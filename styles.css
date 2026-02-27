@@ -152,12 +152,12 @@ nav.scrolled{background:rgba(8,8,14,.92);backdrop-filter:blur(24px);padding:14px
 .gcta-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 .gcta-left h2{font-family:'Sora',sans-serif;font-size:26px;font-weight:700;margin-bottom:16px}
 .gcta-left li{padding:8px 0;padding-left:22px;position:relative;font-size:15px;color:var(--txt-dim);list-style:none}
-.gcta-left li::before{content:'âœ“';position:absolute;left:0;color:var(--purple);font-weight:600}
+.gcta-left li::before{content:'\2713';position:absolute;left:0;color:var(--purple);font-weight:600}
 .gcta-right{background:rgba(147,51,234,.04);border:1px solid rgba(147,51,234,.1);border-radius:12px;padding:32px;text-align:center}
 .gcta-right h3{font-family:'Sora',sans-serif;font-size:18px;font-weight:600;margin-bottom:8px}
 .gcta-right p{font-size:14px;color:var(--txt-dim);line-height:1.7;margin-bottom:6px}
 .gcta-checks p{text-align:left;padding-left:22px;position:relative;font-size:13px;color:var(--txt-dim);margin-bottom:4px}
-.gcta-checks p::before{content:'âœ“';position:absolute;left:0;color:var(--purple)}
+.gcta-checks p::before{content:'\2713';position:absolute;left:0;color:var(--purple)}
 
 /* ===== CASE STUDY ===== */
 .cs-card{background:var(--white);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;max-width:900px;margin:40px auto 0;color:#1a1a2e}
