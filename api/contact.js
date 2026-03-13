@@ -16,7 +16,41 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-  // Gmail SMTP transport
+  // --- GHL Webhook ---
+  const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/imHfi70hPr9q2dnxwMmK/webhook-trigger/b58e2fc4-39c8-426f-9edc-1c93a10c74dc';
+
+  const ghlPayload = {
+    firstName: first_name,
+    lastName: last_name,
+    email: email,
+    phone: phone || '',
+    companyName: company,
+    source: 'Website Contact Form',
+    tags: ['website-lead'],
+    customField: {
+      service_interested: service || '',
+      budget_range: budget || '',
+      project_timeline: timeline || '',
+      project_details: details
+    }
+  };
+
+  let ghlSuccess = false;
+  try {
+    const ghlResponse = await fetch(GHL_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(ghlPayload)
+    });
+    ghlSuccess = ghlResponse.ok;
+    if (!ghlSuccess) {
+      console.error('GHL webhook error:', ghlResponse.status, await ghlResponse.text());
+    }
+  } catch (error) {
+    console.error('GHL webhook error:', error);
+  }
+
+  // --- Gmail Notification ---
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -25,7 +59,6 @@ module.exports = async (req, res) => {
     }
   });
 
-  // Beautiful HTML email
   const htmlEmail = `
     <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:600px;margin:0 auto;background:#08080e;border-radius:12px;overflow:hidden;border:1px solid rgba(147,51,234,.2)">
       <div style="padding:32px 32px 24px;border-bottom:1px solid rgba(147,51,234,.1)">
@@ -48,12 +81,11 @@ module.exports = async (req, res) => {
         </div>
       </div>
       <div style="padding:16px 32px;border-top:1px solid rgba(147,51,234,.1);font-size:11px;color:#5a5470">
-        Submitted from inklockautomation.com contact form
+        Submitted from inklockautomation.com contact form${ghlSuccess ? ' &#x2714; Synced to GHL' : ' &#x26A0; GHL sync failed'}
       </div>
     </div>
   `;
 
-  // Plain text fallback
   const textEmail = `
 NEW LEAD — InkLock Automation
 
@@ -67,8 +99,11 @@ ${timeline ? `Timeline: ${timeline}` : ''}
 
 Project Details:
 ${details}
+
+GHL Sync: ${ghlSuccess ? 'Success' : 'Failed'}
   `.trim();
 
+  let emailSuccess = false;
   try {
     await transporter.sendMail({
       from: `InkLock Automation <${process.env.GMAIL_USER}>`,
@@ -78,10 +113,15 @@ ${details}
       text: textEmail,
       html: htmlEmail
     });
-
-    return res.status(200).json({ success: true });
+    emailSuccess = true;
   } catch (error) {
     console.error('Email error:', error);
-    return res.status(500).json({ error: 'Failed to send email' });
   }
+
+  // Success if at least one channel worked
+  if (ghlSuccess || emailSuccess) {
+    return res.status(200).json({ success: true, ghl: ghlSuccess, email: emailSuccess });
+  }
+
+  return res.status(500).json({ error: 'Failed to process submission' });
 };
