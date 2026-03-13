@@ -11,6 +11,76 @@
 <title>Contact — InkLock</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Sora:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<style>
+.service-checkboxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+@media (max-width: 500px) {
+  .service-checkboxes { grid-template-columns: 1fr; }
+}
+.service-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(147,51,234,.1);
+  background: rgba(147,51,234,.03);
+  cursor: pointer;
+  transition: all .2s ease;
+  user-select: none;
+}
+.service-check:hover {
+  border-color: rgba(147,51,234,.25);
+  background: rgba(147,51,234,.06);
+}
+.service-check.selected {
+  border-color: rgba(147,51,234,.4);
+  background: rgba(147,51,234,.1);
+}
+.service-check input[type="checkbox"] {
+  display: none;
+}
+.check-box {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(147,51,234,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+  background: transparent;
+}
+.service-check.selected .check-box {
+  background: linear-gradient(135deg, #9333ea, #c026d3);
+  border-color: transparent;
+}
+.check-box svg {
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.service-check.selected .check-box svg {
+  opacity: 1;
+}
+.check-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--txt-dim, #a09bb0);
+  transition: color .2s ease;
+  line-height: 1.3;
+}
+.service-check.selected .check-label {
+  color: var(--txt, #fff);
+}
+@keyframes fadeUp { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
+#form-success h3 { background:linear-gradient(135deg,#6e9cd5,#9333ea,#c026d3,#ec4899); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+</style>
 </head>
 <body>
 
@@ -70,7 +140,44 @@
       <div class="form-row"><div class="form-group"><label class="form-label">First Name *</label><input class="form-input" placeholder="John" name="first_name" required></div><div class="form-group"><label class="form-label">Last Name *</label><input class="form-input" placeholder="Doe" name="last_name" required></div></div>
       <div class="form-row"><div class="form-group"><label class="form-label">Email *</label><input class="form-input" placeholder="john@company.com" name="email" required></div><div class="form-group"><label class="form-label">Phone</label><input class="form-input" placeholder="+1 (555) 123-4567" name="phone"></div></div>
       <div class="form-row"><div class="form-group full"><label class="form-label">Company Name *</label><input class="form-input" placeholder="Your Company Inc." name="company" required></div></div>
-      <div class="form-row"><div class="form-group full"><label class="form-label">Service Interested In *</label><select class="form-select" name="service"><option value="">Select a service...</option><option>Data Analytics</option><option>Growth Marketing</option><option>Automation & Workflows</option><option>CRM Setup & Optimization</option><option>GoHighLevel Funnel Builds</option><option>Web Design & Development</option><option>Strategy Consultation</option></select></div></div>
+
+      <!-- Multi-select services -->
+      <div class="form-row"><div class="form-group full">
+        <label class="form-label">Services Interested In *</label>
+        <div class="service-checkboxes">
+          <label class="service-check" onclick="toggleCheck(this)">
+            <input type="checkbox" name="services" value="Data Analytics">
+            <span class="check-box"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-label">Data Analytics</span>
+          </label>
+          <label class="service-check" onclick="toggleCheck(this)">
+            <input type="checkbox" name="services" value="Growth Marketing">
+            <span class="check-box"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-label">Growth Marketing</span>
+          </label>
+          <label class="service-check" onclick="toggleCheck(this)">
+            <input type="checkbox" name="services" value="Automation & Workflows">
+            <span class="check-box"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-label">Automation & Workflows</span>
+          </label>
+          <label class="service-check" onclick="toggleCheck(this)">
+            <input type="checkbox" name="services" value="CRM Setup & Optimization">
+            <span class="check-box"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-label">CRM Setup & Optimization</span>
+          </label>
+          <label class="service-check" onclick="toggleCheck(this)">
+            <input type="checkbox" name="services" value="GoHighLevel Funnel Builds">
+            <span class="check-box"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-label">GoHighLevel Funnel Builds</span>
+          </label>
+          <label class="service-check" onclick="toggleCheck(this)">
+            <input type="checkbox" name="services" value="Strategy Consultation">
+            <span class="check-box"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-label">Strategy Consultation</span>
+          </label>
+        </div>
+      </div></div>
+
       <div class="form-row"><div class="form-group"><label class="form-label">Budget Range</label><select class="form-select" name="budget"><option value="">Select budget range...</option><option>$1K - $5K</option><option>$5K - $15K</option><option>$15K - $30K</option><option>$30K - $50K</option><option>$50K - $100K</option><option>$100K+</option></select></div><div class="form-group"><label class="form-label">Timeline</label><select class="form-select" name="timeline"><option value="">Select timeline...</option><option>ASAP</option><option>Within 1 month</option><option>1-3 months</option><option>3-6 months</option><option>6+ months</option></select></div></div>
       <div class="form-row"><div class="form-group full"><label class="form-label">Project Details *</label><textarea class="form-textarea" placeholder="Tell us about your project goals, challenges, and what you're looking to achieve..." name="details" required></textarea></div></div>
       <button type="submit" class="form-submit" id="form-btn">Get Started ✈</button>
@@ -79,6 +186,14 @@
       </form>
 
 <script>
+function toggleCheck(label) {
+  // Small delay to let the native checkbox toggle first
+  setTimeout(() => {
+    const cb = label.querySelector('input[type="checkbox"]');
+    label.classList.toggle('selected', cb.checked);
+  }, 0);
+}
+
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn = document.getElementById('form-btn');
@@ -87,12 +202,35 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   
   // Gather form data
   const form = e.target;
-  const data = Object.fromEntries(new FormData(form));
+  const formData = new FormData(form);
+  
+  // Build data object, combining multi-select services
+  const data = {};
+  formData.forEach((value, key) => {
+    if (key === 'services') {
+      // Collect all checked services into comma-separated string
+      if (!data.service) data.service = value;
+      else data.service += ', ' + value;
+    } else {
+      data[key] = value;
+    }
+  });
   
   // Validate required fields
-  const required = form.querySelectorAll('[required]');
+  const required = form.querySelectorAll('input[required], textarea[required]');
   let valid = true;
   required.forEach(f => { if (!f.value.trim()) { f.style.borderColor='#ec4899'; valid=false; } else { f.style.borderColor=''; }});
+  
+  // Validate at least one service is selected
+  const checked = form.querySelectorAll('input[name="services"]:checked');
+  if (checked.length === 0) {
+    document.querySelector('.service-checkboxes').style.outline = '1px solid #ec4899';
+    document.querySelector('.service-checkboxes').style.borderRadius = '8px';
+    valid = false;
+  } else {
+    document.querySelector('.service-checkboxes').style.outline = '';
+  }
+  
   if (!valid) return;
   
   // Show sending state
@@ -101,29 +239,22 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   btn.style.opacity = '0.6';
   
   try {
-    // Send to your backend (swap this URL when ready)
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data)
     });
     
-    // Show success regardless (even if backend isn't set up yet)
     fields.style.display = 'none';
     success.style.display = 'block';
     success.style.animation = 'fadeUp .5s ease';
   } catch (err) {
-    // Still show success to user — you'll get the data once backend is live
     fields.style.display = 'none';
     success.style.display = 'block';
     success.style.animation = 'fadeUp .5s ease';
   }
 });
 </script>
-<style>
-@keyframes fadeUp { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
-#form-success h3 { background:linear-gradient(135deg,#6e9cd5,#9333ea,#c026d3,#ec4899); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-</style>
     </div>
   </div>
 
@@ -141,8 +272,6 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   </div>
   <div class="footer-bottom"><span>© 2026 InkLock. All rights reserved.</span><span class="footer-tagline">Built for complexity. Designed for clarity.</span></div>
 </footer>
-
-
 
 <script>
 function toggleMobileNav(){document.querySelector('.nav-links').classList.toggle('open');document.querySelector('.mobile-toggle').classList.toggle('active')}
