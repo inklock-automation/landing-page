@@ -76,12 +76,12 @@ nav.scrolled{background:rgba(8,8,14,.95);backdrop-filter:blur(24px);padding:14px
 .pain-section{background:var(--bg);color:var(--txt);padding:100px 56px;position:relative}
 .pain-section::before{content:'';position:absolute;left:10%;right:10%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(147,51,234,.2) 30%,rgba(110,156,213,.15) 70%,transparent)}
 .pain-section::after{content:'';position:absolute;left:10%;right:10%;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(147,51,234,.2) 30%,rgba(110,156,213,.15) 70%,transparent)}
-.pain-inner{max-width:700px;margin:0 auto;text-align:center}
+.pain-inner{max-width:800px;margin:0 auto;text-align:center}
 .pain-inner .s-title{color:var(--txt)}
 .pain-list{margin:40px auto;max-width:600px;text-align:left}
 .pain-item{padding:18px 24px;border-left:3px solid var(--blue);margin-bottom:12px;font-size:16px;color:var(--txt-dim);background:rgba(110,156,213,.04);border-radius:0 8px 8px 0;transition:all .3s}
 .pain-item:hover{border-left-color:var(--purple);background:rgba(147,51,234,.04)}
-.pain-punchline{font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--txt);line-height:1.6;margin-top:40px;letter-spacing:-.2px}
+.pain-punchline{font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--txt);line-height:1.6;margin-top:40px;letter-spacing:-.2px;max-width:700px;margin-left:auto;margin-right:auto}
 .pain-punchline span{display:block;margin-top:8px}
 .pain-item .pain-num{color:var(--blue-lt);font-weight:600}
 
