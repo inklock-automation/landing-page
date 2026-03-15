@@ -183,7 +183,7 @@
     </div>
     <div class="footer-col"><h4>Services</h4><ul><li><a href="/services">Data Analytics</a></li><li><a href="/services">Growth Marketing</a></li><li><a href="/services">Automation &amp; Workflows</a></li><li><a href="/services">CRM &amp; Systems</a></li><li><a href="/services">Marketing Creatives</a></li></ul></div>
     <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">Our Company</a></li><li><a href="/case-studies">Case Studies</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:inklockautomation@gmail.com">inklockautomation@gmail.com</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><span class="eml"></span></li></ul></div>
   </div>
   <div class="footer-bottom"><span>&copy; 2026 InkLock. All rights reserved.</span><span class="footer-tagline">Built for complexity. Designed for clarity.</span></div>
 </footer><script>
@@ -192,4 +192,4 @@ var nav=document.getElementById('navbar');window.addEventListener('scroll',funct
 var reveals=document.querySelectorAll('.reveal');
 var revealObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:0.1});
 reveals.forEach(function(el){revealObs.observe(el)});
-</script></body></html>
+</script><script>document.querySelectorAll(".eml").forEach(function(el){var a=document.createElement("a");var u="inklockautomation";var d="gmail.com";a.href="mail"+"to:"+u+"@"+d;a.textContent=u+"@"+d;a.style.color="inherit";el.appendChild(a)})</script></body></html>
