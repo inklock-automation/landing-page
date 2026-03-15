@@ -300,9 +300,9 @@ footer{background:var(--bg2);padding:56px 56px 28px;border-top:1px solid rgba(14
   .contact-body{padding:0 16px}
 }
 
-/* ===== ADDITIONS — Append to existing styles.css ===== */
+/* ===== ADDITIONS â€” Append to existing styles.css ===== */
 
-/* What to Expect — Enhanced (Contact page) */
+/* What to Expect â€” Enhanced (Contact page) */
 .what-to-expect{margin-top:36px;padding:32px;border-radius:16px;border:1px solid rgba(147,51,234,.25);background:linear-gradient(135deg,rgba(147,51,234,.06),rgba(192,38,211,.03))}
 .what-to-expect h4{font-family:'Sora',sans-serif;font-size:18px;font-weight:700;margin-bottom:24px;text-align:center}
 .expect-steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
