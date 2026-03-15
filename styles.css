@@ -299,3 +299,40 @@ footer{background:var(--bg2);padding:56px 56px 28px;border-top:1px solid rgba(14
   .articles-grid{padding:0 16px}
   .contact-body{padding:0 16px}
 }
+
+/* ===== ADDITIONS — Append to existing styles.css ===== */
+
+/* What to Expect — Enhanced (Contact page) */
+.what-to-expect{margin-top:36px;padding:32px;border-radius:16px;border:1px solid rgba(147,51,234,.25);background:linear-gradient(135deg,rgba(147,51,234,.06),rgba(192,38,211,.03))}
+.what-to-expect h4{font-family:'Sora',sans-serif;font-size:18px;font-weight:700;margin-bottom:24px;text-align:center}
+.expect-steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.expect-step{text-align:center;padding:16px 8px}
+.expect-num{font-family:'Sora',sans-serif;font-size:32px;font-weight:800;background:linear-gradient(135deg,var(--purple),var(--fuchsia),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+.expect-step h5{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px}
+.expect-step p{font-size:12px;color:var(--txt-dim);line-height:1.5}
+
+/* Service checkbox grid (Contact form) */
+.svc-checks{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.svc-check-label{display:flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid #d0cce0;border-radius:8px;cursor:pointer;transition:all .3s;font-size:13px;color:#3a3a50}
+.svc-check-label:hover{border-color:var(--purple);background:rgba(147,51,234,.03)}
+.svc-check-label input{accent-color:var(--purple)}
+
+/* Blog post page styles */
+.post-wrap{max-width:720px;margin:0 auto;padding:160px 24px 80px}
+.post-meta{font-size:13px;color:var(--txt-mute);margin-bottom:8px}
+.post-cat{display:inline-block;font-size:11px;font-weight:600;padding:4px 12px;border-radius:6px;background:linear-gradient(135deg,var(--purple),var(--fuchsia));color:var(--white);margin-bottom:16px}
+.post-wrap h1{font-family:'Sora',sans-serif;font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.2;margin-bottom:24px}
+.post-wrap h2{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;margin:40px 0 12px}
+.post-wrap p{font-size:16px;color:var(--txt-dim);line-height:1.85;margin-bottom:20px}
+.post-wrap strong{color:var(--txt)}
+.post-back{display:inline-block;margin-bottom:32px;font-size:14px;font-weight:600;color:var(--purple);text-decoration:none}
+.post-back:hover{text-decoration:underline}
+.post-cta{margin-top:48px;padding:32px;border-radius:12px;border:1px solid rgba(147,51,234,.25);background:rgba(147,51,234,.04);text-align:center}
+.post-cta h3{font-family:'Sora',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px}
+.post-cta p{font-size:14px;margin-bottom:16px}
+
+@media(max-width:900px){
+  .expect-steps{grid-template-columns:1fr}
+  .svc-checks{grid-template-columns:1fr}
+  .post-wrap{padding:140px 20px 60px}
+}
