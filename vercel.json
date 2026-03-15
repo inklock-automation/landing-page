@@ -1,18 +1,14 @@
 {
   "rewrites": [
-    { "source": "/services", "destination": "/services.html" },
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/case-studies", "destination": "/case-studies.html" },
-    { "source": "/blog", "destination": "/blog.html" },
-    { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/blog/your-crm-isnt-broken", "destination": "/blog/your-crm-isnt-broken.html" },
-    { "source": "/blog/the-90-day-rule", "destination": "/blog/the-90-day-rule.html" },
-    { "source": "/blog/stop-automating-chaos", "destination": "/blog/stop-automating-chaos.html" },
-    { "source": "/blog/what-we-look-at-before-running-ads", "destination": "/blog/what-we-look-at-before-running-ads.html" }
+    {"source":"/services","destination":"/services.html"},
+    {"source":"/about","destination":"/about.html"},
+    {"source":"/case-studies","destination":"/case-studies.html"},
+    {"source":"/blog","destination":"/blog.html"},
+    {"source":"/contact","destination":"/contact.html"},
+    {"source":"/blog/your-crm-isnt-broken","destination":"/blog/your-crm-isnt-broken.html"},
+    {"source":"/blog/the-90-day-rule","destination":"/blog/the-90-day-rule.html"},
+    {"source":"/blog/stop-automating-chaos","destination":"/blog/stop-automating-chaos.html"},
+    {"source":"/blog/what-we-look-at-before-running-ads","destination":"/blog/what-we-look-at-before-running-ads.html"}
   ],
-  "functions": {
-    "api/contact.js": {
-      "includeFiles": "api/**"
-    }
-  }
+  "functions":{"api/contact.js":{"includeFiles":"api/**"}}
 }
