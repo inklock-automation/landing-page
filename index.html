@@ -8,52 +8,9 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#08080e">
-<title>Podcast — Coming Soon | InkLock Automation</title>
+<title>InkLock — Where Strategy Meets Systems</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Sora:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
-<style>
-  .podcast-hero{padding:180px 56px 100px;position:relative;overflow:hidden;text-align:center}
-  .podcast-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 80%,rgba(147,51,234,.06),transparent 60%),radial-gradient(ellipse 40% 40% at 80% 30%,rgba(110,156,213,.05),transparent 50%),linear-gradient(180deg,var(--bg),var(--bg2) 60%,var(--bg3))}
-  .podcast-hero .inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
-  .coming-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(147,51,234,.08);border:1px solid rgba(147,51,234,.15);border-radius:100px;padding:8px 20px;font-size:12px;font-weight:600;color:var(--purple);text-transform:uppercase;letter-spacing:2px;margin-bottom:32px}
-  .coming-badge .dot{width:8px;height:8px;background:var(--purple);border-radius:50%}
-  .podcast-title{font-family:'Sora',sans-serif;font-size:clamp(48px,6.5vw,72px);font-weight:800;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,#6e9cd5 0%,#9333ea 40%,#c026d3 70%,#ec4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;line-height:1.1}
-  .podcast-subtitle{font-family:'Sora',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:700;line-height:1.2;color:var(--txt);margin-bottom:24px}
-  .podcast-desc{font-size:18px;color:var(--txt-dim);line-height:1.8;max-width:580px;margin:0 auto 40px}
-  .waveform-wrap{display:flex;align-items:center;justify-content:center;gap:3px;height:70px;margin-bottom:40px}
-  .waveform-bar{width:4px;border-radius:100px;background:linear-gradient(180deg,var(--purple),var(--fuchsia));opacity:.4;height:var(--min);animation:waveform 1.2s ease-in-out infinite}
-  @keyframes waveform{0%,100%{height:var(--min);opacity:.3}50%{height:var(--max);opacity:.6}}
-  .signup-form{display:flex;gap:12px;max-width:480px;margin:0 auto}
-  .signup-form input{flex:1;padding:14px 20px;border:1px solid rgba(147,51,234,.2);border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;color:var(--txt);background:rgba(147,51,234,.04);outline:none;transition:border-color .3s}
-  .signup-form input:focus{border-color:var(--purple)}
-  .signup-form input::placeholder{color:var(--txt-mute)}
-  .signup-form button{padding:14px 28px;background:linear-gradient(135deg,var(--purple),var(--fuchsia));color:var(--white);border:none;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:15px;cursor:pointer;transition:all .3s;white-space:nowrap}
-  .signup-form button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(147,51,234,.3)}
-  .signup-note{font-size:12px;color:var(--txt-mute);margin-top:12px}
-  .signup-success{display:none;align-items:center;justify-content:center;gap:10px;padding:16px 28px;background:rgba(147,51,234,.06);border:1px solid rgba(147,51,234,.15);border-radius:12px;font-weight:500;font-size:15px;color:var(--purple);max-width:480px;margin:0 auto}
-  .signup-success svg{flex-shrink:0}
-  .topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:48px auto 0}
-  .topic-card{padding:28px 24px;border-radius:12px;border:1px solid rgba(147,51,234,.06);background:rgba(147,51,234,.02);transition:all .3s}
-  .topic-card:hover{border-color:rgba(147,51,234,.2);background:rgba(147,51,234,.04);transform:translateY(-4px);box-shadow:0 8px 32px rgba(147,51,234,.06)}
-  .topic-icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,rgba(147,51,234,.15),rgba(192,38,211,.1));display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
-  .topic-card h4{font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:var(--txt);margin-bottom:6px}
-  .topic-card p{font-size:13px;color:var(--txt-dim);line-height:1.7}
-  .format-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:960px;margin:48px auto 0;align-items:start}
-  .format-details{display:flex;flex-direction:column;gap:14px;margin-top:24px}
-  .format-detail{display:flex;align-items:center;gap:14px;font-size:15px;color:var(--txt-dim)}
-  .format-detail .icon-ring{width:36px;height:36px;background:rgba(147,51,234,.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-  .host-card{padding:20px;border-radius:12px;border:1px solid rgba(147,51,234,.08);background:rgba(147,51,234,.02);display:flex;align-items:center;gap:16px;transition:all .3s;margin-bottom:12px}
-  .host-card:hover{border-color:rgba(147,51,234,.2);background:rgba(147,51,234,.04)}
-  .host-avatar{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--purple),var(--fuchsia));display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-size:18px;font-weight:700;color:var(--white);flex-shrink:0}
-  .host-info h4{font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:var(--txt);margin-bottom:2px}
-  .host-role{font-size:13px;color:var(--fuchsia);font-weight:500;margin-bottom:4px}
-  .host-desc{font-size:13px;color:var(--txt-mute);line-height:1.5}
-  .platform-logos{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:36px}
-  .platform-item{display:flex;align-items:center;gap:10px;padding:14px 24px;border-radius:10px;border:1px solid rgba(147,51,234,.1);background:rgba(147,51,234,.02);font-size:14px;font-weight:600;color:var(--txt-dim);transition:all .3s;cursor:default}
-  .platform-item:hover{border-color:rgba(147,51,234,.25);color:var(--txt);background:rgba(147,51,234,.04)}
-  .platform-item svg{width:22px;height:22px;fill:currentColor}
-  @media(max-width:900px){.podcast-hero{padding:140px 24px 80px}.topics-grid{grid-template-columns:1fr;max-width:400px}.format-grid{grid-template-columns:1fr}.signup-form{flex-direction:column}}
-</style>
 </head>
 <body>
 
@@ -64,131 +21,206 @@
     <li><a href="/about">Our Company</a></li>
     <li><a href="/case-studies">Case Studies</a></li>
     <li><a href="/blog">Blog</a></li>
-    <li><a href="/podcast.html" style="color:var(--purple)">Podcast</a></li>
   </ul>
-  <a href="/contact" class="nav-cta">Book a Call &rarr;</a>
+  <a href="/contact" class="nav-cta">Book a Call →</a>
   <button class="mobile-toggle" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
 </nav>
 
-<section class="podcast-hero">
-  <div class="inner">
-    <div class="coming-badge"><span class="dot"></span> Coming Soon</div>
-    <div class="podcast-title">UNLOCKED</div>
-    <p class="podcast-subtitle">Real talk about the systems behind real growth.</p>
-    <p class="podcast-desc">A monthly podcast from the InkLock team. No scripts, no fluff. Just honest conversations about what actually moves the needle when marketing meets operations. This is Unlocked, by InkLock Automation.</p>
-    <div class="waveform-wrap" aria-hidden="true">
-      <div class="waveform-bar" style="--min:12px;--max:28px;animation-delay:0s"></div>
-      <div class="waveform-bar" style="--min:8px;--max:40px;animation-delay:.1s"></div>
-      <div class="waveform-bar" style="--min:16px;--max:52px;animation-delay:.2s"></div>
-      <div class="waveform-bar" style="--min:10px;--max:36px;animation-delay:.3s"></div>
-      <div class="waveform-bar" style="--min:20px;--max:60px;animation-delay:.4s"></div>
-      <div class="waveform-bar" style="--min:14px;--max:48px;animation-delay:.5s"></div>
-      <div class="waveform-bar" style="--min:8px;--max:56px;animation-delay:.6s"></div>
-      <div class="waveform-bar" style="--min:18px;--max:44px;animation-delay:.7s"></div>
-      <div class="waveform-bar" style="--min:12px;--max:64px;animation-delay:.8s"></div>
-      <div class="waveform-bar" style="--min:10px;--max:38px;animation-delay:.9s"></div>
-      <div class="waveform-bar" style="--min:16px;--max:52px;animation-delay:1s"></div>
-      <div class="waveform-bar" style="--min:8px;--max:44px;animation-delay:1.1s"></div>
-      <div class="waveform-bar" style="--min:14px;--max:32px;animation-delay:.15s"></div>
-      <div class="waveform-bar" style="--min:20px;--max:56px;animation-delay:.25s"></div>
-      <div class="waveform-bar" style="--min:10px;--max:40px;animation-delay:.35s"></div>
-      <div class="waveform-bar" style="--min:16px;--max:48px;animation-delay:.45s"></div>
-      <div class="waveform-bar" style="--min:12px;--max:60px;animation-delay:.55s"></div>
-      <div class="waveform-bar" style="--min:8px;--max:36px;animation-delay:.65s"></div>
-      <div class="waveform-bar" style="--min:18px;--max:52px;animation-delay:.75s"></div>
-      <div class="waveform-bar" style="--min:14px;--max:28px;animation-delay:.85s"></div>
-      <div class="waveform-bar" style="--min:10px;--max:44px;animation-delay:.95s"></div>
-      <div class="waveform-bar" style="--min:20px;--max:56px;animation-delay:.05s"></div>
-      <div class="waveform-bar" style="--min:12px;--max:48px;animation-delay:.18s"></div>
-      <div class="waveform-bar" style="--min:8px;--max:36px;animation-delay:.28s"></div>
-      <div class="waveform-bar" style="--min:16px;--max:60px;animation-delay:.38s"></div>
-      <div class="waveform-bar" style="--min:10px;--max:40px;animation-delay:.48s"></div>
-      <div class="waveform-bar" style="--min:18px;--max:52px;animation-delay:.58s"></div>
-      <div class="waveform-bar" style="--min:12px;--max:32px;animation-delay:.68s"></div>
-    </div>
-    <div id="signupForm">
-      <div class="signup-form">
-        <input type="email" id="emailInput" placeholder="Enter your email for launch updates" aria-label="Email address">
-        <button onclick="handleSignup()">Notify Me</button>
-      </div>
-      <p class="signup-note">One email when we launch. That's it. No spam, no drip sequence (ironic, we know).</p>
-    </div>
-    <div class="signup-success" id="signupSuccess">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#9333ea"/><path d="M6 10l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      You're in. We'll let you know when episode one drops.
-    </div>
-  </div>
-</section>
+<!-- ===== HOME ===== -->
 
-<section class="svc-section">
-  <div class="svc-inner centered">
-    <div class="s-label">What We're Building</div>
-    <div class="s-title">Conversations that actually help you <span class="accent">grow.</span></div>
-    <p class="s-sub mx-auto">Each episode tackles the real problems business owners face when their marketing and operations don't talk to each other.</p>
-    <div class="topics-grid">
-      <div class="topic-card reveal"><div class="topic-icon">🔧</div><h4>Systems Breakdowns</h4><p>We'll tear apart real (anonymized) tech stacks and show what's broken, what's wasted, and what the fix actually looks like.</p></div>
-      <div class="topic-card reveal"><div class="topic-icon">📊</div><h4>Marketing That Converts</h4><p>Ad strategy, funnel logic, creative direction. The stuff that moves numbers, not just impressions.</p></div>
-      <div class="topic-card reveal"><div class="topic-icon">🎙️</div><h4>Guest Deep Dives</h4><p>Founders, operators, and clients share what actually happened behind the scenes of their growth (or their recovery).</p></div>
-      <div class="topic-card reveal"><div class="topic-icon">⚡</div><h4>Automation Wins</h4><p>Real workflows that saved real hours. We'll walk through the build so you can steal the framework.</p></div>
-      <div class="topic-card reveal"><div class="topic-icon">💸</div><h4>Revenue Leaks</h4><p>Where businesses lose money without knowing it. CRM graveyards, broken follow-ups, and the tools nobody set up right.</p></div>
-      <div class="topic-card reveal"><div class="topic-icon">🤝</div><h4>Operator to Operator</h4><p>Unfiltered conversations between the three of us about running an agency, managing clients, and building something that lasts.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="pain-section">
-  <div style="max-width:960px;margin:0 auto">
-    <div class="format-grid">
-      <div>
-        <div class="s-label" style="color:var(--fuchsia)">The Format</div>
-        <div class="s-title">Monthly episodes.<br>No filler.</div>
-        <p style="font-size:16px;color:var(--txt-dim);line-height:1.8;margin-top:16px">A mix of partner roundtables and guest interviews. Every episode is built around one question worth answering. If we can't make it worth your 30 minutes, we won't hit publish.</p>
-        <div class="format-details">
-          <div class="format-detail"><span class="icon-ring">📅</span> Once per month, new episodes drop mid-month</div>
-          <div class="format-detail"><span class="icon-ring">⏱️</span> 25 to 40 minutes per episode</div>
-          <div class="format-detail"><span class="icon-ring">🎧</span> Available on all major platforms at launch</div>
-          <div class="format-detail"><span class="icon-ring">📹</span> Video clips on social for the highlights</div>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow">Marketing · Automation · Systems</div>
+        <h1>Stop Leaving Money on the Table. <span class="accent">We'll Build the System That Catches It.</span></h1>
+        <p class="hero-sub">You're losing leads, burning hours on manual work, and running ads you can't measure. We build the marketing, automation, and systems that turn chaos into revenue — so you can stop being the bottleneck and start being the CEO.</p>
+        <div class="hero-btns">
+          <a href="/contact" class="btn-primary" >Book a Free Discovery Call →</a>
+          <a href="/case-studies" class="btn-secondary" >See Our Impact</a>
         </div>
       </div>
-      <div>
-        <div class="s-label" style="color:var(--fuchsia)">Your Hosts</div>
-        <div class="host-card"><div class="host-avatar">BB</div><div class="host-info"><h4>Brigitte Bentulan</h4><p class="host-role">Creative + Paid Media</p><p class="host-desc">Runs BB Digital Labs. The person behind your ads, your creative, and the reason your Meta account isn't on fire.</p></div></div>
-        <div class="host-card"><div class="host-avatar">AZ</div><div class="host-info"><h4>Alex Zamora</h4><p class="host-role">Analytics + Strategy</p><p class="host-desc">The data brain. If a number looks off, Alex already found it, diagnosed it, and has a plan to fix it.</p></div></div>
-        <div class="host-card"><div class="host-avatar">EC</div><div class="host-info"><h4>Erin</h4><p class="host-role">Systems + Operations</p><p class="host-desc">Runs The Coastal Collaborative. The one who builds everything that makes the marketing actually work.</p></div></div>
+      <div class="hero-cards">
+        <div class="hcard"><div class="hcard-icon">📊</div><div><h4>Data Analytics & Intelligence</h4><p>for Business Growth</p></div><div class="hcard-dot"></div></div>
+        <div class="hcard"><div class="hcard-icon">🚀</div><div><h4>Growth Marketing & Paid Media</h4><p>Meta, Google & Beyond</p></div><div class="hcard-dot"></div></div>
+        <div class="hcard"><div class="hcard-icon">⚡</div><div><h4>Automation & Workflow Design</h4><p>Systems That Run Themselves</p></div><div class="hcard-dot"></div></div>
+        <div class="hcard"><div class="hcard-icon">🔧</div><div><h4>CRM Setup & Optimization</h4><p>HubSpot, GHL & More</p></div><div class="hcard-dot"></div></div>
+        <div class="hcard"><div class="hcard-icon">🎯</div><div><h4>Conversion & Funnel Engineering</h4><p>From Click to Close</p></div><div class="hcard-dot"></div></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section style="position:relative;padding:80px 56px;text-align:center">
-  <div style="position:absolute;left:10%;right:10%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(147,51,234,.2) 30%,rgba(110,156,213,.15) 70%,transparent)"></div>
-  <div class="s-label">Listen Anywhere</div>
-  <div class="s-title">Available everywhere at <span class="accent">launch.</span></div>
-  <p class="s-sub mx-auto">Subscribe on your favorite platform so you don't miss episode one.</p>
-  <div class="platform-logos">
-    <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.622.622 0 01-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.622.622 0 11-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.622.622 0 01.207.857zm1.224-2.722a.779.779 0 01-1.072.257c-2.687-1.652-6.785-2.13-9.965-1.166a.779.779 0 01-.452-1.491c3.632-1.102 8.147-.568 11.234 1.328a.78.78 0 01.255 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.934.934 0 11-.542-1.79c3.533-1.072 9.404-.865 13.115 1.338a.934.934 0 01-.955 1.609z"/></svg> Spotify</div>
-    <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M18.7 10.7c-.5-.3-1.1-.5-1.7-.5-.6 0-1.2.2-1.7.5-.5.3-.8.8-1 1.3h-.1c-.2-.5-.5-1-1-1.3-.5-.3-1.1-.5-1.7-.5s-1.2.2-1.7.5c-.5.3-.8.8-1 1.3-.2.5-.3 1.1-.3 1.7 0 .6.1 1.2.3 1.7.2.5.5 1 1 1.3.5.3 1.1.5 1.7.5.6 0 1.2-.2 1.7-.5.5-.3.8-.8 1-1.3h.1c.2.5.5 1 1 1.3.5.3 1.1.5 1.7.5.6 0 1.2-.2 1.7-.5.5-.3.8-.8 1-1.3.2-.5.3-1.1.3-1.7 0-.6-.1-1.2-.3-1.7-.2-.5-.6-1-1-1.3zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/></svg> Apple Podcasts</div>
-    <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg> YouTube</div>
-  </div>
-</section>
+  <!-- Sound Familiar? -->
+  <section class="pain-section">
+    <div class="pain-inner">
+      <div class="divider centered" style="margin-left:auto;margin-right:auto"></div>
+      <div class="s-title">Sound familiar?</div>
+      <div class="pain-list">
+        <div class="pain-item">You bought Zapier six months ago and you've logged in once. That's <span class='pain-num'>$240</span> in subscription fees lighting itself on fire.</div>
+        <div class="pain-item">A lead filled out your contact form last Tuesday and you just now saw it. If your average client is worth <span class='pain-num'>$3,000+</span>, that's not a missed notification. That's a lost contract.</div>
+        <div class="pain-item">Every time you onboard a new client, you're reinventing the wheel.</div>
+        <div class="pain-item">Your ads are running but you have no idea which ones are actually converting. You're spending <span class='pain-num'>$3,000+/month</span> on hope and a prayer.</div>
+        <div class="pain-item">You're copying data between six different tools because none of them talk to each other.</div>
+      </div>
+      <div class="pain-punchline">These aren't just inconveniences.<br>They're costing you clients, revenue, and the energy you need to grow.</div>
+    </div>
+  </section>
 
-<section class="cta-band">
-  <div class="inner">
-    <div class="s-title">Don't miss <span class="accent">episode one.</span></div>
-    <p class="s-sub mx-auto" style="margin-bottom:28px">Drop your email and we'll send exactly one message when we go live. That's the whole deal.</p>
-    <div id="signupForm2">
-      <div class="signup-form">
-        <input type="email" id="emailInput2" placeholder="Your email address" aria-label="Email address">
-        <button onclick="handleSignup2()">Get Notified</button>
+  <!-- What If -->
+  <section style="position:relative"><div style="position:absolute;left:10%;right:10%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(147,51,234,.2) 30%,rgba(192,38,211,.12) 70%,transparent)"></div>
+    <div class="s-pad" style="max-width:1100px;margin:0 auto">
+      <div class="divider"></div>
+      <div class="s-title">What if your business just... <span class="accent">ran?</span></div>
+      <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;margin-top:32px">
+        <div>
+          <p class="s-sub" style="margin-bottom:24px">Picture this: you open your laptop Monday morning and everything's handled. Your new client already got their welcome email, intake form, and onboarding packet. <em>Automatically.</em> Your CRM is updated. Your ads are optimized. Your team knows what to do. Nothing fell through the cracks because the system caught it.</p>
+          <p class="s-sub" style="font-weight:600;color:var(--txt)">We build the strategy, systems, automations, and marketing that take your business from barely holding it together to fully dialed in. Not in 6 months. Not after a 12-week onboarding. In 90 days or less.</p>
+          <div style="margin-top:28px"><a href="/services" class="btn-primary">See How We Help →</a></div>
+        </div>
+        <div class="whatif-visual">
+          <div class="whatif-illustration">
+            <svg viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:85%;height:85%;position:relative;z-index:1">
+              <!-- Dashboard mockup -->
+              <rect x="20" y="20" width="280" height="200" rx="12" fill="rgba(147,51,234,.06)" stroke="rgba(147,51,234,.15)" stroke-width="1"/>
+              <rect x="20" y="20" width="280" height="36" rx="12" fill="rgba(147,51,234,.08)"/>
+              <rect x="20" y="44" width="280" height="1" fill="rgba(147,51,234,.1)"/>
+              <!-- Status dots -->
+              <circle cx="36" cy="38" r="5" fill="#4ade80"/>
+              <circle cx="52" cy="38" r="5" fill="#facc15"/>
+              <circle cx="68" cy="38" r="5" fill="rgba(147,51,234,.3)"/>
+              <!-- Chart bars -->
+              <rect x="44" y="140" width="24" height="56" rx="4" fill="rgba(110,156,213,.3)"/>
+              <rect x="80" y="110" width="24" height="86" rx="4" fill="rgba(110,156,213,.4)"/>
+              <rect x="116" y="90" width="24" height="106" rx="4" fill="rgba(147,51,234,.4)"/>
+              <rect x="152" y="70" width="24" height="126" rx="4" fill="rgba(147,51,234,.5)"/>
+              <rect x="188" y="80" width="24" height="116" rx="4" fill="rgba(192,38,211,.4)"/>
+              <rect x="224" y="60" width="24" height="136" rx="4" fill="rgba(192,38,211,.5)"/>
+              <rect x="260" y="68" width="24" height="128" rx="4" fill="rgba(236,72,153,.4)"/>
+              <!-- Trend line -->
+              <path d="M56 135 L92 105 L128 88 L164 68 L200 76 L236 56 L272 64" stroke="rgba(110,156,213,.6)" stroke-width="2" fill="none" stroke-dasharray="4 2"/>
+              <!-- Checkmarks -->
+              <rect x="44" y="64" width="80" height="16" rx="4" fill="rgba(74,222,128,.1)"/>
+              <text x="50" y="75" fill="rgba(74,222,128,.6)" font-size="9" font-family="Sora">✓ Leads synced</text>
+              <rect x="140" y="64" width="86" height="16" rx="4" fill="rgba(74,222,128,.1)"/>
+              <text x="146" y="75" fill="rgba(74,222,128,.6)" font-size="9" font-family="Sora">✓ Ads optimized</text>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="signup-success" id="signupSuccess2">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#9333ea"/><path d="M6 10l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      You're on the list. Talk soon.
+  </section>
+
+  <!-- Service Arsenal Preview -->
+  <section class="svc-section">
+    <div class="svc-inner centered">
+      <div class="s-label" style="color:var(--blue)">How We Help</div>
+      <div class="s-title">Our <span class="accent">Service Arsenal</span></div>
+      <p class="s-sub mx-auto">From data-driven marketing to bulletproof automation, we provide end-to-end solutions that turn complexity into clarity.</p>
+      <div class="svc-tabs" id="home-tabs">
+        <div class="svc-tab active" onclick="switchTab(0)">Data Analytics</div>
+        <div class="svc-tab" onclick="switchTab(1)">Growth Marketing</div>
+        <div class="svc-tab" onclick="switchTab(2)">Automation</div>
+        <div class="svc-tab" onclick="switchTab(3)">CRM & Systems</div>
+        <div class="svc-tab" onclick="switchTab(4)">Funnel Builds</div>
+        <div class="svc-tab" onclick="switchTab(5)">Creatives</div>
+      </div>
+      <div class="svc-panel" id="svc-panel">
+        <div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+            <div class="svc-num" id="svc-num">1</div>
+            <div><h3 id="svc-name" style="margin-bottom:0">Data Analytics & Intelligence</h3>
+            <div class="svc-sub" id="svc-sub" style="margin-bottom:0">Business Growth Through Data Intelligence</div></div>
+          </div>
+          <p class="svc-desc" id="svc-desc">We turn complex datasets into clear, actionable insights. Our analytics solutions help businesses identify trends, measure marketing performance, and improve decision-making across every channel.</p>
+          <div class="svc-expect" style="margin-top:16px"><strong>What to Expect:</strong><p id="svc-expect">Smarter decisions, higher marketing ROI, and continuous improvement across digital campaigns.</p></div>
+          <div class="svc-panel-meta">
+            <div class="svc-tools" id="svc-tools"><strong style="display:block;margin-bottom:8px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--txt-mute)">Tools & Methods</strong><span class="svc-tool-tag">Google Analytics</span><span class="svc-tool-tag">Data Dashboards</span><span class="svc-tool-tag">Custom Reporting</span><span class="svc-tool-tag">Performance Tracking</span></div>
+            <div class="svc-tools" id="svc-specs"><strong style="display:block;margin-bottom:8px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--txt-mute)">Specializations</strong><span class="svc-spec-tag">Trend Analysis</span><span class="svc-spec-tag">Marketing Performance</span><span class="svc-spec-tag">Decision Intelligence</span><span class="svc-spec-tag">ROI Measurement</span></div>
+          </div>
+          <p class="svc-best" id="svc-best"><strong>Best for:</strong> Businesses making marketing decisions based on gut feeling instead of real numbers.</p>
+          <div style="margin-top:20px"><a href="/contact" class="svc-cta">Get Started →</a></div>
+        </div>
+        <div class="svc-visual"><div class="svc-illustration" id="svc-icon"><svg viewBox="0 0 200 200" fill="none"><rect x="20" y="30" width="160" height="140" rx="12" fill="rgba(147,51,234,.05)" stroke="rgba(147,51,234,.12)"/><rect x="40" y="130" width="20" height="30" rx="3" fill="rgba(110,156,213,.4)"/><rect x="70" y="105" width="20" height="55" rx="3" fill="rgba(147,51,234,.4)"/><rect x="100" y="85" width="20" height="75" rx="3" fill="rgba(192,38,211,.4)"/><rect x="130" y="65" width="20" height="95" rx="3" fill="rgba(236,72,153,.4)"/><path d="M50 125 L80 100 L110 80 L140 60" stroke="rgba(110,156,213,.5)" stroke-width="1.5" fill="none"/><circle cx="50" cy="125" r="3" fill="rgba(110,156,213,.6)"/><circle cx="140" cy="60" r="3" fill="rgba(236,72,153,.6)"/></svg></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- By the Numbers -->
+  <div class="stats-band">
+    <div class="stats-inner">
+      <div><div class="stat-num">200+</div><div class="stat-lbl">Automated workflows built</div></div>
+      <div><div class="stat-num">150+</div><div class="stat-lbl">Integrations deployed</div></div>
+      <div><div class="stat-num">$16.85M</div><div class="stat-lbl">Revenue generated for clients</div></div>
+      <div><div class="stat-num">50+</div><div class="stat-lbl">Platforms connected</div></div>
     </div>
   </div>
-</section>
 
+  <!-- Process -->
+  <section class="process-section">
+    <div class="s-pad centered">
+      <div class="divider centered" style="margin-left:auto;margin-right:auto"></div>
+      <div class="s-title">What to <span class="accent">Expect</span></div>
+      <p class="s-sub mx-auto">A proven methodology from discovery to deployment.</p>
+      <div class="process-grid">
+        <div class="p-card reveal"><div class="p-num">01</div><h4>Discovery Call</h4><p>30 minutes. We discuss what's broken, what it's costing you, and whether we can fix it. No pitch, no pressure.</p></div>
+        <div class="p-card reveal"><div class="p-num">02</div><h4>Custom Strategy</h4><p>Within a week, you get a custom roadmap — what we'll build, what it'll cost, and exactly when you'll see results.</p></div>
+        <div class="p-card reveal"><div class="p-num">03</div><h4>Build & Execute</h4><p>We build and launch. Marketing, automations, systems — everything running within 90 days. Clear communication throughout.</p></div>
+        <div class="p-card reveal"><div class="p-num">04</div><h4>Analyze & Scale</h4><p>We don't disappear after launch. Continuous optimization ensures your systems keep delivering as you grow.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="inner">
+      <div class="s-title">Ready to Scale Your <span class="accent">Business?</span></div>
+      <p class="s-sub mx-auto" style="margin-bottom:20px">No pitch decks. No 47-slide proposals. Just a real conversation about what's broken and what it would look like fixed.</p>
+      <p class="risk-reversal">If we're not the right fit, we'll tell you — and point you to who is.</p>
+      <div style="margin-top:28px"><a href="/contact" class="btn-primary" style="font-size:16px;padding:16px 40px">Book Your Free Strategy Session →</a></div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why-section">
+    <div class="s-pad centered">
+      <div class="s-title">Why Leading Businesses <span class="accent">Choose Us</span></div>
+      <p class="s-sub mx-auto">Three disciplines. One team. Zero gaps. Most agencies sell you one piece and leave you to figure out the rest. We don't.</p>
+      <div class="why-grid">
+        <div class="why-card reveal"><div class="why-icon">📈</div><h4>Proven Track Record</h4><p>Measurable results and long-term client partnerships across healthcare, real estate, and tech.</p><span class="why-badge">Driven by Results</span></div>
+        <div class="why-card reveal"><div class="why-icon">🧠</div><h4>Expert Team</h4><p>Senior strategists, not junior account managers. You work directly with the people doing the work.</p><span class="why-badge">10+ Years Avg</span></div>
+        <div class="why-card reveal"><div class="why-icon">⚡</div><h4>Systems That Scale</h4><p>We don't just run campaigns — we build the infrastructure that lets everything else run itself.</p><span class="why-badge">Built to Last</span></div>
+        <div class="why-card reveal"><div class="why-icon">🔍</div><h4>Full Transparency</h4><p>Real-time reporting, clear communication, no black boxes. You always know exactly what's happening.</p><span class="why-badge">100% Data-Backed</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global CTA -->
+  <section class="gcta">
+    <div class="gcta-inner">
+      <div class="gcta-left">
+        <h2>Why Choose InkLock?</h2>
+        <ul>
+          <li>Personalized Strategy — Every engagement is custom-built for your business model, not a template.</li>
+          <li>Full-Stack Execution — Marketing, automation, systems, and analytics under one roof.</li>
+          <li>Transparent Reporting — Clear, actionable insights with comprehensive performance reports.</li>
+          <li>Dedicated Team — Senior strategists committed to your success, not account managers reading scripts.</li>
+        </ul>
+      </div>
+      <div class="gcta-right">
+        <div style="font-size:28px;margin-bottom:8px">☆</div>
+        <h3>Start Your Growth Journey</h3>
+        <p>Get a free strategy session and discover how we can help you achieve your goals.</p>
+        <div class="gcta-checks" style="margin:14px 0">
+          <p>Free 30-minute discovery call</p>
+          <p>Custom audit of your current systems</p>
+          <p>No commitment required</p>
+        </div>
+        <a href="/contact" class="btn-primary"  style="margin-top:12px;display:inline-block">Book Your Call →</a>
+      </div>
+    </div>
+  </section>
+
+
+<!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -198,20 +230,48 @@
     <div class="footer-col"><h4>Services</h4><ul><li><a href="/services">Data Analytics</a></li><li><a href="/services">Growth Marketing</a></li><li><a href="/services">Automation & Workflows</a></li><li><a href="/services">CRM & Systems</a></li><li><a href="/services">Marketing Creatives</a></li></ul></div>
     <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">Our Company</a></li><li><a href="/case-studies">Case Studies</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Contact</h4><ul><li><span class="eml"></span></li></ul></div>
-  </div>
   <div class="footer-bottom"><span>&copy; 2026 InkLock. All rights reserved.</span></div>
 </footer>
 
-<script src="/reveal.js"></script>
-<script>
-document.querySelectorAll(".eml").forEach(function(el){var a=document.createElement("a");var u="inklockautomation";var d="gmail.com";a.href="mail"+"to:"+u+"@"+d;a.textContent=u+"@"+d;a.style.color="inherit";el.appendChild(a)});
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));</script><script src="/reveal.js"></script><script>document.querySelectorAll(".eml").forEach(function(el){var a=document.createElement("a");var u="inklockautomation";var d="gmail.com";a.href="mail"+"to:"+u+"@"+d;a.textContent=u+"@"+d;a.style.color="inherit";el.appendChild(a)})</script><script>
 function toggleMobileNav(){document.querySelector('.nav-links').classList.toggle('open');document.querySelector('.mobile-toggle').classList.toggle('active')}
 const nav=document.getElementById('navbar');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
-const reveals=document.querySelectorAll('.reveal');const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.1});reveals.forEach(el=>observer.observe(el));
-function handleSignup(){const email=document.getElementById('emailInput').value;if(email&&email.includes('@')){document.getElementById('signupForm').style.display='none';document.getElementById('signupSuccess').style.display='flex'}}
-function handleSignup2(){const email=document.getElementById('emailInput2').value;if(email&&email.includes('@')){document.getElementById('signupForm2').style.display='none';document.getElementById('signupSuccess2').style.display='flex'}}
-document.getElementById('emailInput').addEventListener('keydown',e=>{if(e.key==='Enter')handleSignup()});
-document.getElementById('emailInput2').addEventListener('keydown',e=>{if(e.key==='Enter')handleSignup2()});
-</script>
-</body>
-</html>
+
+const svcData=[
+  {n:1,name:'Data Analytics & Intelligence',sub:'Business Growth Through Data Intelligence',desc:'We turn complex datasets into clear, actionable insights. Our analytics solutions help businesses identify trends, measure marketing performance, and improve decision-making across every channel.',expect:'Smarter decisions, higher marketing ROI, and continuous improvement across digital campaigns.',best:'Businesses making marketing decisions based on gut feeling instead of real numbers.',tools:['Google Analytics','Data Dashboards','Custom Reporting','Performance Tracking'],specs:['Trend Analysis','Marketing Performance','Decision Intelligence','ROI Measurement'],svg:'<svg viewBox="0 0 200 200" fill="none"><rect x="20" y="30" width="160" height="140" rx="12" fill="rgba(147,51,234,.06)" stroke="rgba(147,51,234,.15)"/><rect x="40" y="130" width="20" height="30" rx="3" fill="rgba(110,156,213,.5)"/><rect x="70" y="100" width="20" height="60" rx="3" fill="rgba(147,51,234,.5)"/><rect x="100" y="80" width="20" height="80" rx="3" fill="rgba(192,38,211,.5)"/><rect x="130" y="60" width="20" height="100" rx="3" fill="rgba(236,72,153,.5)"/><path d="M50 125 L80 95 L110 75 L140 55" stroke="rgba(110,156,213,.7)" stroke-width="2"/><circle cx="50" cy="125" r="3" fill="#6e9cd5"/><circle cx="80" cy="95" r="3" fill="#9333ea"/><circle cx="110" cy="75" r="3" fill="#c026d3"/><circle cx="140" cy="55" r="3" fill="#ec4899"/></svg>'},
+  {n:2,name:'Growth Marketing & Paid Media',sub:'Scalable Strategies for Sustainable Growth',desc:'We combine creative strategy with data-driven execution across Meta, Google, Instagram, and YouTube. From high-converting video content to precision-targeted campaigns, we build brands people believe in.',expect:'Accelerated growth, sustainable customer acquisition, and optimized marketing spend.',best:'Brands spending on ads but not sure which ones are actually working.',tools:['Digital Strategy','Multichannel Campaigns','Rapid Experimentation','Growth Analytics'],specs:['Customer Acquisition','Revenue Optimization','Scalable Systems','Growth Hacking'],svg:'<svg viewBox="0 0 200 200" fill="none"><path d="M100 30 L140 80 L170 75 L130 150 L155 145 L100 185 L75 145 L95 150 L55 75 L85 80 Z" fill="rgba(147,51,234,.15)" stroke="rgba(147,51,234,.3)" stroke-width="1"/><circle cx="100" cy="100" r="30" fill="rgba(192,38,211,.1)" stroke="rgba(192,38,211,.3)"/><text x="88" y="106" fill="rgba(192,38,211,.6)" font-size="18" font-weight="bold">↑</text><text x="55" y="55" fill="rgba(110,156,213,.5)" font-size="10">+400%</text><text x="130" y="50" fill="rgba(236,72,153,.5)" font-size="10">$2.4M</text><text x="60" y="165" fill="rgba(147,51,234,.5)" font-size="10">285%</text></svg>'},
+  {n:3,name:'Automation & Workflow Design',sub:'Systems That Run Themselves',desc:'Your tools should talk to each other without you playing middleman. We build the automations that connect your CRM, email, project management, and payment systems into one smooth operation. Zapier, HubSpot, Make, GoHighLevel — we build the bridges.',expect:'Eliminated manual tasks, zero missed follow-ups, and operations that run while you sleep.',best:'Businesses manually moving data between platforms, missing follow-ups, or drowning in repetitive tasks.',tools:['Zapier','Make (Integromat)','HubSpot Workflows','GoHighLevel'],specs:['Workflow Automation','System Integration','Process Design','API Connections'],svg:'<svg viewBox="0 0 200 200" fill="none"><circle cx="60" cy="60" r="20" fill="rgba(110,156,213,.1)" stroke="rgba(110,156,213,.3)"/><circle cx="140" cy="60" r="20" fill="rgba(147,51,234,.1)" stroke="rgba(147,51,234,.3)"/><circle cx="60" cy="140" r="20" fill="rgba(192,38,211,.1)" stroke="rgba(192,38,211,.3)"/><circle cx="140" cy="140" r="20" fill="rgba(236,72,153,.1)" stroke="rgba(236,72,153,.3)"/><circle cx="100" cy="100" r="16" fill="rgba(147,51,234,.15)" stroke="rgba(147,51,234,.4)" stroke-width="2"/><text x="93" y="105" fill="rgba(147,51,234,.7)" font-size="14">⚡</text><line x1="76" y1="72" x2="88" y2="88" stroke="rgba(110,156,213,.4)" stroke-width="1.5" stroke-dasharray="3 2"/><line x1="124" y1="72" x2="112" y2="88" stroke="rgba(147,51,234,.4)" stroke-width="1.5" stroke-dasharray="3 2"/><line x1="76" y1="128" x2="88" y2="112" stroke="rgba(192,38,211,.4)" stroke-width="1.5" stroke-dasharray="3 2"/><line x1="124" y1="128" x2="112" y2="112" stroke="rgba(236,72,153,.4)" stroke-width="1.5" stroke-dasharray="3 2"/><text x="48" y="64" fill="rgba(110,156,213,.6)" font-size="12">📧</text><text x="128" y="64" fill="rgba(147,51,234,.6)" font-size="12">📊</text><text x="48" y="144" fill="rgba(192,38,211,.6)" font-size="12">💰</text><text x="128" y="144" fill="rgba(236,72,153,.6)" font-size="12">📋</text></svg>'},
+  {n:4,name:'CRM Setup & Optimization',sub:'Your Systems, Finally Working Together',desc:'Whether you\'re starting from scratch or inheriting a CRM that looks like a junk drawer, we configure HubSpot, GoHighLevel, and other platforms to work the way your sales and marketing processes actually flow. Pipeline design, automation, reporting dashboards — the works.',expect:'A CRM your team actually uses, pipeline visibility, and automated client communication.',best:'Businesses that just purchased a CRM or those whose current setup isn\'t delivering insights.',tools:['HubSpot','GoHighLevel','Pipeline Design','Dashboard Builds'],specs:['CRM Architecture','Sales Pipeline','Lead Management','Reporting Automation'],svg:'<svg viewBox="0 0 200 200" fill="none"><rect x="30" y="40" width="140" height="120" rx="10" fill="rgba(147,51,234,.06)" stroke="rgba(147,51,234,.15)"/><rect x="30" y="40" width="140" height="28" rx="10" fill="rgba(147,51,234,.08)"/><text x="46" y="58" fill="rgba(147,51,234,.5)" font-size="10" font-weight="600">Pipeline View</text><rect x="44" y="80" width="52" height="8" rx="4" fill="rgba(74,222,128,.4)"/><text x="100" y="88" fill="rgba(74,222,128,.5)" font-size="8">Won</text><rect x="44" y="96" width="38" height="8" rx="4" fill="rgba(110,156,213,.4)"/><text x="86" y="104" fill="rgba(110,156,213,.5)" font-size="8">Proposal</text><rect x="44" y="112" width="70" height="8" rx="4" fill="rgba(147,51,234,.4)"/><text x="118" y="120" fill="rgba(147,51,234,.5)" font-size="8">Qualified</text><rect x="44" y="128" width="98" height="8" rx="4" fill="rgba(192,38,211,.3)"/><text x="146" y="136" fill="rgba(192,38,211,.4)" font-size="8">New</text></svg>'},
+  {n:5,name:'Funnel & Onboarding Builds',sub:'From Opt-In to Close',desc:'Landing pages, email sequences, pipeline setup, and the automations that tie it all together. We also design onboarding systems that welcome new clients, collect what you need, and set expectations from day one — all without you sending a single manual email.',expect:'Higher conversion rates, automated client onboarding, and a seamless journey from click to close.',best:'Service providers reinventing the wheel every time they land a new client.',tools:['Landing Pages','Email Sequences','Intake Forms','Client Portals'],specs:['Conversion Funnels','Lead Nurture','Client Onboarding','Drip Campaigns'],svg:'<svg viewBox="0 0 200 200" fill="none"><path d="M40 50 L160 50 L140 100 L130 130 L70 130 L60 100 Z" fill="rgba(147,51,234,.06)" stroke="rgba(147,51,234,.2)" stroke-width="1"/><line x1="50" y1="70" x2="150" y2="70" stroke="rgba(147,51,234,.1)"/><line x1="58" y1="90" x2="142" y2="90" stroke="rgba(147,51,234,.1)"/><line x1="65" y1="110" x2="135" y2="110" stroke="rgba(147,51,234,.1)"/><circle cx="80" cy="60" r="4" fill="rgba(110,156,213,.5)"/><circle cx="110" cy="60" r="4" fill="rgba(110,156,213,.5)"/><circle cx="120" cy="60" r="4" fill="rgba(110,156,213,.5)"/><circle cx="90" cy="80" r="4" fill="rgba(147,51,234,.5)"/><circle cx="115" cy="80" r="4" fill="rgba(147,51,234,.5)"/><circle cx="100" cy="100" r="5" fill="rgba(192,38,211,.5)"/><circle cx="100" cy="120" r="6" fill="rgba(236,72,153,.6)"/><text x="72" y="160" fill="rgba(236,72,153,.5)" font-size="10" font-weight="600">Conversion ↑</text></svg>'},
+  {n:6,name:'Marketing Creatives & Content',sub:'Branded Assets That Convert',desc:'Your ads, emails, and funnels are only as good as the creative behind them. We produce scroll-stopping ad creatives, branded social content, video assets, and campaign collateral designed to drive action. Every piece is built to align with your strategy, reinforce your brand, and perform across platforms.',expect:'On-brand creative assets that increase engagement, improve ad performance, and give your campaigns a professional edge.',best:'Businesses running ads or campaigns with DIY graphics, inconsistent branding, or creative that isn\'t converting.',tools:['Ad Creative Design','Video Production','Brand Collateral','Social Content'],specs:['Meta Ad Creatives','Brand Identity','Campaign Assets','Content Strategy'],svg:'<svg viewBox="0 0 200 200" fill="none"><rect x="25" y="35" width="65" height="85" rx="6" fill="rgba(147,51,234,.06)" stroke="rgba(147,51,234,.2)"/><rect x="30" y="40" width="55" height="35" rx="3" fill="rgba(192,38,211,.08)"/><rect x="30" y="82" width="38" height="4" rx="2" fill="rgba(147,51,234,.15)"/><rect x="30" y="90" width="50" height="4" rx="2" fill="rgba(110,156,213,.1)"/><rect x="30" y="98" width="30" height="4" rx="2" fill="rgba(110,156,213,.1)"/><rect x="30" y="108" width="40" height="8" rx="4" fill="rgba(147,51,234,.2)"/><rect x="110" y="35" width="65" height="85" rx="6" fill="rgba(236,72,153,.06)" stroke="rgba(236,72,153,.2)"/><rect x="115" y="40" width="55" height="35" rx="3" fill="rgba(236,72,153,.08)"/><rect x="115" y="82" width="38" height="4" rx="2" fill="rgba(236,72,153,.15)"/><rect x="115" y="90" width="50" height="4" rx="2" fill="rgba(236,72,153,.1)"/><rect x="115" y="98" width="30" height="4" rx="2" fill="rgba(236,72,153,.1)"/><rect x="115" y="108" width="40" height="8" rx="4" fill="rgba(236,72,153,.2)"/><rect x="55" y="135" width="90" height="40" rx="6" fill="rgba(110,156,213,.06)" stroke="rgba(110,156,213,.2)"/><text x="72" y="150" fill="rgba(110,156,213,.4)" font-size="7">▶ 0:30</text><rect x="72" y="158" width="56" height="4" rx="2" fill="rgba(110,156,213,.15)"/><rect x="72" y="165" width="40" height="3" rx="1.5" fill="rgba(110,156,213,.1)"/><circle cx="100" cy="100" r="12" fill="rgba(147,51,234,.1)" stroke="rgba(147,51,234,.3)"/><text x="95" y="104" fill="rgba(147,51,234,.6)" font-size="10">✦</text></svg>'}
+];
+
+function switchTab(i){
+  document.querySelectorAll('.svc-tab').forEach((t,idx)=>t.classList.toggle('active',idx===i));
+  const d=svcData[i];
+  if(document.getElementById('svc-name'))document.getElementById('svc-name').textContent=d.name;
+  if(document.getElementById('svc-sub'))document.getElementById('svc-sub').textContent=d.sub;
+  if(document.getElementById('svc-desc'))document.getElementById('svc-desc').textContent=d.desc;
+  if(document.getElementById('svc-expect'))document.getElementById('svc-expect').textContent=d.expect;
+  if(document.getElementById('svc-best'))document.getElementById('svc-best').innerHTML='<strong>Best for:</strong> '+d.best;
+  if(document.getElementById('svc-num'))document.getElementById('svc-num').textContent=d.n;
+  const vis=document.getElementById('svc-icon');
+  if(vis&&d.svg){vis.innerHTML=d.svg}
+  const toolsEl=document.getElementById('svc-tools');
+  if(toolsEl&&d.tools){toolsEl.innerHTML='<strong style="display:block;margin-bottom:8px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--txt-dim)">Our Tools & Methods</strong>'+d.tools.map(t=>'<span class="svc-tool-tag">'+t+'</span>').join('')}
+  const specsEl=document.getElementById('svc-specs');
+  
+  if(specsEl&&d.specs){specsEl.innerHTML='<strong style="display:block;margin-bottom:8px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--txt-dim)">Specializations</strong>'+d.specs.map(t=>'<span class="svc-spec-tag">'+t+'</span>').join('')}
+}
