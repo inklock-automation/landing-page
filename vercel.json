@@ -13,6 +13,7 @@
     {"source":"/blog/5-zapier-automations","destination":"/blog/5-zapier-automations.html"},
     {"source":"/blog/why-data-driven-marketing","destination":"/blog/why-data-driven-marketing.html"},
     {"source":"/blog/instagram-isnt-dead","destination":"/blog/instagram-isnt-dead.html"}
+    {"source":"/onboarding","destination":"/onboarding.html"}
   ],
   "functions":{"api/contact.js":{"includeFiles":"api/**"}}
 }
