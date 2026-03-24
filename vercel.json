@@ -5,6 +5,7 @@
     {"source":"/case-studies","destination":"/case-studies.html"},
     {"source":"/blog","destination":"/blog.html"},
     {"source":"/contact","destination":"/contact.html"},
+    {"source":"/onboarding","destination":"/onboarding.html"}
     {"source":"/blog/your-crm-isnt-broken","destination":"/blog/your-crm-isnt-broken.html"},
     {"source":"/blog/the-90-day-rule","destination":"/blog/the-90-day-rule.html"},
     {"source":"/blog/stop-automating-chaos","destination":"/blog/stop-automating-chaos.html"},
@@ -13,7 +14,6 @@
     {"source":"/blog/5-zapier-automations","destination":"/blog/5-zapier-automations.html"},
     {"source":"/blog/why-data-driven-marketing","destination":"/blog/why-data-driven-marketing.html"},
     {"source":"/blog/instagram-isnt-dead","destination":"/blog/instagram-isnt-dead.html"}
-    {"source":"/onboarding","destination":"/onboarding.html"}
   ],
   "functions":{"api/contact.js":{"includeFiles":"api/**"}}
 }
