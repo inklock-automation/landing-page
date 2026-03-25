@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog | InkLock Automation</title>
+<meta name="description" content="Insights on marketing automation, CRM systems, and building a business that actually runs. New posts every Sunday."/>
+<link rel="canonical" href="https://www.inklockautomation.com/blog"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet"/>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --purple: #7B2FBE;
+  --pink: #D946A8;
+  --dark: #0F1117;
+  --card-bg: #161B27;
+  --card-border: rgba(255,255,255,0.07);
+  --white: #FFFFFF;
+  --muted: rgba(255,255,255,0.55);
+  --body-text: rgba(255,255,255,0.78);
+  --gradient: linear-gradient(135deg, #7B2FBE, #D946A8);
+  --coastal: #6E9CD5;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: var(--body-text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+/* NAV */
+nav { padding: 20px 48px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--card-border); position: sticky; top: 0; background: rgba(15,17,23,0.95); backdrop-filter: blur(12px); z-index: 100; }
+.logo-wrap { display: flex; align-items: baseline; gap: 2px; text-decoration: none; }
+.logo-ink { font-family: 'Great Vibes', cursive; font-size: 30px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+.logo-lock { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 22px; color: var(--white); letter-spacing: 0.03em; }
+.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.current { color: var(--white); }
+.nav-cta { background: var(--gradient); color: white !important; text-decoration: none; font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: 6px; transition: opacity 0.2s; }
+.nav-cta:hover { opacity: 0.85; }
+
+/* HERO */
+.blog-hero { max-width: 860px; margin: 0 auto; padding: 72px 40px 56px; text-align: center; }
+.hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #C084FC; margin-bottom: 20px; }
+.blog-hero h1 { font-size: clamp(36px, 5vw, 56px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 20px; }
+.gradient-word { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.blog-hero p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto 36px; line-height: 1.65; }
+
+/* FILTER TABS */
+.filter-wrap { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 0; }
+.filter-btn { background: transparent; border: 1px solid var(--card-border); color: var(--muted); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 600; padding: 8px 18px; border-radius: 20px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.02em; }
+.filter-btn:hover { border-color: rgba(123,47,190,0.5); color: var(--white); }
+.filter-btn.active { background: rgba(123,47,190,0.2); border-color: rgba(123,47,190,0.5); color: #C084FC; }
+
+/* FEATURED POST */
+.featured-wrap { max-width: 1020px; margin: 0 auto; padding: 48px 40px 0; }
+.section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+
+.featured-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.25s, transform 0.25s;
+  margin-bottom: 48px;
+}
+.featured-card:hover { border-color: rgba(123,47,190,0.4); transform: translateY(-2px); }
+.featured-img {
+  background: linear-gradient(135deg, rgba(123,47,190,0.3), rgba(217,70,168,0.2));
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.featured-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(123,47,190,0.4), transparent 60%),
+              radial-gradient(circle at 75% 30%, rgba(217,70,168,0.25), transparent 50%);
+}
+.featured-img-icon {
+  position: relative;
+  z-index: 1;
+  width: 72px;
+  height: 72px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.featured-img-icon svg { width: 32px; height: 32px; opacity: 0.7; }
+.featured-content { padding: 44px 40px; display: flex; flex-direction: column; justify-content: center; }
+.post-tag { display: inline-block; background: rgba(123,47,190,0.2); border: 1px solid rgba(123,47,190,0.4); color: #C084FC; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 18px; width: fit-content; }
+.featured-content h2 { font-size: 26px; font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 14px; letter-spacing: -0.01em; }
+.featured-content p { font-size: 15px; color: var(--muted); line-height: 1.65; margin-bottom: 28px; }
+.post-meta-sm { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.meta-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,0.2); display: inline-block; }
+.read-more { display: inline-flex; align-items: center; gap: 6px; color: #C084FC; font-size: 14px; font-weight: 700; letter-spacing: 0.02em; text-decoration: none; transition: gap 0.2s; }
+.featured-card:hover .read-more { gap: 10px; }
+
+/* POST GRID */
+.grid-wrap { max-width: 1020px; margin: 0 auto; padding: 0 40px 80px; }
+.posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.post-card:hover { border-color: rgba(123,47,190,0.4); transform: translateY(-2px); }
+.card-img {
+  height: 160px;
+  background: linear-gradient(135deg, rgba(123,47,190,0.25), rgba(217,70,168,0.15));
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-img.teal { background: linear-gradient(135deg, rgba(15,110,86,0.35), rgba(29,158,117,0.2)); }
+.card-img.blue { background: linear-gradient(135deg, rgba(24,95,165,0.35), rgba(55,138,221,0.2)); }
+.card-img.amber { background: linear-gradient(135deg, rgba(133,79,11,0.35), rgba(186,117,23,0.2)); }
+.card-img.coral { background: linear-gradient(135deg, rgba(153,60,29,0.35), rgba(216,90,48,0.2)); }
+.card-img.pink { background: linear-gradient(135deg, rgba(153,53,86,0.35), rgba(212,83,126,0.2)); }
+.card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 40% 40%, rgba(255,255,255,0.04), transparent 60%);
+}
+.card-img-icon { width: 48px; height: 48px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
+.card-img-icon svg { width: 22px; height: 22px; opacity: 0.65; }
+
+.card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+.card-tag { display: inline-block; background: rgba(123,47,190,0.15); border: 1px solid rgba(123,47,190,0.3); color: #C084FC; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; margin-bottom: 12px; width: fit-content; }
+.card-tag.teal { background: rgba(15,110,86,0.15); border-color: rgba(29,158,117,0.3); color: #34D399; }
+.card-tag.blue { background: rgba(24,95,165,0.15); border-color: rgba(55,138,221,0.3); color: #60A5FA; }
+.card-tag.amber { background: rgba(133,79,11,0.15); border-color: rgba(186,117,23,0.3); color: #FBBF24; }
+.card-tag.coral { background: rgba(153,60,29,0.15); border-color: rgba(216,90,48,0.3); color: #FB923C; }
+.card-tag.pink { background: rgba(153,53,86,0.15); border-color: rgba(212,83,126,0.3); color: #F472B6; }
+
+.card-body h3 { font-size: 16px; font-weight: 700; color: var(--white); line-height: 1.35; margin-bottom: 10px; }
+.card-body p { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 18px; }
+.card-footer { display: flex; align-items: center; justify-content: space-between; }
+.card-date { font-size: 11px; color: rgba(255,255,255,0.3); }
+.card-arrow { color: rgba(123,47,190,0.7); font-size: 14px; transition: color 0.2s, transform 0.2s; }
+.post-card:hover .card-arrow { color: #C084FC; transform: translateX(3px); }
+
+/* BOTTOM CTA */
+.blog-cta { max-width: 1020px; margin: 0 auto; padding: 0 40px 80px; }
+.blog-cta-inner { padding: 52px 48px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; text-align: center; position: relative; overflow: hidden; }
+.blog-cta-inner::before { content: ''; position: absolute; top: -80px; right: -80px; width: 280px; height: 280px; background: radial-gradient(circle, rgba(217,70,168,0.12), transparent 70%); }
+.blog-cta-inner::after { content: ''; position: absolute; bottom: -80px; left: -60px; width: 260px; height: 260px; background: radial-gradient(circle, rgba(123,47,190,0.15), transparent 70%); }
+.cta-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #C084FC; margin-bottom: 14px; position: relative; z-index: 1; }
+.blog-cta-inner h2 { font-size: 32px; font-weight: 700; color: var(--white); margin-bottom: 14px; letter-spacing: -0.01em; position: relative; z-index: 1; line-height: 1.2; }
+.blog-cta-inner p { font-size: 16px; color: var(--muted); margin-bottom: 32px; max-width: 440px; margin-left: auto; margin-right: auto; position: relative; z-index: 1; }
+.cta-btn { display: inline-block; background: var(--gradient); color: white; text-decoration: none; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 8px; position: relative; z-index: 1; transition: opacity 0.2s, transform 0.2s; }
+.cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+/* FOOTER */
+footer { border-top: 1px solid var(--card-border); background: var(--card-bg); padding: 56px 48px 32px; }
+.footer-grid { max-width: 1020px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-brand p { font-size: 13px; color: var(--muted); line-height: 1.65; max-width: 220px; margin-top: 14px; }
+.footer-col-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { max-width: 1020px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--card-border); }
+.footer-bottom p { font-size: 12px; color: var(--muted); }
+.footer-tagline { font-size: 12px; color: var(--muted); font-style: italic; }
+
+@media (max-width: 820px) {
+  nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+  .blog-hero, .featured-wrap, .grid-wrap, .blog-cta { padding-left: 20px; padding-right: 20px; }
+  .featured-card { grid-template-columns: 1fr; }
+  .featured-img { min-height: 180px; }
+  .posts-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+@media (max-width: 560px) {
+  .posts-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .blog-cta-inner { padding: 36px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo-wrap">
+    <span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/services">Services</a></li>
+    <li><a href="/about">Our Company</a></li>
+    <li><a href="/case-studies">Case Studies</a></li>
+    <li><a href="/blog" class="current">Blog</a></li>
+    <li><a href="/contact" class="nav-cta">Book a Call &rarr;</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <p class="hero-eyebrow">Insights</p>
+  <h1>Strategies That Actually<br/><span class="gradient-word">Move the Needle</span></h1>
+  <p>Insights on operations, automation, marketing, and building a business that actually runs. New posts every Sunday.</p>
+  <div class="filter-wrap">
+    <button class="filter-btn active" onclick="filterPosts('all', this)">All Posts</button>
+    <button class="filter-btn" onclick="filterPosts('crm', this)">CRM &amp; Systems</button>
+    <button class="filter-btn" onclick="filterPosts('automation', this)">Automation</button>
+    <button class="filter-btn" onclick="filterPosts('growth', this)">Growth Marketing</button>
+    <button class="filter-btn" onclick="filterPosts('strategy', this)">Strategy</button>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="featured-wrap">
+  <p class="section-label">Featured Post</p>
+  <a href="/blog/healthcare-ads-not-converting" class="featured-card" data-category="growth">
+    <div class="featured-img">
+      <div class="featured-img-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3z"/><path d="M3 10h18v4H3z"/><path d="M3 17h18v4H3z"/><circle cx="7" cy="5" r="1" fill="white"/><circle cx="7" cy="12" r="1" fill="white"/><circle cx="7" cy="19" r="1" fill="white"/></svg>
+      </div>
+    </div>
+    <div class="featured-content">
+      <span class="post-tag">Growth Marketing</span>
+      <h2>Your Practice Is Running Ads. Your Backend Is Losing the Patients.</h2>
+      <p>You checked the ad dashboard. Click-through rate looks solid. Cost per lead isn't bad. So why aren't new patients showing up? The answer usually has nothing to do with your ads.</p>
+      <div class="post-meta-sm">
+        <span>InkLock Team</span>
+        <span class="meta-dot"></span>
+        <span>Mar 25, 2026</span>
+        <span class="meta-dot"></span>
+        <span>8 min read</span>
+      </div>
+      <span class="read-more">Read More &rarr;</span>
+    </div>
+  </a>
+</section>
+
+<!-- POST GRID -->
+<section class="grid-wrap">
+  <p class="section-label">All Posts</p>
+  <div class="posts-grid" id="posts-grid">
+
+    <a href="/blog/your-crm-isnt-broken" class="post-card" data-category="crm">
+      <div class="card-img">
+        <div class="card-img-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">CRM &amp; Systems</span>
+        <h3>Your CRM Isn't Broken. You Just Never Set It Up Right.</h3>
+        <p>Most businesses blame their CRM when leads slip through the cracks. The real problem? Nobody built the pipeline or follow-up sequences properly.</p>
+        <div class="card-footer">
+          <span class="card-date">Mar 15, 2026</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/blog/90-day-rule" class="post-card" data-category="strategy">
+      <div class="card-img blue">
+        <div class="card-img-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-4"/></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag blue">Strategy</span>
+        <h3>The 90-Day Rule: Why Most Marketing Fails Before It Starts</h3>
+        <p>You launched ads on Monday and want leads by Friday. Here's why 90 days is the real benchmark.</p>
+        <div class="card-footer">
+          <span class="card-date">Mar 8, 2026</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/blog/stop-automating-chaos" class="post-card" data-category="automation">
+      <div class="card-img teal">
+        <div class="card-img-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag teal">Automation</span>
+        <h3>Stop Automating Chaos: Fix the Process First</h3>
+        <p>Automation doesn't fix a broken workflow. It just breaks it faster. Here's the question to ask first.</p>
+        <div class="card-footer">
+          <span class="card-date">Mar 1, 2026</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/blog/what-we-look-at-before-running-ads" class="post-card" data-category="growth">
+      <div class="card-img pink">
+        <div class="card-img-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag pink">Growth Marketing</span>
+        <h3>What We Actually Look at Before Running a Single Ad</h3>
+        <p>Most agencies start with the creative. We start with the backend. If your CRM can't convert, ads are wasted.</p>
+        <div class="card-footer">
+          <span class="card-date">Feb 22, 2026</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/blog/break-up-with-broken-systems" class="post-card" data-category="crm">
+      <div class="card-img coral">
+        <div class="card-img-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">CRM &amp; Systems</span>
+        <h3>Break Up With Your Broken Systems</h3>
+        <p>Happy Valentine's Day. This is your sign to stop tolerating tools that work against you.</p>
+        <div class="card-footer">
+          <span class="card-date">Feb 15, 2026</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/blog/5-zapier-automations" class="post-card" data-category="automation">
+      <div class="card-img amber">
+        <div class="card-img-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag teal">Automation</span>
+        <h3>5 Zapier Automations Every Small Business Owner Needs</h3>
+        <p>You don't need 50 automations. You need five good ones.</p>
+        <div class="card-footer">
+          <span class="card-date">Feb 9, 2026</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="blog-cta">
+  <div class="blog-cta-inner">
+    <p class="cta-eyebrow">No pitch. Just a real conversation.</p>
+    <h2>Want to talk about what<br/>you just read?</h2>
+    <p>Book a free discovery call and we'll show you exactly what's not working and how to fix it.</p>
+    <a href="/contact" class="cta-btn">Book a Free Discovery Call &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo-wrap">
+        <span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span>
+      </a>
+      <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-label">Services</p>
+      <ul>
+        <li><a href="#">Data Analytics</a></li>
+        <li><a href="#">Growth Marketing</a></li>
+        <li><a href="#">Automation &amp; Workflows</a></li>
+        <li><a href="#">CRM &amp; Systems</a></li>
+        <li><a href="#">Marketing Creatives</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-label">Company</p>
+      <ul>
+        <li><a href="/about">Our Company</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-label">Contact</p>
+      <ul>
+        <li><a href="mailto:inklockautomation@gmail.com">inklockautomation@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 InkLock. All rights reserved.</p>
+    <p class="footer-tagline">Lock in your systems. Unlock your marketing.</p>
+  </div>
+</footer>
+
+<script>
+function filterPosts(category, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.post-card').forEach(card => {
+    const show = category === 'all' || card.dataset.category === category;
+    card.style.display = show ? 'flex' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>
