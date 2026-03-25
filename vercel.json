@@ -18,6 +18,10 @@
   "functions": {
     "api/contact.js": {
       "includeFiles": "api/**"
+      {
+  "cleanUrls": true,
+  "trailingSlash": false
+}
     }
   }
 }
