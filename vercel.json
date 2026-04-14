@@ -1,27 +1,27 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
-    {"source": "/services", "destination": "/services.html"},
-    {"source": "/about", "destination": "/about.html"},
-    {"source": "/case-studies", "destination": "/case-studies.html"},
-    {"source": "/blog", "destination": "/blog.html"},
-    {"source": "/contact", "destination": "/contact.html"},
-    {"source": "/onboarding", "destination": "/onboarding.html"},
-    {"source": "/blog/your-crm-isnt-broken", "destination": "/blog/your-crm-isnt-broken.html"},
-    {"source": "/blog/the-90-day-rule", "destination": "/blog/the-90-day-rule.html"},
-    {"source": "/blog/stop-automating-chaos", "destination": "/blog/stop-automating-chaos.html"},
-    {"source": "/blog/what-we-look-at-before-running-ads", "destination": "/blog/what-we-look-at-before-running-ads.html"},
-    {"source": "/blog/break-up-with-your-broken-systems", "destination": "/blog/break-up-with-your-broken-systems.html"},
-    {"source": "/blog/5-zapier-automations", "destination": "/blog/5-zapier-automations.html"},
-    {"source": "/blog/why-data-driven-marketing", "destination": "/blog/why-data-driven-marketing.html"},
-    {"source": "/blog/instagram-isnt-dead", "destination": "/blog/instagram-isnt-dead.html"}
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/case-studies", "destination": "/case-studies.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/onboarding", "destination": "/onboarding.html" },
+    { "source": "/build", "destination": "/build.html" },
+    { "source": "/blog/your-crm-isnt-broken", "destination": "/blog/your-crm-isnt-broken.html" },
+    { "source": "/blog/the-90-day-rule", "destination": "/blog/the-90-day-rule.html" },
+    { "source": "/blog/stop-automating-chaos", "destination": "/blog/stop-automating-chaos.html" },
+    { "source": "/blog/what-we-look-at-before-running-ads", "destination": "/blog/what-we-look-at-before-running-ads.html" },
+    { "source": "/blog/break-up-with-your-broken-systems", "destination": "/blog/break-up-with-your-broken-systems.html" },
+    { "source": "/blog/5-zapier-automations", "destination": "/blog/5-zapier-automations.html" },
+    { "source": "/blog/why-data-driven-marketing", "destination": "/blog/why-data-driven-marketing.html" },
+    { "source": "/blog/instagram-isnt-dead", "destination": "/blog/instagram-isnt-dead.html" },
+    { "source": "/blog/healthcare-ads-not-converting", "destination": "/blog/healthcare-ads-not-converting.html" }
   ],
   "functions": {
     "api/contact.js": {
       "includeFiles": "api/**"
-      {
-  "cleanUrls": true,
-  "trailingSlash": false
-}
     }
   }
 }
