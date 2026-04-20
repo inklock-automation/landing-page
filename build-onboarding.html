@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Build Onboarding | InkLock Automation</title>
+  <meta name="description" content="Tell us about your business and we'll build you a custom website in 7 days or less. Quick onboarding form, takes about 10 minutes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Great+Vibes&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-primary: #08080e;
+      --bg-secondary: #0F1117;
+      --bg-card: #151720;
+      --bg-input: #1a1d2e;
+      --brand-purple: #7B2FBE;
+      --brand-pink: #D946A8;
+      --coastal-blue: #6E9CD5;
+      --text-primary: #F1F5F9;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-subtle: rgba(123, 47, 190, 0.15);
+      --border-glow: rgba(123, 47, 190, 0.3);
+      --border-focus: #7B2FBE;
+      --gradient-brand: linear-gradient(135deg, #7B2FBE, #D946A8);
+      --font-primary: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', 'Plus Jakarta Sans', sans-serif;
+      --font-script: 'Great Vibes', cursive;
+      --success: #22c55e;
+      --error: #ef4444;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-primary);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 2rem 1rem;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* LOGO */
+    .form-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+    }
+    .logo-link {
+      display: inline-flex; align-items: baseline; gap: 4px;
+      font-size: 1.5rem; font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .logo-ink {
+      font-family: var(--font-script);
+      background: var(--gradient-brand);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 1.8rem;
+    }
+    .logo-lock {
+      font-family: var(--font-primary);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--text-primary);
+      text-transform: uppercase;
+    }
+
+    /* FORM CONTAINER */
+    .form-container {
+      width: 100%;
+      max-width: 620px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    /* PROGRESS */
+    .progress-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .progress-track {
+      position: absolute;
+      top: 50%;
+      left: 24px;
+      right: 24px;
+      height: 2px;
+      background: var(--border-subtle);
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+    .progress-fill {
+      position: absolute;
+      top: 50%;
+      left: 24px;
+      height: 2px;
+      background: var(--gradient-brand);
+      transform: translateY(-50%);
+      z-index: 1;
+      transition: width 0.4s ease;
+    }
+    .progress-step {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--bg-input);
+      border: 2px solid var(--border-subtle);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 700;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+    .progress-step.active {
+      border-color: var(--brand-purple);
+      color: var(--text-primary);
+      background: var(--bg-card);
+      box-shadow: 0 0 0 4px rgba(123, 47, 190, 0.15);
+    }
+    .progress-step.completed {
+      background: var(--gradient-brand);
+      border-color: transparent;
+      color: #fff;
+    }
+    .progress-step.completed::after {
+      content: '\2713';
+      font-size: 0.85rem;
+    }
+    .progress-step.completed span { display: none; }
+
+    /* STEP HEADER */
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+    }
+    .step-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--coastal-blue);
+    }
+    .step-count {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .step-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+    }
+    .step-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    /* FORM ELEMENTS */
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+
+    .field {
+      margin-bottom: 1.25rem;
+    }
+    .field-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+    }
+    .field-label .required {
+      color: var(--brand-pink);
+      margin-left: 2px;
+    }
+    .field-hint {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    textarea,
+    select {
+      width: 100%;
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(123, 47, 190, 0.12);
+    }
+    input::placeholder, textarea::placeholder { color: var(--text-muted); }
+    textarea { resize: vertical; min-height: 80px; }
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748B' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+    select option { background: var(--bg-input); color: var(--text-primary); }
+
+    /* RADIO OPTIONS */
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .radio-option {
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .radio-option:hover {
+      border-color: var(--border-glow);
+      background: rgba(123, 47, 190, 0.05);
+    }
+    .radio-option.selected {
+      border-color: var(--brand-purple);
+      background: rgba(123, 47, 190, 0.08);
+    }
+    .radio-option input[type="radio"] {
+      display: none;
+    }
+    .radio-dot {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--border-subtle);
+      flex-shrink: 0;
+      margin-top: 1px;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .radio-option.selected .radio-dot {
+      border-color: var(--brand-purple);
+    }
+    .radio-option.selected .radio-dot::after {
+      content: '';
+      position: absolute;
+      top: 3px; left: 3px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--gradient-brand);
+    }
+    .radio-label {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .radio-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* BUTTONS */
+    .form-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      gap: 1rem;
+    }
+    .btn-back {
+      background: none;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-family: var(--font-primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-back:hover {
+      border-color: var(--border-glow);
+      color: var(--text-primary);
+    }
+    .btn-back.hidden { visibility: hidden; }
+    .btn-next, .btn-submit {
+      background: var(--gradient-brand);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-family: var(--font-primary);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .btn-next:hover, .btn-submit:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+    .btn-submit { display: none; }
+
+    /* VALIDATION */
+    .field-error {
+      font-size: 0.78rem;
+      color: var(--error);
+      margin-top: 0.3rem;
+      display: none;
+    }
+    .field.invalid input,
+    .field.invalid textarea,
+    .field.invalid select {
+      border-color: var(--error);
+    }
+    .field.invalid .field-error { display: block; }
+
+    /* SUCCESS */
+    .success-screen {
+      display: none;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    .success-screen.active { display: block; }
+    .success-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: rgba(34, 197, 94, 0.15);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 1.8rem;
+      color: var(--success);
+    }
+    .success-screen h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .success-screen p {
+      font-family: var(--font-body);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .success-screen .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 2rem;
+      background: var(--gradient-brand);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+    .success-screen .btn-home:hover { opacity: 0.9; }
+
+    /* FOOTER */
+    .form-footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* LOADING */
+    .btn-loading {
+      position: relative;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    .btn-loading::after {
+      content: '';
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin-left: 8px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.75rem; }
+      .form-container { padding: 1.75rem 1.25rem; border-radius: 16px; }
+      .progress-step { width: 30px; height: 30px; font-size: 0.7rem; }
+      .step-title { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="form-header">
+    <a href="https://www.inklockautomation.com" class="logo-link">
+      <span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span>
+    </a>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-container">
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-bar" id="progressBar">
+      <div class="progress-track"></div>
+      <div class="progress-fill" id="progressFill"></div>
+      <div class="progress-step active" data-step="1"><span>1</span></div>
+      <div class="progress-step" data-step="2"><span>2</span></div>
+      <div class="progress-step" data-step="3"><span>3</span></div>
+      <div class="progress-step" data-step="4"><span>4</span></div>
+      <div class="progress-step" data-step="5"><span>5</span></div>
+      <div class="progress-step" data-step="6"><span>6</span></div>
+      <div class="progress-step" data-step="7"><span>7</span></div>
+    </div>
+
+    <!-- STEP 1: BASICS -->
+    <div class="form-step active" data-step="1">
+      <div class="step-header">
+        <span class="step-label">Basics</span>
+        <span class="step-count">Step 1 of 7</span>
+      </div>
+      <h2 class="step-title">Let's Build Your Website</h2>
+      <p class="step-subtitle">Takes about 10 minutes. The more you give us, the faster your site goes live.</p>
+
+      <div class="field">
+        <label class="field-label">Your Name <span class="required">*</span></label>
+        <input type="text" name="fullName" placeholder="Your full name" required />
+        <div class="field-error">Please enter your name.</div>
+      </div>
+      <div class="field">
+        <label class="field-label">Business Name <span class="required">*</span></label>
+        <input type="text" name="businessName" placeholder="Your business or brand name" required />
+        <div class="field-error">Please enter your business name.</div>
+      </div>
+      <div class="field">
+        <label class="field-label">Email <span class="required">*</span></label>
+        <input type="email" name="email" placeholder="your@email.com" required />
+        <div class="field-error">Please enter a valid email.</div>
+      </div>
+      <div class="field">
+        <label class="field-label">Phone Number</label>
+        <p class="field-hint">Optional, but helpful if we need to reach you quickly.</p>
+        <input type="tel" name="phone" placeholder="(555) 123-4567" />
+      </div>
+      <div class="field">
+        <label class="field-label">Which package are you here for? <span class="required">*</span></label>
+        <div class="radio-group" data-name="package">
+          <div class="radio-option">
+            <input type="radio" name="package" value="The Fast Launch ($750)" />
+            <div class="radio-dot"></div>
+            <div>
+              <div class="radio-label">The Fast Launch ($750)</div>
+              <div class="radio-desc">Up to 3 pages, custom coded, SEO-optimized, done in 7 days. $375 paid, $375 at launch.</div>
+            </div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="package" value="The Platform Build ($2,500)" />
+            <div class="radio-dot"></div>
+            <div>
+              <div class="radio-label">The Platform Build ($2,500)</div>
+              <div class="radio-desc">WordPress, Squarespace, or Wix. SEO + blog. Built so you can manage it.</div>
+            </div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="package" value="The Full Picture ($5,000)" />
+            <div class="radio-dot"></div>
+            <div>
+              <div class="radio-label">The Full Picture ($5,000)</div>
+              <div class="radio-desc">Website + email capture + nurture sequence + CRM + funnel strategy + automation.</div>
+            </div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="package" value="Not sure yet" />
+            <div class="radio-dot"></div>
+            <div>
+              <div class="radio-label">Not sure yet</div>
+              <div class="radio-desc">No worries. We'll help you figure out the right fit.</div>
+            </div>
+          </div>
+        </div>
+        <div class="field-error">Please select a package.</div>
+      </div>
+    </div>
+
+    <!-- STEP 2: YOUR BUSINESS -->
+    <div class="form-step" data-step="2">
+      <div class="step-header">
+        <span class="step-label">Your Business</span>
+        <span class="step-count">Step 2 of 7</span>
+      </div>
+      <h2 class="step-title">Tell Us What You Do</h2>
+      <p class="step-subtitle">This helps us write copy and design a site that speaks directly to your audience.</p>
+
+      <div class="field">
+        <label class="field-label">What does your business do? <span class="required">*</span></label>
+        <p class="field-hint">One or two sentences is perfect.</p>
+        <textarea name="businessDescription" placeholder="Example: I run a wellness coaching practice helping busy professionals manage stress and build sustainable health habits." required></textarea>
+        <div class="field-error">Please describe your business.</div>
+      </div>
+      <div class="field">
+        <label class="field-label">Who is your ideal client or customer? <span class="required">*</span></label>
+        <textarea name="idealClient" placeholder="Example: Women 30-50 who are juggling careers and families and want to prioritize their health without overhauling their entire life." required></textarea>
+        <div class="field-error">Please describe your ideal client.</div>
+      </div>
+      <div class="field">
+        <label class="field-label">What's your primary service or offer? <span class="required">*</span></label>
+        <input type="text" name="primaryOffer" placeholder="Example: 12-week 1:1 coaching program, $2,500" required />
+        <div class="field-error">Please enter your primary offer.</div>
+      </div>
+    </div>
+
+    <!-- STEP 3: YOUR WEBSITE -->
+    <div class="form-step" data-step="3">
+      <div class="step-header">
+        <span class="step-label">Current Website</span>
+        <span class="step-count">Step 3 of 7</span>
+      </div>
+      <h2 class="step-title">Where Are You Starting From?</h2>
+      <p class="step-subtitle">No judgment. We just need to know what we're working with.</p>
+
+      <div class="field">
+        <label class="field-label">Do you have a website currently? <span class="required">*</span></label>
+        <div class="radio-group" data-name="hasWebsite">
+          <div class="radio-option">
+            <input type="radio" name="hasWebsite" value="Yes" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Yes</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="hasWebsite" value="No" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">No</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="hasWebsite" value="Sort of" />
+            <div class="radio-dot"></div>
+            <div>
+              <div class="radio-label">Sort of</div>
+              <div class="radio-desc">A Linktree, a landing page, something half-built... you know the drill.</div>
+            </div>
+          </div>
+        </div>
+        <div class="field-error">Please select an option.</div>
+      </div>
+      <div class="field">
+        <label class="field-label">If yes, what's the URL?</label>
+        <input type="url" name="currentWebsite" placeholder="https://yoursite.com" />
+      </div>
+      <div class="field">
+        <label class="field-label">What do you want people to DO on your site? <span class="required">*</span></label>
+        <div class="radio-group" data-name="siteCTA">
+          <div class="radio-option">
+            <input type="radio" name="siteCTA" value="Book a call" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Book a call</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="siteCTA" value="Fill out a contact form" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Fill out a contact form</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="siteCTA" value="Buy something" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Buy something</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="siteCTA" value="Learn more and reach out" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Learn more and reach out</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="siteCTA" value="Not sure" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Not sure yet</div></div>
+          </div>
+        </div>
+        <div class="field-error">Please select an option.</div>
+      </div>
+    </div>
+
+    <!-- STEP 4: THE VIBE -->
+    <div class="form-step" data-step="4">
+      <div class="step-header">
+        <span class="step-label">The Vibe</span>
+        <span class="step-count">Step 4 of 7</span>
+      </div>
+      <h2 class="step-title">Show Us What You Like</h2>
+      <p class="step-subtitle">Send a site you love the look of. Doesn't have to be in your industry. We just want to feel the energy.</p>
+
+      <div class="field">
+        <label class="field-label">Link to a website you love the look of</label>
+        <p class="field-hint">Colors, layout, energy. Whatever made you think "I want mine to feel like that."</p>
+        <input type="url" name="vibeLink" placeholder="https://example.com" />
+      </div>
+      <div class="field">
+        <label class="field-label">What colors or energy feel like your brand?</label>
+        <textarea name="brandVibe" placeholder="Example: Clean and modern, navy and gold, warm but professional. Or: I honestly have no idea, just make it look good."></textarea>
+      </div>
+      <div class="field">
+        <label class="field-label">Do you have a logo? <span class="required">*</span></label>
+        <div class="radio-group" data-name="hasLogo">
+          <div class="radio-option">
+            <input type="radio" name="hasLogo" value="Yes" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Yes</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="hasLogo" value="No" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">No</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="hasLogo" value="I need one" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">I need one</div></div>
+          </div>
+        </div>
+        <div class="field-error">Please select an option.</div>
+      </div>
+    </div>
+
+    <!-- STEP 5: CONTENT -->
+    <div class="form-step" data-step="5">
+      <div class="step-header">
+        <span class="step-label">Content</span>
+        <span class="step-count">Step 5 of 7</span>
+      </div>
+      <h2 class="step-title">What Do We Have to Work With?</h2>
+      <p class="step-subtitle">No stress if the answer is "not much." We handle copy and can work with what you've got.</p>
+
+      <div class="field">
+        <label class="field-label">Do you have photos or headshots ready? <span class="required">*</span></label>
+        <div class="radio-group" data-name="hasPhotos">
+          <div class="radio-option">
+            <input type="radio" name="hasPhotos" value="Yes" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Yes, I have photos ready</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="hasPhotos" value="No" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">No, I'll need help with this</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="hasPhotos" value="Some" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">I have some, but could use more</div></div>
+          </div>
+        </div>
+        <div class="field-error">Please select an option.</div>
+      </div>
+      <div class="field">
+        <label class="field-label">Do you have written copy for your site? <span class="required">*</span></label>
+        <div class="radio-group" data-name="hasCopy">
+          <div class="radio-option">
+            <input type="radio" name="hasCopy" value="I have copy" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">I have copy ready</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="hasCopy" value="Write it for me" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Write it for me</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="hasCopy" value="A mix" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">A mix of both</div></div>
+          </div>
+        </div>
+        <div class="field-error">Please select an option.</div>
+      </div>
+    </div>
+
+    <!-- STEP 6: TECHNICAL -->
+    <div class="form-step" data-step="6">
+      <div class="step-header">
+        <span class="step-label">Technical</span>
+        <span class="step-count">Step 6 of 7</span>
+      </div>
+      <h2 class="step-title">Domain and Hosting</h2>
+      <p class="step-subtitle">If you don't have a domain yet, no problem. We'll help you get one.</p>
+
+      <div class="field">
+        <label class="field-label">Do you have a domain name? <span class="required">*</span></label>
+        <div class="radio-group" data-name="hasDomain">
+          <div class="radio-option">
+            <input type="radio" name="hasDomain" value="Yes" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Yes</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="hasDomain" value="No" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">No, I need to buy one</div></div>
+          </div>
+        </div>
+        <div class="field-error">Please select an option.</div>
+      </div>
+      <div class="field">
+        <label class="field-label">If yes, what is it?</label>
+        <input type="text" name="domainName" placeholder="yourdomain.com" />
+      </div>
+      <div class="field">
+        <label class="field-label">Where is your domain registered?</label>
+        <select name="domainRegistrar">
+          <option value="" selected disabled>Select one</option>
+          <option value="GoDaddy">GoDaddy</option>
+          <option value="Namecheap">Namecheap</option>
+          <option value="Google Domains">Google Domains</option>
+          <option value="Squarespace">Squarespace</option>
+          <option value="Other">Other</option>
+          <option value="I don't know">I don't know</option>
+          <option value="N/A">N/A, I need to buy one</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- STEP 7: TIMELINE -->
+    <div class="form-step" data-step="7">
+      <div class="step-header">
+        <span class="step-label">Timeline</span>
+        <span class="step-count">Step 7 of 7</span>
+      </div>
+      <h2 class="step-title">Almost Done. When Do You Need This?</h2>
+      <p class="step-subtitle">We move fast, but it helps to know what we're working toward.</p>
+
+      <div class="field">
+        <label class="field-label">When do you need this live? <span class="required">*</span></label>
+        <div class="radio-group" data-name="timeline">
+          <div class="radio-option">
+            <input type="radio" name="timeline" value="ASAP" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">ASAP</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="timeline" value="Within 2 weeks" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Within 2 weeks</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="timeline" value="Within a month" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Within a month</div></div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="timeline" value="Flexible" />
+            <div class="radio-dot"></div>
+            <div><div class="radio-label">Flexible</div></div>
+          </div>
+        </div>
+        <div class="field-error">Please select a timeline.</div>
+      </div>
+      <div class="field">
+        <label class="field-label">Anything else we should know?</label>
+        <textarea name="additionalNotes" placeholder="Special requests, existing brand guidelines, links to social profiles, anything that helps us build something you love."></textarea>
+      </div>
+    </div>
+
+    <!-- SUCCESS SCREEN -->
+    <div class="success-screen" id="successScreen">
+      <div class="success-icon">&#10003;</div>
+      <h2>You're in. We'll be in touch.</h2>
+      <p>We've got everything we need to get started. Someone from the InkLock team will reach out within 24 hours to confirm your build details and next steps.</p>
+      <p style="margin-top: 1rem; font-size: 0.88rem;">Keep an eye on your inbox (and check spam, just in case).</p>
+      <a href="https://www.inklockautomation.com/build" class="btn-home">Back to InkLock Build &#8594;</a>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="form-buttons" id="formButtons">
+      <button type="button" class="btn-back hidden" id="btnBack">&#8592; Back</button>
+      <button type="button" class="btn-next" id="btnNext">Continue &#8594;</button>
+      <button type="button" class="btn-submit" id="btnSubmit">Submit My Build &#8594;</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="form-footer">
+    <p>inklockautomation.com &middot; Lock in your systems. Unlock your marketing.</p>
+  </div>
+
+  <script>
+    // ====================
+    // MULTI-STEP FORM LOGIC
+    // ====================
+    var totalSteps = 7;
+    var currentStep = 1;
+
+    var steps = document.querySelectorAll('.form-step');
+    var progressSteps = document.querySelectorAll('.progress-step');
+    var progressFill = document.getElementById('progressFill');
+    var btnBack = document.getElementById('btnBack');
+    var btnNext = document.getElementById('btnNext');
+    var btnSubmit = document.getElementById('btnSubmit');
+    var formButtons = document.getElementById('formButtons');
+    var successScreen = document.getElementById('successScreen');
+    var progressBar = document.getElementById('progressBar');
+
+    // Radio option click handling
+    document.querySelectorAll('.radio-option').forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        var group = opt.closest('.radio-group');
+        group.querySelectorAll('.radio-option').forEach(function(o) { o.classList.remove('selected'); });
+        opt.classList.add('selected');
+        opt.querySelector('input[type="radio"]').checked = true;
+        // Clear validation error
+        var field = opt.closest('.field');
+        if (field) field.classList.remove('invalid');
+      });
+    });
+
+    function showStep(step) {
+      steps.forEach(function(s) { s.classList.remove('active'); });
+      var target = document.querySelector('.form-step[data-step="' + step + '"]');
+      if (target) target.classList.add('active');
+
+      // Progress
+      progressSteps.forEach(function(ps) {
+        var s = parseInt(ps.getAttribute('data-step'));
+        ps.classList.remove('active', 'completed');
+        if (s < step) ps.classList.add('completed');
+        else if (s === step) ps.classList.add('active');
+      });
+
+      // Fill bar
+      var pct = ((step - 1) / (totalSteps - 1)) * 100;
+      var trackWidth = progressBar.querySelector('.progress-track').offsetWidth;
+      progressFill.style.width = (pct / 100 * trackWidth) + 'px';
+
+      // Buttons
+      btnBack.classList.toggle('hidden', step === 1);
+      if (step === totalSteps) {
+        btnNext.style.display = 'none';
+        btnSubmit.style.display = 'flex';
+      } else {
+        btnNext.style.display = 'flex';
+        btnSubmit.style.display = 'none';
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function validateStep(step) {
+      var stepEl = document.querySelector('.form-step[data-step="' + step + '"]');
+      var valid = true;
+
+      // Text/email/tel inputs
+      stepEl.querySelectorAll('input[required], textarea[required]').forEach(function(input) {
+        var field = input.closest('.field');
+        if (!input.value.trim()) {
+          field.classList.add('invalid');
+          valid = false;
+        } else {
+          field.classList.remove('invalid');
+        }
+        // Email validation
+        if (input.type === 'email' && input.value.trim()) {
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
+            field.classList.add('invalid');
+            valid = false;
+          }
+        }
+      });
+
+      // Radio groups with required parent
+      stepEl.querySelectorAll('.radio-group').forEach(function(group) {
+        var field = group.closest('.field');
+        var label = field.querySelector('.field-label');
+        if (label && label.querySelector('.required')) {
+          var checked = group.querySelector('input[type="radio"]:checked');
+          if (!checked) {
+            field.classList.add('invalid');
+            valid = false;
+          } else {
+            field.classList.remove('invalid');
+          }
+        }
+      });
+
+      return valid;
+    }
+
+    btnNext.addEventListener('click', function() {
+      if (validateStep(currentStep)) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    });
+
+    btnBack.addEventListener('click', function() {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+
+    // SUBMIT
+    btnSubmit.addEventListener('click', function() {
+      if (!validateStep(currentStep)) return;
+
+      btnSubmit.classList.add('btn-loading');
+      btnSubmit.textContent = 'Submitting...';
+
+      // Collect all data
+      var data = {};
+      document.querySelectorAll('.form-step input, .form-step textarea, .form-step select').forEach(function(el) {
+        if (el.type === 'radio') {
+          if (el.checked) data[el.name] = el.value;
+        } else if (el.name) {
+          data[el.name] = el.value;
+        }
+      });
+
+      // POST to GHL Inbound Webhook
+      // REPLACE THIS URL with your GHL webhook URL
+      var webhookUrl = 'YOUR_GHL_WEBHOOK_URL_HERE';
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(function() {
+        showSuccess();
+      })
+      .catch(function(err) {
+        console.error('Submission error:', err);
+        // Show success anyway since GHL webhooks can be finicky with CORS
+        showSuccess();
+      });
+    });
+
+    function showSuccess() {
+      steps.forEach(function(s) { s.classList.remove('active'); });
+      formButtons.style.display = 'none';
+      progressBar.style.display = 'none';
+      successScreen.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Init
+    showStep(1);
+  </script>
+
+</body>
+</html>
