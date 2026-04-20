@@ -397,33 +397,10 @@
       display: flex; flex-direction: column;
       gap: 6px; margin-bottom: 1rem;
     }
-    .form-group input {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 12px 16px;
-      color: var(--text-primary);
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      transition: border-color 0.2s;
+    .ghl-form-wrapper {
+      margin: 0 -0.5rem;
+      min-height: 519px;
     }
-    .form-group input:focus {
-      outline: none;
-      border-color: var(--brand-purple);
-    }
-    .form-group input::placeholder { color: var(--text-muted); }
-    .form-submit {
-      width: 100%;
-      background: var(--gradient-brand);
-      color: #fff; border: none;
-      padding: 14px; border-radius: 10px;
-      font-family: var(--font-primary);
-      font-weight: 700; font-size: 1rem;
-      cursor: pointer;
-      transition: opacity 0.2s, transform 0.2s;
-      margin-top: 0.5rem;
-    }
-    .form-submit:hover { opacity: 0.9; transform: translateY(-1px); }
     .form-disclaimer {
       font-size: 0.78rem;
       color: var(--text-muted);
@@ -1008,18 +985,25 @@
         <div class="lead-magnet-form">
           <h4>Download the free guide.</h4>
           <p class="form-note">Instant PDF. No spam. No 47-email nurture sequence. Just the stuff that matters.</p>
-          <form id="guideForm">
-            <div class="form-group">
-              <input type="text" name="firstName" placeholder="First name" required />
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Your best email" required />
-            </div>
-            <div class="form-group">
-              <input type="tel" name="phone" placeholder="Phone number (optional)" />
-            </div>
-            <button type="submit" class="form-submit">Send Me the Guide</button>
-          </form>
+          <div class="ghl-form-wrapper">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/ogTi8rm21vIwS6MxRZ7P"
+              style="width:100%;height:519px;border:none;border-radius:8px"
+              id="inline-ogTi8rm21vIwS6MxRZ7P"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Lead Magnet Form"
+              data-height="519"
+              data-layout-iframe-id="inline-ogTi8rm21vIwS6MxRZ7P"
+              data-form-id="ogTi8rm21vIwS6MxRZ7P"
+              title="Lead Magnet Form"
+            ></iframe>
+          </div>
           <p class="form-disclaimer">Unsubscribe anytime. We respect your inbox.</p>
         </div>
       </div>
@@ -1326,6 +1310,7 @@
       });
     });
   </script>
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 </body>
 </html>
