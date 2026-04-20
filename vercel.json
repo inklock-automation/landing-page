@@ -9,7 +9,7 @@
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/onboarding", "destination": "/onboarding.html" },
     { "source": "/build", "destination": "/build.html" },
-    { "source": "/build/thank-you", "destination": "/build-thank-you.html" }
+    { "source": "/build/thank-you", "destination": "/build/thank-you.html" }
     { "source": "/build/onboarding", "destination": "/build-onboarding.html" },
     { "source": "/blog/your-crm-isnt-broken", "destination": "/blog/your-crm-isnt-broken.html" },
     { "source": "/blog/the-90-day-rule", "destination": "/blog/the-90-day-rule.html" },
