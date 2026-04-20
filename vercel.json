@@ -18,6 +18,7 @@
     { "source": "/blog/why-data-driven-marketing", "destination": "/blog/why-data-driven-marketing.html" },
     { "source": "/blog/instagram-isnt-dead", "destination": "/blog/instagram-isnt-dead.html" },
     { "source": "/blog/healthcare-ads-not-converting", "destination": "/blog/healthcare-ads-not-converting.html" }
+    { "source": "/build/onboarding", "destination": "/build-onboarding.html" }
   ],
   "functions": {
     "api/contact.js": {
