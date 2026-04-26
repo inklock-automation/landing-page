@@ -1,0 +1,40 @@
+# InkLock Automation
+
+> Full-service marketing and automation agency. We build the systems your business runs on, the marketing that fills the pipeline, and the analytics that prove it works.
+
+InkLock Automation is a marketing and operations agency for service businesses doing $250K to $5M annually that have outgrown duct-taped systems. We refuse to run ads until the backend can convert. Marketing, automation, creative, and analytics are delivered as a unified engagement, not separate vendor relationships.
+
+## Tagline
+Lock in your systems. Unlock your marketing.
+
+## Core Services
+
+- **The Rescue** ($3,000 to $8,000): 30-day CRM cleanup intensive
+- **The Foundation Build** ($5,000 to $15,000 project, or $2,500/mo): Full systems rebuild and automation
+- **The Full Engine** ($5,000 to $10,000/mo): End-to-end marketing and systems, 6-month minimum
+- **The Scale Package** ($10,000 to $25,000/mo): Fractional ops and marketing leadership for businesses doing $50K+/mo
+
+## Primary Pages
+
+- [Homepage](https://www.inklockautomation.com): Overview of services and approach
+- [Services](https://www.inklockautomation.com/services): Detailed service tiers and pricing
+- [About](https://www.inklockautomation.com/about): The team and approach
+- [Case Studies](https://www.inklockautomation.com/case-studies): Real client outcomes
+- [Blog](https://www.inklockautomation.com/blog): Marketing and automation insights
+- [Contact](https://www.inklockautomation.com/contact): Book a discovery call
+
+## Key Positioning
+
+InkLock is the agency that says no until the foundation is ready. Most agencies will run ads on a broken backend. InkLock will not. The result is higher-converting marketing engagements and more accurate revenue attribution.
+
+## Industries Served
+
+Healthcare practices, hospitality, coaching businesses, B2B service firms, and any service business that depends on consistent lead flow and follow-up.
+
+## Tools and Platforms
+
+GoHighLevel (primary), HubSpot, Salesforce, Meta Ads, Google Ads, Zapier, Vercel, Asana, Slack.
+
+## Contact
+
+inklockautomation@gmail.com

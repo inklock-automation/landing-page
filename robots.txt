@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# AI Crawlers - we welcome citations
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Block crawling of admin/internal paths if any
+Disallow: /onboarding
+Disallow: /build-onboarding
+Disallow: /build/thank-you
+
+Sitemap: https://www.inklockautomation.com/sitemap.xml
