@@ -107,16 +107,29 @@
 
   <!-- TRUST BAND -->
   <section class="trust-band">
-    <div class="trust-inner">
-      <div class="trust-label">Built on</div>
-      <div class="trust-logos">
-        <span class="trust-logo">HubSpot</span>
-        <span class="trust-logo">GoHighLevel</span>
-        <span class="trust-logo">Zapier</span>
-        <span class="trust-logo">Meta Ads</span>
-        <span class="trust-logo">Google Analytics</span>
-        <span class="trust-logo">Make</span>
-        <span class="trust-logo">Claude</span>
+    <div class="trust-inner trust-stacked">
+      <div class="trust-row">
+        <div class="trust-label">Built on</div>
+        <div class="trust-logos">
+          <span class="trust-logo">HubSpot</span>
+          <span class="trust-logo">GoHighLevel</span>
+          <span class="trust-logo">Zapier</span>
+          <span class="trust-logo">Make</span>
+          <span class="trust-logo">Claude</span>
+          <span class="trust-logo">Google Analytics</span>
+        </div>
+      </div>
+      <div class="trust-row">
+        <div class="trust-label">Running ads in</div>
+        <div class="trust-logos">
+          <span class="trust-logo">Meta</span>
+          <span class="trust-logo">Google Ads</span>
+          <span class="trust-logo">YouTube</span>
+          <span class="trust-logo">TikTok</span>
+          <span class="trust-logo">LinkedIn</span>
+          <span class="trust-logo">Reddit</span>
+          <span class="trust-logo">Rumble</span>
+        </div>
       </div>
     </div>
   </section>
@@ -143,7 +156,7 @@
     <div class="s-pad centered" style="max-width:1000px">
       <div class="divider mx-auto"></div>
       <div class="eyebrow">The other side</div>
-      <h2 class="s-title" style="font-size:clamp(40px,5.8vw,76px);letter-spacing:-1.6px;line-height:1.02">What if your business<span class="accent"> just ran?</span></h2>
+      <h2 class="s-title" style="font-size:clamp(40px,5.8vw,76px);letter-spacing:-1.6px;line-height:1">What if your business just&hellip;<br><span class="accent">ran?</span></h2>
       <p class="s-sub mx-auto" style="margin-top:28px;font-size:20px;max-width:780px">You open your laptop Monday and everything's handled. The new client already has their welcome email, intake form, and onboarding packet. <em>Automatically.</em> The CRM is updated. The ads are optimized. The team knows what to do. Nothing fell through the cracks because the system caught it.</p>
       <p class="s-sub mx-auto" style="margin-top:18px;font-size:18px;font-weight:600;color:var(--txt);max-width:780px">We build the strategy, systems, automations, and marketing that take your business from barely holding it together to fully dialed in. Not in six months. Not after a 12-week onboarding. In 90 days or less.</p>
       <div style="margin-top:36px"><a href="/services" class="btn-primary">See how we help →</a></div>
@@ -155,7 +168,7 @@
     <div class="svc-inner centered">
       <div class="eyebrow">How we help</div>
       <h2 class="s-title">Our <span class="accent">service arsenal</span></h2>
-      <p class="s-sub mx-auto" style="margin-top:14px">From data-driven marketing to bulletproof automation, we provide end-to-end solutions that turn complexity into clarity.</p>
+      <p class="s-sub mx-auto" style="margin-top:14px">Six disciplines that usually live at five different agencies. We run them as one. Pick a tab to see what we do for clients every day.</p>
       <div class="svc-tabs" id="home-tabs">
         <button class="svc-tab active" onclick="switchTab(0)">Data analytics</button>
         <button class="svc-tab" onclick="switchTab(1)">Growth marketing</button>
@@ -180,7 +193,10 @@
             <div class="svc-tools" id="svc-specs"><strong>Specializations</strong><span class="svc-spec-tag">Trend analysis</span><span class="svc-spec-tag">Marketing performance</span><span class="svc-spec-tag">Decision intelligence</span><span class="svc-spec-tag">ROI measurement</span></div>
           </div>
           <p class="svc-best" id="svc-best"><strong>Best for:</strong> Businesses making marketing decisions on gut instead of real numbers.</p>
-          <div style="margin-top:22px"><a href="/contact" class="svc-cta">Get started →</a></div>
+          <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+            <a href="/contact" class="btn-primary" style="font-size:14px;padding:12px 24px">Book a discovery call →</a>
+            <a href="/services" class="btn-ghost">See all six disciplines →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -189,12 +205,33 @@
   <!-- EDITORIAL TESTIMONIAL SLAB -->
   <section class="proof-slab">
     <div class="proof-inner">
-      <div class="proof-eyebrow-col">In their words</div>
-      <div>
-        <p class="proof-quote">"Most agencies will happily set fire to your ad budget while your CRM is still held together with rubber bands. <em>We refuse.</em> We fix the backend first, then we run the marketing."</p>
-        <div class="proof-attribution">
-          <div class="proof-avatar">BB</div>
-          <div class="proof-meta"><strong>Brigitte Bentulan</strong><span>Growth Marketing Strategist, InkLock partner</span></div>
+      <div class="proof-eyebrow-col">In our words</div>
+      <div class="proof-rotor" id="proofRotor">
+        <article class="proof-slide is-active" data-idx="0">
+          <p class="proof-quote">"Most agencies will happily set fire to your ad budget while your CRM is still held together with rubber bands. <em>We refuse.</em> We fix the backend first, then we run the marketing."</p>
+          <div class="proof-attribution">
+            <div class="proof-avatar"><img src="/assets/team/brigitte.jpg" alt="Brigitte Bentulan" loading="lazy"></div>
+            <div class="proof-meta"><strong>Brigitte Bentulan</strong><span>Growth marketing &amp; paid media</span></div>
+          </div>
+        </article>
+        <article class="proof-slide" data-idx="1">
+          <p class="proof-quote">"Show me your dashboard and I'll show you exactly where the money's leaking. <em>Most owners are flying blind</em> and paying full price for the privilege. We turn the lights on."</p>
+          <div class="proof-attribution">
+            <div class="proof-avatar"><img src="/assets/team/alex.jpg" alt="Alex Zamora" loading="lazy"></div>
+            <div class="proof-meta"><strong>Alex Zamora</strong><span>Analytics &amp; strategy</span></div>
+          </div>
+        </article>
+        <article class="proof-slide" data-idx="2">
+          <p class="proof-quote">"Your tools should talk to each other so you don't have to. <em>If you're the integration,</em> you're the bottleneck. I build the backend so the business runs while you build the business."</p>
+          <div class="proof-attribution">
+            <div class="proof-avatar"><img src="/assets/team/erin.jpg" alt="Erin Cronin" loading="lazy"></div>
+            <div class="proof-meta"><strong>Erin Cronin</strong><span>Systems &amp; operations</span></div>
+          </div>
+        </article>
+        <div class="proof-dots" role="tablist" aria-label="Partner quotes">
+          <button class="proof-dot is-active" data-go="0" aria-label="Brigitte's quote"></button>
+          <button class="proof-dot" data-go="1" aria-label="Alex's quote"></button>
+          <button class="proof-dot" data-go="2" aria-label="Erin's quote"></button>
         </div>
       </div>
     </div>
@@ -216,7 +253,7 @@
       <div class="divider"></div>
       <div class="eyebrow">What to expect</div>
       <h2 class="s-title">From discovery to <span class="accent">deployment</span></h2>
-      <p class="s-sub mx-auto" style="margin-top:14px">A proven methodology. No mystery, no fluff, no 47-slide proposals.</p>
+      <p class="s-sub mx-auto" style="margin-top:14px">A proven methodology. No mystery, no 47-slide proposals, no consultant theater.</p>
       <div class="process-grid">
         <div class="p-card reveal"><div class="p-num">01</div><h4>Discovery call</h4><p>30 minutes. We discuss what's broken, what it's costing you, and whether we can fix it. No pitch, no pressure.</p></div>
         <div class="p-card reveal"><div class="p-num">02</div><h4>Custom strategy</h4><p>Within a week, you get a custom roadmap. What we'll build, what it'll cost, exactly when you'll see results.</p></div>
@@ -236,7 +273,7 @@
         <div class="ai-webinar">
           <div class="copy">
             <strong>Webinar coming soon: how we use AI to run three businesses at once</strong>
-            <span>Live walkthrough of the stack. Real automations. No fluff.</span>
+            <span>Live walkthrough of the stack. Real automations. Real numbers.</span>
           </div>
           <a href="/contact">Get on the list →</a>
         </div>
@@ -276,10 +313,10 @@
       <h2 class="s-title">Three disciplines. One team. <span class="accent">Zero gaps.</span></h2>
       <p class="s-sub mx-auto" style="margin-top:14px">Most agencies sell you one piece and leave you to figure out the rest. We don't.</p>
       <div class="why-grid">
-        <div class="why-card reveal"><div class="why-icon svg-tile"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><polyline points="14 7 21 7 21 14"/></svg></div><h4>Proven track record</h4><p>Measurable results and long-term partnerships across healthcare, real estate, and tech.</p><span class="why-badge">Driven by results</span></div>
-        <div class="why-card reveal"><div class="why-icon svg-tile"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></div><h4>Expert team</h4><p>Senior strategists, not junior account managers. You work directly with the people doing the work.</p><span class="why-badge">10+ years avg</span></div>
-        <div class="why-card reveal"><div class="why-icon svg-tile"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><h4>Systems that scale</h4><p>We don't just run campaigns. We build the infrastructure that lets everything else run itself.</p><span class="why-badge">Built to last</span></div>
-        <div class="why-card reveal"><div class="why-icon svg-tile"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div><h4>Full transparency</h4><p>Real-time reporting, clear communication, no black boxes. You always know exactly what's happening.</p><span class="why-badge">100% data-backed</span></div>
+        <div class="why-card reveal"><div class="why-icon svg-tile"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><polyline points="14 7 21 7 21 14"/></svg></div><h4>Real numbers, not vanity metrics</h4><p>$16.85M in client revenue. 200+ workflows shipped. Healthcare, real estate, hospitality, B2B service. We tie every dollar back to a result.</p><span class="why-badge">Receipts on request</span></div>
+        <div class="why-card reveal"><div class="why-icon svg-tile"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></div><h4>You talk to the operators</h4><p>The partner doing the strategy is the same person on your weekly call. No account managers reading scripts. No "I'll have to check with the team."</p><span class="why-badge">10+ years avg</span></div>
+        <div class="why-card reveal"><div class="why-icon svg-tile"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><h4>The system outlives the engagement</h4><p>We don't lock you into us. Every automation, dashboard, and workflow is yours when the contract ends. Built to keep working with or without us.</p><span class="why-badge">Built to outlast us</span></div>
+        <div class="why-card reveal"><div class="why-icon svg-tile"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div><h4>Always know what we're doing</h4><p>Real-time reporting in a dashboard you can open at 2am. Weekly Loom updates. No black boxes, no quarterly "trust us, it's working."</p><span class="why-badge">Open by default</span></div>
       </div>
     </div>
   </section>
@@ -291,10 +328,10 @@
         <div class="eyebrow">Why choose InkLock</div>
         <h2>The full engine, not a single part</h2>
         <ul>
-          <li><strong>Personalized strategy.</strong> Every engagement is custom-built for your business model, not a template.</li>
-          <li><strong>Full-stack execution.</strong> Marketing, automation, systems, and analytics under one roof.</li>
-          <li><strong>Transparent reporting.</strong> Clear, actionable insights with comprehensive performance reports.</li>
-          <li><strong>Dedicated team.</strong> Senior strategists committed to your success, not account managers reading scripts.</li>
+          <li><strong>One team, one bill, one accountability.</strong> Marketing, automation, creative, and analytics under one roof. No more vendor finger-pointing when the numbers don't move.</li>
+          <li><strong>Custom-built for your model.</strong> A roofing company doesn't run on a SaaS playbook. We dig into how your business actually works before we touch a single tool.</li>
+          <li><strong>Reporting you can read at 2am.</strong> Real-time dashboards, weekly Loom walkthroughs, and a Slack channel that's actually answered. You always know exactly what's happening.</li>
+          <li><strong>Senior operators only.</strong> The person you meet on the discovery call is the person doing the work. No account-manager middle layer reading scripts back at you.</li>
         </ul>
       </div>
       <div class="gcta-right">
@@ -368,6 +405,29 @@ document.querySelectorAll('.eml').forEach(function(el){
   a.style.textDecoration='none';
   el.appendChild(a);
 });
+
+// Quote rotor
+(function(){
+  var rotor=document.getElementById('proofRotor');
+  if(!rotor) return;
+  var slides=rotor.querySelectorAll('.proof-slide');
+  var dots=rotor.querySelectorAll('.proof-dot');
+  var idx=0, timer;
+  function show(i){
+    idx=(i+slides.length)%slides.length;
+    slides.forEach(function(s,k){s.classList.toggle('is-active',k===idx)});
+    dots.forEach(function(d,k){d.classList.toggle('is-active',k===idx)});
+  }
+  function tick(){show(idx+1)}
+  function start(){stop();timer=setInterval(tick,7000)}
+  function stop(){if(timer)clearInterval(timer)}
+  dots.forEach(function(d){
+    d.addEventListener('click',function(){show(parseInt(d.dataset.go,10));start()});
+  });
+  rotor.addEventListener('mouseenter',stop);
+  rotor.addEventListener('mouseleave',start);
+  start();
+})();
 
 // Reveal on scroll
 var io=new IntersectionObserver(function(entries){
