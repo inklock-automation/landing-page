@@ -115,17 +115,16 @@
   }
   .team-member:hover{box-shadow:var(--shadow-md);border-color:rgba(147,51,234,.22);transform:translateY(-2px)}
   .team-photo{
-    width:100%;aspect-ratio:1;border-radius:14px;
-    background:linear-gradient(135deg,rgba(147,51,234,.10),rgba(192,38,211,.08),rgba(236,72,153,.06));
+    width:100%;aspect-ratio:1;border-radius:14px;overflow:hidden;
+    background:linear-gradient(135deg,rgba(147,51,234,.10),rgba(192,38,211,.08));
     border:1px solid rgba(147,51,234,.18);
-    display:flex;align-items:center;justify-content:center;
-    font-family:var(--font-display);font-size:48px;font-weight:800;letter-spacing:-1px;
-    color:var(--purple);
+    position:relative;
   }
-  .team-photo .mono{
-    background:var(--grad-brand);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  .team-photo img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    transition:transform var(--dur-base);
   }
+  .team-member:hover .team-photo img{transform:scale(1.03)}
   .team-info h3{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--txt);margin-bottom:4px;letter-spacing:-.3px}
   .team-role{
     font-family:var(--font-display);font-size:13px;font-weight:700;
@@ -270,7 +269,7 @@
       <div class="team-grid">
 
         <div class="team-member reveal">
-          <div class="team-photo" aria-hidden="true"><span class="mono">BB</span></div>
+          <div class="team-photo"><img src="/assets/team/brigitte.jpg" alt="Brigitte Bentulan" loading="lazy" decoding="async"></div>
           <div class="team-info">
             <h3>Brigitte Bentulan</h3>
             <div class="team-role">Growth marketing strategist</div>
@@ -286,7 +285,7 @@
         </div>
 
         <div class="team-member reveal">
-          <div class="team-photo" aria-hidden="true"><span class="mono">AZ</span></div>
+          <div class="team-photo"><img src="/assets/team/alex.jpg" alt="Alex Zamora" loading="lazy" decoding="async"></div>
           <div class="team-info">
             <h3>Alex Zamora</h3>
             <div class="team-role">Head of analytics &amp; strategy</div>
@@ -302,9 +301,9 @@
         </div>
 
         <div class="team-member reveal">
-          <div class="team-photo" aria-hidden="true"><span class="mono">EC</span></div>
+          <div class="team-photo"><img src="/assets/team/erin.jpg" alt="Erin Cronin" loading="lazy" decoding="async"></div>
           <div class="team-info">
-            <h3>Erin</h3>
+            <h3>Erin Cronin</h3>
             <div class="team-role">Systems architect &amp; operations</div>
             <p>Since 2016, Erin has worked behind the scenes for leadership teams across healthcare, financial services, federal contracting, nonprofits, and tech startups. Her background includes five years in HR and inside sales, and somewhere along the way she taught herself to code and started building the tools and automations she couldn't find off the shelf.</p>
             <p>Give her two systems that don't communicate and she'll find the bridge and build it. Give her a messy, manual process and she'll turn it into something that runs itself. She specializes in the messy middle, that place where your business has outgrown your systems but hasn't outgrown its potential.</p>
