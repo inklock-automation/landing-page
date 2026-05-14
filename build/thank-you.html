@@ -1,168 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '875044852262418');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=875044852262418&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Thanks for reaching out. The InkLock team will be in touch shortly.">
+<meta name="description" content="You are locked in. The InkLock team will be in touch within one business day.">
 <link rel="canonical" href="https://www.inklockautomation.com/build/thank-you">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.inklockautomation.com/build/thank-you">
-<meta property="og:title" content="Thank You | InkLock">
-<meta property="og:description" content="Thanks for reaching out. The InkLock team will be in touch shortly.">
+<meta property="og:title" content="You are locked in | InkLock Automation">
+<meta property="og:description" content="Thanks for the details. The InkLock team will reach out within one business day.">
 <meta property="og:image" content="https://www.inklockautomation.com/og-image.png">
 <meta property="og:site_name" content="InkLock Automation">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://www.inklockautomation.com/build/thank-you">
-<meta name="twitter:title" content="Thank You | InkLock">
-<meta name="twitter:description" content="Thanks for reaching out. The InkLock team will be in touch shortly.">
+<meta name="twitter:title" content="You are locked in | InkLock Automation">
+<meta name="twitter:description" content="Thanks for the details. The InkLock team will reach out within one business day.">
 <meta name="twitter:image" content="https://www.inklockautomation.com/og-image.png">
-<title>Thank You | InkLock</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#ffffff">
 <meta name="robots" content="noindex, nofollow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Great+Vibes&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<title>You are locked in | InkLock Automation</title>
+<link rel="stylesheet" href="/styles.css">
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EV3NVV92DS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EV3NVV92DS');</script>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg-primary:#08080e;--bg-secondary:#0F1117;--bg-card:#151720;--brand-purple:#7B2FBE;--brand-pink:#D946A8;--coastal-blue:#6E9CD5;--text-primary:#F1F5F9;--text-secondary:#94A3B8;--text-muted:#64748B;--border-subtle:rgba(123,47,190,0.15);--border-glow:rgba(123,47,190,0.3);--gradient-brand:linear-gradient(135deg,#7B2FBE,#D946A8);--font-primary:'Plus Jakarta Sans',sans-serif;--font-body:'Inter','Plus Jakarta Sans',sans-serif;--font-script:'Great Vibes',cursive;--success:#22c55e}
-body{font-family:var(--font-primary);color:var(--text-primary);background:var(--bg-primary);-webkit-font-smoothing:antialiased;min-height:100vh}
+  .ty-wrap{
+    padding:140px var(--x-pad) 80px;position:relative;overflow:hidden;
+    min-height:calc(100vh - var(--nav-h));
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  .ty-wrap::before{
+    content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse 60% 50% at 30% 20%,rgba(147,51,234,.07),transparent 60%),
+      radial-gradient(ellipse 50% 50% at 80% 80%,rgba(236,72,153,.06),transparent 55%);
+  }
+  .ty-card{
+    position:relative;z-index:1;
+    max-width:620px;width:100%;
+    background:var(--white);border:1px solid rgba(147,51,234,.18);border-radius:20px;
+    padding:48px 44px;text-align:center;box-shadow:var(--shadow-lg);
+    animation:fadeUp .7s var(--ease-out) forwards;
+  }
+  .ty-check{
+    width:72px;height:72px;border-radius:50%;
+    background:var(--grad-primary);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 22px;color:var(--white);
+    box-shadow:var(--glow-strong);
+  }
+  .ty-check svg{width:36px;height:36px;stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .ty-card h1{
+    font-family:var(--font-display);font-size:clamp(28px,3.6vw,40px);font-weight:800;
+    color:var(--txt);letter-spacing:-.6px;line-height:1.15;margin-bottom:14px;
+  }
+  .ty-card h1 .accent{
+    background:var(--grad-brand);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  }
+  .ty-card .lede{font-size:17px;color:var(--txt-dim);line-height:1.7;max-width:480px;margin:0 auto 28px}
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
-@keyframes checkPop{0%{transform:scale(0);opacity:0}50%{transform:scale(1.2)}100%{transform:scale(1);opacity:1}}
-@keyframes btnGlow{0%,100%{box-shadow:0 4px 30px rgba(123,47,190,0.5),0 0 60px rgba(123,47,190,0.15)}50%{box-shadow:0 6px 45px rgba(123,47,190,0.7),0 0 90px rgba(123,47,190,0.3)}}
-@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+  .ty-list{
+    text-align:left;list-style:none;
+    background:rgba(147,51,234,.04);
+    border:1px solid rgba(147,51,234,.14);
+    border-radius:12px;padding:24px 26px;margin:0 auto 28px;max-width:480px;
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .ty-list li{padding-left:30px;position:relative;font-size:15px;color:var(--txt-dim);line-height:1.6}
+  .ty-list li::before{
+    content:'';position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;
+    background:rgba(147,51,234,.10);border:1px solid rgba(147,51,234,.30);
+  }
+  .ty-list li strong{display:block;color:var(--txt);font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.1px;margin-bottom:2px}
 
-nav{width:100%;padding:1.2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:var(--bg-secondary);border-bottom:1px solid var(--border-subtle)}
-.nav-logo{display:flex;align-items:baseline;gap:4px;text-decoration:none;font-size:1.3rem;font-weight:700}
-.logo-ink{font-family:var(--font-script);background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:1.6rem}
-.logo-lock{font-family:var(--font-primary);font-weight:800;letter-spacing:0.08em;color:var(--text-primary);text-transform:uppercase}
+  .ty-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+  .ty-foot{
+    position:relative;z-index:1;margin-top:24px;font-size:13px;color:var(--txt-mute);text-align:center;
+  }
 
-.container{max-width:680px;margin:0 auto;padding:3rem 2rem 4rem}
-
-.hero-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:20px;padding:3rem;text-align:center;animation:fadeUp .8s cubic-bezier(.23,1,.32,1) both;margin-bottom:2rem}
-
-.check-icon{width:72px;height:72px;background:var(--gradient-brand);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;animation:checkPop .6s cubic-bezier(.23,1,.32,1) .2s both;box-shadow:0 4px 30px rgba(123,47,190,0.4)}
-.check-icon svg{width:36px;height:36px;color:#fff}
-
-.hero-card h1{font-size:2rem;font-weight:800;color:var(--text-primary);margin-bottom:.6rem;line-height:1.2}
-.hero-card .subtitle{font-family:var(--font-body);font-size:1.05rem;color:var(--text-secondary);margin-bottom:2rem;line-height:1.7}
-
-.download-btn{display:inline-block;background:var(--gradient-brand);color:#fff;padding:1.1rem 2.8rem;border-radius:12px;text-decoration:none;font-weight:700;font-size:1.1rem;transition:all .3s;box-shadow:0 4px 30px rgba(123,47,190,0.5),0 0 60px rgba(123,47,190,0.15);position:relative;overflow:hidden;animation:btnGlow 3s ease infinite}
-.download-btn::before{content:'';position:absolute;top:0;left:-100%;width:200%;height:100%;background:linear-gradient(90deg,transparent 20%,rgba(255,255,255,.15) 50%,transparent 80%);animation:shimmer 2.2s ease infinite}
-.download-btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 8px 50px rgba(123,47,190,0.65),0 0 100px rgba(123,47,190,0.25)}
-
-.download-note{font-size:.82rem;color:var(--text-muted);margin-top:1rem}
-
-.bridge-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:20px;padding:2.5rem 3rem;animation:fadeUp .8s cubic-bezier(.23,1,.32,1) .15s both;text-align:center}
-.bridge-divider{width:50px;height:3px;background:var(--gradient-brand);border-radius:2px;margin:0 auto 1.5rem;box-shadow:0 0 12px rgba(123,47,190,0.4)}
-.bridge-card p{font-family:var(--font-body);font-size:1.05rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1.5rem}
-.bridge-card p strong{color:var(--text-primary)}
-
-.bridge-link{display:inline-flex;align-items:center;gap:.6rem;color:var(--text-primary);font-weight:700;font-size:1.05rem;text-decoration:none;padding:.85rem 2rem;border:2px solid var(--border-glow);border-radius:12px;transition:all .3s;box-shadow:0 0 20px rgba(123,47,190,0.1)}
-.bridge-link:hover{background:var(--gradient-brand);border-color:transparent;color:#fff;box-shadow:0 4px 30px rgba(123,47,190,0.5);transform:translateY(-2px)}
-.bridge-link svg{width:20px;height:20px}
-
-footer{text-align:center;padding:2rem}
-.footer-logo{display:inline-flex;align-items:baseline;gap:4px;font-size:1rem;margin-bottom:.4rem}
-.footer-tagline{font-size:.78rem;color:var(--text-muted);font-style:italic}
-
-@media(max-width:600px){
-.hero-card,.bridge-card{padding:2rem 1.5rem}
-.hero-card h1{font-size:1.6rem}
-.bridge-link{width:100%;justify-content:center}
-nav{padding:1rem 1.25rem}
-.container{padding:2rem 1rem 3rem}
-}
+  @media (max-width:640px){
+    .ty-wrap{padding:110px 20px 60px}
+    .ty-card{padding:36px 24px;border-radius:16px}
+  }
 </style>
-<!-- Vercel Web Analytics -->
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EV3NVV92DS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-EV3NVV92DS');
-    </script><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.inklockautomation.com/#organization",
-  "name": "InkLock Automation",
-  "url": "https://www.inklockautomation.com",
-  "logo": "https://www.inklockautomation.com/og-image.png",
-  "description": "Full-service marketing and automation agency. We build the systems your business runs on, the marketing that fills the pipeline, and the analytics that prove it works.",
-  "slogan": "Lock in your systems. Unlock your marketing.",
-  "foundingDate": "2025",
-  "knowsAbout": [
-    "Marketing Automation",
-    "CRM Setup",
-    "GoHighLevel",
-    "HubSpot",
-    "Lead Generation",
-    "Pipeline Management",
-    "Paid Media",
-    "Funnel Design",
-    "Sales Operations"
-  ],
-  "areaServed": {
-    "@type": "Country",
-    "name": "United States"
-  },
-  "sameAs": []
-}
-</script>
 </head>
 <body>
 
-<nav>
-<a href="https://www.inklockautomation.com" class="nav-logo"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></a>
+<nav id="navbar" aria-label="Main">
+  <a href="/" class="nav-logo" aria-label="InkLock home">
+    <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
+    <span class="logo-bar"></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/services">Services</a></li>
+    <li><a href="/about">Our company</a></li>
+    <li><a href="/case-studies">Case studies</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/podcast">Podcast</a></li>
+  </ul>
+  <a href="/contact" class="nav-cta">Book a call →</a>
+  <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="container">
+<main id="main-content">
 
-<div class="hero-card">
-<div class="check-icon">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-</div>
-<h1>Your guide is ready.</h1>
-<p class="subtitle">The Lead Leak: 5 places your business is quietly losing clients between "interested" and "sold." Click below to grab your copy.</p>
-<a href="/the-lead-leak.pdf" download class="download-btn">Download the Free Guide</a>
-<p class="download-note">PDF opens instantly. No hoops. It's yours.</p>
-</div>
+  <div class="ty-wrap">
 
-<div class="bridge-card">
-<div class="bridge-divider"></div>
-<p>Most people who download this guide already know their systems need work. The website is outdated (or nonexistent). The follow-up is manual. The leads are slipping through.</p>
-<p><strong>What if you could fix the first piece of that puzzle in 7 days, for less than most agencies charge for a single meeting?</strong></p>
-<a href="/build#pricing" class="bridge-link">
-See the website builds
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-</a>
-</div>
+    <div class="ty-card">
+      <div class="ty-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <div class="eyebrow">Submission received</div>
+      <h1>You are locked in. <span class="accent">We will be in touch within one business day.</span></h1>
+      <p class="lede">Thanks for the details. We have everything we need to start mapping out your build. Someone from the InkLock team will reply directly inside one business day, usually Erin.</p>
 
-</div>
+      <ul class="ty-list">
+        <li><strong>What we are doing now</strong>Reviewing your responses and pulling up your inspiration link.</li>
+        <li><strong>What happens next</strong>A real reply from a real human with next steps and any clarifying questions.</li>
+        <li><strong>Then</strong>A short kickoff call if needed, payment link, and we start building.</li>
+        <li><strong>Live in 7 days</strong>From kickoff to live site, usually inside a week.</li>
+      </ul>
 
+      <div class="ty-buttons">
+        <a href="/" class="btn-primary">Back to home →</a>
+        <a href="/case-studies" class="btn-secondary">See recent work</a>
+      </div>
+    </div>
+
+    <p class="ty-foot">Keep an eye on your inbox. Check spam folders just in case.</p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
-<div class="footer-logo"><span class="logo-ink" style="font-size:1.2rem">Ink</span><span class="logo-lock" style="font-size:.85rem">LOCK</span></div>
-<div class="footer-tagline">Lock in your systems. Unlock your marketing.</div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="f-logo" aria-label="InkLock home">
+        <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
+        <span class="logo-bar"></span>
+      </a>
+      <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="/services">Data analytics</a></li>
+      <li><a href="/services">Growth marketing</a></li>
+      <li><a href="/services">Automation &amp; workflows</a></li>
+      <li><a href="/services">CRM &amp; systems</a></li>
+      <li><a href="/services">Marketing creatives</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="/about">Our company</a></li>
+      <li><a href="/case-studies">Case studies</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/podcast">Podcast</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><span class="eml"></span></li>
+      <li><a href="/contact">Book a call →</a></li>
+    </ul></div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 InkLock Automation. All rights reserved.</span>
+      <span>Lock in your systems. Unlock your marketing.</span>
+    </div>
+  </div>
 </footer>
+
+<script>
+function toggleMobileNav(){
+  var nav=document.querySelector('.nav-links');
+  var btn=document.querySelector('.mobile-toggle');
+  nav.classList.toggle('open');
+  btn.classList.toggle('active');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+var navEl=document.getElementById('navbar');
+window.addEventListener('scroll',function(){navEl.classList.toggle('scrolled',window.scrollY>40)});
+
+// Email decode
+document.querySelectorAll('.eml').forEach(function(el){
+  var a=document.createElement('a');
+  var u='inklockautomation', d='gmail.com';
+  a.href='mail'+'to:'+u+'@'+d;
+  a.textContent=u+'@'+d;
+  a.style.color='inherit';
+  a.style.textDecoration='none';
+  el.appendChild(a);
+});
+
+// Reveal on scroll
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
 
 </body>
 </html>

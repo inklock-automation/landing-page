@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70">
+  <defs>
+    <linearGradient id="ik-grad-light" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a7ab5"></stop>
+      <stop offset="50%" stop-color="#7c3aed"></stop>
+      <stop offset="80%" stop-color="#a21caf"></stop>
+      <stop offset="100%" stop-color="#db2777"></stop>
+    </linearGradient>
+  </defs>
+  <text x="0" y="44" font-family="&#39;Great Vibes&#39;, cursive" font-size="48" fill="url(#ik-grad-light)">Ink</text>
+  <text x="98" y="40" font-family="&#39;Sora&#39;, sans-serif" font-weight="700" font-size="22" letter-spacing="6" fill="#0e0e18">LOCK</text>
+  <rect x="0" y="54" width="200" height="2" fill="url(#ik-grad-light)" rx="1"></rect>
+</svg>

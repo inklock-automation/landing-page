@@ -1,129 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '875044852262418');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=875044852262418&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ready to lock in your systems and unlock your marketing? Book a free discovery call with the InkLock team to map your build.">
+<meta name="description" content="Ready to lock in your systems and unlock your marketing? Tell us what's broken. We'll get back inside 24 hours.">
 <link rel="canonical" href="https://www.inklockautomation.com/contact">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.inklockautomation.com/contact">
-<meta property="og:title" content="Contact InkLock | Book a Discovery Call">
-<meta property="og:description" content="Ready to lock in your systems and unlock your marketing? Book a free discovery call with the InkLock team to map your build.">
+<meta property="og:title" content="Contact | InkLock Automation">
+<meta property="og:description" content="Tell us what's broken. 24-hour response. No pitch deck, no pressure.">
 <meta property="og:image" content="https://www.inklockautomation.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="InkLock Automation">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://www.inklockautomation.com/contact">
-<meta name="twitter:title" content="Contact InkLock | Book a Discovery Call">
-<meta name="twitter:description" content="Ready to lock in your systems and unlock your marketing? Book a free discovery call with the InkLock team to map your build.">
+<meta name="twitter:title" content="Contact | InkLock Automation">
+<meta name="twitter:description" content="Tell us what's broken. 24-hour response. No pitch deck, no pressure.">
 <meta name="twitter:image" content="https://www.inklockautomation.com/og-image.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#08080e">
-<title>Contact InkLock | Book a Discovery Call</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#ffffff">
+<title>Contact | InkLock Automation</title>
 <link rel="stylesheet" href="/styles.css">
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EV3NVV92DS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-EV3NVV92DS');
-    </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.inklockautomation.com/#organization",
-  "name": "InkLock Automation",
-  "url": "https://www.inklockautomation.com",
-  "logo": "https://www.inklockautomation.com/og-image.png",
-  "description": "Full-service marketing and automation agency. We build the systems your business runs on, the marketing that fills the pipeline, and the analytics that prove it works.",
-  "slogan": "Lock in your systems. Unlock your marketing.",
-  "foundingDate": "2025",
-  "knowsAbout": [
-    "Marketing Automation",
-    "CRM Setup",
-    "GoHighLevel",
-    "HubSpot",
-    "Lead Generation",
-    "Pipeline Management",
-    "Paid Media",
-    "Funnel Design",
-    "Sales Operations"
-  ],
-  "areaServed": {
-    "@type": "Country",
-    "name": "United States"
-  },
-  "sameAs": []
-}
-</script>
+<style>
+  /* Contact-page extras — layout patterns not yet in styles.css */
+  .contact-hero{
+    padding:140px var(--x-pad) 40px;position:relative;overflow:hidden;text-align:center;
+  }
+  .contact-hero::before{
+    content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse 60% 50% at 20% 90%,rgba(147,51,234,.06),transparent 60%),
+      radial-gradient(ellipse 50% 50% at 85% 20%,rgba(110,156,213,.07),transparent 55%);
+  }
+  .contact-hero .inner{position:relative;z-index:1;max-width:760px;margin:0 auto}
+  .contact-hero h1{
+    font-family:var(--font-display);
+    font-size:clamp(36px,5vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.1;
+    color:var(--txt);margin:14px 0 22px;
+  }
+  .contact-hero .hero-sub{margin:0 auto;text-align:left;max-width:600px}
+
+  .contact-grid{
+    max-width:var(--content-max);margin:0 auto;
+    padding:40px var(--x-pad) var(--y-pad);
+    display:grid;grid-template-columns:1.3fr .9fr;gap:32px;align-items:start;
+  }
+  .form-card h3{
+    font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--txt);
+    letter-spacing:-.3px;margin-bottom:6px;
+  }
+  .form-sub{font-size:15px;color:var(--txt-dim);margin-bottom:24px;line-height:1.6}
+  .form-card form{display:flex;flex-direction:column}
+  .form-submit{
+    font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--white);
+    background:var(--grad-primary);
+    padding:15px 30px;border-radius:8px;border:0;cursor:pointer;
+    transition:transform var(--dur-base),box-shadow var(--dur-base);
+    box-shadow:var(--glow-soft);
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    margin-top:8px;letter-spacing:.2px;
+  }
+  .form-submit:hover{transform:translateY(-2px);box-shadow:var(--glow-button)}
+  .form-submit:disabled{opacity:.7;cursor:not-allowed}
+  .form-note{font-size:12px;color:var(--txt-mute);margin-top:14px;line-height:1.5;text-align:center}
+  .form-risk{
+    font-style:italic;font-size:14px;color:var(--txt-mute);
+    margin-top:18px;padding-top:18px;border-top:1px solid rgba(147,51,234,.10);
+    text-align:center;line-height:1.6;
+  }
+
+  /* "What to expect" — the strong-border card */
+  .side-stack{display:flex;flex-direction:column;gap:20px;position:sticky;top:calc(var(--nav-h) + 24px)}
+  .expect-card h3{margin-bottom:18px}
+  .expect-list li strong{display:block;font-size:14px;margin-bottom:3px}
+  .expect-meta{
+    margin-top:22px;padding-top:18px;border-top:1px solid rgba(147,51,234,.12);
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .expect-meta .em{
+    display:flex;align-items:center;gap:10px;font-size:14px;color:var(--txt-dim);
+  }
+  .expect-meta .em strong{font-family:var(--font-display);color:var(--txt);font-weight:700}
+  .calendar-card{
+    background:var(--white);border:1px solid rgba(147,51,234,.16);border-radius:14px;
+    padding:24px;box-shadow:var(--shadow-sm);
+  }
+  .calendar-card h4{font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--txt);margin-bottom:6px;letter-spacing:-.1px}
+  .calendar-card p{font-size:14px;color:var(--txt-dim);line-height:1.6;margin-bottom:14px}
+
+  /* services checkbox grid */
+  .svc-checks{
+    display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px;
+  }
+  .svc-check-label{
+    display:flex;align-items:center;gap:8px;
+    padding:10px 12px;border-radius:8px;
+    background:rgba(147,51,234,.04);
+    border:1px solid rgba(147,51,234,.12);
+    font-family:var(--font-body);font-size:14px;color:var(--txt);cursor:pointer;
+    transition:all var(--dur-base);
+  }
+  .svc-check-label:hover{border-color:rgba(147,51,234,.30);background:rgba(147,51,234,.06)}
+  .svc-check-label input{accent-color:var(--purple);width:16px;height:16px;cursor:pointer}
+
+  @media (max-width:1024px){
+    .contact-grid{grid-template-columns:1fr;gap:24px}
+    .side-stack{position:static}
+  }
+  @media (max-width:640px){
+    .svc-checks{grid-template-columns:1fr}
+  }
+</style>
 </head>
-<body><nav id="navbar">
-  <a href="/" class="nav-logo"><div class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></div><div class="logo-bar"></div></a>
-  <ul class="nav-links" id="navLinks">
+<body>
+
+<nav id="navbar" aria-label="Main">
+  <a href="/" class="nav-logo" aria-label="InkLock home">
+    <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
+    <span class="logo-bar"></span>
+  </a>
+  <ul class="nav-links">
     <li><a href="/services">Services</a></li>
-    <li><a href="/about">Our Company</a></li>
-    <li><a href="/case-studies">Case Studies</a></li>
+    <li><a href="/about">Our company</a></li>
+    <li><a href="/case-studies">Case studies</a></li>
     <li><a href="/blog">Blog</a></li>
+    <li><a href="/podcast">Podcast</a></li>
   </ul>
-  <a href="/contact" class="nav-cta">Book a Call &rarr;</a>
-  <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open');this.classList.toggle('active')" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <a href="/contact" class="nav-cta" aria-current="page">Book a call →</a>
+  <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
+
 <main id="main-content">
-<section class="page-hero"><div class="inner"><div class="s-label">Get In Touch</div><h1 class="s-title">Let's <span class="accent">Grow</span> Your Business Together</h1><p class="s-sub mx-auto">Book a discovery call or send us a message. We'd love to hear what you're building and explore how we can work together.</p><div class="contact-badges"><span class="c-badge">&#9201; 24hr Response</span><span class="c-badge">&#128170; 90-Day Results</span><span class="c-badge">&#10003; Free Strategy Session</span><span class="c-badge">&#128101; Expert Team</span></div></div></section>
-<div class="contact-body" style="grid-template-columns:1fr 1.2fr">
-  <div class="contact-info"><h3>Get Started Today</h3><div class="contact-detail"><h4>&#9993; Email Us</h4><span class="eml"></span></div><div class="contact-detail"><h4>&#128222; Call Us</h4><p>+1 (630) 812-7443</p><p style="font-size:12px;color:var(--txt-mute)">Mon-Fri 8AM-5PM CST</p></div>
-    <div class="what-to-expect"><h4>What to Expect</h4><div class="expect-steps"><div class="expect-step"><div class="expect-num">01</div><h5>Discovery Call</h5><p>No pressure, just conversation. We learn about your business and what's not working.</p></div><div class="expect-step"><div class="expect-num">02</div><h5>Custom Proposal</h5><p>Scope, deliverables, timeline. A clear plan built around your goals and budget.</p></div><div class="expect-step"><div class="expect-num">03</div><h5>Start Building</h5><p>Clear communication throughout. You'll know exactly what's happening and when.</p></div></div></div>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="inner">
+      <div class="eyebrow">Get in touch</div>
+      <h1>Tell us what's broken. <span class="accent">We'll tell you what we'd build.</span></h1>
+      <p class="hero-sub">No pitch decks. No 47-slide proposals. Just a real conversation about what's not working and what it'd look like fixed. We respond inside 24 hours.</p>
+    </div>
+  </section>
+
+  <!-- FORM + SIDEBAR -->
+  <div class="contact-grid">
+
+    <!-- FORM CARD -->
+    <div class="form-card">
+      <h3>Start the conversation</h3>
+      <p class="form-sub">Tell us a little about your business and what's not working. We'll come back with next steps inside one business day.</p>
+
+      <form id="contactForm" action="/api/contact" method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" type="text" name="name" placeholder="Jane Owner" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" type="email" name="email" placeholder="jane@yourcompany.com" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="cf-company">Company</label>
+          <input id="cf-company" type="text" name="company" placeholder="Your company" required>
+        </div>
+
+        <div class="form-field">
+          <label>What's broken</label>
+          <div class="svc-checks">
+            <label class="svc-check-label"><input type="checkbox" name="service" value="CRM &amp; systems"> CRM &amp; systems</label>
+            <label class="svc-check-label"><input type="checkbox" name="service" value="Automation"> Automation</label>
+            <label class="svc-check-label"><input type="checkbox" name="service" value="Paid media"> Paid media</label>
+            <label class="svc-check-label"><input type="checkbox" name="service" value="Funnels &amp; onboarding"> Funnels &amp; onboarding</label>
+            <label class="svc-check-label"><input type="checkbox" name="service" value="Analytics &amp; reporting"> Analytics &amp; reporting</label>
+            <label class="svc-check-label"><input type="checkbox" name="service" value="Not sure yet"> Not sure yet</label>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="cf-details">Tell us more</label>
+          <textarea id="cf-details" name="details" placeholder="What's not working? What have you tried? What's it costing you?" required></textarea>
+          <span class="form-help">The more specific you are, the more useful our first reply will be.</span>
+        </div>
+
+        <div class="form-field">
+          <label for="cf-contact">Preferred contact method</label>
+          <select id="cf-contact" name="contact_method">
+            <option value="Email">Email</option>
+            <option value="Phone">Phone call</option>
+            <option value="Video">Video call</option>
+          </select>
+        </div>
+
+        <button type="submit" class="form-submit">Send it →</button>
+        <p class="form-note">By submitting, you agree to our privacy policy. We never sell your information. We respond inside 24 business hours.</p>
+        <p class="form-risk">If we're not the right fit, we'll tell you, and point you to who is.</p>
+      </form>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="side-stack">
+      <div class="expect-card">
+        <h3>What to expect</h3>
+        <ul class="expect-list">
+          <li><strong>24-hour response</strong>A real human, not an autoresponder. Usually Erin or Alex.</li>
+          <li><strong>30-minute discovery call</strong>We dig into what's broken, what it's costing you, and whether we can fix it.</li>
+          <li><strong>Custom proposal inside a week</strong>What we'd build, what it costs, exactly when you'd see results.</li>
+          <li><strong>No pressure</strong>If we're not the right fit, you'll know. We'd rather refer you out than waste anyone's time.</li>
+        </ul>
+        <div class="expect-meta">
+          <div class="em"><strong>Email.</strong> <span class="eml"></span></div>
+          <div class="em"><strong>Hours.</strong> Mon–Fri, 8am–5pm CST.</div>
+        </div>
+      </div>
+
+      <div class="calendar-card">
+        <h4>Prefer to skip the form?</h4>
+        <p>Pick a time directly. Same 30 minutes, no inbox ping-pong.</p>
+        <a href="/contact#book" class="btn-secondary" style="font-size:14px;padding:11px 22px">Book a time →</a>
+      </div>
+    </aside>
+
   </div>
-  <div class="form-card"><h3>Start Your Project</h3><p class="form-sub">Fill out the form and we'll get back to you within 24 hours.</p>
-    <form id="contactForm">
-      <div class="form-row"><div class="form-group"><label class="form-label">First Name *</label><input class="form-input" type="text" name="first_name" placeholder="John" required></div><div class="form-group"><label class="form-label">Last Name *</label><input class="form-input" type="text" name="last_name" placeholder="Doe" required></div></div>
-      <div class="form-row"><div class="form-group"><label class="form-label">Email *</label><input class="form-input" type="email" name="email" placeholder="john@company.com" required></div><div class="form-group"><label class="form-label">Phone</label><input class="form-input" type="tel" name="phone" placeholder="+1 (555) 123-4567"></div></div>
-      <div class="form-group full" style="margin-bottom:14px"><label class="form-label">Company Name *</label><input class="form-input" type="text" name="company" placeholder="Your Company Inc." required></div>
-      <label class="form-label" style="margin-bottom:8px;display:block">Services Interested In *</label>
-      <div class="svc-checks"><label class="svc-check-label"><input type="checkbox" name="service" value="Data Analytics"> Data Analytics</label><label class="svc-check-label"><input type="checkbox" name="service" value="Growth Marketing"> Growth Marketing</label><label class="svc-check-label"><input type="checkbox" name="service" value="Automation &amp; Workflows"> Automation &amp; Workflows</label><label class="svc-check-label"><input type="checkbox" name="service" value="CRM Setup &amp; Optimization"> CRM Setup &amp; Optimization</label><label class="svc-check-label"><input type="checkbox" name="service" value="GoHighLevel Funnel Builds"> GoHighLevel Funnel Builds</label><label class="svc-check-label"><input type="checkbox" name="service" value="Strategy Consultation"> Strategy Consultation</label></div>
-      <div class="form-row"><div class="form-group"><label class="form-label">Budget Range</label><select class="form-select" name="budget"><option value="">Select budget range...</option><option>Under $2,500</option><option>$2,500 - $5,000</option><option>$5,000 - $10,000</option><option>$10,000 - $25,000</option><option>$25,000+</option></select></div><div class="form-group"><label class="form-label">Timeline</label><select class="form-select" name="timeline"><option value="">Select timeline...</option><option>ASAP</option><option>1-2 weeks</option><option>1 month</option><option>2-3 months</option><option>Flexible</option></select></div></div>
-      <div class="form-group full"><label class="form-label">Project Details *</label><textarea class="form-textarea" name="details" placeholder="Tell us about your project goals, challenges, and what you're looking to achieve..." required></textarea></div>
-      <button type="submit" class="form-submit">Get Started +</button><p class="form-note">By submitting this form, you agree to our privacy policy and terms of service.</p>
-    </form>
-  </div>
-</div>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="inner">
+      <div class="divider mx-auto"></div>
+      <h2 class="s-title">Not ready to book yet? <span class="accent">Read first.</span></h2>
+      <p class="s-sub mx-auto" style="margin-top:14px">See the kinds of builds we ship and the businesses we ship them for.</p>
+      <div style="margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="/case-studies" class="btn-primary">See case studies →</a>
+        <a href="/services" class="btn-secondary">Browse services</a>
+      </div>
+    </div>
+  </section>
+
 </main>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="f-logo"><div class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></div><div class="logo-bar"></div></div>
+      <a href="/" class="f-logo" aria-label="InkLock home">
+        <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
+        <span class="logo-bar"></span>
+      </a>
       <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
     </div>
-    <div class="footer-col"><h4>Services</h4><ul><li><a href="/services">Data Analytics</a></li><li><a href="/services">Growth Marketing</a></li><li><a href="/services">Automation &amp; Workflows</a></li><li><a href="/services">CRM &amp; Systems</a></li><li><a href="/services">Marketing Creatives</a></li></ul></div>
-    <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">Our Company</a></li><li><a href="/case-studies">Case Studies</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><span class="eml"></span></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="/services">Data analytics</a></li>
+      <li><a href="/services">Growth marketing</a></li>
+      <li><a href="/services">Automation &amp; workflows</a></li>
+      <li><a href="/services">CRM &amp; systems</a></li>
+      <li><a href="/services">Marketing creatives</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="/about">Our company</a></li>
+      <li><a href="/case-studies">Case studies</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/podcast">Podcast</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><span class="eml"></span></li>
+      <li><a href="/contact">Book a call →</a></li>
+    </ul></div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 InkLock Automation. All rights reserved.</span>
+      <span>Lock in your systems. Unlock your marketing.</span>
+    </div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 InkLock. All rights reserved.</span><span class="footer-tagline">Built for complexity. Designed for clarity.</span></div>
-</footer><script>
-function toggleMobileNav(){document.querySelector('.nav-links').classList.toggle('open');document.querySelector('.mobile-toggle').classList.toggle('active')}
-var nav=document.getElementById('navbar');window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60)});
-document.getElementById('contactForm').addEventListener('submit',async function(e){e.preventDefault();var f=e.target,b=f.querySelector('.form-submit'),o=b.textContent;b.textContent='Sending...';b.disabled=true;var d=new FormData(f),s=[];f.querySelectorAll('input[name="service"]:checked').forEach(function(c){s.push(c.value)});try{var r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({first_name:d.get('first_name'),last_name:d.get('last_name'),email:d.get('email'),phone:d.get('phone'),company:d.get('company'),service:s.join(', '),budget:d.get('budget'),timeline:d.get('timeline'),details:d.get('details')})});if(r.ok){f.innerHTML='<div style="text-align:center;padding:60px 20px"><div style="font-size:48px;margin-bottom:16px">&#127881;</div><h3 style="font-family:Sora,sans-serif;font-size:24px;font-weight:700;color:#1a1a2e;margin-bottom:8px">Message Sent!</h3><p style="color:#6b6580">We will get back to you within 24 hours.</p></div>'}else{throw new Error('f')}}catch(x){b.textContent=o;b.disabled=false;alert('Something went wrong. Please email us at inklockautomation@gmail.com')}});
-</script><script>document.querySelectorAll(".eml").forEach(function(el){var a=document.createElement("a");var u="inklockautomation";var d="gmail.com";a.href="mail"+"to:"+u+"@"+d;a.textContent=u+"@"+d;a.style.color="inherit";el.appendChild(a)})</script></body></html>
+</footer>
+
+<script>
+function toggleMobileNav(){
+  var nav=document.querySelector('.nav-links');
+  var btn=document.querySelector('.mobile-toggle');
+  nav.classList.toggle('open');
+  btn.classList.toggle('active');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+var navEl=document.getElementById('navbar');
+window.addEventListener('scroll',function(){navEl.classList.toggle('scrolled',window.scrollY>40)});
+
+// Email decode
+document.querySelectorAll('.eml').forEach(function(el){
+  var a=document.createElement('a');
+  var u='inklockautomation', d='gmail.com';
+  a.href='mail'+'to:'+u+'@'+d;
+  a.textContent=u+'@'+d;
+  a.style.color='inherit';
+  a.style.textDecoration='none';
+  el.appendChild(a);
+});
+
+// Reveal on scroll
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+// Contact form submit -> /api/contact
+document.getElementById('contactForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var f = e.target;
+  var btn = f.querySelector('.form-submit');
+  var original = btn.textContent;
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  var fd = new FormData(f);
+  var services = [];
+  f.querySelectorAll('input[name="service"]:checked').forEach(function(c){ services.push(c.value); });
+
+  var payload = {
+    name: fd.get('name'),
+    email: fd.get('email'),
+    company: fd.get('company'),
+    service: services.join(', '),
+    details: fd.get('details'),
+    contact_method: fd.get('contact_method')
+  };
+
+  try {
+    var res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    });
+    if (res.ok) {
+      f.innerHTML = '<div style="text-align:center;padding:40px 20px"><div style="font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--txt);letter-spacing:-.3px;margin-bottom:10px">Message sent.</div><p style="color:var(--txt-dim);font-size:15px;line-height:1.7">We will be in touch inside 24 business hours. Usually faster.</p></div>';
+    } else {
+      throw new Error('failed');
+    }
+  } catch (err) {
+    btn.textContent = original;
+    btn.disabled = false;
+    alert('Something went wrong. Email us directly at inklockautomation@gmail.com and we\'ll take it from there.');
+  }
+});
+</script>
+
+</body>
+</html>

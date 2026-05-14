@@ -1,546 +1,731 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Client Onboarding | InkLock Automation</title>
-  <meta name="description" content="Complete your InkLock Automation client onboarding form to prepare for your launch call." /><link rel="canonical" href="https://www.inklockautomation.com/onboarding"><meta property="og:type" content="article"><meta property="og:url" content="https://www.inklockautomation.com/onboarding"><meta property="og:title" content="Client Onboarding | InkLock"><meta property="og:description" content="Complete your InkLock Automation client onboarding form to prepare for your launch call."><meta property="og:image" content="https://www.inklockautomation.com/og-image.png"><meta property="og:site_name" content="InkLock Automation"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://www.inklockautomation.com/onboarding"><meta name="twitter:title" content="Client Onboarding | InkLock"><meta name="twitter:description" content="Complete your InkLock Automation client onboarding form to prepare for your launch call."><meta name="twitter:image" content="https://www.inklockautomation.com/og-image.png">
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
-  <style>
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    body { background:#08080e; font-family:'Sora',sans-serif; -webkit-font-smoothing:antialiased; color:#e2e8f0; }
-    #root { min-height:100vh; }
-    ::placeholder { color:#64748b; }
-    select { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5L6 8L9 5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center; padding-right:40px !important; }
-    textarea { font-family:'Inter',sans-serif; }
-    a { color:#9333ea; }
-    @media (max-width:640px) {
-      .form-grid { grid-template-columns:1fr !important; }
-      .step-labels { font-size:10px !important; }
-      .content-area { padding:28px 20px 130px !important; }
-      .header-bar,.progress-bar,.footer-bar { padding-left:20px !important; padding-right:20px !important; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Complete your InkLock Automation client onboarding form to prepare for your launch call.">
+<link rel="canonical" href="https://www.inklockautomation.com/onboarding">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.inklockautomation.com/onboarding">
+<meta property="og:title" content="Client onboarding | InkLock Automation">
+<meta property="og:description" content="Tell us about your stack, your goals, and what is broken. We will use this to prep your kickoff call.">
+<meta property="og:image" content="https://www.inklockautomation.com/og-image.png">
+<meta property="og:site_name" content="InkLock Automation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Client onboarding | InkLock Automation">
+<meta name="twitter:description" content="Tell us about your stack, your goals, and what is broken.">
+<meta name="twitter:image" content="https://www.inklockautomation.com/og-image.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="noindex, nofollow">
+<title>Client onboarding | InkLock Automation</title>
+<link rel="stylesheet" href="/styles.css">
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EV3NVV92DS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-EV3NVV92DS');
-    </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.inklockautomation.com/#organization",
-  "name": "InkLock Automation",
-  "url": "https://www.inklockautomation.com",
-  "logo": "https://www.inklockautomation.com/og-image.png",
-  "description": "Full-service marketing and automation agency. We build the systems your business runs on, the marketing that fills the pipeline, and the analytics that prove it works.",
-  "slogan": "Lock in your systems. Unlock your marketing.",
-  "foundingDate": "2025",
-  "knowsAbout": [
-    "Marketing Automation",
-    "CRM Setup",
-    "GoHighLevel",
-    "HubSpot",
-    "Lead Generation",
-    "Pipeline Management",
-    "Paid Media",
-    "Funnel Design",
-    "Sales Operations"
-  ],
-  "areaServed": {
-    "@type": "Country",
-    "name": "United States"
-  },
-  "sameAs": []
-}
-</script>
-</head>
-<body>
-<div id="root"></div>
-<script type="text/babel">
-const { useState, useRef } = React;
 
-const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/imHfi70hPr9q2dnxwMmK/webhook-trigger/gqdbm93lTVLoVrSEYcrj";
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EV3NVV92DS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EV3NVV92DS');</script>
 
-/* ── DARK BRAND TOKENS ── */
-const C = {
-  purple:"#9333ea", pink:"#D946A8", gradient:"linear-gradient(135deg,#7B2FBE,#D946A8)",
-  coastalBlue:"#6e9cd5",
-  bg:"#08080e", surface:"#0f0f18", surfaceHover:"#161625",
-  card:"#12121e", cardBorder:"rgba(147,51,234,0.12)",
-  text:"#e2e8f0", textMuted:"#94a3b8", textDim:"#64748b",
-  border:"rgba(255,255,255,0.08)", borderFocus:"#9333ea",
-  white:"#ffffff",
-  inputBg:"#0c0c16", inputBorder:"rgba(255,255,255,0.1)",
-};
+<style>
+  .ob-wrap{
+    padding:120px var(--x-pad) 80px;position:relative;overflow:hidden;
+    min-height:calc(100vh - var(--nav-h));
+    display:flex;flex-direction:column;align-items:center;
+  }
+  .ob-wrap::before{
+    content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse 60% 50% at 20% 80%,rgba(147,51,234,.06),transparent 60%),
+      radial-gradient(ellipse 50% 50% at 85% 10%,rgba(110,156,213,.07),transparent 55%);
+  }
+  .ob-head{position:relative;z-index:1;text-align:center;margin-bottom:28px;max-width:720px}
+  .ob-head h1{
+    font-family:var(--font-display);font-size:clamp(28px,3.4vw,40px);font-weight:800;
+    color:var(--txt);letter-spacing:-.5px;line-height:1.15;margin:14px 0 12px;
+  }
+  .ob-head h1 .accent{
+    background:var(--grad-brand);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  }
+  .ob-head p{font-size:16px;color:var(--txt-dim);line-height:1.65}
 
-const STEPS = [
-  {id:"welcome",label:"Welcome"},{id:"business",label:"Business"},
-  {id:"tech",label:"Tech & Access"},{id:"marketing",label:"Marketing"},
-  {id:"operations",label:"Operations"},{id:"review",label:"Review"},
-];
-
-const INITIAL = {
-  contactName:"",businessName:"",industry:"",website:"",
-  primaryEmail:"",phone:"",timezone:"",businessAddress:"",
-  yearsInBusiness:"",teamSize:"",avgClientValue:"",
-  monthlyRevenue:"",topServices:"",
-  crmPlatform:"",crmNotes:"",websitePlatform:"",websiteNotes:"",
-  emailPlatform:"",emailNotes:"",schedulingTool:"",schedulingNotes:"",
-  projectTool:"",projectNotes:"",paymentProcessor:"",paymentNotes:"",
-  otherTools:"",
-  googleBusinessProfile:false,googleAds:false,googleAnalytics:false,
-  youtubeStudio:false,metaBusinessManager:false,crmAccess:false,
-  runningAds:"",monthlyAdSpend:"",adPlatforms:[],
-  hasFunnels:"",funnelDetails:"",
-  hasEmailMarketing:"",emailMarketingDetails:"",
-  hasRawContent:"",rawContentDetails:"",
-  trackingROI:"",roiDetails:"",
-  biggestMarketingChallenge:"",
-  currentPainPoints:"",idealOutcome:"",
-  slackReady:"",slackHandle:"",currentQuickComm:"",
-  communicationPreference:"",decisionStyle:"",
-  meetingPreference:"",additionalNotes:"",
-  sharedDriveLinks:"",hasFilesToShare:"",
-};
-
-/* ── COMPONENTS ── */
-function InkLockMark({size="md"}) {
-  const s={sm:{script:22,bold:18},md:{script:28,bold:22},lg:{script:36,bold:28}}[size]||{script:28,bold:22};
-  return (
-    <span style={{display:"inline-flex",alignItems:"baseline",gap:2}}>
-      <span style={{fontFamily:"'Great Vibes',cursive",fontSize:s.script,background:C.gradient,WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>Ink</span>
-      <span style={{fontFamily:"'Sora',sans-serif",fontWeight:700,fontSize:s.bold,color:C.white,letterSpacing:"1.5px"}}>LOCK</span>
-    </span>
-  );
-}
-
-function Input({label,hint,required,...props}) {
-  const [f,setF]=useState(false);
-  return (
-    <div style={{marginBottom:22}}>
-      {label&&<label style={{display:"block",fontFamily:"'Sora',sans-serif",fontWeight:500,fontSize:13,color:C.text,marginBottom:7,letterSpacing:"0.2px"}}>{label}{required&&<span style={{color:C.pink}}> *</span>}</label>}
-      <input style={{width:"100%",padding:"13px 16px",boxSizing:"border-box",border:`1.5px solid ${f?C.borderFocus:C.inputBorder}`,borderRadius:10,fontFamily:"'Inter',sans-serif",fontSize:15,color:C.text,outline:"none",background:C.inputBg,transition:"border-color 0.2s,box-shadow 0.2s",boxShadow:f?"0 0 0 3px rgba(147,51,234,0.1)":"none"}} onFocus={()=>setF(true)} onBlur={()=>setF(false)} {...props} />
-      {hint&&<p style={{fontSize:12,color:C.textDim,margin:"5px 0 0",fontFamily:"'Inter',sans-serif",lineHeight:1.5}}>{hint}</p>}
-    </div>
-  );
-}
-
-function TextArea({label,hint,required,...props}) {
-  const [f,setF]=useState(false);
-  return (
-    <div style={{marginBottom:22}}>
-      {label&&<label style={{display:"block",fontFamily:"'Sora',sans-serif",fontWeight:500,fontSize:13,color:C.text,marginBottom:7,letterSpacing:"0.2px"}}>{label}{required&&<span style={{color:C.pink}}> *</span>}</label>}
-      <textarea style={{width:"100%",padding:"13px 16px",boxSizing:"border-box",border:`1.5px solid ${f?C.borderFocus:C.inputBorder}`,borderRadius:10,fontFamily:"'Inter',sans-serif",fontSize:15,color:C.text,outline:"none",background:C.inputBg,transition:"border-color 0.2s,box-shadow 0.2s",minHeight:100,resize:"vertical",boxShadow:f?"0 0 0 3px rgba(147,51,234,0.1)":"none"}} onFocus={()=>setF(true)} onBlur={()=>setF(false)} {...props} />
-      {hint&&<p style={{fontSize:12,color:C.textDim,margin:"5px 0 0",fontFamily:"'Inter',sans-serif",lineHeight:1.5}}>{hint}</p>}
-    </div>
-  );
-}
-
-function Select({label,hint,required,options,...props}) {
-  const [f,setF]=useState(false);
-  return (
-    <div style={{marginBottom:22}}>
-      {label&&<label style={{display:"block",fontFamily:"'Sora',sans-serif",fontWeight:500,fontSize:13,color:C.text,marginBottom:7,letterSpacing:"0.2px"}}>{label}{required&&<span style={{color:C.pink}}> *</span>}</label>}
-      <select style={{width:"100%",padding:"13px 16px",boxSizing:"border-box",border:`1.5px solid ${f?C.borderFocus:C.inputBorder}`,borderRadius:10,fontFamily:"'Inter',sans-serif",fontSize:15,color:C.text,outline:"none",background:C.inputBg,transition:"border-color 0.2s",cursor:"pointer",boxShadow:f?"0 0 0 3px rgba(147,51,234,0.1)":"none"}} onFocus={()=>setF(true)} onBlur={()=>setF(false)} {...props}>
-        <option value="">Select...</option>
-        {options.map(o=><option key={o.value||o} value={o.value||o}>{o.label||o}</option>)}
-      </select>
-      {hint&&<p style={{fontSize:12,color:C.textDim,margin:"5px 0 0",fontFamily:"'Inter',sans-serif",lineHeight:1.5}}>{hint}</p>}
-    </div>
-  );
-}
-
-function RadioGroup({label,hint,options,value,onChange}) {
-  return (
-    <div style={{marginBottom:24}}>
-      {label&&<label style={{display:"block",fontFamily:"'Sora',sans-serif",fontWeight:500,fontSize:13,color:C.text,marginBottom:4,letterSpacing:"0.2px"}}>{label}</label>}
-      {hint&&<p style={{fontSize:12,color:C.textDim,marginBottom:10,fontFamily:"'Inter',sans-serif",lineHeight:1.5,marginTop:2}}>{hint}</p>}
-      <div style={{display:"flex",flexDirection:"column",gap:8}}>
-        {options.map(o=>{
-          const val=o.value||o,sel=value===val;
-          return (
-            <label key={val} style={{display:"flex",alignItems:"center",gap:12,padding:"12px 16px",borderRadius:10,cursor:"pointer",border:`1.5px solid ${sel?C.purple:C.border}`,background:sel?"rgba(147,51,234,0.06)":C.surface,transition:"all 0.2s"}}>
-              <div style={{width:20,height:20,borderRadius:"50%",flexShrink:0,border:sel?"none":`2px solid ${C.textDim}`,background:sel?C.gradient:"transparent",display:"flex",alignItems:"center",justifyContent:"center",transition:"all 0.2s"}}>
-                {sel&&<div style={{width:8,height:8,borderRadius:"50%",background:C.white}} />}
-              </div>
-              <input type="radio" checked={sel} onChange={()=>onChange({target:{value:val}})} style={{display:"none"}} />
-              <span style={{fontFamily:"'Inter',sans-serif",fontSize:14,color:C.text,lineHeight:1.5}}>{o.label||o}</span>
-            </label>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-function SectionTitle({title,subtitle}) {
-  return (
-    <div style={{marginBottom:32}}>
-      <h2 style={{fontFamily:"'Sora',sans-serif",fontWeight:700,fontSize:24,color:C.white,margin:"0 0 8px",lineHeight:1.3}}>{title}</h2>
-      {subtitle&&<p style={{fontFamily:"'Inter',sans-serif",fontSize:15,color:C.textMuted,lineHeight:1.7,margin:0}}>{subtitle}</p>}
-    </div>
-  );
-}
-
-function SubSection({title}) {
-  return (<>
-    <div style={{height:2,background:`linear-gradient(90deg,${C.coastalBlue}50,transparent)`,margin:"8px 0 28px",borderRadius:1}} />
-    <h3 style={{fontFamily:"'Sora',sans-serif",fontWeight:600,fontSize:17,color:C.purple,marginBottom:16,marginTop:0}}>{title}</h3>
-  </>);
-}
-
-function InfoCallout({children}) {
-  return (
-    <div style={{background:"rgba(147,51,234,0.06)",border:"1px solid rgba(147,51,234,0.15)",borderRadius:12,padding:"18px 22px",marginBottom:28,borderLeft:`3px solid ${C.coastalBlue}`}}>
-      <div style={{fontFamily:"'Inter',sans-serif",fontSize:14,color:C.textMuted,lineHeight:1.7}}>{children}</div>
-    </div>
-  );
-}
-
-function AccessCard({platform,checked,onChange,instructions}) {
-  return (
-    <div style={{border:`1.5px solid ${checked?"rgba(147,51,234,0.3)":C.border}`,borderRadius:12,padding:"18px 20px",background:checked?"rgba(147,51,234,0.04)":C.surface,transition:"all 0.25s",marginBottom:10}}>
-      <label style={{display:"flex",alignItems:"flex-start",gap:14,cursor:"pointer"}}>
-        <div style={{width:22,height:22,borderRadius:6,flexShrink:0,border:checked?"none":`2px solid ${C.textDim}`,background:checked?C.gradient:"transparent",display:"flex",alignItems:"center",justifyContent:"center",marginTop:2,transition:"all 0.2s"}}>
-          {checked&&<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7L6 10L11 4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>}
-        </div>
-        <input type="checkbox" checked={checked} onChange={onChange} style={{display:"none"}} />
-        <div style={{flex:1}}>
-          <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:4}}>
-            <span style={{fontFamily:"'Sora',sans-serif",fontWeight:600,fontSize:14,color:C.white}}>{platform}</span>
-            {checked&&<span style={{background:C.gradient,color:C.white,fontSize:10,fontWeight:600,padding:"2px 8px",borderRadius:20,fontFamily:"'Sora',sans-serif",letterSpacing:"0.5px"}}>GRANTED</span>}
-          </div>
-          <div style={{fontSize:13,color:C.textDim,fontFamily:"'Inter',sans-serif",lineHeight:1.5}}>{instructions}</div>
-        </div>
-      </label>
-    </div>
-  );
-}
-
-function ReviewCard({title,children}) {
-  return (
-    <div style={{background:C.surface,borderRadius:12,padding:24,marginBottom:16,border:`1px solid ${C.border}`}}>
-      <h4 style={{fontFamily:"'Sora',sans-serif",fontWeight:600,fontSize:15,color:C.white,marginBottom:14,marginTop:0}}>{title}</h4>
-      {children}
-    </div>
-  );
-}
-
-function ReviewRow({label,value}) {
-  if(!value) return null;
-  return (
-    <div style={{display:"flex",gap:8,marginBottom:6,fontFamily:"'Inter',sans-serif",fontSize:14}}>
-      <span style={{color:C.textDim,minWidth:90}}>{label}</span>
-      <span style={{color:C.text}}>{value}</span>
-    </div>
-  );
-}
-
-/* ── STEPS ── */
-function WelcomeStep() {
-  return (
-    <div style={{textAlign:"center",padding:"20px 0"}}>
-      <h1 style={{fontFamily:"'Sora',sans-serif",fontWeight:700,fontSize:"clamp(26px,4vw,34px)",color:C.white,marginBottom:24,lineHeight:1.25}}>
-        Welcome to <InkLockMark size="lg" />.
-      </h1>
-      <p style={{fontFamily:"'Inter',sans-serif",fontSize:16,color:C.textMuted,lineHeight:1.8,maxWidth:580,margin:"0 auto 32px"}}>
-        This onboarding form helps us prepare for your launch call so we can hit the ground running. Fill out what you can. Skip what you don't know. We will work through the rest together.
-      </p>
-      <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))",gap:14,maxWidth:560,margin:"0 auto 36px",textAlign:"left"}}>
-        {[
-          {num:"01",title:"Business Basics",desc:"Contact info and company details"},
-          {num:"02",title:"Tech & Access",desc:"Platforms and granting access"},
-          {num:"03",title:"Marketing Snapshot",desc:"What you're running and where the gaps are"},
-          {num:"04",title:"Operations & Goals",desc:"Pain points, communication, and outcomes"},
-        ].map(s=>(
-          <div key={s.num} style={{padding:"18px 20px",borderRadius:12,background:C.surface,border:`1px solid ${C.border}`}}>
-            <div style={{fontFamily:"'Sora',sans-serif",fontWeight:700,fontSize:20,marginBottom:4,color:C.coastalBlue}}>{s.num}</div>
-            <div style={{fontFamily:"'Sora',sans-serif",fontWeight:600,fontSize:13,color:C.white,marginBottom:3}}>{s.title}</div>
-            <div style={{fontFamily:"'Inter',sans-serif",fontSize:12,color:C.textDim,lineHeight:1.4}}>{s.desc}</div>
-          </div>
-        ))}
-      </div>
-      <div style={{background:C.surface,borderRadius:12,padding:"28px 32px",maxWidth:520,margin:"0 auto",border:`1px solid ${C.border}`,textAlign:"left"}}>
-        <p style={{fontFamily:"'Sora',sans-serif",fontWeight:600,fontSize:15,color:C.white,margin:"0 0 14px"}}>Set aside about 20 to 30 minutes.</p>
-        <p style={{fontFamily:"'Inter',sans-serif",fontSize:14,color:C.textMuted,margin:"0 0 14px",lineHeight:1.7}}>Some of these questions involve tracking down logins and granting platform access, which can take a few extra minutes. That's normal.</p>
-        <p style={{fontFamily:"'Inter',sans-serif",fontSize:14,color:C.textMuted,margin:"0 0 14px",lineHeight:1.7}}>Don't have all the answers? No problem. We will cover gaps on your launch call.</p>
-        <p style={{fontFamily:"'Inter',sans-serif",fontSize:14,color:C.textMuted,margin:0,lineHeight:1.7}}>Questions before you start? Reach out at <a href="mailto:inklockautomation@gmail.com" style={{color:C.purple,textDecoration:"none",fontWeight:500}}>inklockautomation@gmail.com</a></p>
-      </div>
-    </div>
-  );
-}
-
-function BusinessStep({data,onChange}) {
-  const set=k=>e=>onChange(k,e.target.value);
-  return (
-    <div>
-      <SectionTitle title="Business Information" subtitle="Tell us about your business so we know who we're building for." />
-      <div className="form-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"0 20px"}}>
-        <Input label="Your Name" required value={data.contactName} onChange={set("contactName")} placeholder="Full name" />
-        <Input label="Business Name" required value={data.businessName} onChange={set("businessName")} placeholder="Company name" />
-        <Input label="Industry" required value={data.industry} onChange={set("industry")} placeholder="e.g., Real Estate, Healthcare, E-Commerce" />
-        <Input label="Website" value={data.website} onChange={set("website")} placeholder="https://..." />
-        <Input label="Primary Email" required value={data.primaryEmail} onChange={set("primaryEmail")} placeholder="you@company.com" type="email" />
-        <Input label="Phone" value={data.phone} onChange={set("phone")} placeholder="(555) 555-5555" />
-        <Select label="Time Zone" value={data.timezone} onChange={set("timezone")} options={["Eastern (ET)","Central (CT)","Mountain (MT)","Pacific (PT)","Other"]} />
-        <Input label="Business Address" value={data.businessAddress} onChange={set("businessAddress")} placeholder="City, State" />
-      </div>
-      <SubSection title="Business Snapshot" />
-      <div className="form-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"0 20px"}}>
-        <Select label="Years in Business" value={data.yearsInBusiness} onChange={set("yearsInBusiness")} options={["Less than 1 year","1-3 years","3-5 years","5-10 years","10+ years"]} />
-        <Select label="Team Size" value={data.teamSize} onChange={set("teamSize")} options={["Just me","2-5","6-15","16-50","50+"]} />
-        <Input label="Average Client Value" value={data.avgClientValue} onChange={set("avgClientValue")} placeholder="e.g., $3,000" hint="Approximate lifetime or per-project value." />
-        <Select label="Monthly Revenue Range" value={data.monthlyRevenue} onChange={set("monthlyRevenue")} options={["Under $10K","$10K - $25K","$25K - $50K","$50K - $100K","$100K - $250K","$250K+"]} />
-      </div>
-      <TextArea label="Top Services or Products" value={data.topServices} onChange={set("topServices")} placeholder="List your primary services or products, especially your highest-revenue ones." hint="This helps us understand what to prioritize in your marketing and funnel strategy." />
-    </div>
-  );
-}
-
-function TechStep({data,onChange}) {
-  const set=k=>e=>onChange(k,e.target.value);
-  const toggle=k=>()=>onChange(k,!data[k]);
-  return (
-    <div>
-      <SectionTitle title="Tech Stack & Platform Access" subtitle="What tools are you currently using? Check off what you have. Note what you're unsure about. We will sort the rest on the launch call." />
-      <InfoCallout>
-        <strong style={{color:C.white}}>How access works:</strong><br /><br />Rather than sharing passwords, we ask you to add <strong style={{color:C.purple}}>inklockautomation@gmail.com</strong> as a user or admin on each platform.
-        <br /><br />This keeps your credentials secure and gives us what we need to audit and build.
-        <br /><br />Check each box below once you've granted access. If you're not sure how, we will walk through it live.
-      </InfoCallout>
-      <h3 style={{fontFamily:"'Sora',sans-serif",fontWeight:600,fontSize:17,color:C.white,marginBottom:6,marginTop:0}}>Current Platforms</h3>
-      <p style={{fontFamily:"'Inter',sans-serif",fontSize:14,color:C.textMuted,marginBottom:20,lineHeight:1.6,marginTop:0}}>Tell us what you're using. If you're not sure about a platform, write "unsure" and we will figure it out together.</p>
-      <div className="form-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"0 20px"}}>
-        <div><Select label="CRM / Client Management" value={data.crmPlatform} onChange={set("crmPlatform")} options={["GoHighLevel (GHL)","HubSpot","Salesforce","Kajabi","Zoho","Dubsado","HoneyBook","None","Unsure","Other"]} />{(data.crmPlatform==="Other"||data.crmPlatform==="Unsure")&&<Input placeholder="Tell us more..." value={data.crmNotes} onChange={set("crmNotes")} />}</div>
-        <div><Select label="Website Platform" value={data.websitePlatform} onChange={set("websitePlatform")} options={["WordPress","Squarespace","Wix","Shopify","GHL Funnel/Site","Webflow","Custom","None","Unsure","Other"]} />{(data.websitePlatform==="Other"||data.websitePlatform==="Unsure")&&<Input placeholder="Tell us more..." value={data.websiteNotes} onChange={set("websiteNotes")} />}</div>
-        <div><Select label="Email Marketing" value={data.emailPlatform} onChange={set("emailPlatform")} options={["Mailchimp","ActiveCampaign","GHL Email","ConvertKit","Klaviyo","Constant Contact","None","Unsure","Other"]} />{(data.emailPlatform==="Other"||data.emailPlatform==="Unsure")&&<Input placeholder="Tell us more..." value={data.emailNotes} onChange={set("emailNotes")} />}</div>
-        <div><Select label="Scheduling Tool" value={data.schedulingTool} onChange={set("schedulingTool")} options={["Calendly","Acuity","GHL Calendar","Cal.com","None","Unsure","Other"]} />{(data.schedulingTool==="Other"||data.schedulingTool==="Unsure")&&<Input placeholder="Tell us more..." value={data.schedulingNotes} onChange={set("schedulingNotes")} />}</div>
-        <div><Select label="Project Management" value={data.projectTool} onChange={set("projectTool")} options={["Asana","Trello","ClickUp","Monday","Notion","None","Unsure","Other"]} />{(data.projectTool==="Other"||data.projectTool==="Unsure")&&<Input placeholder="Tell us more..." value={data.projectNotes} onChange={set("projectNotes")} />}</div>
-        <div><Select label="Payment Processor" value={data.paymentProcessor} onChange={set("paymentProcessor")} options={["Stripe","Square","PayPal","QuickBooks","None","Unsure","Other"]} />{(data.paymentProcessor==="Other"||data.paymentProcessor==="Unsure")&&<Input placeholder="Tell us more..." value={data.paymentNotes} onChange={set("paymentNotes")} />}</div>
-      </div>
-      <TextArea label="Any Other Tools or Software?" value={data.otherTools} onChange={set("otherTools")} placeholder="Zapier, Make, Google Workspace, Slack, etc. List anything else your business runs on." />
-      <SubSection title="Grant Access for Audit" />
-      <p style={{fontFamily:"'Inter',sans-serif",fontSize:14,color:C.textMuted,marginBottom:12,lineHeight:1.7,marginTop:0}}>Add <strong style={{color:C.white}}>inklockautomation@gmail.com</strong> to each platform that applies, then check the box.</p>
-      <p style={{fontFamily:"'Inter',sans-serif",fontSize:14,color:C.textMuted,marginBottom:20,lineHeight:1.7,marginTop:0}}>If you don't have one of these set up or aren't sure how to add us, leave it unchecked. We will address it on the launch call.</p>
-      <AccessCard platform="Google Business Profile" checked={data.googleBusinessProfile} onChange={toggle("googleBusinessProfile")} instructions="business.google.com → Users → Add user → inklockautomation@gmail.com as Manager" />
-      <AccessCard platform="Google Ads" checked={data.googleAds} onChange={toggle("googleAds")} instructions="ads.google.com → Admin → Access → Invite → inklockautomation@gmail.com as Admin" />
-      <AccessCard platform="Google Analytics" checked={data.googleAnalytics} onChange={toggle("googleAnalytics")} instructions="analytics.google.com → Admin → Property Access → Add user → inklockautomation@gmail.com as Admin" />
-      <AccessCard platform="YouTube Studio" checked={data.youtubeStudio} onChange={toggle("youtubeStudio")} instructions="studio.youtube.com → Settings → Permissions → Invite → inklockautomation@gmail.com as Manager" />
-      <AccessCard platform="Meta Business Manager" checked={data.metaBusinessManager} onChange={toggle("metaBusinessManager")} instructions="business.facebook.com → Settings → People → Add → inklockautomation@gmail.com as Admin. This covers Meta Ads, Pixel Data, and Backend Analytics." />
-      <AccessCard platform="CRM Platform" checked={data.crmAccess} onChange={toggle("crmAccess")} instructions="Add inklockautomation@gmail.com as a user or admin in your CRM so we can review your pipeline, workflows, and automations." />
-    </div>
-  );
-}
-
-function MarketingStep({data,onChange}) {
-  const set=k=>e=>onChange(k,e.target.value);
-  const toggleAd=p=>{const c=data.adPlatforms||[];onChange("adPlatforms",c.includes(p)?c.filter(x=>x!==p):[...c,p]);};
-  return (
-    <div>
-      <SectionTitle title="Marketing Snapshot" subtitle="Help us understand what you're currently doing so we know where to start the audit. Be honest. There are no wrong answers here." />
-      <RadioGroup label="Are you currently running paid ads?" value={data.runningAds} onChange={e=>onChange("runningAds",e.target.value)} options={[{value:"yes",label:"Yes, currently running"},{value:"paused",label:"Ran in the past, not currently"},{value:"no",label:"Never run paid ads"},{value:"unsure",label:"Not sure what's running"}]} />
-      {(data.runningAds==="yes"||data.runningAds==="paused")&&(<>
-        <div style={{marginBottom:22}}>
-          <label style={{display:"block",fontFamily:"'Sora',sans-serif",fontWeight:500,fontSize:13,color:C.text,marginBottom:10,letterSpacing:"0.2px"}}>Which platforms?</label>
-          <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
-            {["Meta (Facebook/Instagram)","Google Ads","YouTube","TikTok","LinkedIn","Other"].map(p=>(
-              <button key={p} onClick={()=>toggleAd(p)} style={{padding:"9px 18px",borderRadius:20,border:`1.5px solid ${(data.adPlatforms||[]).includes(p)?C.purple:C.border}`,background:(data.adPlatforms||[]).includes(p)?"rgba(147,51,234,0.1)":"transparent",color:(data.adPlatforms||[]).includes(p)?C.purple:C.textMuted,fontFamily:"'Inter',sans-serif",fontSize:13,fontWeight:500,cursor:"pointer",transition:"all 0.2s"}}>{p}</button>
-            ))}
-          </div>
-        </div>
-        <Select label="Monthly Ad Spend" value={data.monthlyAdSpend} onChange={set("monthlyAdSpend")} options={["Under $1,000","$1,000 - $3,000","$3,000 - $5,000","$5,000 - $10,000","$10,000 - $25,000","$25,000+","Not sure"]} />
-      </>)}
-      <SubSection title="Funnels & Email" />
-      <RadioGroup label="Do you have funnels or landing pages set up?" value={data.hasFunnels} onChange={e=>onChange("hasFunnels",e.target.value)} options={[{value:"yes",label:"Yes, actively using"},{value:"partial",label:"Started but never finished"},{value:"no",label:"No funnels yet"},{value:"unsure",label:"Not sure"}]} />
-      {(data.hasFunnels==="yes"||data.hasFunnels==="partial")&&<TextArea placeholder="Tell us about your funnels. Where do they live? What's working, what's not?" value={data.funnelDetails} onChange={set("funnelDetails")} />}
-      <RadioGroup label="Are you doing any email marketing?" value={data.hasEmailMarketing} onChange={e=>onChange("hasEmailMarketing",e.target.value)} options={[{value:"yes",label:"Yes, regular campaigns"},{value:"some",label:"Have a list but rarely email them"},{value:"no",label:"No email marketing"}]} />
-      {(data.hasEmailMarketing==="yes"||data.hasEmailMarketing==="some")&&<TextArea placeholder="What platform? How many subscribers? Open rates if you know them." value={data.emailMarketingDetails} onChange={set("emailMarketingDetails")} />}
-      <SubSection title="Content & Tracking" />
-      <RadioGroup label="Do you have raw content that hasn't been edited or used yet?" hint="Photos, video clips, testimonials, case study material, etc." value={data.hasRawContent} onChange={e=>onChange("hasRawContent",e.target.value)} options={[{value:"yes",label:"Yes, plenty of it"},{value:"some",label:"Some, but it's scattered"},{value:"no",label:"Not really"}]} />
-      {(data.hasRawContent==="yes"||data.hasRawContent==="some")&&<TextArea placeholder="What kind of content and where is it stored?" value={data.rawContentDetails} onChange={set("rawContentDetails")} />}
-      <RadioGroup label="Are you currently tracking ROI or new client/patient acquisition?" value={data.trackingROI} onChange={e=>onChange("trackingROI",e.target.value)} options={[{value:"yes",label:"Yes, we have tracking in place"},{value:"partial",label:"Somewhat, but it's not reliable"},{value:"no",label:"No formal tracking"}]} />
-      {(data.trackingROI==="yes"||data.trackingROI==="partial")&&<TextArea placeholder="What does your tracking look like? Spreadsheet, CRM reports, something else?" value={data.roiDetails} onChange={set("roiDetails")} />}
-      <TextArea label="What's your biggest marketing challenge right now?" value={data.biggestMarketingChallenge} onChange={set("biggestMarketingChallenge")} placeholder="Be specific. 'Not enough leads' is a start, but 'We get leads from Meta but they ghost after the first call' tells us exactly where to look." hint="This directly informs what we prioritize in the audit." />
-      <SubSection title="Share Files & Resources" />
-      <InfoCallout>
-        <strong style={{color:C.white}}>Have files we should review?</strong> If you have brand assets, ad creatives, content libraries, analytics exports, SOPs, or anything else that would help us during the audit, share them here.
-        <br /><br />The easiest way is to share a Google Drive, Dropbox, or OneDrive folder with <strong style={{color:C.purple}}>inklockautomation@gmail.com</strong> and paste the link below.
-      </InfoCallout>
-      <RadioGroup label="Do you have files or resources to share with us?" value={data.hasFilesToShare} onChange={e=>onChange("hasFilesToShare",e.target.value)} options={[{value:"yes_link",label:"Yes, I can share a link (Google Drive, Dropbox, OneDrive, etc.)"},{value:"yes_later",label:"Yes, but I need to organize them first"},{value:"no",label:"Nothing to share right now"}]} />
-      {data.hasFilesToShare==="yes_link"&&<TextArea label="Paste your shared folder or file links" value={data.sharedDriveLinks} onChange={set("sharedDriveLinks")} placeholder="e.g., https://drive.google.com/drive/folders/... or https://www.dropbox.com/..." hint="Make sure inklockautomation@gmail.com has view or edit access to anything shared via Google Drive." />}
-      {data.hasFilesToShare==="yes_later"&&<p style={{fontFamily:"'Inter',sans-serif",fontSize:14,color:C.textMuted,lineHeight:1.6,marginBottom:20}}>No rush. Share the folder link with inklockautomation@gmail.com before the launch call and we will review everything in advance.</p>}
-    </div>
-  );
-}
-
-function OperationsStep({data,onChange}) {
-  const set=k=>e=>onChange(k,e.target.value);
-  return (
-    <div>
-      <SectionTitle title="Operations & Goals" subtitle="This helps us understand what's not working, what you want, and how to best work with you." />
-      <TextArea label="What are your biggest operational pain points right now?" required value={data.currentPainPoints} onChange={set("currentPainPoints")} placeholder="What's eating up your time? What keeps falling through the cracks? Where are you losing money or leads?" hint="The more specific you are, the faster we can identify solutions." />
-      <TextArea label="What does success look like 90 days from now?" required value={data.idealOutcome} onChange={set("idealOutcome")} placeholder="If everything went right over the next 3 months, what would be different about your business?" />
-      <SubSection title="Working Together" />
-      <InfoCallout>
-        <strong style={{color:C.white}}>How we communicate:</strong> <InkLockMark size="sm" /> uses Slack as our primary day-to-day communication channel.
-        <br /><br />We will create a dedicated Slack channel for your project and invite you and any relevant team members. This keeps quick questions, updates, and decisions organized in one place with a clear written record.
-        <br /><br />Email is reserved for formal deliverables, contracts, and documentation. We will get this set up on the launch call.
-      </InfoCallout>
-      <RadioGroup label="Do you already use Slack?" value={data.slackReady} onChange={e=>onChange("slackReady",e.target.value)} options={[{value:"yes",label:"Yes, I use Slack regularly"},{value:"have_account",label:"I have an account but don't use it much"},{value:"no",label:"No, but I'm open to it"},{value:"prefer_other",label:"I'd prefer a different quick communication tool"}]} />
-      {data.slackReady==="yes"&&<Input label="Slack email or handle (optional)" value={data.slackHandle} onChange={set("slackHandle")} placeholder="So we can send the channel invite" hint="We will invite you to the InkLock workspace and your dedicated client channel." />}
-      {data.slackReady==="prefer_other"&&<TextArea label="What do you currently use for quick communication?" value={data.currentQuickComm} onChange={set("currentQuickComm")} placeholder="Let us know what works for you and we will discuss options on the launch call." />}
-      <RadioGroup label="How do you handle day-to-day communication?" hint="This helps us match your rhythm." value={data.communicationPreference} onChange={e=>onChange("communicationPreference",e.target.value)} options={[{value:"async",label:"I prefer async. Send me everything in writing and I'll respond when I can."},{value:"realtime",label:"I like real-time. Ping me throughout the day, I'll respond quickly."},{value:"batched",label:"Batch it. Consolidate updates into one message per day."},{value:"calls",label:"I'd rather jump on a quick call than type it out."}]} />
-      <RadioGroup label="When decisions need to be made, what works best?" value={data.decisionStyle} onChange={e=>onChange("decisionStyle",e.target.value)} options={[{value:"recommend",label:"Give me options with your recommendation"},{value:"present",label:"Present options equally, I'll decide"},{value:"handle",label:"Handle it and update me after"}]} />
-      <RadioGroup label="Meeting preference for ongoing calls?" value={data.meetingPreference} onChange={e=>onChange("meetingPreference",e.target.value)} options={[{value:"weekly",label:"Weekly (recommended for the first 90 days)"},{value:"biweekly",label:"Every other week"},{value:"monthly",label:"Monthly"},{value:"asneeded",label:"As needed"}]} />
-      <TextArea label="Anything else we should know?" value={data.additionalNotes} onChange={set("additionalNotes")} placeholder="Concerns, expectations, things you've been burned on before, upcoming deadlines. Anything that helps us serve you better." />
-    </div>
-  );
-}
-
-function ReviewStep({data}) {
-  const ap=[{key:"googleBusinessProfile",label:"Google Business Profile"},{key:"googleAds",label:"Google Ads"},{key:"googleAnalytics",label:"Google Analytics"},{key:"youtubeStudio",label:"YouTube Studio"},{key:"metaBusinessManager",label:"Meta Business Manager"},{key:"crmAccess",label:"CRM Platform"}];
-  const granted=ap.filter(p=>data[p.key]),notGranted=ap.filter(p=>!data[p.key]);
-  return (
-    <div>
-      <SectionTitle title="Review & Submit" subtitle="Take a quick look to make sure everything's right. Don't worry about anything you left blank. We will cover gaps on the launch call." />
-      <ReviewCard title="Business Info">
-        <div className="form-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:6}}>
-          <ReviewRow label="Name" value={data.contactName} /><ReviewRow label="Business" value={data.businessName} />
-          <ReviewRow label="Industry" value={data.industry} /><ReviewRow label="Email" value={data.primaryEmail} />
-          <ReviewRow label="Revenue" value={data.monthlyRevenue} /><ReviewRow label="Team" value={data.teamSize} />
-        </div>
-      </ReviewCard>
-      <ReviewCard title="Platform Access">
-        {granted.map(p=><div key={p.key} style={{display:"flex",alignItems:"center",gap:8,marginBottom:6,fontFamily:"'Inter',sans-serif",fontSize:14}}><span style={{color:"#22c55e",fontSize:15}}>✓</span><span style={{color:C.white}}>{p.label}</span><span style={{fontSize:10,color:C.purple,fontWeight:600,letterSpacing:"0.5px"}}>ACCESS GRANTED</span></div>)}
-        {notGranted.map(p=><div key={p.key} style={{display:"flex",alignItems:"center",gap:8,marginBottom:6,fontFamily:"'Inter',sans-serif",fontSize:14}}><span style={{color:"rgba(255,255,255,0.15)",fontSize:15}}>○</span><span style={{color:C.textDim}}>{p.label}</span><span style={{fontSize:10,color:C.textDim}}>will cover on launch call</span></div>)}
-      </ReviewCard>
-      {(data.slackReady||data.communicationPreference||data.meetingPreference)&&(
-        <ReviewCard title="Communication">
-          <ReviewRow label="Slack" value={data.slackReady==="yes"?`Ready${data.slackHandle?` (${data.slackHandle})`:""}`:data.slackReady==="have_account"?"Has account, light user":data.slackReady==="no"?"New to Slack, open to it":data.slackReady==="prefer_other"?"Prefers alternative":null} />
-          <ReviewRow label="Style" value={data.communicationPreference==="async"?"Async / written":data.communicationPreference==="realtime"?"Real-time, responsive":data.communicationPreference==="batched"?"Batched daily updates":data.communicationPreference==="calls"?"Prefers quick calls":null} />
-          <ReviewRow label="Meetings" value={data.meetingPreference==="weekly"?"Weekly":data.meetingPreference==="biweekly"?"Every other week":data.meetingPreference==="monthly"?"Monthly":data.meetingPreference==="asneeded"?"As needed":null} />
-          <ReviewRow label="Decisions" value={data.decisionStyle==="recommend"?"Wants recommendations":data.decisionStyle==="present"?"Present options, they decide":data.decisionStyle==="handle"?"Handle it, update after":null} />
-        </ReviewCard>
-      )}
-      {(data.currentPainPoints||data.idealOutcome||data.biggestMarketingChallenge)&&(
-        <ReviewCard title="Key Priorities">
-          <div style={{fontFamily:"'Inter',sans-serif",fontSize:14,color:C.textMuted,lineHeight:1.7}}>
-            {data.biggestMarketingChallenge&&<p style={{margin:"0 0 10px"}}><strong style={{color:C.white}}>Marketing challenge:</strong> {data.biggestMarketingChallenge}</p>}
-            {data.currentPainPoints&&<p style={{margin:"0 0 10px"}}><strong style={{color:C.white}}>Pain points:</strong> {data.currentPainPoints}</p>}
-            {data.idealOutcome&&<p style={{margin:0}}><strong style={{color:C.white}}>90-day goal:</strong> {data.idealOutcome}</p>}
-          </div>
-        </ReviewCard>
-      )}
-      <InfoCallout>
-        <strong style={{color:C.white}}>What happens next:</strong><br /><br />Once you submit, our team reviews everything and prepares a custom audit agenda for your launch call.
-        <br /><br />We will reach out within 24 to 48 hours to confirm scheduling.
-        <br /><br />If anything came up that you want to flag, email us at <a href="mailto:inklockautomation@gmail.com" style={{color:C.purple,textDecoration:"none",fontWeight:500}}>inklockautomation@gmail.com</a>.
-      </InfoCallout>
-    </div>
-  );
-}
-
-/* ── MAIN ── */
-function App() {
-  const [step,setStep]=useState(0);
-  const [data,setData]=useState(INITIAL);
-  const [submitted,setSubmitted]=useState(false);
-  const [submitting,setSubmitting]=useState(false);
-
-  const onChange=(key,value)=>setData(prev=>({...prev,[key]:value}));
-  const go=dir=>{setStep(s=>s+dir);window.scrollTo({top:0,behavior:"smooth"});};
-
-  const handleSubmit=async()=>{
-    setSubmitting(true);
-    try {
-      const payload={...data,adPlatforms:(data.adPlatforms||[]).join(", "),googleBusinessProfile:data.googleBusinessProfile?"Granted":"Not yet",googleAds:data.googleAds?"Granted":"Not yet",googleAnalytics:data.googleAnalytics?"Granted":"Not yet",youtubeStudio:data.youtubeStudio?"Granted":"Not yet",metaBusinessManager:data.metaBusinessManager?"Granted":"Not yet",crmAccess:data.crmAccess?"Granted":"Not yet",formSource:"InkLock Onboarding Form",submittedAt:new Date().toISOString()};
-      await fetch(GHL_WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
-    } catch(err) { console.error("Webhook error:",err); }
-    setSubmitting(false);
-    setSubmitted(true);
-  };
-
-  if (submitted) {
-    return (
-      <div style={{minHeight:"100vh",background:C.bg,display:"flex",alignItems:"center",justifyContent:"center",padding:"40px 20px"}}>
-        <div style={{textAlign:"center",maxWidth:520}}>
-          <h1 style={{fontFamily:"'Sora',sans-serif",fontWeight:700,fontSize:32,color:C.white,marginBottom:20}}>You're locked in.</h1>
-          <p style={{fontFamily:"'Inter',sans-serif",fontSize:16,color:C.textMuted,lineHeight:1.8,marginBottom:12}}>We've received your onboarding form and our team is already reviewing your information.</p>
-          <p style={{fontFamily:"'Inter',sans-serif",fontSize:16,color:C.textMuted,lineHeight:1.8,marginBottom:12}}>Expect to hear from us within 24 to 48 hours to schedule your launch call.</p>
-          <p style={{fontFamily:"'Inter',sans-serif",fontSize:16,color:C.textMuted,lineHeight:1.8,marginBottom:36}}>If any other access details come to mind, send them to <a href="mailto:inklockautomation@gmail.com" style={{color:C.purple,textDecoration:"none",fontWeight:500}}>inklockautomation@gmail.com</a>.</p>
-          <div style={{width:80,height:3,background:`linear-gradient(90deg,${C.coastalBlue},${C.purple})`,borderRadius:2,margin:"0 auto 24px"}} />
-          <div style={{display:"inline-block",padding:"14px 32px",borderRadius:10,background:C.gradient,color:C.white,fontFamily:"'Sora',sans-serif",fontWeight:600,fontSize:15}}>Lock in your systems. Unlock your marketing.</div>
-        </div>
-      </div>
-    );
+  .ob-card{
+    position:relative;z-index:1;
+    width:100%;max-width:720px;
+    background:var(--white);border:1px solid rgba(147,51,234,.16);border-radius:18px;
+    padding:40px;box-shadow:var(--shadow-md);
   }
 
-  const progress=Math.round((step/(STEPS.length-1))*100);
+  /* Progress */
+  .progress-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;position:relative}
+  .progress-track{position:absolute;top:50%;left:18px;right:18px;height:2px;background:rgba(147,51,234,.12);transform:translateY(-50%);z-index:0}
+  .progress-fill{position:absolute;top:50%;left:18px;height:2px;background:var(--grad-primary);transform:translateY(-50%);z-index:1;transition:width .4s var(--ease-out);width:0}
+  .progress-step{
+    width:36px;height:36px;border-radius:50%;
+    background:var(--white);border:1.5px solid rgba(147,51,234,.18);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--txt-mute);
+    position:relative;z-index:2;transition:all var(--dur-base);
+  }
+  .progress-step.active{border-color:var(--purple);color:var(--purple);box-shadow:0 0 0 4px rgba(147,51,234,.10)}
+  .progress-step.completed{background:var(--grad-primary);border-color:transparent;color:var(--white)}
+  .progress-step.completed::after{content:'\2713';font-size:14px}
+  .progress-step.completed span{display:none}
 
-  return (
-    <div style={{minHeight:"100vh",background:C.bg,fontFamily:"'Sora',sans-serif"}}>
-      {/* Header */}
-      <div className="header-bar" style={{background:C.surface,borderBottom:`1px solid ${C.border}`,padding:"14px 32px",display:"flex",alignItems:"center",justifyContent:"space-between",position:"sticky",top:0,zIndex:100}}>
-        <a href="/" style={{textDecoration:"none"}}><InkLockMark size="md" /></a>
-        <span style={{fontFamily:"'Inter',sans-serif",fontSize:13,color:C.textDim,letterSpacing:"0.3px"}}>Client Onboarding</span>
-      </div>
+  .step-meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .step-label{
+    font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:1.6px;
+    text-transform:uppercase;color:var(--purple);
+  }
+  .step-count{font-size:12px;color:var(--txt-mute);font-weight:600}
+  .step-title{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--txt);margin-bottom:8px;letter-spacing:-.3px;line-height:1.25}
+  .step-sub{font-size:15px;color:var(--txt-dim);line-height:1.65;margin-bottom:24px}
 
-      {/* Progress */}
-      <div className="progress-bar" style={{background:C.surface,padding:"12px 32px 14px",borderBottom:`1px solid ${C.border}`}}>
-        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
-          <div className="step-labels" style={{display:"flex",gap:0,flex:1,justifyContent:"space-between"}}>
-            {STEPS.map((s,i)=>(
-              <button key={s.id} onClick={()=>i<=step&&setStep(i)} style={{background:"none",border:"none",padding:0,cursor:i<=step?"pointer":"default",fontFamily:"'Sora',sans-serif",fontSize:12,fontWeight:i===step?600:400,color:i===step?C.purple:i<step?C.text:C.textDim,opacity:i>step?0.35:1,transition:"all 0.2s"}}>{s.label}</button>
-            ))}
-          </div>
-          <span style={{fontFamily:"'Sora',sans-serif",fontSize:13,fontWeight:600,color:C.coastalBlue,marginLeft:16,whiteSpace:"nowrap"}}>{progress}%</span>
-        </div>
-        <div style={{height:3,background:"rgba(255,255,255,0.06)",borderRadius:2,overflow:"hidden"}}>
-          <div style={{height:"100%",borderRadius:2,background:C.gradient,width:`${progress}%`,transition:"width 0.4s ease"}} />
-        </div>
-        <div style={{height:2,background:`linear-gradient(90deg,${C.coastalBlue}40,transparent)`,marginTop:1,borderRadius:1}} />
-      </div>
+  .form-step{display:none}
+  .form-step.active{display:block}
 
-      {/* Content */}
-      <div className="content-area" style={{maxWidth:720,margin:"0 auto",padding:"40px 32px 130px"}}>
-        {step===0&&<WelcomeStep />}
-        {step===1&&<BusinessStep data={data} onChange={onChange} />}
-        {step===2&&<TechStep data={data} onChange={onChange} />}
-        {step===3&&<MarketingStep data={data} onChange={onChange} />}
-        {step===4&&<OperationsStep data={data} onChange={onChange} />}
-        {step===5&&<ReviewStep data={data} />}
-      </div>
+  .field{margin-bottom:20px}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field-label{
+    display:block;font-family:var(--font-display);font-size:13px;font-weight:700;
+    color:var(--txt);margin-bottom:8px;letter-spacing:.2px;
+  }
+  .field-label .req{color:var(--fuchsia);margin-left:2px}
+  .field-hint{font-size:12px;color:var(--txt-mute);margin-bottom:8px;line-height:1.55}
 
-      {/* Footer */}
-      <div className="footer-bar" style={{position:"fixed",bottom:0,left:0,right:0,background:"rgba(8,8,14,0.96)",backdropFilter:"blur(12px)",borderTop:`1px solid ${C.border}`,padding:"14px 32px",display:"flex",justifyContent:"space-between",alignItems:"center",zIndex:100}}>
-        <button onClick={()=>go(-1)} disabled={step===0} style={{padding:"11px 22px",borderRadius:10,border:`1.5px solid ${C.border}`,background:"transparent",fontFamily:"'Sora',sans-serif",fontWeight:600,fontSize:14,color:C.textMuted,cursor:step===0?"default":"pointer",opacity:step===0?0.3:1,transition:"all 0.2s"}}>← Back</button>
-        <span style={{fontFamily:"'Inter',sans-serif",fontSize:13,color:C.textDim}}>{step+1} of {STEPS.length}</span>
-        {step<STEPS.length-1?(
-          <button onClick={()=>go(1)} style={{padding:"11px 26px",borderRadius:10,border:"none",background:C.gradient,fontFamily:"'Sora',sans-serif",fontWeight:600,fontSize:14,color:C.white,cursor:"pointer",transition:"all 0.2s",display:"flex",alignItems:"center",gap:6}}>
-            {step===0?"Get Started":"Continue"} <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </button>
-        ):(
-          <button onClick={handleSubmit} disabled={submitting} style={{padding:"11px 26px",borderRadius:10,border:"none",background:submitting?"#6b21a8":C.gradient,fontFamily:"'Sora',sans-serif",fontWeight:600,fontSize:14,color:C.white,cursor:submitting?"wait":"pointer",transition:"all 0.2s",opacity:submitting?0.7:1}}>
-            {submitting?"Submitting...":"Submit Onboarding"}
-          </button>
-        )}
-      </div>
+  .field input[type=text],
+  .field input[type=email],
+  .field input[type=tel],
+  .field input[type=url],
+  .field textarea,
+  .field select{
+    width:100%;
+    font-family:var(--font-body);font-size:15px;color:var(--txt);
+    background:var(--white);border:1px solid rgba(147,51,234,.20);border-radius:8px;padding:12px 14px;
+    transition:border-color var(--dur-base),box-shadow var(--dur-base);outline:none;
+  }
+  .field input:focus,.field textarea:focus,.field select:focus{
+    border-color:var(--purple);box-shadow:0 0 0 3px rgba(147,51,234,.10);
+  }
+  .field textarea{min-height:90px;resize:vertical;line-height:1.55}
+  .field select{
+    appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8598' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer;
+  }
+
+  /* Radios + checkboxes */
+  .radio-group{display:flex;flex-direction:column;gap:10px}
+  .radio-option{
+    background:var(--white);border:1px solid rgba(147,51,234,.14);border-radius:10px;
+    padding:14px 16px;cursor:pointer;transition:all var(--dur-base);
+    display:flex;align-items:flex-start;gap:12px;
+  }
+  .radio-option:hover{border-color:rgba(147,51,234,.32);background:rgba(147,51,234,.03)}
+  .radio-option.selected{border-color:var(--purple);background:rgba(147,51,234,.06);box-shadow:0 0 0 1px rgba(147,51,234,.10)}
+  .radio-option input[type=radio]{display:none}
+  .radio-dot{
+    width:20px;height:20px;border-radius:50%;flex-shrink:0;
+    border:2px solid rgba(147,51,234,.22);margin-top:2px;position:relative;transition:border-color var(--dur-base);
+  }
+  .radio-option.selected .radio-dot{border-color:var(--purple)}
+  .radio-option.selected .radio-dot::after{
+    content:'';position:absolute;top:3px;left:3px;width:10px;height:10px;border-radius:50%;background:var(--grad-primary);
+  }
+  .radio-label{font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--txt);letter-spacing:.1px}
+  .radio-desc{font-size:13px;color:var(--txt-dim);margin-top:3px;line-height:1.5}
+
+  .check-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .check-label{
+    display:flex;align-items:center;gap:10px;
+    padding:11px 14px;border-radius:8px;
+    background:rgba(147,51,234,.04);border:1px solid rgba(147,51,234,.14);
+    font-family:var(--font-body);font-size:14px;color:var(--txt);cursor:pointer;
+    transition:all var(--dur-base);
+  }
+  .check-label:hover{border-color:rgba(147,51,234,.30);background:rgba(147,51,234,.06)}
+  .check-label input{accent-color:var(--purple);width:16px;height:16px;cursor:pointer}
+
+  /* Validation */
+  .field-error{font-size:12px;color:#dc2626;margin-top:6px;display:none}
+  .field.invalid input,.field.invalid textarea,.field.invalid select{border-color:#dc2626}
+  .field.invalid .field-error{display:block}
+
+  /* Buttons */
+  .form-buttons{display:flex;justify-content:space-between;align-items:center;margin-top:30px;gap:14px}
+  .btn-back{
+    font-family:var(--font-display);font-size:14px;font-weight:600;
+    background:none;border:1px solid rgba(147,51,234,.20);color:var(--txt-dim);
+    padding:12px 22px;border-radius:8px;cursor:pointer;transition:all var(--dur-base);
+  }
+  .btn-back:hover{border-color:var(--purple);color:var(--purple);background:rgba(147,51,234,.04)}
+  .btn-back.hidden{visibility:hidden}
+  .btn-next,.btn-submit{
+    font-family:var(--font-display);font-size:14px;font-weight:700;
+    background:var(--grad-primary);color:var(--white);
+    border:0;padding:13px 26px;border-radius:8px;cursor:pointer;
+    transition:transform var(--dur-base),box-shadow var(--dur-base);
+    box-shadow:var(--glow-soft);
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .btn-next:hover,.btn-submit:hover{transform:translateY(-2px);box-shadow:var(--glow-button)}
+  .btn-submit{display:none}
+
+  /* Sub-section divider */
+  .sub-rule{
+    height:1px;
+    background:linear-gradient(90deg,rgba(147,51,234,.20),transparent);
+    margin:18px 0 22px;
+  }
+  .sub-head{
+    font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--purple);
+    letter-spacing:.2px;margin-bottom:14px;
+  }
+
+  /* Success screen */
+  .success-screen{display:none;text-align:center;padding:20px 0}
+  .success-screen.active{display:block}
+  .success-icon{
+    width:72px;height:72px;border-radius:50%;
+    background:var(--grad-primary);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 22px;color:var(--white);box-shadow:var(--glow-strong);
+  }
+  .success-icon svg{width:36px;height:36px;stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .success-screen h2{
+    font-family:var(--font-display);font-size:clamp(24px,3vw,32px);font-weight:800;
+    color:var(--txt);letter-spacing:-.4px;line-height:1.2;margin-bottom:12px;
+  }
+  .success-screen h2 .accent{
+    background:var(--grad-brand);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  }
+  .success-screen p{font-size:16px;color:var(--txt-dim);line-height:1.7;max-width:440px;margin:0 auto 22px}
+  .success-screen .btn-primary{margin-top:8px}
+
+  .ob-foot{position:relative;z-index:1;margin-top:20px;font-size:13px;color:var(--txt-mute);text-align:center}
+  .ob-foot a{color:var(--purple);text-decoration:none}
+
+  @media (max-width:640px){
+    .ob-wrap{padding:96px 20px 60px}
+    .ob-card{padding:28px 22px;border-radius:14px}
+    .progress-step{width:30px;height:30px;font-size:11px}
+    .step-title{font-size:20px}
+    .field-row,.check-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav id="navbar" aria-label="Main">
+  <a href="/" class="nav-logo" aria-label="InkLock home">
+    <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
+    <span class="logo-bar"></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/services">Services</a></li>
+    <li><a href="/about">Our company</a></li>
+    <li><a href="/case-studies">Case studies</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/podcast">Podcast</a></li>
+  </ul>
+  <a href="/contact" class="nav-cta">Book a call →</a>
+  <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<main id="main-content">
+
+  <div class="ob-wrap">
+
+    <div class="ob-head">
+      <div class="eyebrow">Client onboarding</div>
+      <h1>Let's get the engine running. <span class="accent">Tell us what we are working with.</span></h1>
+      <p>This is the prep work for your kickoff. The more specific you are, the faster we move. Takes about 12 minutes.</p>
     </div>
-  );
+
+    <div class="ob-card">
+
+      <!-- Progress -->
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-track"></div>
+        <div class="progress-fill" id="progressFill"></div>
+        <div class="progress-step active" data-step="1"><span>1</span></div>
+        <div class="progress-step" data-step="2"><span>2</span></div>
+        <div class="progress-step" data-step="3"><span>3</span></div>
+        <div class="progress-step" data-step="4"><span>4</span></div>
+        <div class="progress-step" data-step="5"><span>5</span></div>
+        <div class="progress-step" data-step="6"><span>6</span></div>
+      </div>
+
+      <form id="clientForm" action="/api/contact" method="POST" novalidate>
+
+        <!-- STEP 1: Contact -->
+        <div class="form-step active" data-step="1">
+          <div class="step-meta"><span class="step-label">Contact</span><span class="step-count">Step 1 of 6</span></div>
+          <h2 class="step-title">The basics.</h2>
+          <p class="step-sub">Who we are working with and how to reach you.</p>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Your name <span class="req">*</span></label>
+              <input type="text" name="contactName" placeholder="Jane Owner" required>
+              <div class="field-error">Please enter your name.</div>
+            </div>
+            <div class="field">
+              <label class="field-label">Business name <span class="req">*</span></label>
+              <input type="text" name="businessName" placeholder="Your company" required>
+              <div class="field-error">Please enter your business name.</div>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Email <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="you@yourcompany.com" required>
+              <div class="field-error">Please enter a valid email.</div>
+            </div>
+            <div class="field">
+              <label class="field-label">Phone</label>
+              <input type="tel" name="phone" placeholder="(555) 123-4567">
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Website</label>
+            <input type="url" name="website" placeholder="https://yourcompany.com">
+          </div>
+          <div class="field">
+            <label class="field-label">Industry</label>
+            <input type="text" name="industry" placeholder="Example. Wellness coaching, real estate, B2B services">
+          </div>
+        </div>
+
+        <!-- STEP 2: Business overview -->
+        <div class="form-step" data-step="2">
+          <div class="step-meta"><span class="step-label">Business</span><span class="step-count">Step 2 of 6</span></div>
+          <h2 class="step-title">The shape of the business.</h2>
+          <p class="step-sub">Quick context on size and economics. We use this to scope the right system.</p>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Years in business</label>
+              <input type="text" name="yearsInBusiness" placeholder="Example. 4 years">
+            </div>
+            <div class="field">
+              <label class="field-label">Team size</label>
+              <input type="text" name="teamSize" placeholder="Example. Just me, or 8 FTE + 3 contractors">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Average client value</label>
+              <input type="text" name="avgClientValue" placeholder="$2,500 LTV, $400 per month, etc.">
+            </div>
+            <div class="field">
+              <label class="field-label">Approximate monthly revenue</label>
+              <select name="monthlyRevenue">
+                <option value="">Select range</option>
+                <option value="Under $10K/mo">Under $10K per month</option>
+                <option value="$10K-$25K/mo">$10K to $25K per month</option>
+                <option value="$25K-$50K/mo">$25K to $50K per month</option>
+                <option value="$50K-$100K/mo">$50K to $100K per month</option>
+                <option value="$100K+/mo">$100K+ per month</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Top services or offers <span class="req">*</span></label>
+            <p class="field-hint">List your main 2 to 4 offers with prices if you can.</p>
+            <textarea name="topServices" placeholder="Example. 12-week coaching, $2,500. VIP day, $5,000. Group cohort, $1,200." required></textarea>
+            <div class="field-error">Please list your top services.</div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Current stack -->
+        <div class="form-step" data-step="3">
+          <div class="step-meta"><span class="step-label">Current stack</span><span class="step-count">Step 3 of 6</span></div>
+          <h2 class="step-title">What is the tech stack looking like?</h2>
+          <p class="step-sub">Tell us what tools you are using. Be honest about which ones actually work.</p>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">CRM platform</label>
+              <input type="text" name="crmPlatform" placeholder="HubSpot, GoHighLevel, none, etc.">
+            </div>
+            <div class="field">
+              <label class="field-label">Email marketing platform</label>
+              <input type="text" name="emailPlatform" placeholder="Klaviyo, ConvertKit, Mailchimp, none">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Website platform</label>
+              <input type="text" name="websitePlatform" placeholder="WordPress, Squarespace, custom, etc.">
+            </div>
+            <div class="field">
+              <label class="field-label">Scheduling tool</label>
+              <input type="text" name="schedulingTool" placeholder="Calendly, Acuity, GHL, none">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Project management</label>
+              <input type="text" name="projectTool" placeholder="Asana, ClickUp, Notion, none">
+            </div>
+            <div class="field">
+              <label class="field-label">Payment processor</label>
+              <input type="text" name="paymentProcessor" placeholder="Stripe, Square, etc.">
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Other tools we should know about</label>
+            <textarea name="otherTools" placeholder="Anything we missed. Zapier, Make, ad platforms, analytics, etc."></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 4: Pain points + goals -->
+        <div class="form-step" data-step="4">
+          <div class="step-meta"><span class="step-label">Pain points + goals</span><span class="step-count">Step 4 of 6</span></div>
+          <h2 class="step-title">What is broken. What is the goal.</h2>
+          <p class="step-sub">This is the most important step. The clearer you are here, the better the build.</p>
+
+          <div class="field">
+            <label class="field-label">What is the biggest thing not working right now? <span class="req">*</span></label>
+            <textarea name="currentPainPoints" placeholder="Example. Leads come in through Instagram and the website, but we lose them between first touch and the first call. Manual follow-up. No nurture. No tracking." required></textarea>
+            <div class="field-error">Tell us what is broken.</div>
+          </div>
+          <div class="field">
+            <label class="field-label">What would success look like in 90 days? <span class="req">*</span></label>
+            <textarea name="idealOutcome" placeholder="Example. Every lead is automatically tagged, nurtured, and notifies the team. We can see pipeline value at a glance. The CEO is not the inbox anymore." required></textarea>
+            <div class="field-error">Tell us what success looks like.</div>
+          </div>
+          <div class="field">
+            <label class="field-label">What have you already tried?</label>
+            <textarea name="alreadyTried" placeholder="Tools you bought and stopped using, agencies you fired, automations you tried to build yourself, etc."></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 5: Budget + scope -->
+        <div class="form-step" data-step="5">
+          <div class="step-meta"><span class="step-label">Budget + scope</span><span class="step-count">Step 5 of 6</span></div>
+          <h2 class="step-title">Tier and timeline.</h2>
+          <p class="step-sub">Pick the package you are in (or interested in). We will confirm scope on the kickoff call.</p>
+
+          <div class="field">
+            <label class="field-label">Engagement tier <span class="req">*</span></label>
+            <div class="radio-group" data-name="engagementTier">
+              <div class="radio-option">
+                <input type="radio" name="engagementTier" value="The Rescue">
+                <div class="radio-dot"></div>
+                <div>
+                  <div class="radio-label">The Rescue, $3K to $8K</div>
+                  <div class="radio-desc">30-day CRM cleanup intensive. For businesses with a junk-drawer CRM.</div>
+                </div>
+              </div>
+              <div class="radio-option">
+                <input type="radio" name="engagementTier" value="The Foundation Build">
+                <div class="radio-dot"></div>
+                <div>
+                  <div class="radio-label">The Foundation Build, $5K to $15K project or $2.5K per month</div>
+                  <div class="radio-desc">Full systems rebuild + automation.</div>
+                </div>
+              </div>
+              <div class="radio-option">
+                <input type="radio" name="engagementTier" value="The Full Engine">
+                <div class="radio-dot"></div>
+                <div>
+                  <div class="radio-label">The Full Engine, $5K to $10K per month, 6-month minimum</div>
+                  <div class="radio-desc">End-to-end marketing + systems.</div>
+                </div>
+              </div>
+              <div class="radio-option">
+                <input type="radio" name="engagementTier" value="The Scale Package">
+                <div class="radio-dot"></div>
+                <div>
+                  <div class="radio-label">The Scale Package, $10K to $25K per month</div>
+                  <div class="radio-desc">Fractional ops + marketing leadership.</div>
+                </div>
+              </div>
+              <div class="radio-option">
+                <input type="radio" name="engagementTier" value="Not sure">
+                <div class="radio-dot"></div>
+                <div><div class="radio-label">Not sure yet</div><div class="radio-desc">We will scope it together.</div></div>
+              </div>
+            </div>
+            <div class="field-error">Please select a tier.</div>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Timeline <span class="req">*</span></label>
+            <div class="radio-group" data-name="timeline">
+              <div class="radio-option"><input type="radio" name="timeline" value="ASAP"><div class="radio-dot"></div><div><div class="radio-label">As soon as possible</div></div></div>
+              <div class="radio-option"><input type="radio" name="timeline" value="Within 30 days"><div class="radio-dot"></div><div><div class="radio-label">Within 30 days</div></div></div>
+              <div class="radio-option"><input type="radio" name="timeline" value="Within 60-90 days"><div class="radio-dot"></div><div><div class="radio-label">Within 60 to 90 days</div></div></div>
+              <div class="radio-option"><input type="radio" name="timeline" value="Flexible"><div class="radio-dot"></div><div><div class="radio-label">Flexible</div></div></div>
+            </div>
+            <div class="field-error">Please select a timeline.</div>
+          </div>
+        </div>
+
+        <!-- STEP 6: Access + working preferences -->
+        <div class="form-step" data-step="6">
+          <div class="step-meta"><span class="step-label">Access + working style</span><span class="step-count">Step 6 of 6</span></div>
+          <h2 class="step-title">How we work together.</h2>
+          <p class="step-sub">Last few details and we are off to kickoff.</p>
+
+          <div class="field">
+            <label class="field-label">Platforms we will likely need access to</label>
+            <p class="field-hint">Check anything that applies. We will send access instructions after kickoff.</p>
+            <div class="check-grid">
+              <label class="check-label"><input type="checkbox" name="access" value="Google Business Profile"> Google Business Profile</label>
+              <label class="check-label"><input type="checkbox" name="access" value="Google Ads"> Google Ads</label>
+              <label class="check-label"><input type="checkbox" name="access" value="Google Analytics"> Google Analytics</label>
+              <label class="check-label"><input type="checkbox" name="access" value="Meta Business Manager"> Meta Business Manager</label>
+              <label class="check-label"><input type="checkbox" name="access" value="CRM"> CRM</label>
+              <label class="check-label"><input type="checkbox" name="access" value="Email platform"> Email platform</label>
+              <label class="check-label"><input type="checkbox" name="access" value="Website / hosting"> Website + hosting</label>
+              <label class="check-label"><input type="checkbox" name="access" value="Domain registrar"> Domain registrar</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Preferred communication channel</label>
+            <select name="communicationPreference">
+              <option value="">Select one</option>
+              <option value="Email">Email</option>
+              <option value="Slack">Slack</option>
+              <option value="Video calls">Scheduled video calls</option>
+              <option value="Async Loom">Async Loom updates</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Meeting cadence preference</label>
+            <select name="meetingPreference">
+              <option value="">Select one</option>
+              <option value="Weekly">Weekly check-ins</option>
+              <option value="Biweekly">Every other week</option>
+              <option value="Monthly">Monthly reviews</option>
+              <option value="As needed">As needed only</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Anything else we should know?</label>
+            <textarea name="additionalNotes" placeholder="Things we did not ask but you want us to know. Decision-making style, dealbreakers, deadlines, etc."></textarea>
+          </div>
+        </div>
+
+        <input type="hidden" name="form_source" value="onboarding">
+
+        <!-- Buttons -->
+        <div class="form-buttons" id="formButtons">
+          <button type="button" class="btn-back hidden" id="btnBack">← Back</button>
+          <button type="button" class="btn-next" id="btnNext">Continue →</button>
+          <button type="submit" class="btn-submit" id="btnSubmit">Submit onboarding →</button>
+        </div>
+
+        <!-- Success -->
+        <div class="success-screen" id="successScreen">
+          <div class="success-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h2>You're locked in. <span class="accent">We have everything we need.</span></h2>
+          <p>Thanks for the detail. The InkLock team is reviewing your responses now. We will reply inside one business day with kickoff timing and any clarifying questions.</p>
+          <a href="/" class="btn-primary">Back to home →</a>
+        </div>
+
+      </form>
+    </div>
+
+    <p class="ob-foot">Need to talk this through first? <a href="/contact">Book a call instead →</a></p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="f-logo" aria-label="InkLock home">
+        <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
+        <span class="logo-bar"></span>
+      </a>
+      <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="/services">Data analytics</a></li>
+      <li><a href="/services">Growth marketing</a></li>
+      <li><a href="/services">Automation &amp; workflows</a></li>
+      <li><a href="/services">CRM &amp; systems</a></li>
+      <li><a href="/services">Marketing creatives</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="/about">Our company</a></li>
+      <li><a href="/case-studies">Case studies</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/podcast">Podcast</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><span class="eml"></span></li>
+      <li><a href="/contact">Book a call →</a></li>
+    </ul></div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 InkLock Automation. All rights reserved.</span>
+      <span>Lock in your systems. Unlock your marketing.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileNav(){
+  var nav=document.querySelector('.nav-links');
+  var btn=document.querySelector('.mobile-toggle');
+  nav.classList.toggle('open');
+  btn.classList.toggle('active');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+var navEl=document.getElementById('navbar');
+window.addEventListener('scroll',function(){navEl.classList.toggle('scrolled',window.scrollY>40)});
+
+// Email decode
+document.querySelectorAll('.eml').forEach(function(el){
+  var a=document.createElement('a');
+  var u='inklockautomation', d='gmail.com';
+  a.href='mail'+'to:'+u+'@'+d;
+  a.textContent=u+'@'+d;
+  a.style.color='inherit';
+  a.style.textDecoration='none';
+  el.appendChild(a);
+});
+
+// Reveal
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+// Multi-step form
+var totalSteps=6;
+var currentStep=1;
+var steps=document.querySelectorAll('.form-step');
+var progressSteps=document.querySelectorAll('.progress-step');
+var progressFill=document.getElementById('progressFill');
+var btnBack=document.getElementById('btnBack');
+var btnNext=document.getElementById('btnNext');
+var btnSubmit=document.getElementById('btnSubmit');
+var form=document.getElementById('clientForm');
+var formButtons=document.getElementById('formButtons');
+var successScreen=document.getElementById('successScreen');
+var progressBar=document.getElementById('progressBar');
+
+document.querySelectorAll('.radio-option').forEach(function(opt){
+  opt.addEventListener('click',function(){
+    var group=opt.closest('.radio-group');
+    group.querySelectorAll('.radio-option').forEach(function(o){o.classList.remove('selected')});
+    opt.classList.add('selected');
+    opt.querySelector('input[type="radio"]').checked=true;
+    var field=opt.closest('.field');
+    if(field) field.classList.remove('invalid');
+  });
+});
+
+function showStep(step){
+  steps.forEach(function(s){s.classList.remove('active')});
+  var target=document.querySelector('.form-step[data-step="'+step+'"]');
+  if(target) target.classList.add('active');
+
+  progressSteps.forEach(function(ps){
+    var s=parseInt(ps.getAttribute('data-step'));
+    ps.classList.remove('active','completed');
+    if(s<step) ps.classList.add('completed');
+    else if(s===step) ps.classList.add('active');
+  });
+
+  var pct=((step-1)/(totalSteps-1))*100;
+  var trackWidth=progressBar.querySelector('.progress-track').offsetWidth;
+  progressFill.style.width=(pct/100*trackWidth)+'px';
+
+  btnBack.classList.toggle('hidden', step===1);
+  if(step===totalSteps){
+    btnNext.style.display='none';
+    btnSubmit.style.display='inline-flex';
+  } else {
+    btnNext.style.display='inline-flex';
+    btnSubmit.style.display='none';
+  }
+  window.scrollTo({top:0, behavior:'smooth'});
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+function validateStep(step){
+  var stepEl=document.querySelector('.form-step[data-step="'+step+'"]');
+  var valid=true;
+  stepEl.querySelectorAll('input[required], textarea[required]').forEach(function(input){
+    var field=input.closest('.field');
+    if(!input.value.trim()){field.classList.add('invalid');valid=false}
+    else{field.classList.remove('invalid')}
+    if(input.type==='email' && input.value.trim()){
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())){field.classList.add('invalid');valid=false}
+    }
+  });
+  stepEl.querySelectorAll('.radio-group').forEach(function(group){
+    var field=group.closest('.field');
+    var label=field.querySelector('.field-label');
+    if(label && label.querySelector('.req')){
+      var checked=group.querySelector('input[type="radio"]:checked');
+      if(!checked){field.classList.add('invalid');valid=false}
+      else{field.classList.remove('invalid')}
+    }
+  });
+  return valid;
+}
+
+btnNext.addEventListener('click',function(){
+  if(validateStep(currentStep)){currentStep++;showStep(currentStep)}
+});
+btnBack.addEventListener('click',function(){
+  if(currentStep>1){currentStep--;showStep(currentStep)}
+});
+
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!validateStep(currentStep)) return;
+
+  btnSubmit.classList.add('btn-loading');
+  btnSubmit.textContent='Submitting...';
+
+  // Build payload including checkbox array
+  var data={};
+  form.querySelectorAll('input, textarea, select').forEach(function(el){
+    if(el.type==='radio'){if(el.checked) data[el.name]=el.value}
+    else if(el.type==='checkbox'){
+      if(el.checked){
+        if(!data[el.name]) data[el.name]=[];
+        data[el.name].push(el.value);
+      }
+    }
+    else if(el.name) data[el.name]=el.value;
+  });
+
+  fetch('/api/contact',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(data)
+  }).then(function(){showSuccess()})
+    .catch(function(){showSuccess()});
+});
+
+function showSuccess(){
+  steps.forEach(function(s){s.classList.remove('active')});
+  formButtons.style.display='none';
+  progressBar.style.display='none';
+  successScreen.classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+showStep(1);
 </script>
+
 </body>
 </html>
