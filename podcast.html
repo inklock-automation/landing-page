@@ -1,275 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Meta Pixel Code -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','875044852262418');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=875044852262418&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta -->
-    <meta name="description" content=" The InkLock Podcast">
-    <link rel="canonical" href="https://www.inklockautomation.comReal conversations about marketing, automation, and the systems that scale a business. Hosted by the InkLock team.|/podcast">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.inklockautomation.comReal conversations about marketing, automation, and the systems that scale a business. Hosted by the InkLock team.|/podcast">
-    <meta property="og:title" content="Unlocked ">
-    <meta property="og:description" content=" The InkLock Podcast">
-    <meta property="og:image" content="https://www.inklockautomation.com/og-image.png">
-    <meta property="og:site_name" content="InkLock Automation">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.inklockautomation.comReal conversations about marketing, automation, and the systems that scale a business. Hosted by the InkLock team.|/podcast">
-    <meta name="twitter:title" content="Unlocked ">
-    <meta name="twitter:description" content=" The InkLock Podcast">
-    <meta name="twitter:image" content="https://www.inklockautomation.com/og-image.png">
+<meta name="description" content="Unlocked is the InkLock podcast. Monthly conversations about marketing, automation, and the systems that scale a service business.">
+<link rel="canonical" href="https://www.inklockautomation.com/podcast">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.inklockautomation.com/podcast">
+<meta property="og:title" content="Unlocked | The InkLock podcast">
+<meta property="og:description" content="Monthly conversations about systems, marketing, and the bullshit founders hear from agencies. Hosted by Brigitte, Alex, and Erin.">
+<meta property="og:image" content="https://www.inklockautomation.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="InkLock Automation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Unlocked | The InkLock podcast">
+<meta name="twitter:description" content="Monthly conversations about systems, marketing, and the bullshit founders hear from agencies.">
+<meta name="twitter:image" content="https://www.inklockautomation.com/og-image.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#08080e">
-<title>Unlocked </title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#ffffff">
+<title>Unlocked | The InkLock podcast</title>
 <link rel="stylesheet" href="/styles.css">
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <style>
-  .podcast-hero{padding:180px 56px 100px;position:relative;overflow:hidden;text-align:center}
-  .podcast-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 80%,rgba(147,51,234,.06),transparent 60%),radial-gradient(ellipse 40% 40% at 80% 30%,rgba(110,156,213,.05),transparent 50%),linear-gradient(180deg,var(--bg),var(--bg2) 60%,var(--bg3))}
-  .podcast-hero .inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
-  .coming-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(147,51,234,.08);border:1px solid rgba(147,51,234,.15);border-radius:100px;padding:8px 20px;font-size:12px;font-weight:600;color:var(--purple);text-transform:uppercase;letter-spacing:2px;margin-bottom:32px}
-  .coming-badge .dot{width:8px;height:8px;background:var(--purple);border-radius:50%}
-  .podcast-title{font-family:'Sora',sans-serif;font-size:clamp(48px,6.5vw,72px);font-weight:800;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,#6e9cd5 0%,#9333ea 40%,#c026d3 70%,#ec4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;line-height:1.1}
-  .podcast-subtitle{font-family:'Sora',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:700;line-height:1.2;color:var(--txt);margin-bottom:24px}
-  .podcast-desc{font-size:18px;color:var(--txt-dim);line-height:1.8;max-width:580px;margin:0 auto 40px}
-  .waveform-wrap{display:flex;align-items:center;justify-content:center;gap:3px;height:70px;margin-bottom:40px}
-  .waveform-bar{width:4px;border-radius:100px;background:linear-gradient(180deg,var(--purple),var(--fuchsia));opacity:.4;height:var(--min);animation:waveform 1.2s ease-in-out infinite}
-  @keyframes waveform{0%,100%{height:var(--min);opacity:.3}50%{height:var(--max);opacity:.6}}
-  .signup-form{display:flex;gap:12px;max-width:480px;margin:0 auto}
-  .signup-form input{flex:1;padding:14px 20px;border:1px solid rgba(147,51,234,.2);border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;color:var(--txt);background:rgba(147,51,234,.04);outline:none;transition:border-color .3s}
-  .signup-form input:focus{border-color:var(--purple)}
-  .signup-form input::placeholder{color:var(--txt-mute)}
-  .signup-form button{padding:14px 28px;background:linear-gradient(135deg,var(--purple),var(--fuchsia));color:var(--white);border:none;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:15px;cursor:pointer;transition:all .3s;white-space:nowrap}
-  .signup-form button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(147,51,234,.3)}
-  .signup-note{font-size:12px;color:var(--txt-mute);margin-top:12px}
-  .signup-success{display:none;align-items:center;justify-content:center;gap:10px;padding:16px 28px;background:rgba(147,51,234,.06);border:1px solid rgba(147,51,234,.15);border-radius:12px;font-weight:500;font-size:15px;color:var(--purple);max-width:480px;margin:0 auto}
-  .signup-success svg{flex-shrink:0}
-  .topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:48px auto 0}
-  .topic-card{padding:28px 24px;border-radius:12px;border:1px solid rgba(147,51,234,.06);background:rgba(147,51,234,.02);transition:all .3s}
-  .topic-card:hover{border-color:rgba(147,51,234,.2);background:rgba(147,51,234,.04);transform:translateY(-4px);box-shadow:0 8px 32px rgba(147,51,234,.06)}
-  .topic-icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,rgba(147,51,234,.15),rgba(192,38,211,.1));display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
-  .topic-card h4{font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:var(--txt);margin-bottom:6px}
-  .topic-card p{font-size:13px;color:var(--txt-dim);line-height:1.7}
-  .format-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:960px;margin:48px auto 0;align-items:start}
-  .format-details{display:flex;flex-direction:column;gap:14px;margin-top:24px}
-  .format-detail{display:flex;align-items:center;gap:14px;font-size:15px;color:var(--txt-dim)}
-  .format-detail .icon-ring{width:36px;height:36px;background:rgba(147,51,234,.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-  .host-card{padding:20px;border-radius:12px;border:1px solid rgba(147,51,234,.08);background:rgba(147,51,234,.02);display:flex;align-items:center;gap:16px;transition:all .3s;margin-bottom:12px}
-  .host-card:hover{border-color:rgba(147,51,234,.2);background:rgba(147,51,234,.04)}
-  .host-avatar{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--purple),var(--fuchsia));display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-size:18px;font-weight:700;color:var(--white);flex-shrink:0}
-  .host-info h4{font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:var(--txt);margin-bottom:2px}
-  .host-role{font-size:13px;color:var(--fuchsia);font-weight:500;margin-bottom:4px}
-  .host-desc{font-size:13px;color:var(--txt-mute);line-height:1.5}
-  .platform-logos{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:36px}
-  .platform-item{display:flex;align-items:center;gap:10px;padding:14px 24px;border-radius:10px;border:1px solid rgba(147,51,234,.1);background:rgba(147,51,234,.02);font-size:14px;font-weight:600;color:var(--txt-dim);transition:all .3s;cursor:default}
-  .platform-item:hover{border-color:rgba(147,51,234,.25);color:var(--txt);background:rgba(147,51,234,.04)}
-  .platform-item svg{width:22px;height:22px;fill:currentColor}
-  @media(max-width:900px){.podcast-hero{padding:140px 24px 80px}.topics-grid{grid-template-columns:1fr;max-width:400px}.format-grid{grid-template-columns:1fr}.signup-form{flex-direction:column}}
+  /* Podcast-page extras — patterns not yet in styles.css */
+  .pod-hero{
+    padding:140px var(--x-pad) 70px;position:relative;overflow:hidden;text-align:center;
+  }
+  .pod-hero::before{
+    content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 80%,rgba(147,51,234,.07),transparent 60%),
+      radial-gradient(ellipse 40% 40% at 80% 20%,rgba(110,156,213,.06),transparent 55%),
+      radial-gradient(ellipse 40% 40% at 20% 20%,rgba(236,72,153,.04),transparent 55%);
+  }
+  .pod-hero .inner{position:relative;z-index:1;max-width:780px;margin:0 auto}
+
+  .coming-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(147,51,234,.06);
+    border:1px solid rgba(147,51,234,.18);
+    border-radius:9999px;padding:7px 16px;
+    font-family:var(--font-display);font-size:11px;font-weight:700;
+    color:var(--purple);text-transform:uppercase;letter-spacing:1.8px;margin-bottom:24px;
+  }
+  .coming-badge .dot{width:7px;height:7px;background:var(--purple);border-radius:50%}
+
+  .pod-title{
+    font-family:var(--font-display);
+    font-size:clamp(56px,8vw,96px);font-weight:900;
+    letter-spacing:-2px;text-transform:uppercase;line-height:1;
+    background:var(--grad-brand);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+    margin-bottom:14px;
+  }
+  .pod-subtitle{
+    font-family:var(--font-display);
+    font-size:clamp(22px,3vw,32px);font-weight:700;
+    color:var(--txt);letter-spacing:-.3px;line-height:1.2;margin-bottom:22px;
+  }
+  .pod-desc{font-size:18px;color:var(--txt-dim);line-height:1.75;max-width:620px;margin:0 auto 36px}
+
+  /* Waveform */
+  .wave{display:flex;align-items:center;justify-content:center;gap:3px;height:64px;margin:0 auto 36px;max-width:520px}
+  .wave-bar{
+    width:4px;border-radius:100px;
+    background:linear-gradient(180deg,var(--purple),var(--fuchsia));
+    opacity:.55;height:var(--min);
+    animation:waveform 1.4s ease-in-out infinite;
+  }
+  @keyframes waveform{0%,100%{height:var(--min);opacity:.35}50%{height:var(--max);opacity:.7}}
+  @media (prefers-reduced-motion:reduce){.wave-bar{animation:none;height:var(--max);opacity:.5}}
+
+  /* Email capture */
+  .pod-signup{display:flex;gap:10px;max-width:520px;margin:0 auto}
+  .pod-signup input{
+    flex:1;padding:14px 18px;
+    background:var(--white);
+    border:1px solid rgba(147,51,234,.20);border-radius:8px;
+    font-family:var(--font-body);font-size:15px;color:var(--txt);outline:none;
+    transition:border-color var(--dur-base),box-shadow var(--dur-base);
+  }
+  .pod-signup input:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(147,51,234,.10)}
+  .pod-signup input::placeholder{color:var(--txt-mute)}
+  .pod-signup button{
+    font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--white);
+    background:var(--grad-primary);
+    border:0;border-radius:8px;padding:14px 24px;cursor:pointer;
+    box-shadow:var(--glow-soft);
+    transition:transform var(--dur-base),box-shadow var(--dur-base);
+    white-space:nowrap;
+  }
+  .pod-signup button:hover{transform:translateY(-2px);box-shadow:var(--glow-button)}
+  .signup-note{font-size:13px;color:var(--txt-mute);margin-top:14px;line-height:1.5}
+  .signup-success{
+    display:none;align-items:center;justify-content:center;gap:10px;
+    padding:16px 24px;background:rgba(147,51,234,.05);
+    border:1px solid rgba(147,51,234,.18);border-radius:12px;
+    font-size:15px;color:var(--purple);font-weight:600;
+    max-width:520px;margin:0 auto;
+  }
+
+  /* Format + Hosts grid */
+  .pod-format{padding:var(--y-pad) var(--x-pad);background:var(--bg2);position:relative}
+  .pod-format-inner{
+    max-width:var(--content-max);margin:0 auto;
+    display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;
+  }
+  .format-left h2{
+    font-family:var(--font-display);font-size:clamp(28px,3.2vw,38px);font-weight:800;
+    letter-spacing:-.4px;line-height:1.2;color:var(--txt);margin-bottom:16px;
+  }
+  .format-left h2 .accent{
+    background:var(--grad-brand);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  }
+  .format-left p{font-size:16px;color:var(--txt-dim);line-height:1.8;margin-bottom:24px}
+  .format-bullets{display:flex;flex-direction:column;gap:14px}
+  .format-bullet{
+    display:flex;align-items:center;gap:14px;font-size:15px;color:var(--txt-dim);line-height:1.5;
+  }
+  .format-bullet .ring{
+    width:40px;height:40px;border-radius:10px;
+    background:rgba(147,51,234,.08);
+    border:1px solid rgba(147,51,234,.16);
+    color:var(--purple);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .format-bullet .ring svg{stroke:currentColor}
+  .format-bullet strong{color:var(--txt);font-family:var(--font-display);font-weight:700}
+
+  /* Host cards — premium photo treatment */
+  .hosts-stack{display:flex;flex-direction:column;gap:14px}
+  .host-card{
+    display:flex;align-items:flex-start;gap:20px;
+    padding:22px;
+    background:var(--white);
+    border:1px solid rgba(147,51,234,.14);border-radius:16px;
+    box-shadow:var(--shadow-sm);
+    transition:all var(--dur-base);
+  }
+  .host-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:rgba(147,51,234,.22)}
+  .host-avatar{
+    width:72px;height:72px;border-radius:14px;flex-shrink:0;overflow:hidden;
+    background:linear-gradient(135deg,rgba(147,51,234,.10),rgba(192,38,211,.06));
+    border:1px solid rgba(147,51,234,.18);
+    position:relative;
+  }
+  .host-avatar img{width:100%;height:100%;object-fit:cover;display:block;transition:transform var(--dur-base)}
+  .host-card:hover .host-avatar img{transform:scale(1.05)}
+  .host-info h4{font-family:var(--font-display);font-size:18px;font-weight:800;color:var(--txt);letter-spacing:-.2px;margin-bottom:2px}
+  .host-role{font-family:var(--font-display);font-size:11px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:1.6px;margin-bottom:8px}
+  .host-info p{font-size:14px;color:var(--txt-dim);line-height:1.6}
+
+  /* Topics grid */
+  .topics-section{padding:var(--y-pad) var(--x-pad)}
+  .topics-inner{max-width:var(--content-max);margin:0 auto}
+  .topics-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;
+  }
+  .topic-card{
+    background:var(--white);border:1px solid rgba(147,51,234,.12);border-radius:14px;
+    padding:28px 24px;box-shadow:var(--shadow-sm);
+    transition:all var(--dur-base);
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .topic-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(147,51,234,.22)}
+  .topic-icon{
+    width:48px;height:48px;border-radius:12px;
+    background:linear-gradient(135deg,rgba(147,51,234,.10),rgba(192,38,211,.06));
+    border:1px solid rgba(147,51,234,.14);
+    color:var(--purple);
+    display:flex;align-items:center;justify-content:center;margin-bottom:10px;
+  }
+  .topic-icon svg{stroke:currentColor}
+  .topic-card h4{font-family:var(--font-display);font-size:17px;font-weight:700;color:var(--txt);letter-spacing:-.1px}
+  .topic-card p{font-size:14px;color:var(--txt-dim);line-height:1.65}
+
+  /* Listen anywhere */
+  .listen-section{padding:var(--y-pad) var(--x-pad);background:var(--bg2);text-align:center;position:relative}
+  .platforms{
+    display:flex;align-items:center;justify-content:center;
+    gap:14px;flex-wrap:wrap;margin-top:36px;
+  }
+  .platform-item{
+    display:flex;align-items:center;gap:10px;
+    padding:14px 22px;
+    background:var(--white);
+    border:1px solid rgba(147,51,234,.14);
+    border-radius:10px;
+    font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--txt-dim);
+    text-decoration:none;letter-spacing:.2px;
+    transition:all var(--dur-base);
+    box-shadow:var(--shadow-sm);
+  }
+  .platform-item:hover{
+    transform:translateY(-2px);
+    border-color:rgba(147,51,234,.28);
+    color:var(--txt);box-shadow:var(--shadow-md);
+  }
+  .platform-item svg{width:20px;height:20px;fill:currentColor}
+
+  @media (max-width:1024px){
+    .pod-format-inner{grid-template-columns:1fr;gap:32px}
+    .topics-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:640px){
+    .pod-signup{flex-direction:column}
+    .topics-grid{grid-template-columns:1fr}
+  }
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EV3NVV92DS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-EV3NVV92DS');
-    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EV3NVV92DS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EV3NVV92DS');</script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.inklockautomation.com/#organization",
-  "name": "InkLock Automation",
-  "url": "https://www.inklockautomation.com",
-  "logo": "https://www.inklockautomation.com/og-image.png",
-  "description": "Full-service marketing and automation agency. We build the systems your business runs on, the marketing that fills the pipeline, and the analytics that prove it works.",
-  "slogan": "Lock in your systems. Unlock your marketing.",
-  "foundingDate": "2025",
-  "knowsAbout": [
-    "Marketing Automation",
-    "CRM Setup",
-    "GoHighLevel",
-    "HubSpot",
-    "Lead Generation",
-    "Pipeline Management",
-    "Paid Media",
-    "Funnel Design",
-    "Sales Operations"
-  ],
-  "areaServed": {
-    "@type": "Country",
-    "name": "United States"
-  },
-  "sameAs": []
-}
+{"@context":"https://schema.org","@type":"PodcastSeries","name":"Unlocked","url":"https://www.inklockautomation.com/podcast","description":"A monthly podcast from the InkLock partners. Real conversations about systems, marketing, and growing a service business.","author":[{"@id":"https://www.inklockautomation.com/about#brigitte"},{"@id":"https://www.inklockautomation.com/about#alex"},{"@id":"https://www.inklockautomation.com/about#erin"}],"publisher":{"@id":"https://www.inklockautomation.com/#organization"}}
 </script>
 </head>
 <body>
 
-<nav id="navbar">
-  <a href="/" class="nav-logo"><div class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></div><div class="logo-bar"></div></a>
+<nav id="navbar" aria-label="Main">
+  <a href="/" class="nav-logo" aria-label="InkLock home">
+    <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
+    <span class="logo-bar"></span>
+  </a>
   <ul class="nav-links">
     <li><a href="/services">Services</a></li>
-    <li><a href="/about">Our Company</a></li>
-    <li><a href="/case-studies">Case Studies</a></li>
+    <li><a href="/about">Our company</a></li>
+    <li><a href="/case-studies">Case studies</a></li>
     <li><a href="/blog">Blog</a></li>
-    <li><a href="/podcast.html" style="color:var(--purple)">Podcast</a></li>
+    <li><a href="/podcast" aria-current="page">Podcast</a></li>
   </ul>
-  <a href="/contact" class="nav-cta">Book a Call &rarr;</a>
+  <a href="/contact" class="nav-cta">Book a call →</a>
   <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
+
 <main id="main-content">
 
-<section class="podcast-hero">
-  <div class="inner">
-    <div class="coming-badge"><span class="dot"></span> Coming Soon</div>
-    <div class="podcast-title">UNLOCKED</div>
-    <p class="podcast-subtitle">Real talk about the systems behind real growth.</p>
-    <p class="podcast-desc">A monthly podcast from the InkLock team. No scripts, no fluff. Just honest conversations about what actually moves the needle when marketing meets operations. This is Unlocked, by InkLock Automation.</p>
-    <div class="waveform-wrap" aria-hidden="true">
-      <div class="waveform-bar" style="--min:12px;--max:28px;animation-delay:0s"></div>
-      <div class="waveform-bar" style="--min:8px;--max:40px;animation-delay:.1s"></div>
-      <div class="waveform-bar" style="--min:16px;--max:52px;animation-delay:.2s"></div>
-      <div class="waveform-bar" style="--min:10px;--max:36px;animation-delay:.3s"></div>
-      <div class="waveform-bar" style="--min:20px;--max:60px;animation-delay:.4s"></div>
-      <div class="waveform-bar" style="--min:14px;--max:48px;animation-delay:.5s"></div>
-      <div class="waveform-bar" style="--min:8px;--max:56px;animation-delay:.6s"></div>
-      <div class="waveform-bar" style="--min:18px;--max:44px;animation-delay:.7s"></div>
-      <div class="waveform-bar" style="--min:12px;--max:64px;animation-delay:.8s"></div>
-      <div class="waveform-bar" style="--min:10px;--max:38px;animation-delay:.9s"></div>
-      <div class="waveform-bar" style="--min:16px;--max:52px;animation-delay:1s"></div>
-      <div class="waveform-bar" style="--min:8px;--max:44px;animation-delay:1.1s"></div>
-      <div class="waveform-bar" style="--min:14px;--max:32px;animation-delay:.15s"></div>
-      <div class="waveform-bar" style="--min:20px;--max:56px;animation-delay:.25s"></div>
-      <div class="waveform-bar" style="--min:10px;--max:40px;animation-delay:.35s"></div>
-      <div class="waveform-bar" style="--min:16px;--max:48px;animation-delay:.45s"></div>
-      <div class="waveform-bar" style="--min:12px;--max:60px;animation-delay:.55s"></div>
-      <div class="waveform-bar" style="--min:8px;--max:36px;animation-delay:.65s"></div>
-      <div class="waveform-bar" style="--min:18px;--max:52px;animation-delay:.75s"></div>
-      <div class="waveform-bar" style="--min:14px;--max:28px;animation-delay:.85s"></div>
-      <div class="waveform-bar" style="--min:10px;--max:44px;animation-delay:.95s"></div>
-      <div class="waveform-bar" style="--min:20px;--max:56px;animation-delay:.05s"></div>
-      <div class="waveform-bar" style="--min:12px;--max:48px;animation-delay:.18s"></div>
-      <div class="waveform-bar" style="--min:8px;--max:36px;animation-delay:.28s"></div>
-      <div class="waveform-bar" style="--min:16px;--max:60px;animation-delay:.38s"></div>
-      <div class="waveform-bar" style="--min:10px;--max:40px;animation-delay:.48s"></div>
-      <div class="waveform-bar" style="--min:18px;--max:52px;animation-delay:.58s"></div>
-      <div class="waveform-bar" style="--min:12px;--max:32px;animation-delay:.68s"></div>
-    </div>
-    <div id="signupForm">
-      <div class="signup-form">
-        <input type="email" id="emailInput" placeholder="Enter your email for launch updates" aria-label="Email address">
-        <button onclick="handleSignup()">Notify Me</button>
+  <!-- HERO -->
+  <section class="pod-hero">
+    <div class="inner">
+      <div class="coming-badge"><span class="dot"></span> Coming soon</div>
+      <h1 class="pod-title">Unlocked</h1>
+      <p class="pod-subtitle">Real talk about the systems behind real growth.</p>
+      <p class="pod-desc">A monthly podcast from the InkLock partners. Real conversations about systems, marketing, and the bullshit founders hear from agencies. No scripts. No consultant theater. No 47-slide proposals.</p>
+
+      <div class="wave" aria-hidden="true">
+        <span class="wave-bar" style="--min:12px;--max:28px;animation-delay:0s"></span>
+        <span class="wave-bar" style="--min:8px;--max:40px;animation-delay:.1s"></span>
+        <span class="wave-bar" style="--min:16px;--max:52px;animation-delay:.2s"></span>
+        <span class="wave-bar" style="--min:10px;--max:36px;animation-delay:.3s"></span>
+        <span class="wave-bar" style="--min:20px;--max:60px;animation-delay:.4s"></span>
+        <span class="wave-bar" style="--min:14px;--max:48px;animation-delay:.5s"></span>
+        <span class="wave-bar" style="--min:8px;--max:56px;animation-delay:.6s"></span>
+        <span class="wave-bar" style="--min:18px;--max:44px;animation-delay:.7s"></span>
+        <span class="wave-bar" style="--min:12px;--max:64px;animation-delay:.8s"></span>
+        <span class="wave-bar" style="--min:10px;--max:38px;animation-delay:.9s"></span>
+        <span class="wave-bar" style="--min:16px;--max:52px;animation-delay:1s"></span>
+        <span class="wave-bar" style="--min:8px;--max:44px;animation-delay:1.1s"></span>
+        <span class="wave-bar" style="--min:14px;--max:32px;animation-delay:.15s"></span>
+        <span class="wave-bar" style="--min:20px;--max:56px;animation-delay:.25s"></span>
+        <span class="wave-bar" style="--min:10px;--max:40px;animation-delay:.35s"></span>
+        <span class="wave-bar" style="--min:16px;--max:48px;animation-delay:.45s"></span>
+        <span class="wave-bar" style="--min:12px;--max:60px;animation-delay:.55s"></span>
+        <span class="wave-bar" style="--min:8px;--max:36px;animation-delay:.65s"></span>
+        <span class="wave-bar" style="--min:18px;--max:52px;animation-delay:.75s"></span>
+        <span class="wave-bar" style="--min:14px;--max:28px;animation-delay:.85s"></span>
+        <span class="wave-bar" style="--min:10px;--max:44px;animation-delay:.95s"></span>
       </div>
-      <p class="signup-note">One email when we launch. That's it. No spam, no drip sequence (ironic, we know).</p>
-    </div>
-    <div class="signup-success" id="signupSuccess">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#9333ea"/><path d="M6 10l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      You're in. We'll let you know when episode one drops.
-    </div>
-  </div>
-</section>
 
-<section class="svc-section">
-  <div class="svc-inner centered">
-    <div class="s-label">What We're Building</div>
-    <div class="s-title">Conversations that actually help you <span class="accent">grow.</span></div>
-    <p class="s-sub mx-auto">Each episode tackles the real problems business owners face when their marketing and operations don't talk to each other.</p>
-    <div class="topics-grid">
-      <div class="topic-card reveal"><div class="topic-icon">🔧</div><h4>Systems Breakdowns</h4><p>We'll tear apart real (anonymized) tech stacks and show what's broken, what's wasted, and what the fix actually looks like.</p></div>
-      <div class="topic-card reveal"><div class="topic-icon">📊</div><h4>Marketing That Converts</h4><p>Ad strategy, funnel logic, creative direction. The stuff that moves numbers, not just impressions.</p></div>
-      <div class="topic-card reveal"><div class="topic-icon">🎙️</div><h4>Guest Deep Dives</h4><p>Founders, operators, and clients share what actually happened behind the scenes of their growth (or their recovery).</p></div>
-      <div class="topic-card reveal"><div class="topic-icon">⚡</div><h4>Automation Wins</h4><p>Real workflows that saved real hours. We'll walk through the build so you can steal the framework.</p></div>
-      <div class="topic-card reveal"><div class="topic-icon">💸</div><h4>Revenue Leaks</h4><p>Where businesses lose money without knowing it. CRM graveyards, broken follow-ups, and the tools nobody set up right.</p></div>
-      <div class="topic-card reveal"><div class="topic-icon">🤝</div><h4>Operator to Operator</h4><p>Unfiltered conversations between the three of us about running an agency, managing clients, and building something that lasts.</p></div>
+      <div id="signupForm">
+        <div class="pod-signup">
+          <input type="email" id="emailInput" placeholder="Email for launch updates" aria-label="Email address">
+          <button onclick="handleSignup()" type="button">Notify me →</button>
+        </div>
+        <p class="signup-note">One email when episode one drops. No drip sequence (ironic, we know).</p>
+      </div>
+      <div class="signup-success" id="signupSuccess">
+        You're in. We'll let you know when episode one drops.
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="pain-section">
-  <div style="max-width:960px;margin:0 auto">
-    <div class="format-grid">
-      <div>
-        <div class="s-label" style="color:var(--fuchsia)">The Format</div>
-        <div class="s-title">Monthly episodes.<br>No filler.</div>
-        <p style="font-size:16px;color:var(--txt-dim);line-height:1.8;margin-top:16px">A mix of partner roundtables and guest interviews. Every episode is built around one question worth answering. If we can't make it worth your 30 minutes, we won't hit publish.</p>
-        <div class="format-details">
-          <div class="format-detail"><span class="icon-ring">📅</span> Once per month, new episodes drop mid-month</div>
-          <div class="format-detail"><span class="icon-ring">⏱️</span> 25 to 40 minutes per episode</div>
-          <div class="format-detail"><span class="icon-ring">🎧</span> Available on all major platforms at launch</div>
-          <div class="format-detail"><span class="icon-ring">📹</span> Video clips on social for the highlights</div>
+  <!-- FORMAT + HOSTS -->
+  <section class="pod-format hairline">
+    <div class="pod-format-inner">
+
+      <div class="format-left">
+        <div class="divider"></div>
+        <div class="eyebrow">The format</div>
+        <h2>Monthly episodes. <span class="accent">Real conversations.</span></h2>
+        <p>Real conversations about systems, marketing, and the bullshit founders hear from agencies. A mix of partner roundtables and guest interviews, every episode built around one question worth answering.</p>
+        <div class="format-bullets">
+          <div class="format-bullet"><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><div><strong>Monthly drops.</strong> New episodes mid-month.</div></div>
+          <div class="format-bullet"><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div><strong>25 to 40 minutes.</strong> Nothing longer than it needs to be.</div></div>
+          <div class="format-bullet"><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M3 12a9 9 0 0 1 18 0v6a2 2 0 0 1-2 2h-2v-6h4M3 18v-6h4v6H5a2 2 0 0 1-2-2z"/></svg></span><div><strong>Every major platform.</strong> Spotify, Apple, YouTube at launch.</div></div>
+          <div class="format-bullet"><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span><div><strong>Highlight clips on social.</strong> The good parts, surfaced.</div></div>
         </div>
       </div>
+
       <div>
-        <div class="s-label" style="color:var(--fuchsia)">Your Hosts</div>
-        <div class="host-card"><div class="host-avatar">BB</div><div class="host-info"><h4>Brigitte Bentulan</h4><p class="host-role">Creative + Paid Media</p><p class="host-desc">Runs BB Digital Labs. The person behind your ads, your creative, and the reason your Meta account isn't on fire.</p></div></div>
-        <div class="host-card"><div class="host-avatar">AZ</div><div class="host-info"><h4>Alex Zamora</h4><p class="host-role">Analytics + Strategy</p><p class="host-desc">The data brain. If a number looks off, Alex already found it, diagnosed it, and has a plan to fix it.</p></div></div>
-        <div class="host-card"><div class="host-avatar">EC</div><div class="host-info"><h4>Erin</h4><p class="host-role">Systems + Operations</p><p class="host-desc">Runs The Coastal Collaborative. The one who builds everything that makes the marketing actually work.</p></div></div>
+        <div class="eyebrow">Your hosts</div>
+        <div class="hosts-stack">
+
+          <div class="host-card">
+            <div class="host-avatar"><img src="/assets/team/brigitte.jpg" alt="Brigitte Bentulan" loading="lazy" decoding="async"></div>
+            <div class="host-info">
+              <h4>Brigitte Bentulan</h4>
+              <div class="host-role">Creative + paid media</div>
+              <p>Runs BB Digital Labs. The person behind your ads, your creative, and the reason your Meta account isn't on fire.</p>
+            </div>
+          </div>
+
+          <div class="host-card">
+            <div class="host-avatar"><img src="/assets/team/alex.jpg" alt="Alex Zamora" loading="lazy" decoding="async"></div>
+            <div class="host-info">
+              <h4>Alex Zamora</h4>
+              <div class="host-role">Analytics + strategy</div>
+              <p>The data brain. If a number looks off, Alex already found it, diagnosed it, and has a plan to fix it.</p>
+            </div>
+          </div>
+
+          <div class="host-card">
+            <div class="host-avatar"><img src="/assets/team/erin.jpg" alt="Erin Cronin" loading="lazy" decoding="async"></div>
+            <div class="host-info">
+              <h4>Erin Cronin</h4>
+              <div class="host-role">Systems + operations</div>
+              <p>Runs The Coastal Collaborative. The one who builds everything that makes the marketing actually work.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="topics-section">
+    <div class="topics-inner">
+      <div class="centered">
+        <div class="divider mx-auto"></div>
+        <div class="eyebrow">What we're building</div>
+        <h2 class="s-title">Conversations that actually help you <span class="accent">grow.</span></h2>
+        <p class="s-sub mx-auto" style="margin-top:14px">Every episode tackles a real problem founders face when marketing and operations don't talk to each other.</p>
+      </div>
+      <div class="topics-grid">
+        <div class="topic-card reveal"><div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h4>Systems breakdowns</h4><p>We tear apart real anonymized tech stacks and show what's broken, what's wasted, and what the fix actually looks like.</p></div>
+        <div class="topic-card reveal"><div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div><h4>Marketing that converts</h4><p>Ad strategy, funnel logic, creative direction. The stuff that moves numbers, not just impressions.</p></div>
+        <div class="topic-card reveal"><div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div><h4>Guest deep dives</h4><p>Founders, operators, and clients on what actually happened behind the scenes of their growth (or their recovery).</p></div>
+        <div class="topic-card reveal"><div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h4>Automation wins</h4><p>Real workflows that saved real hours. We walk through the build so you can steal the framework.</p></div>
+        <div class="topic-card reveal"><div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h4>Revenue leaks</h4><p>Where businesses lose money without knowing. CRM graveyards, broken follow-ups, the tools nobody set up right.</p></div>
+        <div class="topic-card reveal"><div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.04z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.04z"/></svg></div><h4>Operator to operator</h4><p>Unfiltered between the three of us. Running an agency, managing clients, building something that lasts.</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section style="position:relative;padding:80px 56px;text-align:center">
-  <div style="position:absolute;left:10%;right:10%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(147,51,234,.2) 30%,rgba(110,156,213,.15) 70%,transparent)"></div>
-  <div class="s-label">Listen Anywhere</div>
-  <div class="s-title">Available everywhere at <span class="accent">launch.</span></div>
-  <p class="s-sub mx-auto">Subscribe on your favorite platform so you don't miss episode one.</p>
-  <div class="platform-logos">
-    <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.622.622 0 01-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.622.622 0 11-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.622.622 0 01.207.857zm1.224-2.722a.779.779 0 01-1.072.257c-2.687-1.652-6.785-2.13-9.965-1.166a.779.779 0 01-.452-1.491c3.632-1.102 8.147-.568 11.234 1.328a.78.78 0 01.255 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.934.934 0 11-.542-1.79c3.533-1.072 9.404-.865 13.115 1.338a.934.934 0 01-.955 1.609z"/></svg> Spotify</div>
-    <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M18.7 10.7c-.5-.3-1.1-.5-1.7-.5-.6 0-1.2.2-1.7.5-.5.3-.8.8-1 1.3h-.1c-.2-.5-.5-1-1-1.3-.5-.3-1.1-.5-1.7-.5s-1.2.2-1.7.5c-.5.3-.8.8-1 1.3-.2.5-.3 1.1-.3 1.7 0 .6.1 1.2.3 1.7.2.5.5 1 1 1.3.5.3 1.1.5 1.7.5.6 0 1.2-.2 1.7-.5.5-.3.8-.8 1-1.3h.1c.2.5.5 1 1 1.3.5.3 1.1.5 1.7.5.6 0 1.2-.2 1.7-.5.5-.3.8-.8 1-1.3.2-.5.3-1.1.3-1.7 0-.6-.1-1.2-.3-1.7-.2-.5-.6-1-1-1.3zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/></svg> Apple Podcasts</div>
-    <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg> YouTube</div>
-  </div>
-</section>
+  <!-- LISTEN ANYWHERE -->
+  <section class="listen-section hairline">
+    <div class="divider mx-auto"></div>
+    <div class="eyebrow">Listen anywhere</div>
+    <h2 class="s-title">Available everywhere <span class="accent">at launch.</span></h2>
+    <p class="s-sub mx-auto" style="margin-top:14px">Subscribe wherever you already listen so you don't miss episode one.</p>
+    <div class="platforms">
+      <a href="#" class="platform-item" aria-label="Spotify (coming soon)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.622.622 0 01-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.622.622 0 11-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.622.622 0 01.207.857zm1.224-2.722a.779.779 0 01-1.072.257c-2.687-1.652-6.785-2.13-9.965-1.166a.779.779 0 01-.452-1.491c3.632-1.102 8.147-.568 11.234 1.328a.78.78 0 01.255 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.934.934 0 11-.542-1.79c3.533-1.072 9.404-.865 13.115 1.338a.934.934 0 01-.955 1.609z"/></svg>
+        Spotify
+      </a>
+      <a href="#" class="platform-item" aria-label="Apple Podcasts (coming soon)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.7 10.7c-.5-.3-1.1-.5-1.7-.5-.6 0-1.2.2-1.7.5-.5.3-.8.8-1 1.3h-.1c-.2-.5-.5-1-1-1.3-.5-.3-1.1-.5-1.7-.5s-1.2.2-1.7.5c-.5.3-.8.8-1 1.3-.2.5-.3 1.1-.3 1.7 0 .6.1 1.2.3 1.7.2.5.5 1 1 1.3.5.3 1.1.5 1.7.5.6 0 1.2-.2 1.7-.5.5-.3.8-.8 1-1.3h.1c.2.5.5 1 1 1.3.5.3 1.1.5 1.7.5.6 0 1.2-.2 1.7-.5.5-.3.8-.8 1-1.3.2-.5.3-1.1.3-1.7 0-.6-.1-1.2-.3-1.7-.2-.5-.6-1-1-1.3zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        Apple Podcasts
+      </a>
+      <a href="#" class="platform-item" aria-label="YouTube (coming soon)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        YouTube
+      </a>
+    </div>
+  </section>
 
-<section class="cta-band">
-  <div class="inner">
-    <div class="s-title">Don't miss <span class="accent">episode one.</span></div>
-    <p class="s-sub mx-auto" style="margin-bottom:28px">Drop your email and we'll send exactly one message when we go live. That's the whole deal.</p>
-    <div id="signupForm2">
-      <div class="signup-form">
-        <input type="email" id="emailInput2" placeholder="Your email address" aria-label="Email address">
-        <button onclick="handleSignup2()">Get Notified</button>
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="inner">
+      <div class="divider mx-auto"></div>
+      <h2 class="s-title">Drop us a topic. <span class="accent">Or your email.</span></h2>
+      <p class="s-sub mx-auto" style="margin-top:14px">Have a question you want us to tear apart on the show? Send it over. Or just leave your email and we'll send exactly one message when we go live.</p>
+      <div id="signupForm2" style="margin-top:28px">
+        <div class="pod-signup">
+          <input type="email" id="emailInput2" placeholder="Your email address" aria-label="Email address">
+          <button onclick="handleSignup2()" type="button">Get notified →</button>
+        </div>
       </div>
+      <div class="signup-success" id="signupSuccess2" style="margin-top:28px">
+        You're on the list. Talk soon.
+      </div>
+      <p class="risk-reversal" style="margin-top:24px">Topic idea? Email us directly. The good ones get answered on the show.</p>
     </div>
-    <div class="signup-success" id="signupSuccess2">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#9333ea"/><path d="M6 10l2.5 2.5L14 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      You're on the list. Talk soon.
-    </div>
-  </div>
-</section>
+  </section>
 
 </main>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="f-logo"><div class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></div><div class="logo-bar"></div></div>
+      <a href="/" class="f-logo" aria-label="InkLock home">
+        <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
+        <span class="logo-bar"></span>
+      </a>
       <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
     </div>
-    <div class="footer-col"><h4>Services</h4><ul><li><a href="/services">Data Analytics</a></li><li><a href="/services">Growth Marketing</a></li><li><a href="/services">Automation & Workflows</a></li><li><a href="/services">CRM & Systems</a></li><li><a href="/services">Marketing Creatives</a></li></ul></div>
-    <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">Our Company</a></li><li><a href="/case-studies">Case Studies</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><span class="eml"></span></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="/services">Data analytics</a></li>
+      <li><a href="/services">Growth marketing</a></li>
+      <li><a href="/services">Automation &amp; workflows</a></li>
+      <li><a href="/services">CRM &amp; systems</a></li>
+      <li><a href="/services">Marketing creatives</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="/about">Our company</a></li>
+      <li><a href="/case-studies">Case studies</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/podcast">Podcast</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><span class="eml"></span></li>
+      <li><a href="/contact">Book a call →</a></li>
+    </ul></div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 InkLock Automation. All rights reserved.</span>
+      <span>Lock in your systems. Unlock your marketing.</span>
+    </div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 InkLock. All rights reserved.</span></div>
 </footer>
 
-<script src="/reveal.js"></script>
 <script>
-document.querySelectorAll(".eml").forEach(function(el){var a=document.createElement("a");var u="inklockautomation";var d="gmail.com";a.href="mail"+"to:"+u+"@"+d;a.textContent=u+"@"+d;a.style.color="inherit";el.appendChild(a)});
-function toggleMobileNav(){document.querySelector('.nav-links').classList.toggle('open');document.querySelector('.mobile-toggle').classList.toggle('active')}
-const nav=document.getElementById('navbar');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
-const reveals=document.querySelectorAll('.reveal');const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.1});reveals.forEach(el=>observer.observe(el));
-function handleSignup(){const email=document.getElementById('emailInput').value;if(email&&email.includes('@')){document.getElementById('signupForm').style.display='none';document.getElementById('signupSuccess').style.display='flex'}}
-function handleSignup2(){const email=document.getElementById('emailInput2').value;if(email&&email.includes('@')){document.getElementById('signupForm2').style.display='none';document.getElementById('signupSuccess2').style.display='flex'}}
-document.getElementById('emailInput').addEventListener('keydown',e=>{if(e.key==='Enter')handleSignup()});
-document.getElementById('emailInput2').addEventListener('keydown',e=>{if(e.key==='Enter')handleSignup2()});
+function toggleMobileNav(){
+  var nav=document.querySelector('.nav-links');
+  var btn=document.querySelector('.mobile-toggle');
+  nav.classList.toggle('open');
+  btn.classList.toggle('active');
+  btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+}
+var navEl=document.getElementById('navbar');
+window.addEventListener('scroll',function(){navEl.classList.toggle('scrolled',window.scrollY>40)});
+
+// Email decode
+document.querySelectorAll('.eml').forEach(function(el){
+  var a=document.createElement('a');
+  var u='inklockautomation', d='gmail.com';
+  a.href='mail'+'to:'+u+'@'+d;
+  a.textContent=u+'@'+d;
+  a.style.color='inherit';
+  a.style.textDecoration='none';
+  el.appendChild(a);
+});
+
+// Reveal on scroll
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+// Email-capture signups (front-end only — replace with real endpoint when launching)
+function handleSignup(){
+  var input=document.getElementById('emailInput');
+  var email=input.value.trim();
+  if(email && email.indexOf('@')>0){
+    document.getElementById('signupForm').style.display='none';
+    document.getElementById('signupSuccess').style.display='flex';
+  }
+}
+function handleSignup2(){
+  var input=document.getElementById('emailInput2');
+  var email=input.value.trim();
+  if(email && email.indexOf('@')>0){
+    document.getElementById('signupForm2').style.display='none';
+    document.getElementById('signupSuccess2').style.display='flex';
+  }
+}
+document.getElementById('emailInput').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();handleSignup();}});
+document.getElementById('emailInput2').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();handleSignup2();}});
 </script>
+
 </body>
 </html>
