@@ -19,7 +19,24 @@
     { "source": "/blog/5-zapier-automations", "destination": "/blog/5-zapier-automations.html" },
     { "source": "/blog/why-data-driven-marketing", "destination": "/blog/why-data-driven-marketing.html" },
     { "source": "/blog/instagram-isnt-dead", "destination": "/blog/instagram-isnt-dead.html" },
-    { "source": "/blog/healthcare-ads-not-converting", "destination": "/blog/healthcare-ads-not-converting.html" }
+    { "source": "/blog/healthcare-ads-not-converting", "destination": "/blog/healthcare-ads-not-converting.html" },
+    { "source": "/blog/the-lead-you-already-paid-for", "destination": "/blog/the-lead-you-already-paid-for.html" },
+    { "source": "/blog/ai-wont-fix-a-broken-process", "destination": "/blog/ai-wont-fix-a-broken-process.html" },
+    { "source": "/blog/the-five-minute-rule", "destination": "/blog/the-five-minute-rule.html" },
+    { "source": "/blog/your-pipeline-is-lying-to-you", "destination": "/blog/your-pipeline-is-lying-to-you.html" },
+    { "source": "/blog/write-your-sops-like-someone-else-runs-them", "destination": "/blog/write-your-sops-like-someone-else-runs-them.html" },
+    { "source": "/blog/stop-buying-tools-start-buying-outcomes", "destination": "/blog/stop-buying-tools-start-buying-outcomes.html" },
+    { "source": "/blog/ai-prompts-for-service-businesses", "destination": "/blog/ai-prompts-for-service-businesses.html" },
+    { "source": "/blog/the-onboarding-experience-sells-the-next-client", "destination": "/blog/the-onboarding-experience-sells-the-next-client.html" },
+    { "source": "/blog/the-metric-that-actually-matters", "destination": "/blog/the-metric-that-actually-matters.html" },
+    { "source": "/blog/the-handoff-is-where-things-break", "destination": "/blog/the-handoff-is-where-things-break.html" },
+    { "source": "/blog/good-data-in-good-decisions-out", "destination": "/blog/good-data-in-good-decisions-out.html" },
+    { "source": "/blog/saying-no-is-a-growth-strategy", "destination": "/blog/saying-no-is-a-growth-strategy.html" },
+    { "source": "/blog/the-mid-year-systems-audit", "destination": "/blog/the-mid-year-systems-audit.html" },
+    { "source": "/blog/the-second-half-reset", "destination": "/blog/the-second-half-reset.html" },
+    { "source": "/blog/let-ai-read-your-inbox", "destination": "/blog/let-ai-read-your-inbox.html" },
+    { "source": "/blog/the-referral-system-you-dont-have", "destination": "/blog/the-referral-system-you-dont-have.html" },
+    { "source": "/blog/automate-the-boring-keep-the-human", "destination": "/blog/automate-the-boring-keep-the-human.html" }
   ],
   "functions": {
     "api/contact.js": {
