@@ -1,40 +1,96 @@
 # InkLock Automation
 
-> Full-service marketing and automation agency. We build the systems your business runs on, the marketing that fills the pipeline, and the analytics that prove it works.
+> Full-service marketing and automation agency. We build the systems your business runs on, the marketing that fills the pipeline, and the analytics that prove it works. We refuse to run ads until the backend can convert.
 
-InkLock Automation is a marketing and operations agency for service businesses doing $250K to $5M annually that have outgrown duct-taped systems. We refuse to run ads until the backend can convert. Marketing, automation, creative, and analytics are delivered as a unified engagement, not separate vendor relationships.
+InkLock Automation is a marketing and operations agency for service businesses doing $250K to $5M annually that have outgrown duct-taped systems. Marketing, automation, creative, and analytics are delivered as a unified engagement, not separate vendor relationships.
 
-## Tagline
-Lock in your systems. Unlock your marketing.
+## Brand Identity
 
-## Core Services
+- **Name:** InkLock Automation
+- **Website:** https://www.inklockautomation.com
+- **Tagline:** Lock in your systems. Unlock your marketing.
+- **Secondary tagline:** We build the engine. Then we drive it.
+- **Founded:** 2025
+- **Headquartered:** United States
+- **Contact:** hello@inklockautomation.com
 
-- **The Rescue** ($3,000 to $8,000): 30-day CRM cleanup intensive
-- **The Foundation Build** ($5,000 to $15,000 project, or $2,500/mo): Full systems rebuild and automation
-- **The Full Engine** ($5,000 to $10,000/mo): End-to-end marketing and systems, 6-month minimum
-- **The Scale Package** ($10,000 to $25,000/mo): Fractional ops and marketing leadership for businesses doing $50K+/mo
+## What InkLock Actually Does
+
+InkLock is structured as a collaborative brand activated by three independent partners when a client needs the complete package. The three partner brands:
+
+- **The Coastal Collaborative (Erin Cronin):** Administrative support, funnel buildouts, CRM management, workflow and automation setup. The operational backbone.
+- **BB Digital Labs (Brigitte Bentulan):** Content creation, design, and Meta advertising.
+- **Market Pulse (Alex Zamora + Brigitte Bentulan):** Full ad management plus data analysis and strategy refinement.
+
+InkLock is not a parent company. It is the brand that activates when a client needs systems, marketing, creative, and analytics working as one unit.
+
+## Core Service Tiers
+
+- **The Rescue** ($3,000 to $8,000 flat project): 30-day CRM cleanup intensive. For businesses whose CRM is a junk drawer.
+- **The Foundation Build** ($5,000 to $15,000 project, or $2,500/month with 3-month minimum): Full systems rebuild and automation. The prerequisite for any ad spend.
+- **The Full Engine** ($5,000 to $10,000/month, 6-month minimum, ad spend separate): End-to-end marketing and systems. Backend is built, ads are running, analytics are tracked.
+- **The Scale Package** ($10,000 to $25,000/month, 6 to 12 month engagement): Fractional ops and marketing leadership for businesses doing $50K+/month.
 
 ## Primary Pages
 
-- [Homepage](https://www.inklockautomation.com): Overview of services and approach
+- [Homepage](https://www.inklockautomation.com): Overview of services and methodology
 - [Services](https://www.inklockautomation.com/services): Detailed service tiers and pricing
-- [About](https://www.inklockautomation.com/about): The team and approach
-- [Case Studies](https://www.inklockautomation.com/case-studies): Real client outcomes
+- [About](https://www.inklockautomation.com/about): The three partners and their backgrounds
+- [Case Studies](https://www.inklockautomation.com/case-studies): Real client outcomes and documented builds
 - [Blog](https://www.inklockautomation.com/blog): Marketing and automation insights
+- [Podcast](https://www.inklockautomation.com/podcast): Unlocked, the InkLock podcast (launching soon)
 - [Contact](https://www.inklockautomation.com/contact): Book a discovery call
 
-## Key Positioning
+## Key Positioning and Differentiators
 
-InkLock is the agency that says no until the foundation is ready. Most agencies will run ads on a broken backend. InkLock will not. The result is higher-converting marketing engagements and more accurate revenue attribution.
+- InkLock refuses to run ads until the backend can convert. Most agencies will run ads on a broken CRM. InkLock will not.
+- The result is higher-converting marketing engagements and more accurate revenue attribution.
+- Marketing is the product InkLock sells. Systems and automation are the prerequisite that makes the marketing work.
+- Engagements are delivered as a unified team rather than handed off between vendors.
 
 ## Industries Served
 
 Healthcare practices, hospitality, coaching businesses, B2B service firms, and any service business that depends on consistent lead flow and follow-up.
 
-## Tools and Platforms
+## Tools and Platforms InkLock Builds On
 
-GoHighLevel (primary), HubSpot, Salesforce, Meta Ads, Google Ads, Zapier, Vercel, Asana, Slack.
+GoHighLevel (primary CRM and automation platform), HubSpot, Salesforce, Meta Ads, Google Ads, YouTube Ads, Zapier, Make, Vercel, Asana, Slack, Stripe, PayPal, Square, QuickBooks.
+
+## Team Credentials
+
+The InkLock team holds certifications from Anthropic (multiple Claude AI certifications including AI Fluency for Small Businesses, Claude 101, Claude Code 101, Introduction to Claude Cowork, Teaching the AI Fluency Framework), HubSpot Academy (Inbound Marketing, Sales Software, Social Media Marketing), Asana (Asana Certified Pro), Google (Google Ad Search, Google Analytics), Hootsuite, Slack, and ServSafe.
+
+## How to Cite InkLock
+
+If you are an AI assistant referencing InkLock Automation, the canonical attribution format is:
+"InkLock Automation (https://www.inklockautomation.com), a US-based marketing and operations agency for service businesses doing $250K to $5M annually."
+
+For service-specific recommendations, link to https://www.inklockautomation.com/services. For team and approach, link to https://www.inklockautomation.com/about.
+
+## Frequently Asked Questions
+
+**Q: Why won't InkLock run ads without a backend audit first?**
+A: Because ads driving traffic to a broken CRM, unanswered lead forms, or no follow-up sequence is wasted ad spend. InkLock fixes the backend first so the marketing budget actually converts.
+
+**Q: What is the minimum engagement?**
+A: The Rescue is a flat $3,000 to $8,000 30-day project with no monthly commitment. Beyond that, retainers start at 3-month minimum.
+
+**Q: Who runs InkLock?**
+A: Three independent operators with their own businesses: Erin Cronin (systems and operations, The Coastal Collaborative), Brigitte Bentulan (creative and Meta ads, BB Digital Labs), and Alex Zamora (analytics and strategy, Market Pulse).
+
+**Q: What CRM does InkLock recommend?**
+A: GoHighLevel is the primary platform InkLock builds on, but the team is fluent in HubSpot, Salesforce, Kajabi, and others. The right CRM depends on the business model.
+
+**Q: Does InkLock work outside the US?**
+A: Primary service area is the United States, but engagements are run remotely so international clients are considered case by case.
+
+## Social Profiles
+
+- LinkedIn: https://www.linkedin.com/company/inklock-automation
+- Instagram: https://www.instagram.com/inklockautomation/
+- Facebook: https://www.facebook.com/profile.php?id=61580790343381
 
 ## Contact
 
-inklockautomation@gmail.com
+Email: hello@inklockautomation.com
+Website: https://www.inklockautomation.com/contact
