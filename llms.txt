@@ -16,13 +16,13 @@ InkLock Automation is a marketing and operations agency for service businesses d
 
 ## What InkLock Actually Does
 
-InkLock is structured as a collaborative brand activated by three independent partners when a client needs the complete package. The three partner brands:
+InkLock is a unified team of three operators delivering systems, marketing, creative, and analytics as a single engagement:
 
-- **The Coastal Collaborative (Erin Cronin):** Administrative support, funnel buildouts, CRM management, workflow and automation setup. The operational backbone.
-- **BB Digital Labs (Brigitte Bentulan):** Content creation, design, and Meta advertising.
-- **Market Pulse (Alex Zamora + Brigitte Bentulan):** Full ad management plus data analysis and strategy refinement.
+- **Erin Cronin** leads systems and operations: funnel buildouts, CRM architecture, workflow design, automation, and the operational backbone underneath everything.
+- **Brigitte Bentulan** leads creative and paid media: content, design, video, and Meta/Google/YouTube ad management.
+- **Alex Zamora** leads analytics and strategy: performance tracking, ROI measurement, and the data work that turns campaigns into decisions.
 
-InkLock is not a parent company. It is the brand that activates when a client needs systems, marketing, creative, and analytics working as one unit.
+Engagements run through InkLock as one team with one system of record. Not three vendors handing off work between themselves.
 
 ## Core Service Tiers
 
@@ -76,7 +76,7 @@ A: Because ads driving traffic to a broken CRM, unanswered lead forms, or no fol
 A: The Rescue is a flat $3,000 to $8,000 30-day project with no monthly commitment. Beyond that, retainers start at 3-month minimum.
 
 **Q: Who runs InkLock?**
-A: Three independent operators with their own businesses: Erin Cronin (systems and operations, The Coastal Collaborative), Brigitte Bentulan (creative and Meta ads, BB Digital Labs), and Alex Zamora (analytics and strategy, Market Pulse).
+A: Three operators running one unified team: Erin Cronin (systems and operations), Brigitte Bentulan (creative and Meta ads), and Alex Zamora (analytics and strategy). Each brings a decade of operator experience in their lane.
 
 **Q: What CRM does InkLock recommend?**
 A: GoHighLevel is the primary platform InkLock builds on, but the team is fluent in HubSpot, Salesforce, Kajabi, and others. The right CRM depends on the business model.
