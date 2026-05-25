@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
   const tags = TAG_MAP[type] || ['newsletter-subscriber', 'website-lead'];
 
   // Reuses the same GHL webhook as contact form, separated by tags in GHL workflows
-  const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/imHfi70hPr9q2dnxwMmK/webhook-trigger/b58e2fc4-39c8-426f-9edc-1c93a10c74dc';
+  const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/imHfi70hPr9q2dnxwMmK/webhook-trigger/PXzpvApyS47ABmOVYre0';
 
   const payload = {
     email: email,
