@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { email, type, source } = req.body || {};
+  const { email, firstName, type, source } = req.body || {};
 
   // Basic validation
   if (!email || !email.includes('@')) {
@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
 
   const payload = {
     email: email,
-    firstName: '',
+    firstName: firstName || '',
     lastName: '',
     source: source || (type === 'podcast-waitlist' ? 'Podcast Waitlist' : 'Newsletter Signup'),
     tags: tags,

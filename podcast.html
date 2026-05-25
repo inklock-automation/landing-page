@@ -279,7 +279,8 @@
 
       <div id="signupForm">
         <div class="pod-signup">
-          <input type="email" id="emailInput" placeholder="Email for launch updates" aria-label="Email address">
+          <input type="text" id="firstNameInput" required placeholder="First name" aria-label="First name">
+        <input type="email" id="emailInput" placeholder="Email for launch updates" aria-label="Email address">
           <button onclick="handleSignup()" type="button">Notify me →</button>
         </div>
         <p class="signup-note">One email when episode one drops. No drip sequence (ironic, we know).</p>
@@ -394,7 +395,8 @@
       <p class="s-sub mx-auto" style="margin-top:14px">Have a question you want us to tear apart on the show? Send it over. Or just leave your email and we'll send exactly one message when we go live.</p>
       <div id="signupForm2" style="margin-top:28px">
         <div class="pod-signup">
-          <input type="email" id="emailInput2" placeholder="Your email address" aria-label="Email address">
+          <input type="text" id="firstNameInput2" required placeholder="First name" aria-label="First name">
+        <input type="email" id="emailInput2" placeholder="Your email address" aria-label="Email address">
           <button onclick="handleSignup2()" type="button">Get notified →</button>
         </div>
       </div>
@@ -471,7 +473,7 @@ var io=new IntersectionObserver(function(entries){
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 
 // Email-capture signups wired to /api/subscribe (GHL)
-async function submitWaitlist(inputId, formId, successId, source){
+async function submitWaitlist(inputId, firstNameId, formId, successId, source){
   var input=document.getElementById(inputId);
   var email=input.value.trim();
   if(!email||email.indexOf('@')<0){input.style.borderColor='#ec4899';return}
@@ -479,7 +481,7 @@ async function submitWaitlist(inputId, formId, successId, source){
   var oldText=btn?btn.textContent:'';
   if(btn){btn.disabled=true;btn.textContent='Adding you...'}
   try{
-    var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,type:'podcast-waitlist',source:source})});
+    var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,firstName:document.getElementById(firstNameId).value.trim(),type:'podcast-waitlist',source:source})});
     if(r.ok){
       document.getElementById(formId).style.display='none';
       document.getElementById(successId).style.display='flex';
@@ -490,8 +492,8 @@ async function submitWaitlist(inputId, formId, successId, source){
     alert('Something went wrong. Try again or email hello@inklockautomation.com')
   }
 }
-function handleSignup(){submitWaitlist('emailInput','signupForm','signupSuccess','Podcast Page Hero')}
-function handleSignup2(){submitWaitlist('emailInput2','signupForm2','signupSuccess2','Podcast Page CTA')}
+function handleSignup(){submitWaitlist('emailInput','firstNameInput','signupForm','signupSuccess','Podcast Page Hero')}
+function handleSignup2(){submitWaitlist('emailInput2','firstNameInput2','signupForm2','signupSuccess2','Podcast Page CTA')}
 document.getElementById('emailInput').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();handleSignup();}});
 document.getElementById('emailInput2').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();handleSignup2();}});
 </script>

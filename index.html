@@ -350,6 +350,7 @@
       <h2 class="s-title">Get the stuff we'd <span class="accent">actually pay for.</span></h2>
       <p class="s-sub mx-auto" style="margin-bottom:28px">Monthly notes on systems, automation, and what's working right now. Real builds, real numbers, zero fluff.</p>
       <form id="newsletterForm" onsubmit="return submitNewsletter(event)" style="display:flex;gap:12px;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+        <input type="text" id="newsletterFirstName" required placeholder="First name" aria-label="First name" style="flex:1;min-width:160px;padding:14px 20px;border:1px solid rgba(147,51,234,.25);border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;background:rgba(255,255,255,.02);color:inherit;outline:none">
         <input type="email" id="newsletterEmail" required placeholder="your@email.com" aria-label="Email address" style="flex:1;min-width:240px;padding:14px 20px;border:1px solid rgba(147,51,234,.25);border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;background:rgba(255,255,255,.02);color:inherit;outline:none">
         <button type="submit" id="newsletterBtn" style="padding:14px 28px;background:linear-gradient(135deg,#9333ea,#c026d3);color:#fff;border:none;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:15px;cursor:pointer;white-space:nowrap">Lock me in</button>
       </form>
@@ -510,7 +511,7 @@ async function submitNewsletter(e){
   var oldText=btn.textContent;
   btn.disabled=true;btn.textContent='Locking you in...';
   try{
-    var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,type:'newsletter',source:'Homepage Newsletter'})});
+    var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,firstName:document.getElementById('newsletterFirstName').value.trim(),type:'newsletter',source:'Homepage Newsletter'})});
     if(r.ok){
       document.getElementById('newsletterForm').style.display='none';
       document.getElementById('newsletterSuccess').style.display='flex';
