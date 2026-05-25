@@ -116,11 +116,18 @@
       <p>If you can't train a new hire to do it manually in 30 minutes, you can't automate it yet. The documentation required to train a human is the same documentation required to build a reliable automation.</p>
     </div>
 
-    <div class="post-cta">
-      <h3>Want this kind of system for your business?</h3>
-      <p>Book a 30-minute discovery call. If we're not the right fit, we'll tell you and point you to who is.</p>
-      <a href="https://api.leadconnectorhq.com/widget/booking/rji8xmGWO2uQ8DuEziEn" target="_blank" rel="noopener" class="btn-primary">Book a discovery call →</a>
-    </div>
+    <div class="cta-block" style="text-align:center;padding:36px 28px;background:rgba(147,51,234,.04);border:1px solid rgba(147,51,234,.14);border-radius:14px;margin:32px 0">
+<p style="color:#9333ea;font-family:Sora,sans-serif;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin:0 0 14px">The Inside Track</p>
+<h2 style="font-family:Sora,sans-serif;font-size:clamp(24px,3.2vw,32px);font-weight:800;line-height:1.15;letter-spacing:-.5px;color:#14111c;margin:0 0 12px">One note a month.<br>Worth the inbox space.</h2>
+<p style="font-size:16px;line-height:1.65;color:#6b6580;max-width:520px;margin:0 auto 22px">Real builds, real numbers, what's actually working right now. The same stuff we'd send a friend.</p>
+<form onsubmit="return submitBlogNewsletter(event,this)" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+<input type="email" name="email" required placeholder="your@email.com" aria-label="Email address" style="flex:1;min-width:220px;padding:13px 18px;border:1px solid rgba(147,51,234,.25);border-radius:8px;font-family:Plus Jakarta Sans,sans-serif;font-size:15px;background:#fff;color:#14111c;outline:none">
+<button type="submit" style="padding:13px 24px;background:linear-gradient(135deg,#9333ea,#c026d3);color:#fff;border:0;border-radius:8px;font-family:Plus Jakarta Sans,sans-serif;font-weight:700;font-size:15px;cursor:pointer;white-space:nowrap">Lock me in &rarr;</button>
+</form>
+<p style="margin:14px 0 0;font-size:12px;color:#9aa0ad;font-family:Plus Jakarta Sans,sans-serif">One email a month. Unsubscribe anytime. No spam, ever.</p>
+<p style="margin:22px 0 0;padding-top:18px;border-top:1px solid rgba(147,51,234,.10);font-size:14px;color:#6b6580">Got a question about this post? <a href="/contact" style="color:#9333ea;font-weight:600;text-decoration:none">Reach out &rarr;</a></p>
+<script>function submitBlogNewsletter(e,f){e.preventDefault();var b=f.querySelector('button'),o=b.textContent,em=f.querySelector('input[name=email]').value;b.disabled=true;b.textContent='Locking you in...';fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,type:'newsletter',source:'Blog Post CTA'})}).then(function(r){if(r.ok){f.outerHTML='<div style="text-align:center;padding:18px;background:rgba(147,51,234,.06);border:1px solid rgba(147,51,234,.15);border-radius:12px;font-weight:500;font-size:15px;color:#9333ea;max-width:440px;margin:0 auto">You\'re in. First note hits next month.</div>';if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Blog Newsletter Signup'})}else{throw new Error('failed')}}).catch(function(){b.disabled=false;b.textContent=o;alert('Something went wrong. Email us at hello@inklockautomation.com and we will add you manually.')});return false}</script>
+</div>
   </article>
 
 </main>
@@ -162,7 +169,7 @@
 <script>
 function toggleMobileNav(){var nav=document.querySelector('.nav-links');var btn=document.querySelector('.mobile-toggle');nav.classList.toggle('open');btn.classList.toggle('active');btn.setAttribute('aria-expanded',nav.classList.contains('open'));}
 var navEl=document.getElementById('navbar');window.addEventListener('scroll',function(){navEl.classList.toggle('scrolled',window.scrollY>40)});
-document.querySelectorAll('.eml').forEach(function(el){var a=document.createElement('a');var u='inklockautomation',d='gmail.com';a.href='mail'+'to:'+u+'@'+d;a.textContent=u+'@'+d;a.style.color='inherit';a.style.textDecoration='none';el.appendChild(a);});
+document.querySelectorAll('.eml').forEach(function(el){var a=document.createElement('a');var u='hello',d='inklockautomation.com';a.href='mail'+'to:'+u+'@'+d;a.textContent=u+'@'+d;a.style.color='inherit';a.style.textDecoration='none';el.appendChild(a);});
 var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 </script>
