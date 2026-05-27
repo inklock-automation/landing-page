@@ -310,18 +310,69 @@
     </div>
   </section>
 
-  <!-- CTA BAND -->
-  <section class="cta-band" id="book">
-    <div class="inner">
+  <!-- REQUEST FORM -->
+  <section class="s-pad" id="request-audit">
+    <div class="centered" style="margin-bottom:40px">
       <div class="divider mx-auto"></div>
-      <h2 class="s-title">Ready for <span class="accent">your free baseline?</span></h2>
-      <p class="s-sub mx-auto" style="margin-top:14px">3 minutes to run. Real dashboard back in your inbox within 24 hours. Zero obligation after.</p>
-      <div style="margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a href="/contact?topic=site-health-audit" class="btn-primary" style="font-size:16px;padding:16px 36px">Email us your URL →</a>
-        <a href="https://api.leadconnectorhq.com/widget/booking/rji8xmGWO2uQ8DuEziEn" target="_blank" rel="noopener" class="btn-ghost" style="font-size:16px;padding:16px 36px">Book a discovery call</a>
-      </div>
-      <p style="margin-top:18px;font-size:14px;color:var(--txt-mute)">Or text Erin directly: (910) 821-3007</p>
+      <div class="eyebrow">Request your audit</div>
+      <h2 class="s-title">Drop your URL. <span class="accent">Get your free baseline.</span></h2>
+      <p class="s-sub mx-auto" style="margin-top:14px">3 minutes for us to run. Real dashboard back in your inbox within 24 hours. Zero obligation after.</p>
     </div>
+
+    <div class="audit-form-card" style="max-width:640px;margin:0 auto">
+      <form id="auditForm" novalidate>
+        <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-field">
+            <label for="af-first">First name *</label>
+            <input id="af-first" name="first_name" type="text" autocomplete="given-name" required>
+          </div>
+          <div class="form-field">
+            <label for="af-last">Last name *</label>
+            <input id="af-last" name="last_name" type="text" autocomplete="family-name" required>
+          </div>
+        </div>
+        <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
+          <div class="form-field">
+            <label for="af-email">Work email *</label>
+            <input id="af-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="af-company">Company *</label>
+            <input id="af-company" name="company" type="text" autocomplete="organization" required>
+          </div>
+        </div>
+        <div class="form-field" style="margin-top:14px">
+          <label for="af-url">Website URL to audit *</label>
+          <input id="af-url" name="website_url" type="url" placeholder="https://yourcompany.com" required>
+        </div>
+        <div class="form-field" style="margin-top:14px">
+          <label for="af-notes">Anything we should know? <span style="color:var(--txt-mute);font-weight:400">(optional)</span></label>
+          <textarea id="af-notes" name="notes" rows="3" placeholder="Specific pages to look at, recent migrations, SEO concerns, etc."></textarea>
+        </div>
+        <input type="hidden" name="service" value="Site Health Audit">
+        <button type="submit" class="btn-primary form-submit" style="margin-top:22px;width:100%;font-size:16px;padding:16px 36px">
+          <span class="form-submit-label">Get my free baseline →</span>
+          <span class="form-submit-loading" style="display:none">Sending...</span>
+        </button>
+        <p class="form-note" style="margin-top:14px;font-size:13px;color:var(--txt-mute);text-align:center">
+          Or text Erin directly: (910) 821-3007. We reply to every request within 24 hours.
+        </p>
+      </form>
+
+      <div id="auditFormSuccess" style="display:none;text-align:center;padding:40px 24px;border:1px solid rgba(147,51,234,.18);border-radius:14px;background:rgba(147,51,234,.04)">
+        <div class="eyebrow" style="color:var(--purple)">Request received</div>
+        <h3 style="margin-top:12px;font-size:22px">Your audit is in the queue.</h3>
+        <p style="margin-top:12px;color:var(--txt-dim);line-height:1.65">Real dashboard back in your inbox within 24 hours. If we have questions we will reach out first. If you need anything before that, text Erin at (910) 821-3007.</p>
+      </div>
+
+      <div id="auditFormError" style="display:none;margin-top:18px;padding:14px 18px;border:1px solid rgba(220,38,38,.25);border-radius:10px;background:rgba(220,38,38,.05);color:#b91c1c;font-size:14px">
+        Something broke on our end. Please try again, or email <a href="mailto:hello@inklockautomation.com" style="color:inherit;text-decoration:underline">hello@inklockautomation.com</a> directly with your URL.
+      </div>
+    </div>
+
+    <p class="centered" style="margin-top:40px;font-size:14px;color:var(--txt-mute)">
+      Rather chat first? <a href="https://api.leadconnectorhq.com/widget/booking/rji8xmGWO2uQ8DuEziEn" target="_blank" rel="noopener" style="color:var(--purple);font-weight:600">Book a 30-minute discovery call →</a>
+    </p>
   </section>
 </main>
 
