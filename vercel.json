@@ -7,6 +7,7 @@
     { "source": "/case-studies", "destination": "/case-studies.html" },
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/site-health-audit", "destination": "/site-health-audit.html" },
     { "source": "/onboarding", "destination": "/onboarding.html" },
     { "source": "/build", "destination": "/build.html" },
     { "source": "/build/onboarding", "destination": "/build-onboarding.html" },
