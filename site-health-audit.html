@@ -343,7 +343,8 @@
         </div>
         <div class="form-field" style="margin-top:14px">
           <label for="af-url">Website URL to audit *</label>
-          <input id="af-url" name="website_url" type="url" placeholder="https://yourcompany.com" required>
+          <input id="af-url" name="website_url" type="text" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="yourcompany.com" required>
+          <span style="font-size:12px;color:var(--txt-mute);margin-top:4px">No need to type https:// — we'll add it for you.</span>
         </div>
         <div class="form-field" style="margin-top:14px">
           <label for="af-notes">Anything we should know? <span style="color:var(--txt-mute);font-weight:400">(optional)</span></label>
@@ -355,14 +356,14 @@
           <span class="form-submit-loading" style="display:none">Sending...</span>
         </button>
         <p class="form-note" style="margin-top:14px;font-size:13px;color:var(--txt-mute);text-align:center">
-          Or text Erin directly: (910) 821-3007. We reply to every request within 24 hours.
+          Or email us directly: <a href="mailto:hello@inklockautomation.com" style="color:var(--purple);font-weight:600">hello@inklockautomation.com</a>. We reply to every request within 24 hours.
         </p>
       </form>
 
       <div id="auditFormSuccess" style="display:none;text-align:center;padding:40px 24px;border:1px solid rgba(147,51,234,.18);border-radius:14px;background:rgba(147,51,234,.04)">
         <div class="eyebrow" style="color:var(--purple)">Request received</div>
         <h3 style="margin-top:12px;font-size:22px">Your audit is in the queue.</h3>
-        <p style="margin-top:12px;color:var(--txt-dim);line-height:1.65">Real dashboard back in your inbox within 24 hours. If we have questions we will reach out first. If you need anything before that, text Erin at (910) 821-3007.</p>
+        <p style="margin-top:12px;color:var(--txt-dim);line-height:1.65">Real dashboard back in your inbox within 24 hours. If we have questions we will reach out first. If you need anything before that, email <a href="mailto:hello@inklockautomation.com" style="color:var(--purple);font-weight:600">hello@inklockautomation.com</a>.</p>
       </div>
 
       <div id="auditFormError" style="display:none;margin-top:18px;padding:14px 18px;border:1px solid rgba(220,38,38,.25);border-radius:10px;background:rgba(220,38,38,.05);color:#b91c1c;font-size:14px">
@@ -510,8 +511,28 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
   var labelEl=form.querySelector('.form-submit-label');
   var loadingEl=form.querySelector('.form-submit-loading');
 
+  // Normalize URL on blur so visitor sees the protocol get added live
+  var urlInput=document.getElementById('af-url');
+  function normalizeUrl(raw){
+    var v=(raw||'').trim();
+    if(!v)return '';
+    // strip accidental leading "//"
+    v=v.replace(/^\/\//,'');
+    // add https:// if no protocol present
+    if(!/^https?:\/\//i.test(v))v='https://'+v;
+    return v;
+  }
+  if(urlInput){
+    urlInput.addEventListener('blur',function(){
+      var norm=normalizeUrl(urlInput.value);
+      if(norm)urlInput.value=norm;
+    });
+  }
+
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    // Auto-fix URL one more time at submit in case they tabbed straight to submit
+    if(urlInput)urlInput.value=normalizeUrl(urlInput.value);
     if(!form.checkValidity()){form.reportValidity();return;}
     errorBox.style.display='none';
     submitBtn.disabled=true;
