@@ -9,6 +9,17 @@ module.exports = async (req, res) => {
 
   const { first_name, last_name, email, phone, company, service, budget, timeline, details } = req.body;
 
+  // Diagnostic log so we can verify exactly what the API received from the form,
+  // separate from anything that might happen downstream in GHL or Slack.
+  console.log('Contact form submission received:', JSON.stringify({
+    first_name: first_name,
+    last_name: last_name,
+    email: email,
+    company: company,
+    service: service || '(none)',
+    details_preview: (details || '').slice(0, 200)
+  }));
+
   // Basic validation
   if (!first_name || !last_name || !email || !company || !details) {
     return res.status(400).json({ error: 'Missing required fields' });
@@ -16,10 +27,13 @@ module.exports = async (req, res) => {
 
   const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/imHfi70hPr9q2dnxwMmK/webhook-trigger/b58e2fc4-39c8-426f-9edc-1c93a10c74dc';
 
-  // Identify Site Health Audit requests so we can tag + ping Slack distinctly
+  // Identify Site Health Audit requests so we can tag + ping Slack distinctly.
+  // Audit requests get ONLY the site-health-audit tag (no website-lead) so the
+  // generic Website Lead workflow in GHL never fires for them. This avoids the
+  // tag-timing race condition that lets the workflow filter slip through.
   const isAuditRequest = (service || '').toLowerCase().includes('site health');
   const tags = isAuditRequest
-    ? ['website-lead', 'site-health-audit']
+    ? ['site-health-audit']
     : ['website-lead'];
 
   const payload = {
