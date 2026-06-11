@@ -303,20 +303,26 @@
     <div class="form-card">
       <h3>Tell us what's broken</h3>
       <p class="form-sub">A few sentences is plenty. If we're not the right fit, we'll tell you, and point you to who is.</p>
-      <form id="contactForm" action="/api/contact" method="POST" novalidate>
+      <form id="contactForm" action="/api/contact" method="POST">
         <div class="form-row">
           <div class="form-field">
-            <label for="cf-name">Name</label>
-            <input id="cf-name" type="text" name="name" placeholder="Jane Owner" required>
+            <label for="cf-first">First name</label>
+            <input id="cf-first" type="text" name="first_name" placeholder="Jane" required>
           </div>
+          <div class="form-field">
+            <label for="cf-last">Last name</label>
+            <input id="cf-last" type="text" name="last_name" placeholder="Owner" required>
+          </div>
+        </div>
+        <div class="form-row">
           <div class="form-field">
             <label for="cf-email">Email</label>
             <input id="cf-email" type="email" name="email" placeholder="jane@yourcompany.com" required>
           </div>
-        </div>
-        <div class="form-field">
-          <label for="cf-company">Company</label>
-          <input id="cf-company" type="text" name="company" placeholder="Your company" required>
+          <div class="form-field">
+            <label for="cf-company">Company</label>
+            <input id="cf-company" type="text" name="company" placeholder="Your company" required>
+          </div>
         </div>
         <div class="form-field">
           <label>What's broken</label>
@@ -341,6 +347,11 @@
             <option value="Phone">Phone call</option>
             <option value="Video">Video call</option>
           </select>
+        </div>
+        <div class="form-field" id="cf-phone-field" hidden>
+          <label for="cf-phone">Phone number</label>
+          <input id="cf-phone" type="tel" name="phone" inputmode="tel" placeholder="(555) 123-4567">
+          <span class="form-help">So we can reach you at the right number.</span>
         </div>
         <button type="submit" class="form-submit">Send it →</button>
         <p class="form-note">By submitting, you agree to our privacy policy. We never sell your information. We respond inside 24 business hours.</p>
@@ -465,6 +476,20 @@ var io=new IntersectionObserver(function(entries){
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 
+// Show + require the phone field only when "Phone call" is the preferred method.
+// Kept in sync so a hidden field is never `required` (which would silently block submit).
+var contactSel = document.getElementById('cf-contact');
+var phoneField = document.getElementById('cf-phone-field');
+var phoneInput = document.getElementById('cf-phone');
+function syncPhoneField(){
+  var isPhone = contactSel.value === 'Phone';
+  phoneField.hidden = !isPhone;
+  phoneInput.required = isPhone;
+  if(!isPhone){ phoneInput.value = ''; }
+}
+contactSel.addEventListener('change', syncPhoneField);
+syncPhoneField();
+
 // Contact form submit -> /api/contact
 document.getElementById('contactForm').addEventListener('submit', async function(e){
   e.preventDefault();
@@ -477,8 +502,10 @@ document.getElementById('contactForm').addEventListener('submit', async function
   var services = [];
   f.querySelectorAll('input[name="service"]:checked').forEach(function(c){ services.push(c.value); });
   var payload = {
-    name: fd.get('name'),
+    first_name: fd.get('first_name'),
+    last_name: fd.get('last_name'),
     email: fd.get('email'),
+    phone: fd.get('phone') || '',
     company: fd.get('company'),
     service: services.join(', '),
     details: fd.get('details'),
