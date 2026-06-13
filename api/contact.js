@@ -93,6 +93,7 @@ module.exports = async (req, res) => {
           const visitorNotes = notesMatch ? notesMatch[1].trim() : '';
 
           slackPayload = {
+            username: 'InkLock Site Audit Notifier',
             text: `Site Health Request: ${first_name} ${last_name} (${company})`,
             blocks: [
               {
@@ -143,6 +144,7 @@ module.exports = async (req, res) => {
           }
 
           slackPayload = {
+            username: 'InkLock Lead Notifier',
             text: `New Website Lead: ${first_name} ${last_name} (${company})`,
             blocks: [
               {
