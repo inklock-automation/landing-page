@@ -78,49 +78,98 @@ module.exports = async (req, res) => {
       return res.status(500).json({ error: 'Failed to process submission' });
     }
 
-    // Fire a rich Slack notification for Site Health Audit requests.
+    // Notify Slack for every submission (Site Health Audit + regular contact form).
     // AWAIT it so Vercel doesn't kill the function before the request completes.
     // Wrapped in try/catch + 3s timeout so it cannot break or delay the submission response.
-    if (isAuditRequest && process.env.SLACK_WEBHOOK_URL) {
+    if (process.env.SLACK_WEBHOOK_URL) {
       try {
-        // Best-effort URL extraction from the details field
-        const urlMatch = (details || '').match(/Website URL to audit:\s*(\S+)/i);
-        const websiteUrl = urlMatch ? urlMatch[1] : '(not provided)';
-        const notesMatch = (details || '').match(/Additional context:\s*([\s\S]*)$/i);
-        const visitorNotes = notesMatch ? notesMatch[1].trim() : '';
+        let slackPayload;
 
-        const slackPayload = {
-          text: `Site Health Request: ${first_name} ${last_name} (${company})`,
-          blocks: [
-            {
-              type: 'header',
-              text: { type: 'plain_text', text: 'Site Health Request', emoji: false }
-            },
-            {
+        if (isAuditRequest) {
+          // Best-effort URL extraction from the details field
+          const urlMatch = (details || '').match(/Website URL to audit:\s*(\S+)/i);
+          const websiteUrl = urlMatch ? urlMatch[1] : '(not provided)';
+          const notesMatch = (details || '').match(/Additional context:\s*([\s\S]*)$/i);
+          const visitorNotes = notesMatch ? notesMatch[1].trim() : '';
+
+          slackPayload = {
+            text: `Site Health Request: ${first_name} ${last_name} (${company})`,
+            blocks: [
+              {
+                type: 'header',
+                text: { type: 'plain_text', text: 'Site Health Request', emoji: false }
+              },
+              {
+                type: 'section',
+                fields: [
+                  { type: 'mrkdwn', text: `*Name*\n${first_name} ${last_name}` },
+                  { type: 'mrkdwn', text: `*Company*\n${company}` },
+                  { type: 'mrkdwn', text: `*Email*\n<mailto:${email}|${email}>` },
+                  { type: 'mrkdwn', text: `*URL to audit*\n<${websiteUrl}|${websiteUrl}>` }
+                ]
+              }
+            ]
+          };
+
+          if (visitorNotes) {
+            slackPayload.blocks.push({
               type: 'section',
-              fields: [
-                { type: 'mrkdwn', text: `*Name*\n${first_name} ${last_name}` },
-                { type: 'mrkdwn', text: `*Company*\n${company}` },
-                { type: 'mrkdwn', text: `*Email*\n<mailto:${email}|${email}>` },
-                { type: 'mrkdwn', text: `*URL to audit*\n<${websiteUrl}|${websiteUrl}>` }
-              ]
-            }
-          ]
-        };
+              text: { type: 'mrkdwn', text: `*Notes from visitor*\n${visitorNotes}` }
+            });
+          }
 
-        if (visitorNotes) {
           slackPayload.blocks.push({
-            type: 'section',
-            text: { type: 'mrkdwn', text: `*Notes from visitor*\n${visitorNotes}` }
+            type: 'context',
+            elements: [
+              { type: 'mrkdwn', text: `Submitted ${new Date().toISOString()} via /site-health-audit. Lead is also in GHL with tag \`site-health-audit\`.` }
+            ]
+          });
+        } else {
+          // Regular website contact-form lead.
+          const fields = [
+            { type: 'mrkdwn', text: `*Name*\n${first_name} ${last_name}` },
+            { type: 'mrkdwn', text: `*Company*\n${company}` },
+            { type: 'mrkdwn', text: `*Email*\n<mailto:${email}|${email}>` },
+            { type: 'mrkdwn', text: `*Preferred contact*\n${contact_method || 'Not specified'}` }
+          ];
+          if (phone) {
+            fields.push({ type: 'mrkdwn', text: `*Phone*\n${phone}` });
+          }
+          if (availability) {
+            fields.push({ type: 'mrkdwn', text: `*Availability*\n${availability}${timezone ? ` (${timezone})` : ''}` });
+          }
+          if (service) {
+            fields.push({ type: 'mrkdwn', text: `*Interested in*\n${service}` });
+          }
+
+          slackPayload = {
+            text: `New Website Lead: ${first_name} ${last_name} (${company})`,
+            blocks: [
+              {
+                type: 'header',
+                text: { type: 'plain_text', text: 'New Website Lead', emoji: false }
+              },
+              {
+                type: 'section',
+                fields: fields
+              }
+            ]
+          };
+
+          if (details) {
+            slackPayload.blocks.push({
+              type: 'section',
+              text: { type: 'mrkdwn', text: `*Message*\n${details}` }
+            });
+          }
+
+          slackPayload.blocks.push({
+            type: 'context',
+            elements: [
+              { type: 'mrkdwn', text: `Submitted ${new Date().toISOString()} via /contact. Lead is also in GHL with tag \`website-lead\`.` }
+            ]
           });
         }
-
-        slackPayload.blocks.push({
-          type: 'context',
-          elements: [
-            { type: 'mrkdwn', text: `Submitted ${new Date().toISOString()} via /site-health-audit. Lead is also in GHL with tag \`site-health-audit\`.` }
-          ]
-        });
 
         // 3-second timeout via AbortController so a slow Slack can't hold up the response.
         const slackController = new AbortController();
@@ -136,13 +185,13 @@ module.exports = async (req, res) => {
         if (!slackRes.ok) {
           console.error('Slack webhook responded non-200:', slackRes.status, await slackRes.text().catch(() => ''));
         } else {
-          console.log('Slack notification sent for Site Health Audit request');
+          console.log(`Slack notification sent for ${isAuditRequest ? 'Site Health Audit' : 'website'} lead`);
         }
       } catch (slackErr) {
         console.error('Slack webhook error (non-fatal, GHL still fired):', slackErr.message || slackErr);
       }
-    } else if (isAuditRequest && !process.env.SLACK_WEBHOOK_URL) {
-      console.warn('Site Health Audit request received but SLACK_WEBHOOK_URL is not set');
+    } else {
+      console.warn('Submission received but SLACK_WEBHOOK_URL is not set');
     }
 
     return res.status(200).json({ success: true });
