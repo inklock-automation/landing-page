@@ -255,14 +255,14 @@
     </a>
 
     <!-- EMAIL -->
-    <a href="mailto:hello@inklockautomation.com?subject=Hey%20InkLock" class="path-card pc-email">
+    <a id="emailCard" href="mailto:hello@inklockautomation.com?subject=Hey%20InkLock" class="path-card pc-email">
       <span class="pc-icon" aria-hidden="true">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </span>
       <h3>Email us</h3>
       <p>Old-school works. Send a few sentences about what's going on, we'll write back with thoughts.</p>
       <span class="pc-detail">hello@inklockautomation.com</span>
-      <span class="pc-foot"><span>Open email</span><span class="pc-arrow">→</span></span>
+      <span class="pc-foot"><span id="emailCardLabel">Open email</span><span class="pc-arrow">→</span></span>
     </a>
 
     <!-- MESSAGE -->
@@ -352,6 +352,26 @@
           <label for="cf-phone">Phone number</label>
           <input id="cf-phone" type="tel" name="phone" inputmode="tel" placeholder="(555) 123-4567">
           <span class="form-help">So we can reach you at the right number.</span>
+        </div>
+        <div id="cf-video-field" hidden>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-availability">Best days &amp; times</label>
+              <input id="cf-availability" type="text" name="availability" placeholder="e.g. Tue–Thu afternoons">
+            </div>
+            <div class="form-field">
+              <label for="cf-timezone">Your time zone</label>
+              <select id="cf-timezone" name="timezone">
+                <option value="">Select…</option>
+                <option value="ET">Eastern (ET)</option>
+                <option value="CT">Central (CT)</option>
+                <option value="MT">Mountain (MT)</option>
+                <option value="PT">Pacific (PT)</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <span class="form-help">We'll send a calendar invite to confirm — no need to nail it down exactly.</span>
         </div>
         <button type="submit" class="form-submit">Send it →</button>
         <p class="form-note">By submitting, you agree to our privacy policy. We never sell your information. We respond inside 24 business hours.</p>
@@ -470,6 +490,49 @@ document.querySelectorAll('.eml').forEach(function(el){
   el.appendChild(a);
 });
 
+// Email card — mailto works only if the visitor has a default mail handler.
+// Always give feedback by copying the address to the clipboard, and still let
+// the mailto fire for those who do have a handler set.
+(function(){
+  var card = document.getElementById('emailCard');
+  var label = document.getElementById('emailCardLabel');
+  if(!card || !label) return;
+  var addr = 'hello@inklockautomation.com';
+  var original = label.textContent;
+  var resetTimer = null;
+  function flash(msg){
+    label.textContent = msg;
+    if(resetTimer) clearTimeout(resetTimer);
+    resetTimer = setTimeout(function(){ label.textContent = original; }, 2500);
+  }
+  // Synchronous fallback — works inside the click gesture even when the async
+  // Clipboard API is blocked (unfocused tab, older Safari, etc.).
+  function legacyCopy(){
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = addr;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'absolute';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return ok;
+    } catch(e){ return false; }
+  }
+  card.addEventListener('click', function(){
+    // Don't preventDefault — if a mail client is registered, let it open too.
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(addr)
+        .then(function(){ flash('Copied — paste into your email'); })
+        .catch(function(){ flash(legacyCopy() ? 'Copied — paste into your email' : addr); });
+    } else {
+      flash(legacyCopy() ? 'Copied — paste into your email' : addr);
+    }
+  });
+})();
+
 // Reveal on scroll
 var io=new IntersectionObserver(function(entries){
   entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
@@ -481,14 +544,24 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 var contactSel = document.getElementById('cf-contact');
 var phoneField = document.getElementById('cf-phone-field');
 var phoneInput = document.getElementById('cf-phone');
-function syncPhoneField(){
-  var isPhone = contactSel.value === 'Phone';
+var videoField = document.getElementById('cf-video-field');
+var availabilityInput = document.getElementById('cf-availability');
+var timezoneSel = document.getElementById('cf-timezone');
+function syncContactFields(){
+  var method = contactSel.value;
+  var isPhone = method === 'Phone';
+  var isVideo = method === 'Video';
+  // Phone call -> need a number
   phoneField.hidden = !isPhone;
   phoneInput.required = isPhone;
   if(!isPhone){ phoneInput.value = ''; }
+  // Video call -> need availability so we can send an invite
+  videoField.hidden = !isVideo;
+  availabilityInput.required = isVideo;
+  if(!isVideo){ availabilityInput.value = ''; timezoneSel.value = ''; }
 }
-contactSel.addEventListener('change', syncPhoneField);
-syncPhoneField();
+contactSel.addEventListener('change', syncContactFields);
+syncContactFields();
 
 // Contact form submit -> /api/contact
 document.getElementById('contactForm').addEventListener('submit', async function(e){
@@ -509,7 +582,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
     company: fd.get('company'),
     service: services.join(', '),
     details: fd.get('details'),
-    contact_method: fd.get('contact_method')
+    contact_method: fd.get('contact_method'),
+    availability: fd.get('availability') || '',
+    timezone: fd.get('timezone') || ''
   };
   try {
     var res = await fetch('/api/contact', {

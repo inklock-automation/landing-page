@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { first_name, last_name, email, phone, company, service, budget, timeline, details, contact_method } = req.body;
+  const { first_name, last_name, email, phone, company, service, budget, timeline, details, contact_method, availability, timezone } = req.body;
 
   // Diagnostic log so we can verify exactly what the API received from the form,
   // separate from anything that might happen downstream in GHL or Slack.
@@ -36,11 +36,16 @@ module.exports = async (req, res) => {
     ? ['site-health-audit']
     : ['website-lead'];
 
-  // Append the preferred contact method into the details body too, so the lead
-  // always shows it even if the GHL custom field isn't mapped on their end.
-  const detailsWithMeta = contact_method
-    ? `${details}\n\nPreferred contact method: ${contact_method}`
-    : details;
+  // Append the preferred contact method (and any method-specific extras) into the
+  // details body too, so the lead always shows it even if the GHL custom field
+  // isn't mapped on their end.
+  let detailsWithMeta = details;
+  if (contact_method) {
+    detailsWithMeta += `\n\nPreferred contact method: ${contact_method}`;
+  }
+  if (availability) {
+    detailsWithMeta += `\nAvailability for video call: ${availability}${timezone ? ` (${timezone})` : ''}`;
+  }
 
   const payload = {
     firstName: first_name,
@@ -55,7 +60,9 @@ module.exports = async (req, res) => {
       budget_range: budget || '',
       project_timeline: timeline || '',
       project_details: detailsWithMeta,
-      preferred_contact_method: contact_method || ''
+      preferred_contact_method: contact_method || '',
+      availability: availability || '',
+      timezone: timezone || ''
     }
   };
 
