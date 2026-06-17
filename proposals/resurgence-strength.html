@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InkLock Proposal | Resurgence Strength</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap">
+<style>
+:root {
+  --dark-ink: #14111C;
+  --mid-grey: #4A4660;
+  --txt-dim: #324859;
+  --txt-mute: #94a3b8;
+  --coastal: #6E9CD5;
+  --purple: #9333EA;
+  --purple-soft: rgba(147, 51, 234, 0.08);
+  --purple-border: rgba(147, 51, 234, 0.18);
+  --header-bg: #EFEDF6;
+  --total-bg: #F7F5FB;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #fafafa; }
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--dark-ink);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 40px 56px 80px;
+  box-shadow: 0 4px 24px rgba(20, 17, 28, 0.06);
+}
+
+/* Brand bar */
+.brand-bar {
+  max-width: 800px;
+  margin: 24px auto 0;
+  background: var(--white);
+  border: 1px solid var(--purple-border);
+  border-radius: 14px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(20, 17, 28, 0.04);
+}
+.brand-logo svg { display: block; height: 50px; width: auto; }
+.brand-tagline {
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+/* Cover */
+.cover {
+  text-align: center;
+  padding: 48px 0 64px;
+}
+.cover-rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--coastal), var(--purple), #ec4899);
+  margin: 24px 0;
+  border-radius: 1px;
+}
+.cover-title {
+  font-family: 'Outfit', 'Sora', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--dark-ink);
+  margin-top: 24px;
+}
+.cover-subtitle {
+  font-family: 'Outfit', 'Sora', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--mid-grey);
+  margin-top: 8px;
+}
+.cover-block {
+  margin-top: 40px;
+}
+.cover-eyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid-grey);
+  margin-bottom: 8px;
+}
+.cover-client {
+  font-family: 'Outfit', 'Sora', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark-ink);
+}
+.cover-company {
+  font-size: 18px;
+  color: var(--mid-grey);
+  margin-top: 4px;
+}
+.cover-team {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--dark-ink);
+}
+.cover-team strong { font-weight: 700; }
+.cover-team span { color: var(--mid-grey); margin-left: 6px; }
+.cover-tagline {
+  margin-top: 48px;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 18px;
+  background: linear-gradient(90deg, #4a7ab5 0%, #7c3aed 50%, #db2777 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--purple); /* fallback for browsers/print that don't support background-clip */
+}
+
+/* Section title */
+.content-section {
+  margin-top: 48px;
+  padding-bottom: 12px;
+}
+.section-title {
+  font-family: 'Outfit', 'Sora', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dark-ink);
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--purple);
+  margin-bottom: 20px;
+}
+.content-section p {
+  margin-bottom: 16px;
+  color: var(--dark-ink);
+  font-size: 16px;
+}
+.content-section ul, .content-section ol {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+.content-section li {
+  margin-bottom: 10px;
+  color: var(--dark-ink);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Phase block */
+.phase {
+  margin-bottom: 40px;
+}
+.phase-banner {
+  background: linear-gradient(135deg, var(--dark-ink) 0%, #2a2440 100%);
+  color: var(--white);
+  padding: 18px 24px;
+  border-radius: 10px;
+  font-family: 'Outfit', 'Sora', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(20, 17, 28, 0.12);
+}
+.phase-banner .phase-num { color: var(--white); }
+.phase-banner .phase-title { color: var(--coastal); margin-left: 12px; }
+.phase-objective {
+  color: var(--dark-ink);
+  font-size: 16px;
+  padding: 14px 18px;
+  background: var(--purple-soft);
+  border-left: 4px solid var(--purple);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.phase-subhead {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mid-grey);
+  margin: 20px 0 10px;
+}
+.deliverable-list {
+  list-style: none;
+  counter-reset: deliv;
+  margin-left: 0 !important;
+}
+.deliverable-list li {
+  counter-increment: deliv;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 14px;
+}
+.deliverable-list li::before {
+  content: counter(deliv);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Investment table */
+.investment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  border: 1px solid var(--purple-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.investment-table th,
+.investment-table td {
+  padding: 14px 18px;
+  font-size: 16px;
+  border-bottom: 1px solid var(--purple-border);
+}
+.investment-table th {
+  background: var(--header-bg);
+  text-align: left;
+  font-weight: 700;
+  color: var(--dark-ink);
+}
+.investment-table th.right, .investment-table td.right { text-align: right; }
+.investment-table tr.total-row td {
+  background: var(--total-bg);
+  font-weight: 700;
+  border-bottom: none;
+}
+
+/* Signature table */
+.signature-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  border: 1px solid var(--purple-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.signature-table th,
+.signature-table td {
+  padding: 16px 18px;
+  font-size: 16px;
+  border-bottom: 1px solid var(--purple-border);
+  text-align: left;
+}
+.signature-table th {
+  background: var(--total-bg);
+  font-weight: 700;
+  width: 35%;
+  color: var(--dark-ink);
+}
+.signature-table tr:last-child th,
+.signature-table tr:last-child td { border-bottom: none; }
+
+/* Closing */
+.closing {
+  text-align: center;
+  margin-top: 64px;
+  padding-top: 24px;
+}
+.closing-mark {
+  font-family: 'Outfit', 'Sora', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-ink);
+}
+.closing-tagline {
+  font-style: italic;
+  font-size: 18px;
+  color: var(--purple);
+  margin-top: 8px;
+}
+
+/* Footer */
+.proposal-footer {
+  max-width: 800px;
+  margin: 24px auto 40px;
+  text-align: center;
+}
+.footer-rule {
+  height: 1px;
+  background: var(--purple);
+  margin-bottom: 12px;
+}
+.footer-line {
+  font-size: 13px;
+}
+.footer-url {
+  color: var(--purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer-meta {
+  color: var(--mid-grey);
+}
+
+/* Score panel */
+.score-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 14px;
+  margin: 24px 0;
+}
+.score-card {
+  background: var(--white);
+  border: 1px solid var(--purple-border);
+  border-radius: 12px;
+  padding: 20px 18px;
+  text-align: center;
+}
+.score-card.primary {
+  background: linear-gradient(180deg, var(--white) 0%, var(--purple-soft) 100%);
+  border: 1.5px solid var(--purple);
+}
+.score-pillar {
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dark-ink);
+}
+.score-sub {
+  font-size: 11px;
+  color: var(--mid-grey);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+.score-grade {
+  font-family: 'Outfit', 'Sora', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-top: 14px;
+}
+.score-grade.grade-A { color: #16a34a; }
+.score-grade.grade-B { color: #65a30d; }
+.score-grade.grade-C { color: #eab308; }
+.score-grade.grade-D { color: #f97316; }
+.score-grade.grade-F { color: #dc2626; }
+.score-num {
+  font-size: 14px;
+  color: var(--mid-grey);
+  margin-top: 8px;
+}
+.score-num strong { color: var(--dark-ink); font-size: 22px; font-weight: 700; }
+.score-band {
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--dark-ink);
+}
+.score-band.band-A { background: rgba(22, 163, 74, 0.08); border-left: 4px solid #16a34a; }
+.score-band.band-B { background: rgba(101, 163, 13, 0.08); border-left: 4px solid #65a30d; }
+.score-band.band-C { background: rgba(234, 179, 8, 0.10); border-left: 4px solid #eab308; }
+.score-band.band-D { background: rgba(249, 115, 22, 0.08); border-left: 4px solid #f97316; }
+.score-band.band-F { background: rgba(220, 38, 38, 0.08); border-left: 4px solid #dc2626; }
+
+/* Peer benchmark bars */
+.bench-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0 8px;
+}
+.bench-row {
+  display: grid;
+  grid-template-columns: 1.4fr 2.5fr 1.4fr;
+  gap: 14px;
+  align-items: center;
+}
+.bench-row.highlight .bench-label,
+.bench-row.highlight .bench-note { font-weight: 700; color: var(--dark-ink); }
+.bench-row.highlight .bench-track {
+  border: 2px solid var(--purple);
+  box-shadow: 0 0 0 4px var(--purple-soft);
+}
+.bench-label {
+  font-size: 14px;
+  color: var(--dark-ink);
+  font-weight: 500;
+}
+.bench-track {
+  position: relative;
+  background: #f3f4f6;
+  border-radius: 8px;
+  height: 32px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+.bench-fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.4s;
+}
+.grade-bg-A { background: #16a34a; }
+.grade-bg-B { background: #65a30d; }
+.grade-bg-C { background: #eab308; }
+.grade-bg-D { background: #f97316; }
+.grade-bg-F { background: #dc2626; }
+.bench-score {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  text-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+.bench-note {
+  font-size: 13px;
+  color: var(--mid-grey);
+  line-height: 1.4;
+}
+
+/* Per-pillar fix cards */
+.pillar-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 24px 0;
+}
+.pillar-card {
+  background: var(--white);
+  border: 1px solid var(--purple-border);
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+.pillar-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--purple-border);
+  margin-bottom: 16px;
+}
+.pillar-name {
+  font-family: 'Outfit', 'Sora', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--dark-ink);
+}
+.pillar-sub {
+  font-size: 13px;
+  color: var(--mid-grey);
+  margin-top: 2px;
+}
+.pillar-score-block {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.pillar-grade {
+  font-family: 'Outfit', 'Sora', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+.pillar-grade.grade-A { color: #16a34a; }
+.pillar-grade.grade-B { color: #65a30d; }
+.pillar-grade.grade-C { color: #eab308; }
+.pillar-grade.grade-D { color: #f97316; }
+.pillar-grade.grade-F { color: #dc2626; }
+.pillar-num {
+  font-size: 16px;
+  color: var(--mid-grey);
+  font-weight: 600;
+}
+.pillar-fix-head {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--purple);
+  margin-bottom: 12px;
+}
+.pillar-fix-list {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0;
+  counter-reset: pfx;
+}
+.pillar-fix-list li {
+  counter-increment: pfx;
+  position: relative;
+  padding: 12px 0 12px 44px;
+  border-bottom: 1px solid #f0e9f7;
+  margin: 0;
+}
+.pillar-fix-list li:last-child { border-bottom: none; }
+.pillar-fix-list li::before {
+  content: counter(pfx);
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--purple-soft);
+  color: var(--purple);
+  font-weight: 800;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pillar-fix-name {
+  font-size: 15px;
+  color: var(--dark-ink);
+  line-height: 1.5;
+  font-weight: 500;
+}
+.pillar-fix-meta {
+  margin-top: 6px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.pts-pill {
+  background: rgba(22, 163, 74, 0.10);
+  color: #166534;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 4px;
+}
+.effort-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 4px;
+  text-transform: lowercase;
+}
+.effort-low { background: #ecfccb; color: #3f6212; }
+.effort-medium { background: #fef3c7; color: #92400e; }
+.effort-high { background: #fee2e2; color: #991b1b; }
+.cite-link {
+  font-size: 11px;
+  color: var(--purple);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--purple-border);
+}
+
+/* Print styles - clean PDF export */
+@media print {
+  html, body { background: var(--white); font-size: 11pt; }
+  main { box-shadow: none; max-width: 100%; padding: 0; }
+  .brand-bar { box-shadow: none; margin: 0 0 24px; max-width: 100%; }
+  .proposal-footer { margin: 24px 0; max-width: 100%; }
+  .phase-banner { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .deliverable-list li::before { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .investment-table th, .investment-table tr.total-row td,
+  .phase-objective, .signature-table th,
+  .score-card, .score-band, .bench-fill, .pillar-card, .pillar-fix-list li::before,
+  .pts-pill, .effort-pill {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .section-title { page-break-after: avoid; }
+  .phase, .pillar-card, .bench-row, .score-grid { page-break-inside: avoid; }
+  .cover { page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<header class="brand-bar">
+    <div class="brand-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" aria-label="InkLock Automation">
+        <defs>
+          <linearGradient id="ik-grad-prop" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4a7ab5"/>
+            <stop offset="50%" stop-color="#7c3aed"/>
+            <stop offset="80%" stop-color="#a21caf"/>
+            <stop offset="100%" stop-color="#db2777"/>
+          </linearGradient>
+        </defs>
+        <text x="14" y="48" font-family="'Great Vibes', cursive" font-size="48" fill="url(#ik-grad-prop)">Ink</text>
+        <text x="104" y="44" font-family="'Sora', sans-serif" font-weight="700" font-size="22" letter-spacing="5" fill="#0e0e18">LOCK</text>
+      </svg>
+    </div>
+    <div class="brand-tagline">Project Proposal</div>
+  </header>
+
+<main>
+
+  <!-- COVER -->
+  <section class="cover">
+    <div class="cover-rule"></div>
+    <div class="cover-title">Site Health Audit</div>
+    <div class="cover-subtitle">+ 90-Day Foundation Build</div>
+    <div class="cover-rule"></div>
+
+    <div class="cover-block">
+      <div class="cover-eyebrow">PREPARED FOR</div>
+      <div class="cover-client">Gym Owner Name</div>
+      <div class="cover-company">Resurgence Strength</div>
+    </div>
+
+    <div class="cover-block">
+      <div class="cover-eyebrow">INKLOCK TEAM</div>
+      <div class="cover-team">
+        <div><strong>Erin Cronin</strong> <span>Project Lead</span></div>
+        <div><strong>Alex Zamora</strong> <span>Secondary Lead</span></div>
+        <div><strong>Brigitte Bentulan</strong> <span>Secondary Lead</span></div>
+      </div>
+    </div>
+
+    <div class="cover-tagline">Lock in your systems. Unlock your marketing.</div>
+  </section>
+
+  <!-- ENGAGEMENT OVERVIEW -->
+  <section class="content-section">
+    <h2 class="section-title">Engagement overview</h2>
+    <p>This proposal outlines a 90-day Site Health Audit and Foundation Build for Resurgence Strength. The audit is already complete and lives in the dashboard you've reviewed. resurgencestrength.com currently scores 31 out of 100 (F). SEO sits at 10, AEO at 45, GEO at 45, audited across 13 pages.</p>
+    <p>The work below brings resurgencestrength.com from where it stands today up to an A-grade technical and AI-search foundation, in three phases over 90 days. Every deliverable is tied to a specific finding the audit identified and a published standard from Google, schema.org, or the llms.txt spec.</p>
+  </section>
+
+  <section class="content-section">
+    <h2 class="section-title">Your score, right now</h2>
+    <p>The audit measures 13 pages across three pillars: traditional SEO (Google), AEO (voice + featured snippets), and GEO (ChatGPT, Claude, Perplexity, Gemini).</p>
+    <div class="score-grid">
+      
+        <div class="score-card primary">
+          <div class="score-pillar">Site Health</div>
+          <div class="score-sub">Overall</div>
+          <div class="score-grade grade-F">F</div>
+          <div class="score-num"><strong>31</strong>/100</div>
+        </div>
+      
+        <div class="score-card ">
+          <div class="score-pillar">SEO</div>
+          <div class="score-sub">Search engines</div>
+          <div class="score-grade grade-F">F</div>
+          <div class="score-num"><strong>10</strong>/100</div>
+        </div>
+      
+        <div class="score-card ">
+          <div class="score-pillar">AEO</div>
+          <div class="score-sub">Answer engines</div>
+          <div class="score-grade grade-F">F</div>
+          <div class="score-num"><strong>45</strong>/100</div>
+        </div>
+      
+        <div class="score-card ">
+          <div class="score-pillar">GEO</div>
+          <div class="score-sub">AI generative</div>
+          <div class="score-grade grade-F">F</div>
+          <div class="score-num"><strong>45</strong>/100</div>
+        </div>
+      
+    </div>
+    <div class="score-band band-F">
+      <strong>F (31/100):</strong> Foundation work needed across the board. Most fixes are low-effort and have outsized impact.
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2 class="section-title">Where you stand</h2>
+    <p>Here's where resurgencestrength.com sits today compared to typical small business sites and what's actually achievable. The bars are real averages from audits I've run across multiple industries.</p>
+    <div class="bench-bars">
+      
+        <div class="bench-row highlight">
+          <div class="bench-label">resurgencestrength.com (today)</div>
+          <div class="bench-track">
+            <div class="bench-fill grade-bg-F" style="width: 31%"></div>
+            <div class="bench-score">31/100</div>
+          </div>
+          <div class="bench-note">Your score: F</div>
+        </div>
+      
+        <div class="bench-row ">
+          <div class="bench-label">Most small business sites we audit</div>
+          <div class="bench-track">
+            <div class="bench-fill grade-bg-F" style="width: 32%"></div>
+            <div class="bench-score">32/100</div>
+          </div>
+          <div class="bench-note">Median F-grade. Basic technical SEO gaps.</div>
+        </div>
+      
+        <div class="bench-row ">
+          <div class="bench-label">Sites with basic SEO work done</div>
+          <div class="bench-track">
+            <div class="bench-fill grade-bg-C" style="width: 62%"></div>
+            <div class="bench-score">62/100</div>
+          </div>
+          <div class="bench-note">C-grade. Foundation in place, no AI search work.</div>
+        </div>
+      
+        <div class="bench-row ">
+          <div class="bench-label">Best-in-class (post AI search work)</div>
+          <div class="bench-track">
+            <div class="bench-fill grade-bg-A" style="width: 94%"></div>
+            <div class="bench-score">94/100</div>
+          </div>
+          <div class="bench-note">A-grade. Where we get every client we ship.</div>
+        </div>
+      
+    </div>
+    <p style="margin-top: 20px; font-size: 14px; color: var(--mid-grey);">The 90-day plan below moves resurgencestrength.com from where it sits today up to the top band. That's the work.</p>
+  </section>
+
+  <section class="content-section">
+    <h2 class="section-title">Top fixes by category</h2>
+    <p>Every finding is cited to an authoritative standard so you can verify the audit yourself. The proposal below executes on every one of these.</p>
+    <div class="pillar-stack">
+      <div class="pillar-card">
+      <div class="pillar-head">
+        <div>
+          <div class="pillar-name">SEO</div>
+          <div class="pillar-sub">Traditional search (Google)</div>
+        </div>
+        <div class="pillar-score-block">
+          <span class="pillar-grade grade-F">F</span>
+          <span class="pillar-num">10/100</span>
+        </div>
+      </div>
+      <div class="pillar-fix-head">TOP 3 FIXES FOR SEO</div>
+      <ol class="pillar-fix-list">
+        <li>
+          <div class="pillar-fix-name">Meta description outside 120-160 chars</div>
+          <div class="pillar-fix-meta">
+            <span class="pts-pill">+15 pts</span>
+            <span class="effort-pill effort-low">low effort</span>
+            <a class="cite-link" href="https://developers.google.com/search/docs/appearance/snippet" target="_blank" rel="noopener">Google: meta descriptions</a>
+          </div>
+        </li><li>
+          <div class="pillar-fix-name">H1 missing</div>
+          <div class="pillar-fix-meta">
+            <span class="pts-pill">+15 pts</span>
+            <span class="effort-pill effort-low">low effort</span>
+            <a class="cite-link" href="https://developers.google.com/style/headings" target="_blank" rel="noopener">Google: heading structure</a>
+          </div>
+        </li><li>
+          <div class="pillar-fix-name">Thin content (under 300 words)</div>
+          <div class="pillar-fix-meta">
+            <span class="pts-pill">+15 pts</span>
+            <span class="effort-pill effort-medium">medium effort</span>
+            <a class="cite-link" href="https://developers.google.com/search/docs/essentials/spam-policies#thin-content" target="_blank" rel="noopener">Google: thin content</a>
+          </div>
+        </li>
+      </ol>
+    </div><div class="pillar-card">
+      <div class="pillar-head">
+        <div>
+          <div class="pillar-name">AEO</div>
+          <div class="pillar-sub">Voice + featured snippets</div>
+        </div>
+        <div class="pillar-score-block">
+          <span class="pillar-grade grade-F">F</span>
+          <span class="pillar-num">45/100</span>
+        </div>
+      </div>
+      <div class="pillar-fix-head">TOP 3 FIXES FOR AEO</div>
+      <ol class="pillar-fix-list">
+        <li>
+          <div class="pillar-fix-name">No JSON-LD schema on page</div>
+          <div class="pillar-fix-meta">
+            <span class="pts-pill">+15 pts</span>
+            <span class="effort-pill effort-low">low effort</span>
+            <a class="cite-link" href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="noopener">Google: intro to structured data</a>
+          </div>
+        </li><li>
+          <div class="pillar-fix-name">No dateModified visible</div>
+          <div class="pillar-fix-meta">
+            <span class="pts-pill">+14.8 pts</span>
+            <span class="effort-pill effort-low">low effort</span>
+            <a class="cite-link" href="https://developers.google.com/search/blog/2011/11/giving-you-fresher-more-recent-search" target="_blank" rel="noopener">Google: freshness in search</a>
+          </div>
+        </li><li>
+          <div class="pillar-fix-name">No question-style headings</div>
+          <div class="pillar-fix-meta">
+            <span class="pts-pill">+11.8 pts</span>
+            <span class="effort-pill effort-low">low effort</span>
+            <a class="cite-link" href="https://developers.google.com/search/docs/appearance/featured-snippets" target="_blank" rel="noopener">Google: featured snippets</a>
+          </div>
+        </li>
+      </ol>
+    </div><div class="pillar-card">
+      <div class="pillar-head">
+        <div>
+          <div class="pillar-name">GEO</div>
+          <div class="pillar-sub">ChatGPT, Claude, Perplexity, Gemini</div>
+        </div>
+        <div class="pillar-score-block">
+          <span class="pillar-grade grade-F">F</span>
+          <span class="pillar-num">45/100</span>
+        </div>
+      </div>
+      <div class="pillar-fix-head">TOP 3 FIXES FOR GEO</div>
+      <ol class="pillar-fix-list">
+        <li>
+          <div class="pillar-fix-name">llms-full.txt incomplete</div>
+          <div class="pillar-fix-meta">
+            <span class="pts-pill">+15 pts</span>
+            <span class="effort-pill effort-medium">medium effort</span>
+            <a class="cite-link" href="https://llmstxt.org/" target="_blank" rel="noopener">llmstxt.org spec</a>
+          </div>
+        </li><li>
+          <div class="pillar-fix-name">Organization schema missing sitewide</div>
+          <div class="pillar-fix-meta">
+            <span class="pts-pill">+15 pts</span>
+            <span class="effort-pill effort-low">low effort</span>
+            <a class="cite-link" href="https://developers.google.com/search/docs/appearance/structured-data/organization" target="_blank" rel="noopener">Google: Organization schema</a>
+          </div>
+        </li><li>
+          <div class="pillar-fix-name">Page content missing from llms-full.txt</div>
+          <div class="pillar-fix-meta">
+            <span class="pts-pill">+10.6 pts</span>
+            <span class="effort-pill effort-medium">medium effort</span>
+            <a class="cite-link" href="https://llmstxt.org/" target="_blank" rel="noopener">llmstxt.org spec</a>
+          </div>
+        </li>
+      </ol>
+    </div>
+    </div>
+  </section>
+
+  <!-- PHASES -->
+  <section class="content-section">
+    <h2 class="section-title">Phase-by-phase deliverables</h2>
+
+    <div class="phase">
+    <div class="phase-banner">
+      <span class="phase-num">Phase 1: Days 1-30</span>
+      <span class="phase-title">Foundation &amp; Technical SEO</span>
+    </div>
+    <p class="phase-objective"><strong>Objective:</strong> Fix the technical SEO basics across every page in scope so Google can crawl, parse, and rank the site properly. By the end of Phase 1, your traditional SEO score should move up to a B-grade foundation.</p>
+    <h3 class="phase-subhead">Deliverables</h3>
+    <ol class="deliverable-list">
+      <li><strong>Meta descriptions</strong>, rewrite every page&#39;s meta description to land in the 120 to 160 character sweet spot so the snippet that appears in search results actually sells the click instead of being auto-generated by Google.</li><li><strong>H1 headlines</strong>, add one clear, descriptive H1 headline to every page so Google and AI engines instantly know what each page is about. This is the single highest-impact technical fix on most sites.</li><li><strong>Page content depth</strong>, expand the thinnest pages with the information visitors and prospects actually want (hours, services, qualifications, results) until every primary page passes the 300 word threshold Google uses to decide a page is worth ranking.</li><li><strong>Title tags</strong>, rewrite every page title to the 30 to 60 character range Google rewards, with the primary keyword up front and the brand at the end. Same SEO weight as the H1 with the added benefit of showing in browser tabs.</li><li><strong>Image alt text</strong>, add descriptive alt text to every image so screen readers and Google&#39;s image search can identify what&#39;s actually in each photo. Required for accessibility and a quiet SEO boost.</li>
+    </ol>
+    <h3 class="phase-subhead">Success measures</h3>
+    <ul>
+      <li>Every page has a unique, descriptive title tag in the 30 to 60 character range.</li><li>Every page has a meta description in the 120 to 160 character range.</li><li>Every page has one clear H1 headline that matches search intent.</li><li>Page-level schema markup live on every primary page.</li><li>Re-audit confirms SEO pillar at B-grade or higher.</li>
+    </ul>
+  </div>
+
+    <div class="phase">
+    <div class="phase-banner">
+      <span class="phase-num">Phase 2: Days 31-60</span>
+      <span class="phase-title">Answer Engine Optimization</span>
+    </div>
+    <p class="phase-objective"><strong>Objective:</strong> Layer Answer Engine Optimization on top of the technical foundation. Voice assistants, Google&#39;s AI overviews, and featured snippets pull from structured content. Phase 2 makes your site the kind of source they can confidently quote.</p>
+    <h3 class="phase-subhead">Deliverables</h3>
+    <ol class="deliverable-list">
+      <li><strong>Page schema markup</strong>, add JSON-LD structured data to every page (Service, Product, Article, or LocalBusiness depending on the page type) so search engines and AI engines can parse the content semantically instead of guessing.</li><li><strong>dateModified markers</strong>, add dateModified markers to every page so Google knows when content was last touched. Critical for &quot;freshness&quot; ranking signals on industries where current information matters.</li><li><strong>Question-style headings</strong>, rewrite top-of-page headings as questions a real prospect would type into Google or ChatGPT. This is the single biggest unlock for showing up in featured snippets and AI overviews.</li><li><strong>Review schema</strong>, add AggregateRating schema to the homepage and testimonials so star ratings appear directly in Google search results, which dramatically lifts click-through rates.</li>
+    </ol>
+    <h3 class="phase-subhead">Success measures</h3>
+    <ul>
+      <li>FAQPage schema on every page that includes question-style content.</li><li>Question-style headings on the homepage, services pages, and top blog content.</li><li>AggregateRating schema live and validated.</li><li>Re-audit confirms AEO pillar at B-grade or higher.</li>
+    </ul>
+  </div>
+
+    <div class="phase">
+    <div class="phase-banner">
+      <span class="phase-num">Phase 3: Days 61-90</span>
+      <span class="phase-title">Generative Engine Optimization &amp; Handoff</span>
+    </div>
+    <p class="phase-objective"><strong>Objective:</strong> Make the site discoverable and citable by ChatGPT, Claude, Perplexity, and Gemini. Generative engines work differently from Google. Phase 3 closes that gap and hands the system off so you can keep the score where we put it.</p>
+    <h3 class="phase-subhead">Deliverables</h3>
+    <ol class="deliverable-list">
+      <li><strong>llms-full.txt build</strong>, write a comprehensive llms-full.txt at the site root that packages every page of long-form content into a single file AI engines can ground their answers in. This is what makes ChatGPT, Claude, and Perplexity confidently cite the business by name.</li><li><strong>Organization schema</strong>, add sitewide Organization schema with the business name, address, phone, hours, social profiles, and logo so every AI engine knows exactly who they are talking about when the site comes up in a search.</li><li><strong>Speakable schema</strong>, add Speakable schema to the homepage and top pages so voice assistants (Siri, Alexa, Google Assistant) know which sentences to read aloud when answering a voice query about the business.</li><li><strong>Author schema</strong>, add Person schema with author bylines on every blog post and content page so AI engines tie content back to the actual humans behind it, which boosts the E-E-A-T signals Google rewards.</li>
+    </ol>
+    <h3 class="phase-subhead">Success measures</h3>
+    <ul>
+      <li>llms.txt and llms-full.txt live at the site root and validated.</li><li>All major AI crawlers explicitly allowed in robots.txt.</li><li>Sitewide Organization schema published.</li><li>Final A-grade audit certifies the turnaround.</li><li>Handoff documentation delivered so you can maintain the score in-house.</li>
+    </ul>
+  </div>
+  </section>
+
+  <!-- INCLUDED -->
+  <section class="content-section">
+    <h2 class="section-title">Included in your service package</h2>
+    <ul>
+      <li>Unlimited email support Monday through Friday throughout the 90-day engagement.</li>
+      <li>One monthly check-in call with your InkLock project lead to review progress and surface blockers.</li>
+      <li>Draft copy for every meta tag, schema block, and llms.txt section, for client review and approval before anything goes live.</li>
+      <li>Full access to InkLock for technical implementation across every deliverable in scope.</li>
+      <li>Final A-grade re-audit + handoff documentation so you can maintain the technical foundation yourselves after the build.</li>
+    </ul>
+  </section>
+
+  <!-- RESPONSIBILITIES -->
+  <section class="content-section">
+    <h2 class="section-title">Client responsibilities</h2>
+    <p>To start the work and keep the build on schedule, the client agrees to provide the following:</p>
+    <ul>
+      <li>Timely feedback and approvals, with a target turnaround of 3 business days per deliverable.</li>
+      <li>Admin access to the website CMS (WordPress, Webflow, Squarespace, custom, etc.) and analytics (Google Analytics, Search Console).</li>
+      <li>Brand guidelines, copy approvals, and any subject-matter context needed for content depth fixes and schema markup.</li>
+      <li>Approved business information (NAP details, services, certifications, social profiles) for Organization schema.</li>
+      <li>A single point of contact authorized to approve changes on behalf of the company.</li>
+    </ul>
+  </section>
+
+  <!-- PLEASE NOTE -->
+  <section class="content-section">
+    <h2 class="section-title">Please note</h2>
+    <ul>
+      <li>All work includes no more than two rounds of revisions per deliverable. Revisions beyond that may result in additional fees.</li>
+      <li>This engagement covers the scope listed above only. Ad management, copywriting outside schema and meta tags, and ongoing content production are not included unless separately agreed.</li>
+      <li>After the initial build is complete, future technical changes to the website may require additional charges.</li>
+      <li>If additional work is requested outside the scope of this agreement, InkLock will assess a rate of $150 per hour per additional responsibility if accepted. InkLock reserves the right to decline any requests not covered by this agreement.</li>
+      <li>This proposal is valid for 30 days from the date of issue. Pricing and scope may change after that window.</li>
+    </ul>
+  </section>
+
+  <!-- INVESTMENT -->
+  <section class="content-section">
+    <h2 class="section-title">Investment</h2>
+    <table class="investment-table">
+      <thead>
+        <tr><th>Service</th><th class="right">Rate</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Site Health Audit + Foundation Build (90-day project)</td>
+          <td class="right">$2,500</td>
+        </tr>
+        <tr class="total-row">
+          <td><strong>Total project investment</strong></td>
+          <td class="right"><strong>$2,500</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Payment of $2,500 is due in full upon signing this agreement to start the work. No additional payments or monthly fees apply during the 90-day engagement. If the client wants ongoing monthly monitoring after the project completes, that's a separate engagement starting at $97 per month.</p>
+  </section>
+
+  <!-- ACCEPTANCE -->
+  <section class="content-section">
+    <h2 class="section-title">Acceptance</h2>
+    <p>Your signature below indicates acceptance of this proposal. Your initial payment per the terms above will also represent acceptance of this proposal and entrance into a contractual agreement with InkLock.</p>
+    <table class="signature-table">
+      <tr><th>Client's Company Name</th><td></td></tr>
+      <tr><th>Representative / Client Name</th><td></td></tr>
+      <tr><th>Client's Business Address</th><td></td></tr>
+      <tr><th>Client's Phone Number</th><td></td></tr>
+      <tr><th>Signature</th><td></td></tr>
+      <tr><th>Date</th><td></td></tr>
+    </table>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="closing-mark">InkLock Automation</div>
+    <div class="closing-tagline">We build the engine. Then we drive it.</div>
+  </section>
+
+</main>
+
+<footer class="proposal-footer">
+  <div class="footer-rule"></div>
+  <div class="footer-line">
+    <span class="footer-url">inklockautomation.com</span>
+    <span class="footer-meta"> | Confidential | Proposal for Resurgence Strength | 2026-06-17</span>
+  </div>
+</footer>
+
+</body>
+</html>
