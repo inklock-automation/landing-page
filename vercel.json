@@ -39,6 +39,11 @@
     { "source": "/blog/let-ai-read-your-inbox", "destination": "/blog/let-ai-read-your-inbox.html" },
     { "source": "/blog/the-referral-system-you-dont-have", "destination": "/blog/the-referral-system-you-dont-have.html" },
     { "source": "/blog/automate-the-boring-keep-the-human", "destination": "/blog/automate-the-boring-keep-the-human.html" },
+    { "source": "/blog/q4-is-won-in-august", "destination": "/blog/q4-is-won-in-august.html" },
+    { "source": "/blog/the-deal-didnt-die", "destination": "/blog/the-deal-didnt-die.html" },
+    { "source": "/blog/count-the-clicks-to-booked", "destination": "/blog/count-the-clicks-to-booked.html" },
+    { "source": "/blog/if-everyone-gets-the-same-email", "destination": "/blog/if-everyone-gets-the-same-email.html" },
+    { "source": "/blog/your-cold-list-isnt-dead", "destination": "/blog/your-cold-list-isnt-dead.html" },
     { "source": "/podcast", "destination": "/podcast.html" }
   ],
   "headers": [
