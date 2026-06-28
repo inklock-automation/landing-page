@@ -78,10 +78,55 @@ module.exports = async (req, res) => {
       return res.status(500).json({ error: 'Failed to process submission' });
     }
 
+    // Site Health Audit requests ALSO go to the inklock-portal so the lead
+    // lands in /admin/leads and Erin can run the audit from there. Best-effort
+    // with a 5s timeout so a slow or down portal never breaks the form response.
+    // When this path is configured the portal owns the Slack + email
+    // notification, so the landing Slack block below is skipped for audit
+    // requests (prevents double-pinging).
+    if (isAuditRequest && process.env.PORTAL_SITE_HEALTH_URL && process.env.SITE_HEALTH_REQUEST_SECRET) {
+      try {
+        const urlMatch2 = (details || '').match(/Website URL to audit:\s*(\S+)/i);
+        const websiteForPortal = urlMatch2 ? urlMatch2[1] : '';
+        const notesMatch2 = (details || '').match(/Additional context:\s*([\s\S]*)$/i);
+        const notesForPortal = notesMatch2 ? notesMatch2[1].trim() : '';
+
+        const portalController = new AbortController();
+        const portalTimeout = setTimeout(() => portalController.abort(), 5000);
+        const portalRes = await fetch(process.env.PORTAL_SITE_HEALTH_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${process.env.SITE_HEALTH_REQUEST_SECRET}`
+          },
+          body: JSON.stringify({
+            first_name: first_name,
+            last_name: last_name,
+            email: email,
+            company: company,
+            website_url: websiteForPortal,
+            notes: notesForPortal
+          }),
+          signal: portalController.signal
+        });
+        clearTimeout(portalTimeout);
+
+        if (!portalRes.ok) {
+          console.error('Portal site-health intake non-200:', portalRes.status, await portalRes.text().catch(() => ''));
+        } else {
+          console.log('Portal site-health intake created');
+        }
+      } catch (portalErr) {
+        console.error('Portal site-health intake error (non-fatal, GHL still fired):', portalErr.message || portalErr);
+      }
+    }
+
     // Notify Slack for every submission (Site Health Audit + regular contact form).
     // AWAIT it so Vercel doesn't kill the function before the request completes.
     // Wrapped in try/catch + 3s timeout so it cannot break or delay the submission response.
-    if (process.env.SLACK_WEBHOOK_URL) {
+    // Audit requests are skipped here when the portal path is on — the portal
+    // sends their notification instead, so we don't double-ping.
+    if (process.env.SLACK_WEBHOOK_URL && !(isAuditRequest && process.env.PORTAL_SITE_HEALTH_URL)) {
       try {
         let slackPayload;
 
