@@ -129,7 +129,7 @@
     width:100%;height:100%;object-fit:cover;display:block;
     transition:transform var(--dur-base);
   }
-  .team-member:hover .team-photo img{transform:scale(1.03)}
+  
   .team-info h3{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--txt);margin-bottom:4px;letter-spacing:-.3px}
   .team-role{
     font-family:var(--font-display);font-size:13px;font-weight:700;
@@ -188,10 +188,17 @@
   </a>
   <ul class="nav-links">
     <li><a href="/services">Services</a></li>
-    <li><a href="/about" aria-current="page">Our company</a></li>
+    <li><a href="/about" aria-current="page">Company</a></li>
     <li><a href="/case-studies">Case studies</a></li>
     <li><a href="/blog">Blog</a></li>
     <li><a href="/podcast">Podcast</a></li>
+    <li class="nav-drop">
+      <button class="nav-drop-btn" type="button" aria-haspopup="true">Resources <span class="drop-caret" aria-hidden="true">▾</span></button>
+      <ul class="nav-drop-menu">
+        <li><a href="/site-health-audit">Site Health Audit</a></li>
+        <li><a href="/the-lead-leak.pdf">The Lead Leak (PDF)</a></li>
+      </ul>
+    </li>
   </ul>
   <a href="/contact" class="nav-cta">Contact us →</a>
   <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -357,27 +364,27 @@
         <h3 style="font-family:'Sora',sans-serif;font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#c026d3;margin-bottom:24px">AI &amp; Claude (Anthropic)</h3>
         <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;max-width:1100px;margin:0 auto">
           <div style="padding:20px;border-radius:12px;background:linear-gradient(135deg,rgba(147,51,234,.08),rgba(192,38,211,.05));border:1px solid rgba(147,51,234,.2);text-align:left">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#9333ea,#c026d3);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px">A\</span><span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:1px;text-transform:uppercase">Anthropic</span></div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:var(--grad-primary);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px">A\</span><span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:1px;text-transform:uppercase">Anthropic</span></div>
             <p style="font-family:'Sora',sans-serif;font-size:14px;font-weight:600;color:var(--txt);margin:0 0 4px;line-height:1.4">Teaching the AI Fluency Framework</p>
             <p style="font-size:12px;color:var(--txt-dim);margin:0">Issued 2026</p>
           </div>
           <div style="padding:20px;border-radius:12px;background:linear-gradient(135deg,rgba(147,51,234,.08),rgba(192,38,211,.05));border:1px solid rgba(147,51,234,.2);text-align:left">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#9333ea,#c026d3);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px">A\</span><span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:1px;text-transform:uppercase">Anthropic</span></div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:var(--grad-primary);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px">A\</span><span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:1px;text-transform:uppercase">Anthropic</span></div>
             <p style="font-family:'Sora',sans-serif;font-size:14px;font-weight:600;color:var(--txt);margin:0 0 4px;line-height:1.4">Introduction to Claude Cowork</p>
             <p style="font-size:12px;color:var(--txt-dim);margin:0">Issued 2026</p>
           </div>
           <div style="padding:20px;border-radius:12px;background:linear-gradient(135deg,rgba(147,51,234,.08),rgba(192,38,211,.05));border:1px solid rgba(147,51,234,.2);text-align:left">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#9333ea,#c026d3);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px">A\</span><span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:1px;text-transform:uppercase">Anthropic</span></div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:var(--grad-primary);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px">A\</span><span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:1px;text-transform:uppercase">Anthropic</span></div>
             <p style="font-family:'Sora',sans-serif;font-size:14px;font-weight:600;color:var(--txt);margin:0 0 4px;line-height:1.4">Claude Code 101</p>
             <p style="font-size:12px;color:var(--txt-dim);margin:0">Issued 2026</p>
           </div>
           <div style="padding:20px;border-radius:12px;background:linear-gradient(135deg,rgba(147,51,234,.08),rgba(192,38,211,.05));border:1px solid rgba(147,51,234,.2);text-align:left">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#9333ea,#c026d3);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px">A\</span><span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:1px;text-transform:uppercase">Anthropic</span></div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:var(--grad-primary);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px">A\</span><span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:1px;text-transform:uppercase">Anthropic</span></div>
             <p style="font-family:'Sora',sans-serif;font-size:14px;font-weight:600;color:var(--txt);margin:0 0 4px;line-height:1.4">Claude 101</p>
             <p style="font-size:12px;color:var(--txt-dim);margin:0">Issued 2026</p>
           </div>
           <div style="padding:20px;border-radius:12px;background:linear-gradient(135deg,rgba(147,51,234,.08),rgba(192,38,211,.05));border:1px solid rgba(147,51,234,.2);text-align:left">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#9333ea,#c026d3);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px">A\</span><span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:1px;text-transform:uppercase">Anthropic</span></div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:var(--grad-primary);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:13px">A\</span><span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:1px;text-transform:uppercase">Anthropic</span></div>
             <p style="font-family:'Sora',sans-serif;font-size:14px;font-weight:600;color:var(--txt);margin:0 0 4px;line-height:1.4">AI Fluency for Small Businesses</p>
             <p style="font-size:12px;color:var(--txt-dim);margin:0">Issued 2026</p>
           </div>
@@ -408,7 +415,7 @@
       <h2 class="s-title">Ready to meet <span class="accent">the team?</span></h2>
       <p class="s-sub mx-auto" style="margin-top:14px">30 minutes on a discovery call. No pitch deck, no pressure. Just a real conversation about what's broken and what it'd look like fixed.</p>
       <p class="risk-reversal">If we're not the right fit, we'll tell you, and point you to who is.</p>
-      <div style="margin-top:30px"><a href="https://api.leadconnectorhq.com/widget/booking/rji8xmGWO2uQ8DuEziEn" target="_blank" rel="noopener" class="btn-primary" style="font-size:16px;padding:16px 36px">Book a free discovery call →</a></div>
+      <div style="margin-top:30px"><a href="/contact" class="btn-primary" style="font-size:16px;padding:16px 36px">Book a free discovery call →</a></div>
     </div>
   </section>
 
@@ -422,17 +429,19 @@
         <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
         <span class="logo-bar"></span>
       </a>
-      <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
+      <p>Marketing, automation, AI, and systems engineering for businesses that have outgrown their tools.</p>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="/site-health-audit">Site Health Audit</a></li>
       <li><a href="/services">Data analytics</a></li>
       <li><a href="/services">Growth marketing</a></li>
       <li><a href="/services">Automation &amp; workflows</a></li>
+      <li><a href="/services">AI support</a></li>
       <li><a href="/services">CRM &amp; systems</a></li>
       <li><a href="/services">Marketing creatives</a></li>
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="/about">Our company</a></li>
+      <li><a href="/about">Company</a></li>
       <li><a href="/case-studies">Case studies</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/podcast">Podcast</a></li>

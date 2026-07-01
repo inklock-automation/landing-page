@@ -94,10 +94,17 @@
   </a>
   <ul class="nav-links">
     <li><a href="/services">Services</a></li>
-    <li><a href="/about">Our company</a></li>
+    <li><a href="/about">Company</a></li>
     <li><a href="/case-studies">Case studies</a></li>
     <li><a href="/blog" aria-current="page">Blog</a></li>
     <li><a href="/podcast">Podcast</a></li>
+    <li class="nav-drop">
+      <button class="nav-drop-btn" type="button" aria-haspopup="true">Resources <span class="drop-caret" aria-hidden="true">▾</span></button>
+      <ul class="nav-drop-menu">
+        <li><a href="/site-health-audit">Site Health Audit</a></li>
+        <li><a href="/the-lead-leak.pdf">The Lead Leak (PDF)</a></li>
+      </ul>
+    </li>
   </ul>
   <a href="/contact" class="nav-cta">Contact us &rarr;</a>
   <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -212,11 +219,11 @@
 <p style="font-size:16px;line-height:1.65;color:#6b6580;max-width:520px;margin:0 auto 22px">Real builds, real numbers, what's actually working right now. The same stuff we'd send a friend.</p>
 <form onsubmit="return submitBlogNewsletter(event,this)" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
 <input type="email" name="email" required placeholder="your@email.com" aria-label="Email address" style="flex:1;min-width:220px;padding:13px 18px;border:1px solid rgba(147,51,234,.25);border-radius:8px;font-family:Plus Jakarta Sans,sans-serif;font-size:15px;background:#fff;color:#14111c;outline:none">
-<button type="submit" style="padding:13px 24px;background:linear-gradient(135deg,#9333ea,#c026d3);color:#fff;border:0;border-radius:8px;font-family:Plus Jakarta Sans,sans-serif;font-weight:700;font-size:15px;cursor:pointer;white-space:nowrap">Lock me in &rarr;</button>
+<button type="submit" style="padding:13px 24px;background:var(--grad-primary);color:#fff;border:0;border-radius:8px;font-family:Plus Jakarta Sans,sans-serif;font-weight:700;font-size:15px;cursor:pointer;white-space:nowrap">Lock me in &rarr;</button>
 </form>
 <p style="margin:14px 0 0;font-size:12px;color:#9aa0ad;font-family:Plus Jakarta Sans,sans-serif">One email a month. Unsubscribe anytime. No spam, ever.</p>
 <p style="margin:22px 0 0;padding-top:18px;border-top:1px solid rgba(147,51,234,.10);font-size:14px;color:#6b6580">Got a question about this post? <a href="/contact" style="color:#9333ea;font-weight:600;text-decoration:none">Reach out &rarr;</a></p>
-<script>function submitBlogNewsletter(e,f){e.preventDefault();var b=f.querySelector('button'),o=b.textContent,em=f.querySelector('input[name=email]').value;b.disabled=true;b.textContent='Locking you in...';fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,type:'newsletter',source:'Blog Post CTA'})}).then(function(r){if(r.ok){f.outerHTML='<div style="text-align:center;padding:18px;background:rgba(147,51,234,.06);border:1px solid rgba(147,51,234,.15);border-radius:12px;font-weight:500;font-size:15px;color:#9333ea;max-width:440px;margin:0 auto">You\'re in. First note hits next month.</div>';if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Blog Newsletter Signup'})}else{throw new Error('failed')}}).catch(function(){b.disabled=false;b.textContent=o;alert('Something went wrong. Email us at hello@inklockautomation.com and we will add you manually.')});return false}</script>
+<script>function submitBlogNewsletter(e,f){e.preventDefault();var b=f.querySelector('button'),o=b.textContent,em=f.querySelector('input[name=email]').value;b.disabled=true;b.textContent='Locking you in...';fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,type:'newsletter',source:'Blog Post CTA'})}).then(function(r){if(r.ok){f.outerHTML='<div style="text-align:center;padding:18px;background:rgba(147,51,234,.06);border:1px solid rgba(147,51,234,.15);border-radius:12px;font-weight:500;font-size:15px;color:#9333ea;max-width:440px;margin:0 auto">You\'re in. First note hits next month.</div>';if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'Blog Newsletter Signup'})}else{throw new Error('failed')}}).catch(function(){b.disabled=false;b.textContent=o;alert('Something went wrong. Email us at hello@inklockautomation.com and we'll add you manually.')});return false}</script>
 </div>
   </article>
 
@@ -229,17 +236,19 @@
         <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
         <span class="logo-bar"></span>
       </a>
-      <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
+      <p>Marketing, automation, AI, and systems engineering for businesses that have outgrown their tools.</p>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="/site-health-audit">Site Health Audit</a></li>
       <li><a href="/services">Data analytics</a></li>
       <li><a href="/services">Growth marketing</a></li>
       <li><a href="/services">Automation &amp; workflows</a></li>
+      <li><a href="/services">AI support</a></li>
       <li><a href="/services">CRM &amp; systems</a></li>
       <li><a href="/services">Marketing creatives</a></li>
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="/about">Our company</a></li>
+      <li><a href="/about">Company</a></li>
       <li><a href="/case-studies">Case studies</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/podcast">Podcast</a></li>
