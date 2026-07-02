@@ -37,8 +37,9 @@
   /* Semantic */
   --success:#22c55e; --warning:#facc15; --danger:#ef4444;
   /* Gradients */
-  --grad-primary:linear-gradient(135deg,var(--purple),var(--fuchsia));
+  --grad-primary:linear-gradient(90deg,var(--blue) 0%,var(--purple) 42%,var(--fuchsia) 72%,var(--pink) 100%);
   --grad-brand:linear-gradient(135deg,var(--blue) 0%,var(--purple) 50%,var(--fuchsia) 80%,var(--pink) 100%);
+  --grad-wordmark:linear-gradient(90deg,var(--blue) 0%,var(--blue) 14%,var(--purple) 48%,var(--pink) 80%,var(--pink) 100%);
   --grad-cool:linear-gradient(135deg,var(--purple),var(--blue));
   /* Violet tints */
   --tint-purple-02:rgba(147,51,234,.02);
@@ -59,9 +60,9 @@
   --border-soft:1px solid rgba(147,51,234,.16);
   --border-strong:1px solid rgba(147,51,234,.32);
   /* Shadows + glow */
-  --shadow-sm:0 2px 8px rgba(20,17,28,.06);
-  --shadow-md:0 8px 24px rgba(20,17,28,.08);
-  --shadow-lg:0 16px 40px rgba(20,17,28,.10),0 0 80px rgba(147,51,234,.04);
+  --shadow-sm:0 2px 8px rgba(20,17,28,.06),0 0 24px rgba(147,51,234,.06);
+  --shadow-md:0 8px 24px rgba(20,17,28,.08),0 0 40px rgba(147,51,234,.10);
+  --shadow-lg:0 16px 40px rgba(20,17,28,.10),0 0 80px rgba(147,51,234,.14);
   --glow-soft:0 0 24px rgba(147,51,234,.12);
   --glow-button:0 12px 32px rgba(147,51,234,.35);
   --glow-strong:0 0 30px rgba(147,51,234,.30);
@@ -117,11 +118,11 @@ nav.scrolled{
 
 .nav-logo{text-decoration:none;display:inline-flex;flex-direction:column;align-items:flex-start;gap:0}
 .nav-logo .logo-row{display:flex;align-items:baseline}
-.logo-bar{width:100%;height:1.5px;border-radius:1px;background:var(--grad-brand);margin-top:2px}
+.logo-bar{width:100%;height:1px;border-radius:1px;background:var(--grad-wordmark);margin-top:2px}
 
 .logo-ink{
   font-family:'Great Vibes',cursive;font-weight:400;font-size:28px;letter-spacing:1px;
-  background:var(--grad-brand);
+  background:var(--grad-wordmark);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
 }
 .logo-lock{
@@ -132,6 +133,28 @@ nav.scrolled{
 .nav-links{display:flex;gap:34px;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--txt);text-decoration:none;transition:color var(--dur-base);letter-spacing:-.1px}
 .nav-links a:hover{color:var(--purple)}
+
+/* Resources dropdown */
+.nav-drop{position:relative}
+.nav-drop-btn{
+  font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--txt);
+  background:none;border:0;cursor:pointer;padding:0;letter-spacing:-.1px;
+  display:inline-flex;align-items:center;gap:5px;transition:color var(--dur-base);
+}
+.nav-drop-btn:hover{color:var(--purple)}
+.drop-caret{font-size:10px;color:var(--txt-mute);transition:transform var(--dur-base)}
+.nav-drop:hover .drop-caret,.nav-drop:focus-within .drop-caret{transform:rotate(180deg);color:var(--purple)}
+.nav-drop-menu{
+  position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%,6px);
+  min-width:220px;list-style:none;padding:8px;
+  background:var(--white);border:1px solid rgba(147,51,234,.16);border-radius:12px;
+  box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transition:opacity var(--dur-base),transform var(--dur-base),visibility var(--dur-base);
+}
+.nav-drop::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.nav-drop:hover .nav-drop-menu,.nav-drop:focus-within .nav-drop-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.nav-drop-menu li a{display:block;padding:10px 14px;border-radius:8px;font-size:14px;transition:background var(--dur-base),color var(--dur-base)}
+.nav-drop-menu li a:hover{background:var(--tint-purple-06);color:var(--purple)}
 .nav-cta{
   font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--white);
   background:var(--grad-primary);
@@ -728,6 +751,11 @@ footer::before{
   :root{--x-pad:20px;--y-pad:64px;--nav-h:64px}
   .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:var(--white);flex-direction:column;padding:24px;border-bottom:1px solid rgba(147,51,234,.10);gap:18px}
   .nav-links.open{display:flex}
+  .nav-drop{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .nav-drop-btn{pointer-events:none}
+  .drop-caret{display:none}
+  .nav-drop-menu{position:static;transform:none;opacity:1;visibility:visible;border:0;box-shadow:none;padding:0;min-width:0;text-align:center}
+  .nav-drop-menu li a{padding:4px 10px;color:var(--txt-dim)}
   .mobile-toggle{display:inline-block}
   .nav-cta{display:none}
   .nav-links.open + .nav-cta{display:inline-flex}

@@ -50,7 +50,7 @@
   {"@type":"Question","name":"Do you need access to my hosting or analytics?","acceptedAnswer":{"@type":"Answer","text":"No. We point the audit at your public website and read what Google and AI engines see. No tracking pixels, no plugins, no hosting access required."}},
   {"@type":"Question","name":"What if I want the audit and not the implementation?","acceptedAnswer":{"@type":"Answer","text":"Take the report and run with it. The free baseline gives you everything to fix the issues yourself or hand it to a developer. We make money on the follow-up work, not on gated reports."}},
   {"@type":"Question","name":"How do I prove the score is real?","acceptedAnswer":{"@type":"Answer","text":"The audit engine is open source. Every check is in the public rubric with a citation to the authoritative source. Scoring is deterministic, so the same site returns the same score on every run. Anyone can clone the repo and reproduce the results."}}
-]}}
+]}
 </script>
 
 <!-- BreadcrumbList -->
@@ -77,10 +77,17 @@
   </a>
   <ul class="nav-links">
     <li><a href="/services">Services</a></li>
-    <li><a href="/site-health-audit" aria-current="page">Site audit</a></li>
-    <li><a href="/about">Our company</a></li>
+    <li><a href="/about">Company</a></li>
     <li><a href="/case-studies">Case studies</a></li>
     <li><a href="/blog">Blog</a></li>
+    <li><a href="/podcast">Podcast</a></li>
+    <li class="nav-drop">
+      <button class="nav-drop-btn" type="button" aria-haspopup="true">Resources <span class="drop-caret" aria-hidden="true">▾</span></button>
+      <ul class="nav-drop-menu">
+        <li><a href="/site-health-audit" aria-current="page">Site Health Audit</a></li>
+        <li><a href="/the-lead-leak.pdf">The Lead Leak (PDF)</a></li>
+      </ul>
+    </li>
   </ul>
   <a href="/contact" class="nav-cta">Contact us →</a>
   <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -109,7 +116,7 @@
       <div class="divider mx-auto"></div>
       <div class="eyebrow">Why this exists</div>
       <h2 class="s-title">Most audit tools score one pillar. <span class="accent">AI search is happening on three.</span></h2>
-      <p class="s-sub mx-auto" style="margin-top:14px">SEO is still required. It is not enough on its own anymore.</p>
+      <p class="s-sub mx-auto" style="margin-top:14px">SEO is still required. It isn't enough on its own anymore.</p>
     </div>
     <div class="tier-grid" style="grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto">
       <div class="tier-card">
@@ -125,12 +132,12 @@
       <div class="tier-card">
         <div class="tier-tag">Pillar 03</div>
         <h3>GEO</h3>
-        <p>How ChatGPT, Claude, Perplexity, and Gemini decide whether to cite you when someone asks a question your business could answer. New game. Most agencies are not even tracking it yet.</p>
+        <p>How ChatGPT, Claude, Perplexity, and Gemini decide whether to cite you when someone asks a question your business could answer. New game. Most agencies aren't even tracking it yet.</p>
       </div>
     </div>
     <div class="centered mx-auto" style="margin:40px auto 0;max-width:760px">
       <p style="padding:20px 24px;border:1px solid rgba(147,51,234,.18);border-radius:12px;background:rgba(147,51,234,.04);text-align:center;line-height:1.65">
-        <strong>What this means in plain English.</strong> Your competitors are showing up inside ChatGPT answers and you are not. Or you are, and you do not know why some pages get cited and others get skipped. The Site Health Audit scores all three pillars in one pass so you can see the whole picture.
+        <strong>What this means in plain English.</strong> Your competitors are showing up inside ChatGPT answers and you aren't. Or you are, and you don't know why some pages get cited and others get skipped. The Site Health Audit scores all three pillars in one pass so you can see the whole picture.
       </p>
     </div>
   </section>
@@ -141,7 +148,7 @@
       <div class="divider mx-auto"></div>
       <div class="eyebrow">Real receipts</div>
       <h2 class="s-title">Same playbook on two sites. <span class="accent">Both ended A-grade.</span></h2>
-      <p class="s-sub mx-auto" style="margin-top:14px">We do not sell what we have not shipped.</p>
+      <p class="s-sub mx-auto" style="margin-top:14px">We don't sell what we haven't shipped.</p>
     </div>
     <div class="tier-grid" style="grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto">
       <div class="tier-card">
@@ -288,7 +295,7 @@
       <div class="divider mx-auto"></div>
       <div class="eyebrow">Why this audit</div>
       <h2 class="s-title">Built like an audit, <span class="accent">not a sales funnel.</span></h2>
-      <p class="s-sub mx-auto" style="margin-top:14px">Most tools in this space hide their methodology and lock the report behind a $300 a month subscription. That is not the move here.</p>
+      <p class="s-sub mx-auto" style="margin-top:14px">Most tools in this space hide their methodology and lock the report behind a $300 a month subscription. That's not the move here.</p>
     </div>
     <div style="max-width:820px;margin:0 auto;display:grid;gap:18px">
       <div class="tier-card">
@@ -301,10 +308,10 @@
       </div>
       <div class="tier-card">
         <h3 style="font-size:18px">Built by operators, not salespeople</h3>
-        <p>We use the audit on our own sites first. Both ended A-grade. We will not sell anything we have not shipped.</p>
+        <p>We use the audit on our own sites first. Both ended A-grade. We won't sell anything we haven't shipped.</p>
       </div>
       <div class="tier-card">
-        <h3 style="font-size:18px">Honest about what it cannot do</h3>
+        <h3 style="font-size:18px">Honest about what it can't do</h3>
         <p>Sites under 5 pages get flagged Inconclusive because percentage-based checks game upward on tiny samples. We tell you when the score is not trustworthy and why.</p>
       </div>
     </div>
@@ -344,7 +351,7 @@
         <div class="form-field" style="margin-top:14px">
           <label for="af-url">Website URL to audit *</label>
           <input id="af-url" name="website_url" type="text" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="yourcompany.com" required>
-          <span style="font-size:12px;color:var(--txt-mute);margin-top:4px">No need to type https:// — we'll add it for you.</span>
+          <span style="font-size:12px;color:var(--txt-mute);margin-top:4px">No need to type https://, we'll add it for you.</span>
         </div>
         <div class="form-field" style="margin-top:14px">
           <label for="af-notes">Anything we should know? <span style="color:var(--txt-mute);font-weight:400">(optional)</span></label>
@@ -363,7 +370,7 @@
       <div id="auditFormSuccess" style="display:none;text-align:center;padding:40px 24px;border:1px solid rgba(147,51,234,.18);border-radius:14px;background:rgba(147,51,234,.04)">
         <div class="eyebrow" style="color:var(--purple)">Request received</div>
         <h3 style="margin-top:12px;font-size:22px">Your audit is in the queue.</h3>
-        <p style="margin-top:12px;color:var(--txt-dim);line-height:1.65">Real dashboard back in your inbox within 24 hours. If we have questions we will reach out first. If you need anything before that, email <a href="mailto:hello@inklockautomation.com" style="color:var(--purple);font-weight:600">hello@inklockautomation.com</a>.</p>
+        <p style="margin-top:12px;color:var(--txt-dim);line-height:1.65">Real dashboard back in your inbox within 24 hours. If we have questions we'll reach out first. If you need anything before that, email <a href="mailto:hello@inklockautomation.com" style="color:var(--purple);font-weight:600">hello@inklockautomation.com</a>.</p>
       </div>
 
       <div id="auditFormError" style="display:none;margin-top:18px;padding:14px 18px;border:1px solid rgba(220,38,38,.25);border-radius:10px;background:rgba(220,38,38,.05);color:#b91c1c;font-size:14px">
@@ -372,7 +379,7 @@
     </div>
 
     <p class="centered" style="margin-top:40px;font-size:14px;color:var(--txt-mute)">
-      Rather chat first? <a href="https://api.leadconnectorhq.com/widget/booking/rji8xmGWO2uQ8DuEziEn" target="_blank" rel="noopener" style="color:var(--purple);font-weight:600">Book a 30-minute discovery call →</a>
+      Rather chat first? <a href="/contact" style="color:var(--purple);font-weight:600">Book a 30-minute discovery call →</a>
     </p>
   </section>
 </main>
@@ -381,17 +388,19 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="/" class="f-logo"><span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span><span class="logo-bar"></span></a>
-      <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
+      <p>Marketing, automation, AI, and systems engineering for businesses that have outgrown their tools.</p>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="/site-health-audit">Site Health Audit</a></li>
       <li><a href="/services">Data analytics</a></li>
       <li><a href="/services">Growth marketing</a></li>
       <li><a href="/services">Automation &amp; workflows</a></li>
+      <li><a href="/services">AI support</a></li>
       <li><a href="/services">CRM &amp; systems</a></li>
       <li><a href="/site-health-audit">Site Health Audit</a></li>
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="/about">Our company</a></li>
+      <li><a href="/about">Company</a></li>
       <li><a href="/case-studies">Case studies</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/podcast">Podcast</a></li>

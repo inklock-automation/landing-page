@@ -156,7 +156,7 @@
     position:relative;
   }
   .host-avatar img{width:100%;height:100%;object-fit:cover;display:block;transition:transform var(--dur-base)}
-  .host-card:hover .host-avatar img{transform:scale(1.05)}
+  
   .host-info h4{font-family:var(--font-display);font-size:18px;font-weight:800;color:var(--txt);letter-spacing:-.2px;margin-bottom:2px}
   .host-role{font-family:var(--font-display);font-size:11px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:1.6px;margin-bottom:8px}
   .host-info p{font-size:14px;color:var(--txt-dim);line-height:1.6}
@@ -250,10 +250,17 @@
   </a>
   <ul class="nav-links">
     <li><a href="/services">Services</a></li>
-    <li><a href="/about">Our company</a></li>
+    <li><a href="/about">Company</a></li>
     <li><a href="/case-studies">Case studies</a></li>
     <li><a href="/blog">Blog</a></li>
     <li><a href="/podcast" aria-current="page">Podcast</a></li>
+    <li class="nav-drop">
+      <button class="nav-drop-btn" type="button" aria-haspopup="true">Resources <span class="drop-caret" aria-hidden="true">▾</span></button>
+      <ul class="nav-drop-menu">
+        <li><a href="/site-health-audit">Site Health Audit</a></li>
+        <li><a href="/the-lead-leak.pdf">The Lead Leak (PDF)</a></li>
+      </ul>
+    </li>
   </ul>
   <a href="/contact" class="nav-cta">Contact us →</a>
   <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -433,17 +440,19 @@
         <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
         <span class="logo-bar"></span>
       </a>
-      <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
+      <p>Marketing, automation, AI, and systems engineering for businesses that have outgrown their tools.</p>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="/site-health-audit">Site Health Audit</a></li>
       <li><a href="/services">Data analytics</a></li>
       <li><a href="/services">Growth marketing</a></li>
       <li><a href="/services">Automation &amp; workflows</a></li>
+      <li><a href="/services">AI support</a></li>
       <li><a href="/services">CRM &amp; systems</a></li>
       <li><a href="/services">Marketing creatives</a></li>
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="/about">Our company</a></li>
+      <li><a href="/about">Company</a></li>
       <li><a href="/case-studies">Case studies</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/podcast">Podcast</a></li>

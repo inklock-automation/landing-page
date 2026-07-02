@@ -112,7 +112,7 @@
   .pc-card{
     background:var(--white);
     border:1px solid rgba(147,51,234,.10);
-    border-left:3px solid var(--blue);
+    border-left:1px solid rgba(147,51,234,.25);
     border-radius:0 12px 12px 0;
     padding:22px 26px;
     box-shadow:var(--shadow-sm);
@@ -328,10 +328,17 @@
   </a>
   <ul class="nav-links">
     <li><a href="/services">Services</a></li>
-    <li><a href="/about">Our company</a></li>
+    <li><a href="/about">Company</a></li>
     <li><a href="/case-studies">Case studies</a></li>
     <li><a href="/blog">Blog</a></li>
     <li><a href="/podcast">Podcast</a></li>
+    <li class="nav-drop">
+      <button class="nav-drop-btn" type="button" aria-haspopup="true">Resources <span class="drop-caret" aria-hidden="true">▾</span></button>
+      <ul class="nav-drop-menu">
+        <li><a href="/site-health-audit">Site Health Audit</a></li>
+        <li><a href="/the-lead-leak.pdf">The Lead Leak (PDF)</a></li>
+      </ul>
+    </li>
   </ul>
   <a href="/contact" class="nav-cta">Contact us →</a>
   <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -376,7 +383,7 @@
           <p>Instagram says one thing. LinkedIn says another. Your website (if it exists) has not been updated since you launched it. When a potential client tries to figure out what you do, it is a scavenger hunt they are not going to finish.</p>
         </div>
         <div class="pc-card">
-          <h3>Google does not know you exist.</h3>
+          <h3>Google doesn't know you exist.</h3>
           <p>Someone searches for the exact service you provide in your city. Three of your competitors show up. You do not. Every day without a properly optimized site is a day full of clients who will never find you.</p>
         </div>
         <div class="pc-card">
@@ -404,7 +411,7 @@
           <div class="scenario-icon red">01</div>
           <div class="scenario-text">
             <h4>Someone visits your website.</h4>
-            <p>If you have one. If it loads fast. If it does not look like it was built six years ago. If they can tell what you do in the first five seconds. That is a lot of "ifs" before they even think about reaching out.</p>
+            <p>If you have one. If it loads fast. If it doesn't look like it was built six years ago. If they can tell what you do in the first five seconds. That's a lot of "ifs" before they even think about reaching out.</p>
           </div>
         </div>
         <div class="scenario-rule"></div>
@@ -432,7 +439,7 @@
           </div>
         </div>
         <div class="scenario-bottom reveal">
-          <p><strong>The website is step one.</strong> But it is not the whole picture. Your site needs to work for you around the clock. And everything behind it, the follow-up, the automation, the systems, is what turns visitors into clients. We build all of it.</p>
+          <p><strong>The website is step one.</strong> But it isn't the whole picture. Your site needs to work for you around the clock. And everything behind it, the follow-up, the automation, the systems, is what turns visitors into clients. We build all of it.</p>
         </div>
       </div>
     </div>
@@ -543,7 +550,7 @@
             <li>New domain setup + hosting</li>
             <li>2 rounds of revisions</li>
           </ul>
-          <a href="https://api.leadconnectorhq.com/widget/booking/rji8xmGWO2uQ8DuEziEn" target="_blank" rel="noopener" class="price-cta secondary">Book a call →</a>
+          <a href="/contact" class="price-cta secondary">Book a call →</a>
         </div>
         <div class="price-card">
           <div class="price-tier">Tier 03</div>
@@ -558,7 +565,7 @@
             <li>Funnel strategy + automation</li>
             <li>A site and a system that sells</li>
           </ul>
-          <a href="https://api.leadconnectorhq.com/widget/booking/rji8xmGWO2uQ8DuEziEn" target="_blank" rel="noopener" class="price-cta secondary">Book a call →</a>
+          <a href="/contact" class="price-cta secondary">Book a call →</a>
         </div>
       </div>
       <p class="price-disclaimer">*Klarna available at checkout for Tier 1. Pay in 4 interest-free installments. Subject to Klarna approval. All builds include an optional $50 per month maintenance plan for ongoing updates and support.</p>
@@ -649,10 +656,10 @@
       <div class="divider mx-auto"></div>
       <h2 class="s-title">Someone is searching for what you do. <span class="accent">Right now.</span></h2>
       <p class="s-sub mx-auto" style="margin-top:14px">The question is not whether they will find a business like yours. It is whether they will find you or someone else.</p>
-      <p class="risk-reversal">If we are not the right fit, we will tell you, and point you to who is.</p>
+      <p class="risk-reversal">If we're not the right fit, we'll tell you, and point you to who is.</p>
       <div style="margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
         <a href="/build-onboarding" class="btn-primary" style="font-size:16px;padding:16px 36px">Start the build form →</a>
-        <a href="https://api.leadconnectorhq.com/widget/booking/rji8xmGWO2uQ8DuEziEn" target="_blank" rel="noopener" class="btn-secondary" style="font-size:16px;padding:16px 30px">Book a call</a>
+        <a href="/contact" class="btn-secondary" style="font-size:16px;padding:16px 30px">Book a call</a>
       </div>
     </div>
   </section>
@@ -667,17 +674,19 @@
         <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
         <span class="logo-bar"></span>
       </a>
-      <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
+      <p>Marketing, automation, AI, and systems engineering for businesses that have outgrown their tools.</p>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="/site-health-audit">Site Health Audit</a></li>
       <li><a href="/services">Data analytics</a></li>
       <li><a href="/services">Growth marketing</a></li>
       <li><a href="/services">Automation &amp; workflows</a></li>
+      <li><a href="/services">AI support</a></li>
       <li><a href="/services">CRM &amp; systems</a></li>
       <li><a href="/services">Marketing creatives</a></li>
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="/about">Our company</a></li>
+      <li><a href="/about">Company</a></li>
       <li><a href="/case-studies">Case studies</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/podcast">Podcast</a></li>

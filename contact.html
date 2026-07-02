@@ -11,14 +11,14 @@
 <link rel="canonical" href="https://www.inklockautomation.com/contact">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.inklockautomation.com/contact">
-<meta property="og:title" content="Contact InkLock Automation | Get In Touch With Us">
+<meta property="og:title" content="Contact InkLock Automation | Get in touch">
 <meta property="og:description" content="Four ways in. Pick your lane. 24-hour response. No pitch deck, no pressure.">
 <meta property="og:image" content="https://www.inklockautomation.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="InkLock Automation">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact InkLock Automation | Get In Touch With Us">
+<meta name="twitter:title" content="Contact InkLock Automation | Get in touch">
 <meta name="twitter:description" content="Four ways in. Pick your lane. 24-hour response. No pitch deck, no pressure.">
 <meta name="twitter:image" content="https://www.inklockautomation.com/og-image.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -26,7 +26,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#ffffff">
-<title>Contact InkLock Automation | Get In Touch With Us</title>
+<title>Contact InkLock Automation | Get in touch</title>
 <link rel="stylesheet" href="/styles.css">
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <style>
@@ -201,7 +201,7 @@
 </script>
 <!-- INKLOCK_BREADCRUMB_INJECTED -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.inklockautomation.com/"},{"@type":"ListItem","position":2,"name":"Contact InkLock Automation | Get In Touch With Us","item":"https://www.inklockautomation.com/contact"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.inklockautomation.com/"},{"@type":"ListItem","position":2,"name":"Contact InkLock Automation | Get in touch","item":"https://www.inklockautomation.com/contact"}]}
 </script>
 <!-- INKLOCK_SPEAKABLE_INJECTED -->
 <script type="application/ld+json">
@@ -220,10 +220,17 @@
   </a>
   <ul class="nav-links">
     <li><a href="/services">Services</a></li>
-    <li><a href="/about">Our company</a></li>
+    <li><a href="/about">Company</a></li>
     <li><a href="/case-studies">Case studies</a></li>
     <li><a href="/blog">Blog</a></li>
     <li><a href="/podcast">Podcast</a></li>
+    <li class="nav-drop">
+      <button class="nav-drop-btn" type="button" aria-haspopup="true">Resources <span class="drop-caret" aria-hidden="true">▾</span></button>
+      <ul class="nav-drop-menu">
+        <li><a href="/site-health-audit">Site Health Audit</a></li>
+        <li><a href="/the-lead-leak.pdf">The Lead Leak (PDF)</a></li>
+      </ul>
+    </li>
   </ul>
   <a href="/contact" class="nav-cta" aria-current="page">Contact us →</a>
   <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -371,7 +378,7 @@
               </select>
             </div>
           </div>
-          <span class="form-help">We'll send a calendar invite to confirm — no need to nail it down exactly.</span>
+          <span class="form-help">We'll send a calendar invite to confirm, no need to nail it down exactly.</span>
         </div>
         <button type="submit" class="form-submit">Send it →</button>
         <p class="form-note">By submitting, you agree to our privacy policy. We never sell your information. We respond inside 24 business hours.</p>
@@ -418,17 +425,19 @@
         <span class="logo-row"><span class="logo-ink">Ink</span><span class="logo-lock">LOCK</span></span>
         <span class="logo-bar"></span>
       </a>
-      <p>Marketing, automation, and systems engineering for businesses that have outgrown their tools.</p>
+      <p>Marketing, automation, AI, and systems engineering for businesses that have outgrown their tools.</p>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="/site-health-audit">Site Health Audit</a></li>
       <li><a href="/services">Data analytics</a></li>
       <li><a href="/services">Growth marketing</a></li>
       <li><a href="/services">Automation &amp; workflows</a></li>
+      <li><a href="/services">AI support</a></li>
       <li><a href="/services">CRM &amp; systems</a></li>
       <li><a href="/services">Marketing creatives</a></li>
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="/about">Our company</a></li>
+      <li><a href="/about">Company</a></li>
       <li><a href="/case-studies">Case studies</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/podcast">Podcast</a></li>
@@ -501,10 +510,10 @@ document.querySelectorAll('.eml').forEach(function(el){
     // Don't preventDefault — if a mail client is registered, let it open too.
     if(navigator.clipboard && navigator.clipboard.writeText){
       navigator.clipboard.writeText(addr)
-        .then(function(){ flash('Copied — paste into your email'); })
-        .catch(function(){ flash(legacyCopy() ? 'Copied — paste into your email' : addr); });
+        .then(function(){ flash('Copied. Paste into your email'); })
+        .catch(function(){ flash(legacyCopy() ? 'Copied. Paste into your email' : addr); });
     } else {
-      flash(legacyCopy() ? 'Copied — paste into your email' : addr);
+      flash(legacyCopy() ? 'Copied. Paste into your email' : addr);
     }
   });
 })();

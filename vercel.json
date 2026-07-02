@@ -8,6 +8,7 @@
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/site-health-audit", "destination": "/site-health-audit.html" },
+    { "source": "/proposals/resurgence-strength", "destination": "/proposals/resurgence-strength.html" },
     { "source": "/onboarding", "destination": "/onboarding.html" },
     { "source": "/build", "destination": "/build.html" },
     { "source": "/build/onboarding", "destination": "/build-onboarding.html" },
