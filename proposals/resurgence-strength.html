@@ -294,9 +294,92 @@ main {
 }
 .closing-tagline {
   font-style: italic;
+  font-weight: 700;
   font-size: 18px;
-  color: var(--purple);
+  background: linear-gradient(90deg, #4a7ab5 0%, #7c3aed 50%, #db2777 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--purple); /* fallback */
   margin-top: 8px;
+}
+
+/* Move-forward CTA section */
+.ready-cta {
+  margin-top: 32px;
+  padding: 32px 36px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(110,156,213,0.10) 0%, rgba(147,51,234,0.10) 50%, rgba(236,72,153,0.10) 100%);
+  border: 1px solid var(--purple-border);
+  text-align: center;
+}
+.ready-cta-eyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #4a7ab5 0%, #7c3aed 50%, #db2777 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--purple);
+}
+.ready-cta-title {
+  font-family: 'Outfit', 'Sora', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--dark-ink);
+  margin-top: 10px;
+  letter-spacing: -0.01em;
+}
+.ready-cta-sub {
+  font-size: 16px;
+  color: var(--mid-grey);
+  margin-top: 8px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.55;
+}
+.ready-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  align-items: center;
+}
+.ready-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  min-width: 280px;
+}
+.ready-btn-primary {
+  background: linear-gradient(90deg, #4a7ab5 0%, #7c3aed 50%, #db2777 100%);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(147, 51, 234, 0.25);
+}
+.ready-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(147, 51, 234, 0.35); }
+.ready-btn-secondary {
+  background: var(--white);
+  color: var(--dark-ink);
+  border: 1.5px solid var(--purple-border);
+}
+.ready-btn-secondary:hover { border-color: var(--purple); transform: translateY(-2px); }
+.ready-cta-note {
+  font-size: 13px;
+  color: var(--mid-grey);
+  margin-top: 20px;
+  line-height: 1.55;
 }
 
 /* Footer */
@@ -958,6 +1041,21 @@ main {
       </tbody>
     </table>
     <p>Payment of $2,500 is due in full upon signing this agreement to start the work. No additional payments or monthly fees apply during the 90-day engagement. If the client wants ongoing monthly monitoring after the project completes, that's a separate engagement starting at $97 per month.</p>
+  </section>
+
+  <!-- READY TO MOVE FORWARD CTA -->
+  <section class="content-section">
+    <div class="ready-cta">
+      <div class="ready-cta-eyebrow">Ready to move forward?</div>
+      <div class="ready-cta-title">Let's lock it in.</div>
+      <div class="ready-cta-sub">If this proposal is a yes, here are the three fastest ways to start. Pick whichever feels right. I'll take it from there.</div>
+      <div class="ready-cta-buttons">
+        <a href="https://api.leadconnectorhq.com/widget/booking/rji8xmGWO2uQ8DuEziEn" target="_blank" rel="noopener" class="ready-btn ready-btn-primary">Book a 15-minute kickoff call →</a>
+        <a href="mailto:hello@inklockautomation.com?subject=Ready%20to%20start%20-%20Resurgence%20Strength%20Site%20Health%20Audit&body=Hey%20Erin%2C%0A%0AReady%20to%20move%20forward%20on%20the%20Site%20Health%20Audit%20%2B%20Foundation%20Build%20for%20Resurgence%20Strength.%20Send%20the%20contract%20over%20and%20let%20me%20know%20what%20you%20need%20from%20me%20to%20get%20started.%0A%0AThanks!" class="ready-btn ready-btn-secondary">Email Erin to start →</a>
+        <a href="tel:9108213007" class="ready-btn ready-btn-secondary">Text Erin: (910) 821-3007</a>
+      </div>
+      <div class="ready-cta-note">All paths lead to the same place. The kickoff call is the fastest if you want to confirm scope first. Email is fastest if you're already a yes and want the contract.</div>
+    </div>
   </section>
 
   <!-- ACCEPTANCE -->
